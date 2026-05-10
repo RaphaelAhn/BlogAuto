@@ -1,32 +1,41 @@
-from pathlib import Path
-
 import pandas as pd
 
 import refine_drafts_ai
-from topic_registry import append_topic_used
+from paths import DATA_DIR
+from topic_registry import append_topic_used, normalize
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-TOP10_PATH = DATA_DIR / "topic_top10.csv"
+QUEUE_PATH = DATA_DIR / "writing_queue.csv"
+def update_queue_status(processed_keywords, status="drafted"):
+    if not QUEUE_PATH.exists():
+        return
+
+    df = pd.read_csv(QUEUE_PATH, encoding="utf-8-sig")
+
+    if df.empty or "keyword" not in df.columns:
+        return
+
+    normalized_processed = {normalize(k) for k in processed_keywords}
+    mask = df["keyword"].apply(lambda k: normalize(str(k)) in normalized_processed)
+    df.loc[mask, "status"] = status
+    df.to_csv(QUEUE_PATH, index=False, encoding="utf-8-sig")
+    print(f"writing_queue.csv status updated: {mask.sum()} -> {status}")
 
 
 def main():
-    refine_drafts_ai.main()
+    print("[debug] run_refine_and_register.main started")
+    print(f"[debug] queue path: {QUEUE_PATH}")
+    source_df = refine_drafts_ai.generate_articles_df()
+    print(f"[debug] generated rows: {len(source_df)}")
 
-    if not TOP10_PATH.exists():
-        print("topic_top10.csv가 없어 topic_used.csv 등록을 건너뜁니다.")
-        return
-
-    top10_df = pd.read_csv(TOP10_PATH, encoding="utf-8-sig")
-
-    if top10_df.empty:
-        print("topic_top10.csv가 비어 있어 topic_used.csv 등록을 건너뜁니다.")
+    if source_df.empty:
+        print("No rows to append into topic_used.csv.")
         return
 
     topic_rows = []
+    processed_keywords = []
 
-    for _, row in top10_df.iterrows():
+    for _, row in source_df.iterrows():
         keyword = str(row.get("keyword", "")).strip()
         if not keyword:
             continue
@@ -39,10 +48,26 @@ def main():
             "search_intent": str(row.get("search_intent", "")).strip(),
             "status": "drafted",
             "created_at": str(row.get("created_at", "")).strip(),
+            "output_path": str(row.get("output_path", "")).strip(),
+            "structure_slot": str(row.get("structure_slot", row.get("structure_variant", ""))).strip(),
+            "lead_slot": str(row.get("lead_slot", "")).strip(),
+            "rhythm_slot": str(row.get("rhythm_slot", "")).strip(),
+            "style_slot": str(row.get("style_slot", "")).strip(),
+            "ending_slot": str(row.get("ending_slot", "")).strip(),
+            "topic_profile": str(row.get("topic_profile", "")).strip(),
+            "similarity_score": row.get("similarity_score", ""),
+            "structural_score": row.get("structural_score", ""),
+            "total_penalty": row.get("total_penalty", ""),
+            "decision": str(row.get("decision", "drafted")).strip(),
+            "decision_reason": str(row.get("decision_reason", "")).strip(),
         })
+        processed_keywords.append(keyword)
 
     saved_topic_count = append_topic_used(topic_rows, default_status="drafted")
-    print(f"topic_used.csv 즉시 기록: {saved_topic_count}건")
+    print(f"topic_used.csv record added: {saved_topic_count}")
+
+    update_queue_status(processed_keywords)
+    print("[debug] run_refine_and_register.main completed")
 
 
 if __name__ == "__main__":

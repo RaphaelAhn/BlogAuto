@@ -1,143 +1,126 @@
-import pandas as pd
-from pathlib import Path
 from datetime import datetime
 
-# =========================
-# 경로 설정
-# =========================
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
+import pandas as pd
 
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+from paths import DATA_DIR
+from topic_registry import read_csv_safe
 
+KEYWORD_CANDIDATES_PATH = DATA_DIR / "keyword_candidates.csv"
+USABLE_KEYWORDS_PATH = DATA_DIR / "usable_keywords.csv"
+TOP10_PATH = DATA_DIR / "topic_top10.csv"
 HISTORY_TOP10_PATH = DATA_DIR / "topic_top10_history.csv"
 
-TOP10_COUNT = 12
-
-# =========================
-# 유틸 함수
-# =========================
-
-def generate_topic_title(keyword):
-    return f"{keyword} 완벽 가이드"
+TOPIC_COUNT = 12
 
 
-def remove_past_top10(df, history_df):
-    if history_df is None or history_df.empty:
+def select_input_path():
+    if KEYWORD_CANDIDATES_PATH.exists():
+        return KEYWORD_CANDIDATES_PATH
+    return USABLE_KEYWORDS_PATH
+
+
+def make_title(keyword):
+    keyword = str(keyword).strip()
+    if not keyword:
+        return "제목 없음"
+    kw = keyword.lower()
+    if any(x in kw for x in ["안됨", "오류", "해결", "안 됨", "작동 안함", "에러"]):
+        return f"{keyword} 원인과 해결 방법"
+    if any(x in kw for x in ["차이", "비교", "vs", "versus"]):
+        return f"{keyword} 어떻게 다른가"
+    if any(x in kw for x in ["초보", "처음", "입문", "기본 설정"]):
+        return f"{keyword} 처음 시작하는 방법"
+    if any(x in kw for x in ["자동화", "업무", "보고서", "반복"]):
+        return f"{keyword} 실무에서 바로 쓰는 법"
+    if any(x in kw for x in ["설정", "옵션", "세팅"]):
+        return f"{keyword} 제대로 설정하는 방법"
+    return f"{keyword} 사용할 때 알아야 할 것"
+
+
+def remove_history(df):
+    history_df = read_csv_safe(HISTORY_TOP10_PATH)
+
+    if history_df.empty or "keyword" not in history_df.columns:
         return df
 
-    if "keyword" not in history_df.columns:
+    past_keywords = set(history_df["keyword"].dropna().astype(str))
+    return df[~df["keyword"].astype(str).isin(past_keywords)].copy()
+
+
+def prepare_topics(df):
+    if df.empty:
         return df
 
-    past_keywords = set(history_df["keyword"].dropna().tolist())
+    df = df.copy()
 
-    return df[~df["keyword"].isin(past_keywords)].copy()
+    if "keyword" not in df.columns:
+        return pd.DataFrame()
+
+    if "final_score" not in df.columns:
+        if "trend_score" in df.columns:
+            df["final_score"] = pd.to_numeric(df["trend_score"], errors="coerce").fillna(0)
+        else:
+            df["final_score"] = 0
+
+    if "title" not in df.columns:
+        df["title"] = df["keyword"].apply(make_title)
+
+    if "created_at" not in df.columns:
+        df["created_at"] = datetime.now().strftime("%Y-%m-%d")
+
+    return df
 
 
-# =========================
-# 메인 함수
-# =========================
-
-def main():
-
-    print("TOPIC 생성 시작")
-
-    # -------------------------
-    # 입력 데이터 로드
-    # -------------------------
-    usable_path = DATA_DIR / "usable_keywords.csv"
-
-    if not usable_path.exists():
-        print("usable_keywords.csv 없음")
+def save_history(topics_df):
+    if topics_df.empty:
         return
 
-    usable_df = pd.read_csv(usable_path, encoding="utf-8-sig")
+    history_df = topics_df.copy()
+    history_df["selected_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # -------------------------
-    # history 로드
-    # -------------------------
-    if HISTORY_TOP10_PATH.exists():
-        history_df = pd.read_csv(HISTORY_TOP10_PATH, encoding="utf-8-sig")
-    else:
-        history_df = pd.DataFrame()
+    old_history_df = read_csv_safe(HISTORY_TOP10_PATH)
+    if not old_history_df.empty:
+        history_df = pd.concat([old_history_df, history_df], ignore_index=True)
 
-    # -------------------------
-    # 그룹 분류 (예시 기준)
-    # -------------------------
-    approved_df = usable_df[usable_df["final_score"] >= 120].copy()
-    hold_df = usable_df[
-        (usable_df["final_score"] >= 90) &
-        (usable_df["final_score"] < 120)
+    history_df.to_csv(HISTORY_TOP10_PATH, index=False, encoding="utf-8-sig")
+
+
+def main():
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    input_path = select_input_path()
+    print("[generate_topics.py] topic selection started")
+    print(f"input: {input_path}")
+
+    source_df = read_csv_safe(input_path)
+    source_df = prepare_topics(source_df)
+
+    if source_df.empty:
+        print("No usable keyword rows found.")
+        return
+
+    approved_df = source_df[source_df["final_score"] >= 80].copy()
+    hold_df = source_df[
+        (source_df["final_score"] >= 60) & (source_df["final_score"] < 80)
     ].copy()
-    rejected_df = usable_df[usable_df["final_score"] < 90].copy()
+    rejected_df = source_df[source_df["final_score"] < 60].copy()
 
-    # =========================
-    # 🔥 TOP10 생성 (핵심)
-    # =========================
+    top_pool_df = remove_history(source_df)
+    top10_df = top_pool_df.sort_values(by=["final_score"], ascending=False).head(TOPIC_COUNT).copy()
 
-    top10_pool_df = usable_df.copy()
+    approved_df.to_csv(DATA_DIR / "topic_approved.csv", index=False, encoding="utf-8-sig")
+    hold_df.to_csv(DATA_DIR / "topic_hold.csv", index=False, encoding="utf-8-sig")
+    rejected_df.to_csv(DATA_DIR / "topic_rejected.csv", index=False, encoding="utf-8-sig")
+    top10_df.to_csv(TOP10_PATH, index=False, encoding="utf-8-sig")
 
-    # 과거 TOP10 제거
-    top10_pool_df = remove_past_top10(top10_pool_df, history_df)
+    save_history(top10_df)
 
-    # 점수 기준 정렬 → 상위 12개
-    top10_df = top10_pool_df.sort_values(
-        by=["final_score"],
-        ascending=False
-    ).head(TOP10_COUNT).copy()
+    print("topic_top10.csv saved")
+    print(f"source rows: {len(source_df)}")
+    print(f"approved rows: {len(approved_df)}")
+    print(f"top rows: {len(top10_df)}")
+    print(f"output: {TOP10_PATH}")
 
-    # -------------------------
-    # 공통 컬럼 생성
-    # -------------------------
-    for df in [approved_df, hold_df, top10_df, rejected_df]:
-        if not df.empty:
-            df["title"] = df["keyword"].apply(generate_topic_title)
-            df["created_at"] = datetime.now().strftime("%Y-%m-%d")
-
-    # -------------------------
-    # 파일 저장
-    # -------------------------
-    approved_df.to_csv(DATA_DIR / "topics_approved.csv", index=False, encoding="utf-8-sig")
-    hold_df.to_csv(DATA_DIR / "topics_hold.csv", index=False, encoding="utf-8-sig")
-    top10_df.to_csv(DATA_DIR / "topic_top10.csv", index=False, encoding="utf-8-sig")
-    rejected_df.to_csv(DATA_DIR / "topics_rejected.csv", index=False, encoding="utf-8-sig")
-
-    # -------------------------
-    # TOP10 히스토리 저장
-    # -------------------------
-    if not top10_df.empty:
-
-        top10_history_df = top10_df.copy()
-        top10_history_df["selected_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-        if HISTORY_TOP10_PATH.exists():
-            old_history_df = pd.read_csv(HISTORY_TOP10_PATH, encoding="utf-8-sig")
-
-            top10_history_df = pd.concat(
-                [old_history_df, top10_history_df],
-                ignore_index=True
-            )
-
-        top10_history_df.to_csv(
-            HISTORY_TOP10_PATH,
-            index=False,
-            encoding="utf-8-sig"
-        )
-
-    # -------------------------
-    # 로그 출력
-    # -------------------------
-    print("완료")
-    print(f"전체 후보: {len(usable_df)}")
-    print(f"승인: {len(approved_df)}")
-    print(f"보류: {len(hold_df)}")
-    print(f"TOP10: {len(top10_df)}")
-    print(f"제외: {len(rejected_df)}")
-
-
-# =========================
-# 실행
-# =========================
 
 if __name__ == "__main__":
     main()

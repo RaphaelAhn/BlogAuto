@@ -3,22 +3,22 @@ import re
 import json
 import requests
 import pandas as pd
-from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from urllib.parse import quote
 
+from paths import DATA_DIR
 from topic_registry import load_existing_texts, normalize, read_csv_safe
 
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-ALLOWED_CATEGORIES_PATH = BASE_DIR / "data" / "allowed_categories.csv"
-KEYWORD_CANDIDATES_PATH = BASE_DIR / "data" / "keyword_candidates.csv"
-PREVIOUS_POSTS_PATH = BASE_DIR / "data" / "previous_posts.csv"
-QA_USED_PATH = BASE_DIR / "data" / "qa_used.csv"
-TOPIC_USED_PATH = BASE_DIR / "data" / "topic_used.csv"
+ALLOWED_CATEGORIES_PATH = DATA_DIR / "allowed_categories.csv"
+KEYWORD_CANDIDATES_PATH = DATA_DIR / "keyword_candidates.csv"
+PREVIOUS_POSTS_PATH = DATA_DIR / "previous_posts.csv"
+QA_USED_PATH = DATA_DIR / "qa_used.csv"
+TOPIC_USED_PATH = DATA_DIR / "topic_used.csv"
 
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
+if not PERPLEXITY_API_KEY:
+    print("[경고] PERPLEXITY_API_KEY 환경변수가 설정되지 않았습니다. Perplexity 수집을 건너뜁니다.")
 
 
 COLUMNS = [
@@ -159,6 +159,21 @@ def is_valid_keyword(keyword):
         "19금",
         "해킹",
         "마약",
+        # 교육과정/취업준비 — 검색량 낮고 수익성 낮음
+        "양성과정",
+        "커리큘럼",
+        "수료",
+        "부트캠프",
+        "bootcamp",
+        "취업 준비",
+        "취준",
+        "코딩테스트",
+        "코딩 테스트",
+        "면접 준비",
+        "면접 질문",
+        "신입 개발자",
+        "교육과정",
+        "학원",
     ]
 
     if any(word in keyword_lower for word in banned):
@@ -275,26 +290,53 @@ def get_naver_suggestions(query):
         return []
 
 
-def call_perplexity_questions(category, seed):
+def call_perplexity_questions(category, seed, existing_texts=None):
     if not PERPLEXITY_API_KEY:
         return []
 
-    prompt = f"""
-'{category}' 분야에서 사람들이 실제로 많이 궁금해할 만한 검색 주제 15개를 만들어줘.
+    if existing_texts:
+        existing_list = "\n".join(f"- {t}" for t in list(existing_texts)[:20])
+    else:
+        existing_list = "(없음)"
 
-조건:
-1. 글 제목으로 바꾸기 좋은 형태
-2. 문제 해결형, 사용법, 비교, 실무 활용 중심
-3. 너무 넓은 주제 금지
-4. 아래 JSON 배열 형식으로만 답변
+    prompt = f"""당신은 트래픽 중심 SEO 주제 설계 전문 에이전트입니다.
+
+[카테고리]
+{category}
+
+[기준 키워드]
+{seed}
+
+[이미 존재하는 글 목록 — 핵심 검색 의도가 겹치면 무조건 제외]
+{existing_list}
+
+새 주제를 15개 생성하세요.
+
+**핵심 목표: 실제 검색량이 많은 키워드 우선**
+- 대상 독자: 도구를 실제로 사용하는 일반 직장인, 학생, 콘텐츠 제작자
+- 우선 유형: 오류 해결, 사용 방법, 설정 팁, 도구 비교, 업무 자동화, 빠른 활용법
+- 반드시 제외: 교육과정, 양성과정, 커리큘럼, 부트캠프, 취업준비, 코딩테스트, 면접준비 관련 주제
+
+생성 규칙:
+1. 각 주제는 아래 3축 중 최소 2축이 기존 글과 달라야 합니다.
+   - 상황(Situation): 사용자가 처한 맥락 (예: 처음 설치, 공유 직전, 업무 중 오류)
+   - 문제(Problem): 사용자가 겪는 구체적 증상 (예: 저장 실패, 동기화 안됨, 권한 오류)
+   - 목적(Purpose): 사용자가 원하는 결과 (예: 빠른 해결, 재발 방지, 설정 최적화)
+2. 기존 글과 핵심 검색 의도가 1%라도 겹치면 즉시 제외합니다.
+3. 같은 기능이어도 상황이 다르면 별도 주제로 허용합니다.
+4. 같은 문제여도 사용 환경이 다르면 별도 주제로 허용합니다.
+
+반드시 아래 JSON 배열만 출력하세요. 설명 문장 금지.
 
 [
-  "키워드 또는 질문",
-  "키워드 또는 질문"
-]
-
-기준 키워드: {seed}
-"""
+  {{
+    "keyword": "검색 키워드",
+    "situation": "상황 한 줄",
+    "problem": "문제 한 줄",
+    "purpose": "목적 한 줄",
+    "why_different": "기존 글과 다른 이유 한 줄"
+  }}
+]"""
 
     headers = {
         "Authorization": f"Bearer {PERPLEXITY_API_KEY}",
@@ -312,37 +354,51 @@ def call_perplexity_questions(category, seed):
     }
 
     endpoints = [
-        "https://api.perplexity.ai/v1/sonar",
         "https://api.perplexity.ai/chat/completions",
+        "https://api.perplexity.ai/v1/sonar",
     ]
 
     for endpoint in endpoints:
-        try:
-            response = requests.post(
-                endpoint,
-                headers=headers,
-                json=body,
-                timeout=60,
-            )
+        for attempt in range(1, 3):
+            try:
+                response = requests.post(
+                    endpoint,
+                    headers=headers,
+                    json=body,
+                    timeout=60,
+                )
 
-            if response.status_code != 200:
+                if response.status_code != 200:
+                    break
+
+                data = response.json()
+                text = data["choices"][0]["message"]["content"]
+
+                match = re.search(r"\[.*?\]", text, re.DOTALL)
+
+                if not match:
+                    return []
+
+                parsed = json.loads(match.group(0))
+
+                if not isinstance(parsed, list):
+                    return []
+
+                results = []
+                for item in parsed:
+                    if isinstance(item, dict) and "keyword" in item:
+                        results.append({
+                            "keyword": str(item.get("keyword", "")).strip(),
+                            "why_different": str(item.get("why_different", "")).strip(),
+                        })
+                    elif isinstance(item, str) and item.strip():
+                        results.append({"keyword": item.strip(), "why_different": ""})
+                return results
+
+            except Exception:
+                if attempt == 2:
+                    break
                 continue
-
-            data = response.json()
-            text = data["choices"][0]["message"]["content"]
-
-            match = re.search(r"\[.*\]", text, re.DOTALL)
-
-            if not match:
-                return []
-
-            parsed = json.loads(match.group(0))
-
-            if isinstance(parsed, list):
-                return [str(x).strip() for x in parsed if str(x).strip()]
-
-        except Exception:
-            continue
 
     return []
 
@@ -384,7 +440,15 @@ def score_keyword(keyword):
     if len(keyword) >= 18:
         score += 10
 
-    return min(score, 100)
+    # 트래픽 최대화: 비교/추천은 검색량 높은 패턴
+    if any(x in keyword for x in ["차이", "비교", "vs", "추천", "단점", "장점"]):
+        score += 10
+
+    # 교육/취업 주제 감점 (필터 통과 시 점수 하락)
+    if any(x in keyword for x in ["양성과정", "커리큘럼", "수료", "부트캠프", "취업준비", "코딩테스트", "면접"]):
+        score -= 60
+
+    return min(max(score, 0), 100)
 
 
 def estimate_difficulty(keyword):
@@ -436,6 +500,12 @@ def is_duplicate_with_existing(keyword, existing_texts):
     return False
 
 
+def fetch_suggestions(seed_word_pair):
+    seed, word = seed_word_pair
+    query = f"{seed} {word}"
+    return get_google_suggestions(query), get_naver_suggestions(query)
+
+
 def collect_keywords():
     categories = load_categories()
     existing_texts = load_existing_texts()
@@ -449,13 +519,12 @@ def collect_keywords():
 
         print(f"\n[{category}] 키워드 수집 시작")
 
-        for seed in seeds:
-            for word in EXPAND_WORDS:
-                query = f"{seed} {word}"
+        queries = [(seed, word) for seed in seeds for word in EXPAND_WORDS]
 
-                google_items = get_google_suggestions(query)
-                naver_items = get_naver_suggestions(query)
-
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            future_to_query = {executor.submit(fetch_suggestions, pair): pair for pair in queries}
+            for future in as_completed(future_to_query):
+                google_items, naver_items = future.result()
                 for source, items in [
                     ("google_suggest", google_items),
                     ("naver_suggest", naver_items),
@@ -486,33 +555,35 @@ def collect_keywords():
                             "created_at": datetime.now().strftime("%Y-%m-%d"),
                         })
 
-            perplexity_items = call_perplexity_questions(category, seed)
+        representative_seed = seeds[0] if seeds else category
+        perplexity_items = call_perplexity_questions(category, representative_seed, existing_texts)
 
-            for keyword in perplexity_items:
-                keyword = str(keyword).strip()
+        for item in perplexity_items:
+            keyword = str(item.get("keyword", "")).strip()
+            why_different = str(item.get("why_different", "")).strip()
 
-                if not keyword:
-                    continue
+            if not keyword:
+                continue
 
-                if not is_valid_keyword(keyword):
-                    blocked_quality_count += 1
-                    continue
+            if not is_valid_keyword(keyword):
+                blocked_quality_count += 1
+                continue
 
-                if is_duplicate_with_existing(keyword, existing_texts):
-                    blocked_duplicate_count += 1
-                    continue
+            if is_duplicate_with_existing(keyword, existing_texts):
+                blocked_duplicate_count += 1
+                continue
 
-                rows.append({
-                    "category": category,
-                    "keyword": keyword,
-                    "source": "perplexity_questions",
-                    "search_intent": classify_intent(keyword),
-                    "trend_score": score_keyword(keyword),
-                    "difficulty": estimate_difficulty(keyword),
-                    "duplicate_risk": "low",
-                    "reason": make_reason(keyword),
-                    "created_at": datetime.now().strftime("%Y-%m-%d"),
-                })
+            rows.append({
+                "category": category,
+                "keyword": keyword,
+                "source": "perplexity_questions",
+                "search_intent": classify_intent(keyword),
+                "trend_score": score_keyword(keyword),
+                "difficulty": estimate_difficulty(keyword),
+                "duplicate_risk": "low",
+                "reason": why_different or make_reason(keyword),
+                "created_at": datetime.now().strftime("%Y-%m-%d"),
+            })
 
     df = pd.DataFrame(rows, columns=COLUMNS)
 
