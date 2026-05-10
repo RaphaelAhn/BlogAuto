@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import threading
@@ -15,6 +16,9 @@ from topic_registry import QA_USED_PATH
 QUEUE_PATH = DATA_DIR / "writing_queue.csv"
 TOP10_PATH = DATA_DIR / "topic_top10.csv"
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY") or os.getenv("CLAUDE_API_KEY")
+
 
 SIMILARITY_THRESHOLD = 0.55
 STRUCTURAL_THRESHOLD = 0.62
@@ -50,6 +54,7 @@ ALLOW_DRAFTED_FALLBACK = _get_bool_env("BLOGAUTO_INCLUDE_DRAFTED_FALLBACK", Fals
 USE_API_ON_RETRY = _get_bool_env("BLOGAUTO_USE_API_ON_RETRY", False)
 PARALLEL_WORKERS = _get_int_env("BLOGAUTO_PARALLEL_WORKERS", 1)
 MIN_KOREAN_CONTENT_CHARS = _get_int_env("BLOGAUTO_MIN_KOREAN_CHARS", 1500, minimum=1000)
+PIPELINE_VERIFY_RETRIES = _get_int_env("BLOGAUTO_PIPELINE_VERIFY_RETRIES", 2)
 
 _state_lock = threading.Lock()
 
@@ -2141,6 +2146,246 @@ def generate_article_via_api(row, plan):
     return None
 
 
+def generate_draft_via_codex(row, plan):
+    """1단계: gpt-4o로 1차 초안 생성."""
+    if not OPENAI_API_KEY:
+        return None
+
+    keyword = plan["keyword"]
+    profile = plan["profile"]
+    section_titles = plan["variant"]["section_titles"]
+
+    prompt = f"""당신은 실무 블로그 글 작성 전문가입니다.
+
+제목: {plan["title"]}
+핵심 키워드: {keyword}
+플랫폼: {clean_value(row.get("platform", ""), "platform")}
+주제 프로필: {profile["name"]}
+작업 흐름: {profile["workflow"]}
+주요 화면 요소: {", ".join(profile["surfaces"])}
+반드시 다룰 실무 장면 3가지:
+- {plan["scenarios"][0]}
+- {plan["scenarios"][1]}
+- {plan["scenarios"][2]}
+
+[필수 규칙]
+1. 한국어 본문 글자 수 최소 {MIN_KOREAN_CONTENT_CHARS:,}자 이상 (영어·숫자·기호·제목 제외)
+2. 각 한국어 문단 바로 다음에 대응하는 영어 문단을 붙일 것
+3. 섹션 순서: {" → ".join(section_titles)} → 정리
+4. 실무 장면은 정확히 3개, Q&A는 정확히 {plan["qa_count"]}개
+5. 범용적인 "메뉴 → 탭 → 설정" 패턴 금지, 주제 특화 용어 사용
+6. 다음 위험 요소를 자연스럽게 포함: {", ".join(profile["pitfalls"])}
+
+본문만 출력하세요."""
+
+    try:
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"},
+            json={"model": "gpt-4o", "messages": [{"role": "user", "content": prompt}], "max_tokens": 4096},
+            timeout=120,
+        )
+        if response.status_code != 200:
+            print(f"[codex] status={response.status_code}", flush=True)
+            return None
+        text = response.json()["choices"][0]["message"]["content"]
+        if count_korean_content_chars(text) >= MIN_KOREAN_CONTENT_CHARS:
+            return text
+    except Exception as e:
+        print(f"[codex] error: {e}", flush=True)
+    return None
+
+
+def refine_article_via_claude(draft, plan):
+    """2단계: Claude로 문법·자연스러움 수정. 내용은 유지."""
+    if not ANTHROPIC_API_KEY or not draft:
+        return draft
+
+    keyword = plan["keyword"]
+    prompt = f"""아래 블로그 글 초안을 검토하고 수정해주세요.
+
+수정 기준:
+1. 문법 오류 수정
+2. 어색한 한국어/영어 표현을 자연스럽게 개선
+3. 문단 간 흐름이 매끄럽게 이어지도록 수정
+4. 키워드 "{keyword}"의 맥락 일관성 유지
+5. 내용·구조·길이는 절대 변경하지 말 것
+
+원문:
+{draft}
+
+수정된 본문만 출력하세요."""
+
+    try:
+        response = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": ANTHROPIC_API_KEY,
+                "anthropic-version": "2023-06-01",
+                "Content-Type": "application/json",
+            },
+            json={"model": "claude-sonnet-4-6", "max_tokens": 4096, "messages": [{"role": "user", "content": prompt}]},
+            timeout=120,
+        )
+        if response.status_code != 200:
+            print(f"[claude-refine] status={response.status_code}", flush=True)
+            return draft
+        text = response.json()["content"][0]["text"]
+        if count_korean_content_chars(text) >= MIN_KOREAN_CONTENT_CHARS:
+            return text
+    except Exception as e:
+        print(f"[claude-refine] error: {e}", flush=True)
+    return draft
+
+
+def verify_article_via_perplexity(article, plan):
+    """3단계: Perplexity로 사실 정확성 + 중복 검증.
+    Returns: {"pass": bool, "corrections": str, "reason": str}
+    """
+    if not PERPLEXITY_API_KEY:
+        return {"pass": True, "corrections": "", "reason": "API 없음 — 통과"}
+
+    keyword = plan["keyword"]
+    excerpt = article[:2000]
+
+    prompt = f"""당신은 블로그 콘텐츠 검수 전문가입니다.
+아래 글을 두 가지 기준으로 검수하세요.
+
+[검수 대상]
+제목: {plan["title"]}
+키워드: {keyword}
+
+본문 (앞부분):
+{excerpt}
+
+[검수 기준]
+1. 사실 정확성: 잘못된 정보, 틀린 수치, 부정확한 기술 설명
+2. 중복/표절: 인터넷에 이미 있는 내용을 그대로 나열한 수준
+
+반드시 아래 JSON만 출력하세요. 설명 없이 JSON만.
+
+{{
+  "pass": true | false,
+  "corrections": "수정이 필요한 내용 구체적 설명 (없으면 빈 문자열)",
+  "reason": "검수 결과 한 줄 요약"
+}}
+
+판단 기준: 명백한 사실 오류가 없고 독창성이 있으면 pass true, 사실 오류나 심각한 중복이면 pass false."""
+
+    try:
+        response = requests.post(
+            "https://api.perplexity.ai/chat/completions",
+            headers={"Authorization": f"Bearer {PERPLEXITY_API_KEY}", "Content-Type": "application/json"},
+            json={"model": "sonar", "messages": [{"role": "user", "content": prompt}]},
+            timeout=60,
+        )
+        if response.status_code != 200:
+            return {"pass": True, "corrections": "", "reason": "API 오류 — 통과 처리"}
+        text = response.json()["choices"][0]["message"]["content"]
+        match = re.search(r"\{.*?\}", text, re.DOTALL)
+        if match:
+            result = json.loads(match.group(0))
+            if "pass" in result:
+                return result
+    except Exception as e:
+        print(f"[perplexity-verify] error: {e}", flush=True)
+    return {"pass": True, "corrections": "", "reason": "파싱 실패 — 통과 처리"}
+
+
+def apply_corrections_via_claude(article, corrections, plan):
+    """4단계: Perplexity 지적 사항을 Claude로 적용."""
+    if not ANTHROPIC_API_KEY or not corrections:
+        return article
+
+    keyword = plan["keyword"]
+    prompt = f"""아래 블로그 글에 검수 의견을 반영해 수정해주세요.
+
+[검수 의견]
+{corrections}
+
+[원문]
+{article}
+
+수정 기준:
+- 검수 의견에서 지적한 사항만 수정
+- 나머지 내용·구조·길이는 그대로 유지
+- 키워드 "{keyword}" 맥락 유지
+
+수정된 본문만 출력하세요."""
+
+    try:
+        response = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": ANTHROPIC_API_KEY,
+                "anthropic-version": "2023-06-01",
+                "Content-Type": "application/json",
+            },
+            json={"model": "claude-sonnet-4-6", "max_tokens": 4096, "messages": [{"role": "user", "content": prompt}]},
+            timeout=120,
+        )
+        if response.status_code != 200:
+            print(f"[claude-fix] status={response.status_code}", flush=True)
+            return article
+        text = response.json()["content"][0]["text"]
+        if count_korean_content_chars(text) >= MIN_KOREAN_CONTENT_CHARS:
+            return text
+    except Exception as e:
+        print(f"[claude-fix] error: {e}", flush=True)
+    return article
+
+
+def run_article_pipeline(row, plan):
+    """
+    5단계 파이프라인:
+      1. Codex(gpt-4o) 1차 초안
+      2. Claude 문법·자연스러움 수정
+      3. Perplexity 사실 정확성 + 중복 검증
+      4. (실패 시) Claude 수정 사항 적용
+      5. Perplexity 재검증 (최대 PIPELINE_VERIFY_RETRIES회)
+
+    Returns: (article_text, source_label)
+    """
+    keyword = clean_value(row.get("keyword", ""), "")
+
+    # 1단계: Codex 초안
+    print(f"[pipeline:1] codex draft keyword={keyword}", flush=True)
+    draft = generate_draft_via_codex(row, plan)
+    if draft:
+        source = "codex"
+    else:
+        print(f"[pipeline:1] codex failed → local render", flush=True)
+        draft = render_article_locally(row, plan)
+        source = "local"
+
+    # 2단계: Claude 다듬기
+    print(f"[pipeline:2] claude refine source={source}", flush=True)
+    article = refine_article_via_claude(draft, plan)
+    if article != draft:
+        source = f"{source}+claude"
+
+    # 3~5단계: Perplexity 검증 루프
+    for verify_num in range(PIPELINE_VERIFY_RETRIES):
+        print(f"[pipeline:3] perplexity verify attempt={verify_num + 1}", flush=True)
+        result = verify_article_via_perplexity(article, plan)
+        reason = result.get("reason", "")
+
+        if result.get("pass"):
+            print(f"[pipeline:3] verify passed reason={reason}", flush=True)
+            break
+
+        corrections = result.get("corrections", "")
+        print(f"[pipeline:4] claude fix attempt={verify_num + 1} corrections={corrections[:80]}", flush=True)
+
+        if verify_num < PIPELINE_VERIFY_RETRIES - 1:
+            article = apply_corrections_via_claude(article, corrections, plan)
+            source = f"{source}+fix{verify_num + 1}"
+        else:
+            print(f"[pipeline] max verify retries reached, using current version", flush=True)
+
+    return article, source
+
+
 def _timed(seconds: float) -> str:
     return f"{seconds:.1f}s"
 
@@ -2358,15 +2603,11 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
         with _state_lock:
             plan = build_article_plan(row, attempt, run_state=run_state, file_index=file_index)
 
-        # API 호출 - 잠금 없이 병렬 실행 (병목 구간)
-        used_api = bool(PERPLEXITY_API_KEY) and (attempt == 0 or USE_API_ON_RETRY)
-        print(f"[api] keyword={keyword} attempt={attempt+1} used_api={used_api}", flush=True)
-        api_started = time.perf_counter()
-        api_result = generate_article_via_api(row, plan) if used_api else None
-        api_elapsed = time.perf_counter() - api_started
-
-        article_source = "api" if api_result else "local"
-        article_text = api_result or render_article_locally(row, plan)
+        # 파이프라인 실행 - 잠금 없이 병렬 실행 (병목 구간)
+        print(f"[pipeline] keyword={keyword} attempt={attempt+1}", flush=True)
+        pipeline_started = time.perf_counter()
+        article_text, article_source = run_article_pipeline(row, plan)
+        pipeline_elapsed = time.perf_counter() - pipeline_started
         attempt_elapsed = time.perf_counter() - attempt_started_at
 
         # 유사도 검사 + 품질 평가 + 상태 갱신 - 직렬화
@@ -2374,7 +2615,7 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
             match, structural_match = checker.find_best_matches(article_text)
             quality_meta = evaluate_quality(plan, article_text, match, structural_match, run_state=run_state)
             quality_meta["article_source"] = article_source
-            quality_meta["api_elapsed_seconds"] = round(api_elapsed, 3)
+            quality_meta["api_elapsed_seconds"] = round(pipeline_elapsed, 3)
             quality_meta["attempt_elapsed_seconds"] = round(attempt_elapsed, 3)
 
             is_standard_ok = match.score < SIMILARITY_THRESHOLD
@@ -2384,7 +2625,7 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
             print(
                 f"[attempt] keyword={keyword} "
                 f"attempt={attempt + 1}/{MAX_REWRITE_ATTEMPTS} "
-                f"source={article_source} api={_timed(api_elapsed)} total={_timed(attempt_elapsed)} "
+                f"source={article_source} pipeline={_timed(pipeline_elapsed)} total={_timed(attempt_elapsed)} "
                 f"standard={match.score} structural={structural_match.score} penalty={quality_meta['total_penalty']}"
             )
 
@@ -2395,7 +2636,7 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
                 save_qa_used(plan["profile"]["name"], plan["questions"])
                 local_report.append(_build_similarity_row(row, plan, attempt + 1, "accepted", match, structural_match))
                 local_quality.append(_build_quality_row(row, plan, quality_meta, match, structural_match, "accepted", attempt + 1, run_dir))
-                print(f"[accepted] keyword={keyword} attempt={attempt + 1} source={article_source} total={_timed(attempt_elapsed)}")
+                print(f"[accepted] keyword={keyword} attempt={attempt + 1} source={article_source} pipeline={_timed(pipeline_elapsed)} total={_timed(attempt_elapsed)}")
                 return article_text, plan, match, structural_match, quality_meta, local_report, local_quality
 
             local_report.append(_build_similarity_row(row, plan, attempt + 1, "retry", match, structural_match))
