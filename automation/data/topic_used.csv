@@ -1,7 +1,19 @@
-﻿platform,title,keyword,search_intent,intent_core,intent_detail,status,created_at
-naver,엑셀 조건부 서식 쉽게 배우는 방법,엑셀 조건부 서식,실무 자동화,엑셀-조건부-서식,엑셀 조건부 서식을/를 실무 자동화 목적으로 쉽게 이해하고 활용,used,2026-04-24
-naver,엑셀 필터 사용법,엑셀 필터 사용법,데이터 정리,엑셀-필터-사용법,엑셀 필터 사용법을/를 데이터 정리 목적으로 쉽게 이해하고 활용,used,2026-04-24
-tistory,엑셀 피벗테이블 쉽게 배우는 방법,엑셀 피벗테이블,데이터 분석,엑셀-피벗테이블,엑셀 피벗테이블을/를 데이터 분석 목적으로 쉽게 이해하고 활용,used,2026-04-24
-naver,엑셀 중복값 제거 쉽게 배우는 방법,엑셀 중복값 제거,데이터 정리,엑셀-중복값-제거,엑셀 중복값 제거을/를 데이터 정리 목적으로 쉽게 이해하고 활용,used,2026-04-24
-blogspot,노션 일정 관리 쉽게 배우는 방법,노션 일정 관리,생산성 향상,노션-일정-관리,노션 일정 관리을/를 생산성 향상 목적으로 쉽게 이해하고 활용,used,2026-04-24
-tistory,노션 데이터베이스 쉽게 배우는 방법,노션 데이터베이스,업무 관리,노션-데이터베이스,노션 데이터베이스을/를 업무 관리 목적으로 쉽게 이해하고 활용,used,2026-04-25
+﻿platform,title,keyword,search_intent,intent_core,intent_detail,status,created_at,output_path
+naver,엑셀 조건부 서식 쉽게 배우는 방법,엑셀 조건부 서식,실무 자동화,엑셀-조건부-서식,엑셀 조건부 서식을/를 실무 자동화 목적으로 쉽게 이해하고 활용,used,2026-04-24,
+naver,엑셀 필터 사용법,엑셀 필터 사용법,데이터 정리,엑셀-필터-사용법,엑셀 필터 사용법을/를 데이터 정리 목적으로 쉽게 이해하고 활용,used,2026-04-24,
+tistory,엑셀 피벗테이블 쉽게 배우는 방법,엑셀 피벗테이블,데이터 분석,엑셀-피벗테이블,엑셀 피벗테이블을/를 데이터 분석 목적으로 쉽게 이해하고 활용,used,2026-04-24,
+naver,엑셀 중복값 제거 쉽게 배우는 방법,엑셀 중복값 제거,데이터 정리,엑셀-중복값-제거,엑셀 중복값 제거을/를 데이터 정리 목적으로 쉽게 이해하고 활용,used,2026-04-24,
+blogspot,노션 일정 관리 쉽게 배우는 방법,노션 일정 관리,생산성 향상,노션-일정-관리,노션 일정 관리을/를 생산성 향상 목적으로 쉽게 이해하고 활용,used,2026-04-24,
+tistory,노션 데이터베이스 쉽게 배우는 방법,노션 데이터베이스,업무 관리,노션-데이터베이스,노션 데이터베이스을/를 업무 관리 목적으로 쉽게 이해하고 활용,used,2026-04-25,
+naver,노션 템플릿 만들기 반복 업무 표준화 방법,노션 템플릿 만들기,업무 자동화,노션-템플릿-만들기,노션 템플릿 만들기을/를 업무 자동화 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\01_naver_노션_템플릿_만들기_반복_업무_표준화_방법.txt
+blogspot_en,PPT 애니메이션 효과 실무 작업 흐름 가이드,PPT 애니메이션 효과,발표 개선,ppt-애니메이션-효과,PPT 애니메이션 효과을/를 발표 개선 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\02_blogspot_en_PPT_애니메이션_효과_실무_작업_흐름_가이드.txt
+blogspot_en,PPT 슬라이드 번호 넣기 실무 작업 흐름 가이드,PPT 슬라이드 번호 넣기,문서 정리,ppt-슬라이드-번호-넣기,PPT 슬라이드 번호 넣기을/를 문서 정리 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\03_blogspot_en_PPT_슬라이드_번호_넣기_실무_작업_흐름_가이드.txt
+naver,워드 자동 목차 실무 작업 흐름 가이드,워드 자동 목차,보고서 작성,워드-자동-목차,워드 자동 목차을/를 보고서 작성 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\04_naver_워드_자동_목차_실무_작업_흐름_가이드.txt
+naver,워드 표 만들기 실무 작업 흐름 가이드,워드 표 만들기,문서 작업,워드-표-만들기,워드 표 만들기을/를 문서 작업 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\05_naver_워드_표_만들기_실무_작업_흐름_가이드.txt
+naver,워드 페이지 번호 실무 작업 흐름 가이드,워드 페이지 번호,문서 정리,워드-페이지-번호,워드 페이지 번호을/를 문서 정리 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\06_naver_워드_페이지_번호_실무_작업_흐름_가이드.txt
+naver,피그마 오토레이아웃 실무 작업 흐름 가이드,피그마 오토레이아웃,디자인 작업,피그마-오토레이아웃,피그마 오토레이아웃을/를 디자인 작업 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\07_naver_피그마_오토레이아웃_실무_작업_흐름_가이드.txt
+naver,피그마 컴포넌트 실무 작업 흐름 가이드,피그마 컴포넌트,디자인 시스템,피그마-컴포넌트,피그마 컴포넌트을/를 디자인 시스템 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\08_naver_피그마_컴포넌트_실무_작업_흐름_가이드.txt
+naver,유니티 씬 전환 실무 작업 흐름 가이드,유니티 씬 전환,게임 개발,유니티-씬-전환,유니티 씬 전환을/를 게임 개발 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\09_naver_유니티_씬_전환_실무_작업_흐름_가이드.txt
+naver,유니티 프리팹 반복 업무 표준화 방법,유니티 프리팹,게임 오브젝트 관리,유니티-프리팹,유니티 프리팹을/를 게임 오브젝트 관리 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\10_naver_유니티_프리팹_반복_업무_표준화_방법.txt
+naver,언리얼 블루프린트 실무 작업 흐름 가이드,언리얼 블루프린트,게임 개발,언리얼-블루프린트,언리얼 블루프린트을/를 게임 개발 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\11_naver_언리얼_블루프린트_실무_작업_흐름_가이드.txt
+naver,언리얼 레벨 스트리밍 실무 작업 흐름 가이드,언리얼 레벨 스트리밍,레벨 디자인,언리얼-레벨-스트리밍,언리얼 레벨 스트리밍을/를 레벨 디자인 목적으로 쉽게 이해하고 활용,drafted,2026-05-03,C:\Users\ahnse\OneDrive\바탕 화면\VScode\Blog\BlogAuto\automation\output\2026-05-05_1\12_naver_언리얼_레벨_스트리밍_실무_작업_흐름_가이드.txt

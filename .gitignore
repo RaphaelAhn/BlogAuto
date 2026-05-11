@@ -1,0 +1,12 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+
+BlogAuto.log
+logs/
+automation/content/
+automation/output/
+
+build/
+dist/

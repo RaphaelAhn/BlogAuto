@@ -1,5 +1,6 @@
 import pandas as pd
 
+from notion_sync import sync_articles_to_notion
 import refine_drafts_ai
 from paths import DATA_DIR
 from topic_registry import append_topic_used, normalize
@@ -32,6 +33,9 @@ def main():
         print("No rows to append into topic_used.csv.")
         return
 
+    notion_results = sync_articles_to_notion(source_df.to_dict("records"))
+    notion_map = {normalize(item.get("keyword", "")): item for item in notion_results if item.get("keyword")}
+
     topic_rows = []
     processed_keywords = []
 
@@ -39,6 +43,7 @@ def main():
         keyword = str(row.get("keyword", "")).strip()
         if not keyword:
             continue
+        notion_result = notion_map.get(normalize(keyword), {})
 
         title = str(row.get("title", "")).strip() or keyword
         topic_rows.append({
@@ -60,6 +65,10 @@ def main():
             "total_penalty": row.get("total_penalty", ""),
             "decision": str(row.get("decision", "drafted")).strip(),
             "decision_reason": str(row.get("decision_reason", "")).strip(),
+            "notion_page_id": str(notion_result.get("page_id", "")).strip(),
+            "notion_page_url": str(notion_result.get("page_url", "")).strip(),
+            "notion_sync_status": str(notion_result.get("status", "disabled")).strip(),
+            "notion_synced_at": str(notion_result.get("synced_at", "")).strip(),
         })
         processed_keywords.append(keyword)
 

@@ -1,23 +1,24 @@
 import hashlib
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
-from pathlib import Path
 from urllib.parse import urlparse
 
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
+from paths import DATA_DIR
+from topic_registry import read_csv_safe as _read_csv_safe, build_intent_core, build_intent_detail
+
 
 # ==============================
 # 1. 기본 경로 설정
 # ==============================
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-PREVIOUS_POSTS_PATH = BASE_DIR / "data" / "previous_posts.csv"
-QA_USED_PATH = BASE_DIR / "data" / "qa_used.csv"
-CRAWL_LOG_PATH = BASE_DIR / "data" / "crawl_run_log.csv"
+PREVIOUS_POSTS_PATH = DATA_DIR / "previous_posts.csv"
+QA_USED_PATH = DATA_DIR / "qa_used.csv"
+CRAWL_LOG_PATH = DATA_DIR / "crawl_run_log.csv"
 
 CRAWL_INTERVAL_DAYS = 14
 
@@ -99,10 +100,7 @@ LOG_COLUMNS = [
 # ==============================
 
 def read_csv_safe(path, columns):
-    if not path.exists() or path.stat().st_size == 0:
-        return pd.DataFrame(columns=columns)
-
-    return pd.read_csv(path, encoding="utf-8-sig")
+    return _read_csv_safe(path, columns)
 
 
 # ==============================
@@ -164,20 +162,20 @@ def save_crawl_log(platform, collected_count, new_count, status, message):
 # 7. HTML / XML 가져오기
 # ==============================
 
-def fetch(url):
-    headers = {
-        "User-Agent": "Mozilla/5.0"
-    }
+def fetch(url, retries=3):
+    headers = {"User-Agent": "Mozilla/5.0"}
 
-    try:
-        response = requests.get(url, headers=headers, timeout=20)
-        response.raise_for_status()
-        return response.text
-
-    except Exception as e:
-        print(f"[수집 실패] {url}")
-        print(e)
-        return ""
+    for attempt in range(1, retries + 1):
+        try:
+            response = requests.get(url, headers=headers, timeout=20)
+            response.raise_for_status()
+            return response.text
+        except Exception as e:
+            if attempt == retries:
+                print(f"[수집 실패] {url} ({attempt}회 시도 후 포기)")
+                print(e)
+            # 마지막 시도가 아니면 조용히 재시도
+    return ""
 
 
 # ==============================
@@ -465,56 +463,33 @@ def hash_question(question):
 
 
 # ==============================
-# 15. intent / keyword 생성
+# 15. 글 수집 실행 단위
+# ==============================
+
+def _fetch_post(post, platform):
+    title = post.get("title", "")
+    url = post.get("url", "")
+    content_hint = post.get("content_hint", "")
+
+    if not title:
+        title = get_title_from_page(url)
+    if not title:
+        title = "제목 없음"
+
+    content = get_content_from_page(url, platform, content_hint)
+    return title, url, content
+
+
+# ==============================
+# 16. intent / keyword 생성
 # ==============================
 
 def make_intent_core(title):
-    title = str(title)
-
-    remove_words = [
-        "방법",
-        "사용법",
-        "활용법",
-        "정리",
-        "가이드",
-        "쉽게",
-        "기본",
-        "완벽",
-    ]
-
-    for word in remove_words:
-        title = title.replace(word, "")
-
-    words = title.strip().split()
-
-    if not words:
-        return "general"
-
-    return "-".join(words[:4])
+    return build_intent_core(title)
 
 
 def make_intent_detail(title):
-    title = str(title)
-
-    if "엑셀" in title or "Excel" in title:
-        return "엑셀 기능을 실무에서 쉽게 사용하는 방법"
-
-    if "파이썬" in title or "Python" in title:
-        return "파이썬 기능을 기초부터 실무까지 활용하는 방법"
-
-    if "노션" in title or "Notion" in title:
-        return "노션 기능을 업무와 일정 관리에 활용하는 방법"
-
-    if "PPT" in title or "PowerPoint" in title or "파워포인트" in title:
-        return "발표 자료 제작 기능을 쉽게 사용하는 방법"
-
-    if "Windows" in title or "윈도우" in title:
-        return "윈도우 오류를 원인부터 해결하는 방법"
-
-    if "Canva" in title or "캔바" in title:
-        return "캔바 기능을 디자인 작업에 활용하는 방법"
-
-    return "IT 기능을 쉽게 이해하고 활용하는 방법"
+    return build_intent_detail(title, "")
 
 
 def extract_keywords(title):
@@ -603,48 +578,40 @@ def main():
 
         platform_posts = []
         platform_qas = []
+        today = datetime.now().strftime("%Y-%m-%d")
 
-        for index, post in enumerate(posts, start=1):
-            title = post.get("title", "")
-            url = post.get("url", "")
-            content_hint = post.get("content_hint", "")
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            future_to_post = {executor.submit(_fetch_post, post, platform): post for post in posts}
+            for index, future in enumerate(as_completed(future_to_post), start=1):
+                title, url, content = future.result()
+                print(f"{index}. {title}")
 
-            if not title:
-                title = get_title_from_page(url)
+                questions = extract_questions(content)
+                intent_core = make_intent_core(title)
+                intent_detail = make_intent_detail(title)
 
-            if not title:
-                title = "제목 없음"
-
-            print(f"{index}. {title}")
-
-            content = get_content_from_page(url, platform, content_hint)
-            questions = extract_questions(content)
-
-            intent_core = make_intent_core(title)
-            intent_detail = make_intent_detail(title)
-
-            platform_posts.append({
-                "platform": platform,
-                "title": title,
-                "url": url,
-                "content": content,
-                "qa_questions": " | ".join(questions),
-                "keywords": extract_keywords(title),
-                "intent_core": intent_core,
-                "intent_detail": intent_detail,
-                "language": language,
-                "created_at": datetime.now().strftime("%Y-%m-%d"),
-            })
-
-            for question in questions:
-                platform_qas.append({
+                platform_posts.append({
                     "platform": platform,
-                    "post_title": title,
-                    "question": question,
-                    "question_hash": hash_question(question),
+                    "title": title,
+                    "url": url,
+                    "content": content,
+                    "qa_questions": " | ".join(questions),
+                    "keywords": extract_keywords(title),
                     "intent_core": intent_core,
-                    "created_at": datetime.now().strftime("%Y-%m-%d"),
+                    "intent_detail": intent_detail,
+                    "language": language,
+                    "created_at": today,
                 })
+
+                for question in questions:
+                    platform_qas.append({
+                        "platform": platform,
+                        "post_title": title,
+                        "question": question,
+                        "question_hash": hash_question(question),
+                        "intent_core": intent_core,
+                        "created_at": today,
+                    })
 
         platform_posts_df = pd.DataFrame(platform_posts, columns=PREVIOUS_COLUMNS)
         platform_qas_df = pd.DataFrame(platform_qas, columns=QA_COLUMNS)
@@ -679,8 +646,16 @@ def main():
         qa_df = pd.concat([qa_df, add_qas_df], ignore_index=True)
         qa_df = qa_df.drop_duplicates(subset=["question_hash"])
 
-    previous_df.to_csv(PREVIOUS_POSTS_PATH, index=False, encoding="utf-8-sig")
-    qa_df.to_csv(QA_USED_PATH, index=False, encoding="utf-8-sig")
+    for df, path in [(previous_df, PREVIOUS_POSTS_PATH), (qa_df, QA_USED_PATH)]:
+        tmp_path = path.with_suffix(".tmp")
+        try:
+            df.to_csv(tmp_path, index=False, encoding="utf-8-sig")
+            tmp_path.replace(path)
+        except Exception as e:
+            print(f"[오류] {path.name} 저장 실패: {e}")
+            if tmp_path.exists():
+                tmp_path.unlink()
+            raise
 
     print("\n전체 블로그 기존 글 수집 완료")
     print(f"previous_posts.csv 전체 글 수: {len(previous_df)}")

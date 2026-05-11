@@ -2674,6 +2674,7 @@ def _save_article_file(row, plan, quality_meta, match, structural_match, article
 
     row_dict = row.to_dict()
     row_dict["title"] = plan["title"]
+    row_dict["article_text"] = article_text
     row_dict["output_path"] = str(final_path)
     row_dict["structure_variant"] = plan["variant"]["name"]
     row_dict["structure_slot"] = quality_meta["structure_slot"]
