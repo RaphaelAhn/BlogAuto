@@ -2,9 +2,19 @@
 .uv-cache/
 __pycache__/
 *.py[cod]
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+secrets.toml
+*.pem
+*.key
+*.p12
+*.pfx
 
 BlogAuto.log
 logs/
+*.log
 automation/content/
 automation/output/
 
