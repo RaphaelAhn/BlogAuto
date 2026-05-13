@@ -1,6 +1,7 @@
 import os
 import re
 from datetime import datetime
+from urllib.parse import unquote
 
 import requests
 
@@ -34,6 +35,45 @@ def _normalize_keyword(value) -> str:
     text = str(value or "").lower()
     text = re.sub(r"\s+", "", text)
     return text.replace("-", "").replace("_", "").strip()
+
+
+def _normalize_notion_id(raw_value: str) -> str:
+    value = unquote(str(raw_value or "").strip())
+    if not value:
+        return ""
+
+    if re.fullmatch(r"[0-9a-fA-F]{32}", value):
+        return value.lower()
+    if re.fullmatch(r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}", value):
+        return value.lower()
+
+    matches = re.findall(
+        r"[0-9a-fA-F]{32}|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+        value,
+    )
+    if matches:
+        return matches[-1].lower()
+
+    return value
+
+
+def _get_preferred_notion_parent() -> tuple[str, str]:
+    data_source_id = _normalize_notion_id(os.getenv("NOTION_DATA_SOURCE_ID", ""))
+    database_id = _normalize_notion_id(os.getenv("NOTION_DATABASE_ID", ""))
+
+    if data_source_id:
+        return "data_source_id", data_source_id
+    if database_id:
+        return "database_id", database_id
+
+    parent_type = os.getenv("NOTION_PARENT_TYPE", "").strip()
+    parent_id = _normalize_notion_id(os.getenv("NOTION_PARENT_ID", ""))
+    if parent_type == "data_source_id" and parent_id:
+        return "data_source_id", parent_id
+    if parent_type == "database_id" and parent_id:
+        return "database_id", parent_id
+
+    return "", ""
 
 
 def _chunk_text(text: str, limit: int = 1900) -> list[str]:
@@ -224,39 +264,50 @@ def _request(method: str, url: str, api_key: str, **kwargs):
     raise RuntimeError(f"Notion API {response.status_code}: {message}")
 
 
+def _extract_first_data_source_id(database_payload: dict) -> str:
+    data_sources = database_payload.get("data_sources") or []
+    if not data_sources:
+        return ""
+    return _normalize_notion_id(data_sources[0].get("id", ""))
+
+
+def _resolve_data_source_from_database(api_key: str, database_id: str) -> dict:
+    database = _request("GET", f"{NOTION_API_BASE}/databases/{database_id}", api_key)
+    data_source_id = _extract_first_data_source_id(database)
+    if not data_source_id:
+        raise RuntimeError(
+            "Notion 데이터베이스 아래의 data source ID를 찾지 못했습니다. "
+            "현재 API 버전(2026-03-11)에서는 database가 아니라 data source를 기준으로 행을 조회해야 합니다."
+        )
+
+    data_source = _request("GET", f"{NOTION_API_BASE}/data_sources/{data_source_id}", api_key)
+    return {
+        "type": "data_source_id",
+        "id": data_source_id,
+        "database_id": database_id,
+        "schema": data_source.get("properties") or {},
+    }
+
+
 def _resolve_parent(api_key: str) -> dict | None:
-    parent_type = os.getenv("NOTION_PARENT_TYPE", "").strip()
-    parent_id = os.getenv("NOTION_PARENT_ID", "").strip()
-    data_source_id = os.getenv("NOTION_DATA_SOURCE_ID", "").strip()
-    database_id = os.getenv("NOTION_DATABASE_ID", "").strip()
-
-    if data_source_id:
-        return {"type": "data_source_id", "id": data_source_id, "schema_id": data_source_id}
-
+    parent_type, parent_id = _get_preferred_notion_parent()
     if parent_type == "data_source_id" and parent_id:
-        return {"type": "data_source_id", "id": parent_id, "schema_id": parent_id}
-
-    if database_id:
-        database = _request("GET", f"{NOTION_API_BASE}/databases/{database_id}", api_key)
-        data_sources = database.get("data_sources") or []
-        schema_id = data_sources[0].get("id") if data_sources else database_id
-        return {"type": "database_id", "id": database_id, "schema_id": schema_id}
+        try:
+            data_source = _request("GET", f"{NOTION_API_BASE}/data_sources/{parent_id}", api_key)
+            return {"type": "data_source_id", "id": parent_id, "schema": data_source.get("properties") or {}}
+        except RuntimeError as exc:
+            if "404" not in str(exc):
+                raise
+            return _resolve_data_source_from_database(api_key, parent_id)
 
     if parent_type == "database_id" and parent_id:
-        database = _request("GET", f"{NOTION_API_BASE}/databases/{parent_id}", api_key)
-        data_sources = database.get("data_sources") or []
-        schema_id = data_sources[0].get("id") if data_sources else parent_id
-        return {"type": "database_id", "id": parent_id, "schema_id": schema_id}
+        return _resolve_data_source_from_database(api_key, parent_id)
 
     return None
 
 
 def _retrieve_schema(api_key: str, parent: dict) -> dict[str, dict]:
-    schema_id = parent.get("schema_id", "")
-    if not schema_id:
-        return {}
-    data_source = _request("GET", f"{NOTION_API_BASE}/data_sources/{schema_id}", api_key)
-    return data_source.get("properties") or {}
+    return parent.get("schema") or {}
 
 
 def _find_property_name(schema: dict[str, dict], configured_name: str) -> str:
@@ -353,7 +404,7 @@ def _create_page(api_key: str, parent: dict, properties: dict, content_blocks: l
         "properties": properties,
     }
     if first_batch:
-        payload["content"] = first_batch
+        payload["children"] = first_batch
 
     page = _request("POST", f"{NOTION_API_BASE}/pages", api_key, json=payload)
     remaining = content_blocks[80:]
@@ -365,6 +416,114 @@ def _create_page(api_key: str, parent: dict, properties: dict, content_blocks: l
         _request("PATCH", f"{NOTION_API_BASE}/blocks/{page_id}/children", api_key, json={"children": batch})
 
     return page
+
+
+def fetch_all_database_page_ids() -> list[str]:
+    """NOTION_DATABASE_ID에 있는 모든 페이지 ID를 직접 조회합니다.
+    실패 시 RuntimeError를 발생시킵니다 (호출자가 처리)."""
+    api_key = os.getenv("NOTION_API_KEY", "").strip()
+    parent_type, parent_id = _get_preferred_notion_parent()
+    if not api_key:
+        raise RuntimeError("NOTION_API_KEY가 설정되지 않았습니다.")
+    if not parent_id:
+        raise RuntimeError("NOTION_DATA_SOURCE_ID 또는 NOTION_DATABASE_ID가 설정되지 않았습니다.")
+
+    page_ids: list[str] = []
+    payload: dict = {"page_size": 100}
+
+    while True:
+        if parent_type == "database_id":
+            query_url = f"{NOTION_API_BASE}/databases/{parent_id}/query"
+        else:
+            query_url = f"{NOTION_API_BASE}/data_sources/{parent_id}/query"
+
+        try:
+            result = _request(
+                "POST",
+                query_url,
+                api_key,
+                json=payload,
+            )
+        except RuntimeError as exc:
+            if parent_type != "data_source_id" or "404" not in str(exc):
+                raise
+            parent_type = "database_id"
+            result = _request(
+                "POST",
+                f"{NOTION_API_BASE}/databases/{parent_id}/query",
+                api_key,
+                json=payload,
+            )
+        for page in result.get("results", []):
+            pid = str(page.get("id", "")).strip()
+            if pid:
+                page_ids.append(pid)
+
+        if not result.get("has_more"):
+            break
+        payload["start_cursor"] = result.get("next_cursor")
+
+    print(f"[notion] fetched {len(page_ids)} page IDs from database")
+    return page_ids
+
+
+def fetch_all_database_page_ids() -> list[str]:
+    """Resolve the configured Notion parent to a data source and fetch page IDs from it."""
+    api_key = os.getenv("NOTION_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("NOTION_API_KEY가 설정되지 않았습니다.")
+
+    parent = _resolve_parent(api_key)
+    if not parent:
+        raise RuntimeError("NOTION_DATA_SOURCE_ID 또는 NOTION_DATABASE_ID가 설정되지 않았습니다.")
+
+    parent_id = str(parent.get("id", "")).strip()
+    page_ids: list[str] = []
+    payload: dict = {"page_size": 100}
+
+    while True:
+        result = _request(
+            "POST",
+            f"{NOTION_API_BASE}/data_sources/{parent_id}/query",
+            api_key,
+            json=payload,
+        )
+        for page in result.get("results", []):
+            pid = str(page.get("id", "")).strip()
+            if pid:
+                page_ids.append(pid)
+
+        if not result.get("has_more"):
+            break
+        payload["start_cursor"] = result.get("next_cursor")
+
+    print(f"[notion] fetched {len(page_ids)} page IDs from database")
+    return page_ids
+
+
+def archive_notion_pages(page_ids: list[str]) -> list[dict]:
+    api_key = os.getenv("NOTION_API_KEY", "").strip()
+    results = []
+    for page_id in page_ids:
+        pid = str(page_id or "").strip()
+        if not pid:
+            continue
+        if not api_key:
+            results.append({"page_id": pid, "status": "disabled"})
+            continue
+        try:
+            _request(
+                "PATCH",
+                f"{NOTION_API_BASE}/pages/{pid}",
+                api_key,
+                json={"in_trash": True},
+            )
+            results.append({"page_id": pid, "status": "archived"})
+            print(f"[notion] deleted: {pid}")
+        except Exception as exc:
+            results.append({"page_id": pid, "status": "failed", "error": str(exc)})
+            print(f"[notion] delete failed: {pid} -> {exc}")
+    return results
 
 
 def sync_articles_to_notion(rows: list[dict]) -> list[dict]:
