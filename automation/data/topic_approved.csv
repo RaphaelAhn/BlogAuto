@@ -28,6 +28,7 @@ python,파이썬 함수 매개변수 기본값 설정,perplexity_questions,how_t
 notion,노션 협업 시 충돌 해결 및 버전 관리,perplexity_questions,problem_solving,100,low,low,2026-05-13,기존 글은 기본 공유만 다루고 실시간 협업 충돌 해결 미포함,100,error_solution,오류 해결형,노션 협업 시 충돌 해결 및 버전 관리 원인과 해결 방법
 office365,오피스365 아웃룩 자동응답 설정 안됨,perplexity_questions,problem_solving,100,low,low,2026-05-13,엑셀 데이터 비교 아닌 메일 자동화 설정,100,error_solution,오류 해결형,오피스365 아웃룩 자동응답 설정 안됨 해결 전에 먼저 확인할 것
 blender,블렌더 초보자 자주 하는 오류 5가지,perplexity_questions,problem_solving,100,low,low,2026-05-13,"기존 글들은 개별 기능 설명만 하고, 이 글은 초보자 자주 하는 오류 패턴 정리",100,error_solution,오류 해결형,블렌더 초보자 자주 하는 오류 5가지 자주 생기는 이유와 점검 순서
+office365,onedrive 동기화 보류중 해결방법,google_suggest,problem_solving,100,low,low,2026-05-15,문제 해결형 검색어라 방문 의도가 강합니다.,100,error_solution,오류 해결형,onedrive 동기화 보류중 해결방법 원인과 해결 방법
 unity,Unity 오류 사용법,naver_suggest,problem_solving,100,medium,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,100,error_solution,오류 해결형,Unity 오류 사용법 문제를 줄이는 실무 처리 순서
 unity,Unity 오류 자동화,naver_suggest,problem_solving,100,medium,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,100,error_solution,오류 해결형,Unity 오류 자동화 문제를 줄이는 실무 처리 순서
 general_it,윈도우 오류 로그 확인 방법,google_suggest,problem_solving,100,medium,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,100,error_solution,오류 해결형,윈도우 오류 로그 확인 방법 자주 생기는 이유와 점검 순서
@@ -280,6 +281,7 @@ office365,오피스365 엑셀 차트 업데이트 안됨,perplexity_questions,pr
 office365,오피스365 문서 변환 PDF 오류,perplexity_questions,problem_solving,95,low,low,2026-05-13,엑셀 자동화와 다른 문서 변환 문제 해결,95,error_solution,오류 해결형,오피스365 문서 변환 PDF 오류 자주 생기는 이유와 점검 순서
 blender,블렌더 UV 맵핑 비틀림 현상 해결,perplexity_questions,problem_solving,95,low,low,2026-05-13,기존 글에 없는 UV 맵핑 트러블슈팅 주제,95,error_solution,오류 해결형,블렌더 UV 맵핑 비틀림 현상 해결 문제를 줄이는 실무 처리 순서
 python,파이썬 numpy 배열 연산 오류,perplexity_questions,problem_solving,95,low,low,2026-05-13,Set/리스트 기본과 달리 numpy 고급 연산,95,error_solution,오류 해결형,파이썬 numpy 배열 연산 오류 문제를 줄이는 실무 처리 순서
+canva,캔바 애니메이션 export 오류,perplexity_questions,problem_solving,95,low,low,2026-05-15,기존 질문 전략과 무관한 export 기술 문제,95,error_solution,오류 해결형,캔바 애니메이션 export 오류 원인과 해결 방법
 unity,Unity 오류 정리,naver_suggest,problem_solving,95,medium,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,error_solution,오류 해결형,Unity 오류 정리 원인과 해결 방법
 unity,Unity 오류 실무,naver_suggest,problem_solving,95,medium,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,error_solution,오류 해결형,Unity 오류 실무 해결 전에 먼저 확인할 것
 unity,Unity 오류 활용,naver_suggest,problem_solving,95,medium,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,error_solution,오류 해결형,Unity 오류 활용 자주 생기는 이유와 점검 순서
@@ -326,6 +328,8 @@ notion,노션 사용법 정리 pdf,google_suggest,how_to,95,medium,low,2026-05-1
 trello,트렐로 자동화 Butler 설정,perplexity_questions,how_to,95,medium,low,2026-05-12,기존 글의 노션 페이지나 파이썬 Set과 다른 트렐로 자동화 오류,95,feature_explanation,기능 설명형,트렐로 자동화 Butler 설정 처음 시작할 때 알아두면 좋은 사용법
 jira,지라 자동화 규칙 설정 실전,perplexity_questions,how_to,95,medium,low,2026-05-12,기존 영상은 자동화 Top 3 기능만 소개하고 실제 설정 튜토리얼은 없음,95,feature_explanation,기능 설명형,지라 자동화 규칙 설정 실전 기본 개념부터 적용 방법까지 정리
 unreal,언리얼 LOD 설정 자동화,perplexity_questions,how_to,95,medium,low,2026-05-12,KPI 자동 비교와 무관한 LOD 최적화,95,feature_explanation,기능 설명형,언리얼 LOD 설정 자동화 기능과 사용 방법 쉽게 설명
+unreal,언리얼엔진 LOD 설정 자동화,perplexity_questions,how_to,95,medium,low,2026-05-15,LOD 최적화 목적으로 초보 렌더링과 구분,95,feature_explanation,기능 설명형,언리얼엔진 LOD 설정 자동화 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 필터 자동화 설정,perplexity_questions,how_to,95,medium,low,2026-05-15,"기존 글은 카테고리 분류만 다루고, 시간 기반 자동 필터링은 미포함",95,feature_explanation,기능 설명형,노션 필터 자동화 설정 기본 개념부터 적용 방법까지 정리
 excel,엑셀 파일 손상 시 Microsoft Office 복구 도구 활용,perplexity_questions,practical,90,low,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,90,practical_usage,실무 활용형,엑셀 파일 손상 시 Microsoft Office 복구 도구 활용 실무에서 바로 쓰는 방법
 notion,노션으로 개인 재정 관리 대시보드 구축하기,perplexity_questions,practical,90,low,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,90,practical_usage,실무 활용형,노션으로 개인 재정 관리 대시보드 구축하기 실무에서 바로 쓰는 방법
 notion,노션 공식 템플릿 커스터마이징 실무 가이드,perplexity_questions,practical,90,low,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,90,practical_usage,실무 활용형,노션 공식 템플릿 커스터마이징 실무 가이드 업무에 적용하는 단계별 방법
@@ -471,6 +475,7 @@ notion,노션 문제 만들기,google_suggest,problem_solving,90,medium,low,2026
 figma,피그마 기본 폰트 설정,google_suggest,how_to,90,medium,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,90,feature_explanation,기능 설명형,피그마 기본 폰트 설정 기본 개념부터 적용 방법까지 정리
 figma,figma 기본 사용법,google_suggest,how_to,90,medium,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,90,feature_explanation,기능 설명형,figma 기본 사용법 기능과 사용 방법 쉽게 설명
 figma,figma 기본 폰트 설정,google_suggest,how_to,90,medium,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,90,feature_explanation,기능 설명형,figma 기본 폰트 설정 기본 개념부터 적용 방법까지 정리
+jira,지라 알림 설정 오류,perplexity_questions,problem_solving,90,medium,low,2026-05-15,초보 튜토리얼에 알림 트러블슈팅 없음,90,error_solution,오류 해결형,지라 알림 설정 오류 자주 생기는 이유와 점검 순서
 excel,cad connect excel 사용법,google_suggest,how_to,85,low,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,feature_explanation,기능 설명형,cad connect excel 사용법 기본 개념부터 적용 방법까지 정리
 excel,엑셀 파일 열리지 않을 때 열기 및 복구 기능 사용법,perplexity_questions,how_to,85,low,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,feature_explanation,기능 설명형,엑셀 파일 열리지 않을 때 열기 및 복구 기능 사용법 기능과 사용 방법 쉽게 설명
 notion,save to notion 사용법,google_suggest,how_to,85,low,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,feature_explanation,기능 설명형,save to notion 사용법 처음 시작할 때 알아두면 좋은 사용법
@@ -1183,6 +1188,24 @@ canva,캔바 애니메이션 삭제 안됨,perplexity_questions,problem_solving,
 canva,캔바 인사이트 조회 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-13,SEO 전략과 다른 개인 디자인 분석 기능,85,error_solution,오류 해결형,캔바 인사이트 조회 안됨 자주 생기는 이유와 점검 순서
 jira,지라 검색이 안될 때 해결법,perplexity_questions,problem_solving,85,medium,low,2026-05-13,"기존 글은 '필터 사용법'인데, 이는 '검색 오류의 원인과 해결'",85,error_solution,오류 해결형,지라 검색이 안될 때 해결법 자주 생기는 이유와 점검 순서
 trello,트렐로 모바일 로그인 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-13,모바일 로그인 문제로 기존 PC 사용법과 무관,85,error_solution,오류 해결형,트렐로 모바일 로그인 안됨 문제를 줄이는 실무 처리 순서
+unity,유니티 메모리 누수 해결,perplexity_questions,problem_solving,85,medium,low,2026-05-15,엑셀 KPI와 무관한 메모리 관리,85,error_solution,오류 해결형,유니티 메모리 누수 해결 자주 생기는 이유와 점검 순서
+unity,유니티 쉐이더 오류 검은화,perplexity_questions,problem_solving,85,medium,low,2026-05-15,파이썬 파일 IO와 다른 그래픽스 프로그래밍,85,error_solution,오류 해결형,유니티 쉐이더 오류 검은화 문제를 줄이는 실무 처리 순서
+general_it,윈도우 백업 복원 오류,perplexity_questions,problem_solving,85,medium,low,2026-05-15,실행 오류와 다른 데이터 백업/복원 프로세스,85,error_solution,오류 해결형,윈도우 백업 복원 오류 해결 전에 먼저 확인할 것
+general_it,윈도우 이벤트 뷰어 오류 분석,perplexity_questions,problem_solving,85,medium,low,2026-05-15,특정 증상 해결이 아닌 로그 기반 진단 가이드,85,error_solution,오류 해결형,윈도우 이벤트 뷰어 오류 분석 문제를 줄이는 실무 처리 순서
+office365,오피스365 동기화 오류,perplexity_questions,problem_solving,85,medium,low,2026-05-15,"엑셀 실무 자동화와 무관, OneDrive 동기화 문제 특화",85,error_solution,오류 해결형,오피스365 동기화 오류 자주 생기는 이유와 점검 순서
+office365,오피스365 저장 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-15,"엑셀 시트 통합과 달리 Word 저장 문제, 복구 목적",85,error_solution,오류 해결형,오피스365 저장 안됨 원인과 해결 방법
+office365,오피스365 이메일 보내기 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-15,기존 Windows 오류 글과 달리 Outlook 이메일 특화,85,error_solution,오류 해결형,오피스365 이메일 보내기 안됨 자주 생기는 이유와 점검 순서
+unreal,언리얼엔진 블루프린트 오류,perplexity_questions,problem_solving,85,medium,low,2026-05-15,블루프린트 디버깅 문제로 기초 UI 조작과 무관,85,error_solution,오류 해결형,언리얼엔진 블루프린트 오류 문제를 줄이는 실무 처리 순서
+unreal,언리얼엔진 빌드 오류 수정,perplexity_questions,problem_solving,85,medium,low,2026-05-15,빌드/컴파일 오류 중심으로 기초 튜토리얼과 무관,85,error_solution,오류 해결형,언리얼엔진 빌드 오류 수정 자주 생기는 이유와 점검 순서
+unreal,언리얼엔진 난리오브스텟 오류,perplexity_questions,problem_solving,85,medium,low,2026-05-15,파티클 시스템 문제로 간단 파티클 드래그와 무관,85,error_solution,오류 해결형,언리얼엔진 난리오브스텟 오류 자주 생기는 이유와 점검 순서
+blender,블렌더 GPU 렌더링 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-15,기존 글은 렌더링 기본만 있고 하드웨어 설정 미포함,85,error_solution,오류 해결형,블렌더 GPU 렌더링 안됨 원인과 해결 방법
+blender,블렌더 파일 공유 오류,perplexity_questions,problem_solving,85,medium,low,2026-05-15,기존 글은 파일 저장만 있고 공유 호환성 미포함,85,error_solution,오류 해결형,블렌더 파일 공유 오류 문제를 줄이는 실무 처리 순서
+notion,노션 모바일 앱 동기화 문제,perplexity_questions,problem_solving,85,medium,low,2026-05-15,"기존 글은 PC 버전만 다루고, 모바일 동기화 문제 해결은 미포함",85,error_solution,오류 해결형,노션 모바일 앱 동기화 문제 문제를 줄이는 실무 처리 순서
+notion,노션 페이지 로딩 느림 해결,perplexity_questions,problem_solving,85,medium,low,2026-05-15,"기존 글은 기능 설정만 다루고, 성능 이슈 진단과 해결은 미포함",85,error_solution,오류 해결형,노션 페이지 로딩 느림 해결 해결 전에 먼저 확인할 것
+canva,캔바 브랜드 키트 적용 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-15,엑셀 KPI와 다른 브랜드 관리 설정,85,error_solution,오류 해결형,캔바 브랜드 키트 적용 안됨 원인과 해결 방법
+jira,지라 인라인 편집 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-15,인라인 편집 트러블슈팅 없음,85,error_solution,오류 해결형,지라 인라인 편집 안됨 원인과 해결 방법
+trello,트렐로 체크리스트 공유 오류,perplexity_questions,problem_solving,85,medium,low,2026-05-15,"기존 글은 기본 구조 설명만, 체크리스트 권한 문제 없음",85,error_solution,오류 해결형,트렐로 체크리스트 공유 오류 원인과 해결 방법
+trello,트렐로 파워업 연결 안됨,perplexity_questions,problem_solving,85,medium,low,2026-05-15,"기존 글은 기본 기능만, 파워업 오류 해결 미포함",85,error_solution,오류 해결형,트렐로 파워업 연결 안됨 원인과 해결 방법
 unity,unity awake start 차이,google_suggest,comparison,80,low,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,80,comparison_analysis,비교/분석형,unity awake start 차이 차이점과 선택 기준 정리
 unity,unity update fixedupdate 차이,google_suggest,comparison,80,low,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,80,comparison_analysis,비교/분석형,unity update fixedupdate 차이 비교할 때 먼저 봐야 할 핵심
 office365,오피스365 오피스 2021 차이 디시,google_suggest,comparison,80,low,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,80,comparison_analysis,비교/분석형,오피스365 오피스 2021 차이 디시 비교할 때 먼저 봐야 할 핵심
@@ -1425,3 +1448,5 @@ jira,지라 라벨 자동화 규칙,perplexity_questions,practical,80,medium,low
 office365,엑셀 기본값 설정,naver_suggest,how_to,80,medium,low,2026-05-13,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,80,feature_explanation,기능 설명형,엑셀 기본값 설정 기본 개념부터 적용 방법까지 정리
 blender,블렌더 렌더링 메모리 캐시 관리,perplexity_questions,practical,80,medium,low,2026-05-13,"강의는 베이크 개념만 설명하고, 이 글은 캐시 관리 전략에 초점",80,practical_usage,실무 활용형,블렌더 렌더링 메모리 캐시 관리 작업 흐름에 맞춰 정리한 활용법
 jira,지라 상태 변경 자동화,perplexity_questions,practical,80,medium,low,2026-05-13,"기존 글은 '업무흐름 개념'인데, 이는 '업무흐름 자동화 설정'",80,practical_usage,실무 활용형,지라 상태 변경 자동화 반복 작업을 줄이는 실전 사용법
+unreal,언리얼엔진 콘솔레 명령어 정리,perplexity_questions,practical,80,medium,low,2026-05-15,고급 디버깅 도구로 UI 기본 조작과 차이,80,practical_usage,실무 활용형,언리얼엔진 콘솔레 명령어 정리 작업 흐름에 맞춰 정리한 활용법
+notion,노션 수식 함수 실무 활용,perplexity_questions,practical,80,medium,low,2026-05-15,"기존 글은 엑셀 함수만 다루고, 노션 특화 함수 활용은 미포함",80,practical_usage,실무 활용형,노션 수식 함수 실무 활용 업무에 적용하는 단계별 방법

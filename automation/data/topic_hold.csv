@@ -972,6 +972,15 @@ jira,지라 공유 권한 설정 방법,perplexity_questions,how_to,75,medium,lo
 jira,지라 리포트 생성 방법,perplexity_questions,how_to,75,medium,low,2026-05-13,"기존 글은 '기본 이슈 관리'인데, 이는 '데이터 기반 리포팅'",75,feature_explanation,기능 설명형,지라 리포트 생성 방법 기본 개념부터 적용 방법까지 정리
 jira,지라 팀 간 협업 설정,perplexity_questions,how_to,75,medium,low,2026-05-13,"기존 글은 '개별 사용 방법'인데, 이는 '다중 팀 워크플로우 설계'",75,feature_explanation,기능 설명형,지라 팀 간 협업 설정 기능과 사용 방법 쉽게 설명
 jira,지라 알림 설정 최적화,perplexity_questions,how_to,75,medium,low,2026-05-13,"기존 글은 '기본 사용법'인데, 이는 '알림 피로도 관리'",75,feature_explanation,기능 설명형,지라 알림 설정 최적화 초보자도 이해하기 쉬운 설정과 활용
+office365,excel 다운로드 방법,google_suggest,how_to,75,medium,low,2026-05-15,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,75,feature_explanation,기능 설명형,excel 다운로드 방법 기능과 사용 방법 쉽게 설명
+office365,오피스365 구독 취소 방법,perplexity_questions,how_to,75,medium,low,2026-05-15,엑셀 자동화와 달리 청구/관리 상황,75,feature_explanation,기능 설명형,오피스365 구독 취소 방법 기본 개념부터 적용 방법까지 정리
+office365,오피스365 가족 공유 설정,perplexity_questions,how_to,75,medium,low,2026-05-15,직장인 실무와 달리 가족 공유 상황,75,feature_explanation,기능 설명형,오피스365 가족 공유 설정 기능과 사용 방법 쉽게 설명
+notion,노션 데이터베이스 연결 방법,perplexity_questions,how_to,75,medium,low,2026-05-15,"기존 글은 단일 DB 생성만 다루고, 여러 DB 간 연결 방법은 미포함",75,feature_explanation,기능 설명형,노션 데이터베이스 연결 방법 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 저장 실패 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-15,"기존 글은 사용 방법 중심이고, 오류 발생 시 대응 방법은 미포함",75,error_solution,오류 해결형,노션 저장 실패 해결 해결 전에 먼저 확인할 것
+notion,노션 페이지 백업 방법,perplexity_questions,how_to,75,medium,low,2026-05-15,"기존 글은 기본 사용 방법만 다루고, 백업 전략은 미포함",75,feature_explanation,기능 설명형,노션 페이지 백업 방법 기본 개념부터 적용 방법까지 정리
+figma,피그마 파일 복구 방법,perplexity_questions,how_to,75,medium,low,2026-05-15,"Windows 복구와 다름, 피그마 버전 히스토리 활용",75,feature_explanation,기능 설명형,피그마 파일 복구 방법 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 그리드 설정 안보임,perplexity_questions,how_to,75,medium,low,2026-05-15,웹사이트 레이아웃 아이디어와 달리 그리드 뷰 버그 수정,75,feature_explanation,기능 설명형,피그마 그리드 설정 안보임 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 자동 저장 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-15,기존 노션/클로드와 다른 캔바 클라우드 문제,75,error_solution,오류 해결형,캔바 자동 저장 안됨 해결 전에 먼저 확인할 것
 excel,엑셀 안전 모드 vs 정상 모드 성능 비교와 전환법,perplexity_questions,comparison,70,low,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,comparison_analysis,비교/분석형,엑셀 안전 모드 vs 정상 모드 성능 비교와 전환법 차이점과 선택 기준 정리
 notion,obsidian notion 차이,google_suggest,comparison,70,low,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,comparison_analysis,비교/분석형,obsidian notion 차이 차이를 이해하고 선택하는 방법
 notion,obsidian notion 비교,google_suggest,comparison,70,low,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,comparison_analysis,비교/분석형,obsidian notion 비교 차이를 이해하고 선택하는 방법
@@ -1133,6 +1142,11 @@ python,파이썬 virtualenv 환경 분리,perplexity_questions,informational,70,
 python,파이썬 openpyxl 엑셀 자동 생성,perplexity_questions,informational,70,low,low,2026-05-13,엑셀 수동 통합과 달리 openpyxl 생성 중심,70,feature_explanation,기능 설명형,파이썬 openpyxl 엑셀 자동 생성 초보자도 이해하기 쉬운 설정과 활용
 python,파이썬 jupyter notebook 느림,perplexity_questions,informational,70,low,low,2026-05-13,"기존 글은 기본 문법, jupyter 최적화 미포함",70,feature_explanation,기능 설명형,파이썬 jupyter notebook 느림 초보자도 이해하기 쉬운 설정과 활용
 python,파이썬 regex 정규식 패턴 추출,perplexity_questions,informational,70,low,low,2026-05-13,기존 파이썬 글에 정규식 실전 활용 없음,70,feature_explanation,기능 설명형,파이썬 regex 정규식 패턴 추출 초보자도 이해하기 쉬운 설정과 활용
+office365,오피스365 파워포인트 슬라이드 복사,perplexity_questions,informational,70,low,low,2026-05-15,"엑셀 데이터 통합과 무관, PPT 재사용 목적",70,feature_explanation,기능 설명형,오피스365 파워포인트 슬라이드 복사 초보자도 이해하기 쉬운 설정과 활용
+office365,오피스365 원드라이브 용량 초과,perplexity_questions,informational,70,low,low,2026-05-15,"기존 클로드 질문과 무관, 스토리지 관리 목적",70,feature_explanation,기능 설명형,오피스365 원드라이브 용량 초과 기능과 사용 방법 쉽게 설명
+unreal,언리얼엔진 버전업그레이드 데이터 손실,perplexity_questions,informational,70,low,low,2026-05-15,버전 관리 상황으로 설치 가이드와 완전 다름,70,feature_explanation,기능 설명형,언리얼엔진 버전업그레이드 데이터 손실 기능과 사용 방법 쉽게 설명
+python,파이썬 requests api 호출,perplexity_questions,informational,70,low,low,2026-05-15,파일 처리와 다른 네트워크 통신 중심,70,feature_explanation,기능 설명형,파이썬 requests api 호출 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 데이터베이스 정렬 및 그룹화,perplexity_questions,informational,70,low,low,2026-05-15,"기존 글은 기본 테이블만 다루고, 다중 정렬과 그룹화 고급 활용은 미포함",70,feature_explanation,기능 설명형,노션 데이터베이스 정렬 및 그룹화 처음 시작할 때 알아두면 좋은 사용법
 excel,논문 정리 excel,google_suggest,practical,70,medium,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,논문 정리 excel 업무에 적용하는 단계별 방법
 ppt,ppt 자동화,google_suggest,practical,70,medium,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,ppt 자동화 반복 작업을 줄이는 실전 사용법
 ppt,ppt 자동화 ai,google_suggest,practical,70,medium,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,ppt 자동화 ai 반복 작업을 줄이는 실전 사용법
@@ -1658,6 +1672,9 @@ notion,노션 백업 자동화,perplexity_questions,practical,70,medium,low,2026
 trello,트렐로 백로그 정리법,perplexity_questions,practical,70,medium,low,2026-05-12,"기존 글은 신규 설정, 이건 과부하 보드 정리 전략",70,practical_usage,실무 활용형,트렐로 백로그 정리법 작업 흐름에 맞춰 정리한 활용법
 trello,트렐로 백업 자동화,perplexity_questions,practical,70,medium,low,2026-05-12,"기존 글은 파이썬 리스트 문법, 트렐로 백업 자동화와 무관",70,practical_usage,실무 활용형,트렐로 백업 자동화 작업 흐름에 맞춰 정리한 활용법
 office365,오피스365 버전 차이,perplexity_questions,comparison,70,medium,low,2026-05-13,엑셀 내부 기능 아닌 다중 버전 협업 해결,70,comparison_analysis,비교/분석형,오피스365 버전 차이 차이점과 선택 기준 정리
+notion,노션 문서 버전 관리,perplexity_questions,practical,70,medium,low,2026-05-15,"기존 글은 협업 기능만 다루고, 버전 관리 전략은 미포함",70,practical_usage,실무 활용형,노션 문서 버전 관리 업무에 적용하는 단계별 방법
+jira,지라 백로그 정리,perplexity_questions,practical,70,medium,low,2026-05-15,정리/정돈 팁 없고 에픽 생성만 다룸,70,practical_usage,실무 활용형,지라 백로그 정리 반복 작업을 줄이는 실전 사용법
+jira,지라 스프린트 자동화,perplexity_questions,practical,70,medium,low,2026-05-15,자동화 기능 소개 없음,70,practical_usage,실무 활용형,지라 스프린트 자동화 반복 작업을 줄이는 실전 사용법
 ppt,ppt 방법,google_suggest,how_to,65,medium,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,ppt 방법 초보자도 이해하기 쉬운 설정과 활용
 ppt,ppt 만드는 방법,google_suggest,how_to,65,medium,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,ppt 만드는 방법 초보자도 이해하기 쉬운 설정과 활용
 ppt,ppt 다운로드 방법,google_suggest,how_to,65,medium,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,ppt 다운로드 방법 초보자도 이해하기 쉬운 설정과 활용
@@ -2257,6 +2274,10 @@ notion,노션 댓글 삭제 방법,perplexity_questions,how_to,65,medium,low,202
 jira,지라 대시보드 만들기,perplexity_questions,how_to,65,medium,low,2026-05-12,엑셀 차트 자동화와 다른 Jira 대시보드 설정,65,feature_explanation,기능 설명형,지라 대시보드 만들기 처음 시작할 때 알아두면 좋은 사용법
 jira,지라 알림 설정 안옴,perplexity_questions,how_to,65,medium,low,2026-05-13,엑셀 시트 통합이나 파이썬 튜플과 다른 지라 통지 설정,65,feature_explanation,기능 설명형,지라 알림 설정 안옴 처음 시작할 때 알아두면 좋은 사용법
 jira,지라 필터 저장 방법,perplexity_questions,how_to,65,medium,low,2026-05-13,"기존 글은 '필터 개념과 사용법'인데, 이는 '필터 재사용성 극대화'라는 실무 최적화 목표",65,feature_explanation,기능 설명형,지라 필터 저장 방법 초보자도 이해하기 쉬운 설정과 활용
+office365,엑셀 기본 책,naver_suggest,how_to,65,medium,low,2026-05-15,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,엑셀 기본 책 처음 시작할 때 알아두면 좋은 사용법
+office365,엑셀 설정 꿀팁,naver_suggest,how_to,65,medium,low,2026-05-15,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,엑셀 설정 꿀팁 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 공유 권한 설정,perplexity_questions,how_to,65,medium,low,2026-05-15,"기존 글은 기본 기능만 다루고, 보안 관점의 세부 권한 관리는 미포함",65,feature_explanation,기능 설명형,노션 공유 권한 설정 기능과 사용 방법 쉽게 설명
+trello,트렐로 백업 방법,perplexity_questions,how_to,65,medium,low,2026-05-15,"기존 글은 실시간 사용법만, 백업 전략 없음",65,feature_explanation,기능 설명형,트렐로 백업 방법 처음 시작할 때 알아두면 좋은 사용법
 excel,csv excel 차이,google_suggest,comparison,60,medium,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,csv excel 차이 비교할 때 먼저 봐야 할 핵심
 excel,csv 와 excel 차이,google_suggest,comparison,60,medium,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,csv 와 excel 차이 차이를 이해하고 선택하는 방법
 excel,access excel 차이,google_suggest,comparison,60,medium,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,access excel 차이 차이점과 선택 기준 정리
@@ -2856,3 +2877,37 @@ trello,트렐로 파일 첨부 크기 제한,perplexity_questions,informational,
 trello,트렐로 키보드 단축키 안먹힘,perplexity_questions,informational,60,medium,low,2026-05-13,단축키 오류로 기존 마우스 조작법과 무관,60,feature_explanation,기능 설명형,트렐로 키보드 단축키 안먹힘 처음 시작할 때 알아두면 좋은 사용법
 trello,트렐로 아카이브 복원 실패,perplexity_questions,informational,60,medium,low,2026-05-13,복원 오류 해결로 기존 삭제 방법과 상황 다름,60,feature_explanation,기능 설명형,트렐로 아카이브 복원 실패 처음 시작할 때 알아두면 좋은 사용법
 trello,트렐로 팀 워크스페이스 전환,perplexity_questions,informational,60,medium,low,2026-05-13,워크스페이스 전환 문제로 기존 단일 보드 사용과 차이,60,feature_explanation,기능 설명형,트렐로 팀 워크스페이스 전환 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 라이팅 검은화면,perplexity_questions,informational,60,medium,low,2026-05-15,파이썬 Set 연산과 무관한 라이팅 베이킹,60,feature_explanation,기능 설명형,유니티 라이팅 검은화면 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 네트워크 싱크 안맞음,perplexity_questions,informational,60,medium,low,2026-05-15,노션 링크와 무관한 네트워킹 동기화,60,feature_explanation,기능 설명형,유니티 네트워크 싱크 안맞음 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 10 탐색기 멈춤,perplexity_questions,informational,60,medium,low,2026-05-15,"작업관리자 문제와 달리 탐색기 프리징에 특화, 설정 변경 중심",60,feature_explanation,기능 설명형,윈도우 10 탐색기 멈춤 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 프로그램 설치 실패,perplexity_questions,informational,60,medium,low,2026-05-15,시스템 오류와 다른 앱 설치 과정 특화,60,feature_explanation,기능 설명형,윈도우 프로그램 설치 실패 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 슬립 모드 깨지 않음,perplexity_questions,informational,60,medium,low,2026-05-15,로그인 오류와 다른 전원 관리 설정,60,feature_explanation,기능 설명형,윈도우 슬립 모드 깨지 않음 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 파일 복사 느림,perplexity_questions,informational,60,medium,low,2026-05-15,디스크 부족과 다른 파일 전송 최적화,60,feature_explanation,기능 설명형,윈도우 파일 복사 느림 기본 개념부터 적용 방법까지 정리
+office365,엑셀 비교 색상,naver_suggest,comparison,60,medium,low,2026-05-15,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,엑셀 비교 색상 차이점과 선택 기준 정리
+office365,오피스365 로그인 실패,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 파이썬/노션 글과 무관, 인증 문제 해결 중심",60,feature_explanation,기능 설명형,오피스365 로그인 실패 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 모바일 앱 동기화,perplexity_questions,informational,60,medium,low,2026-05-15,"파이썬 자료구조와 무관, 모바일 동기화 문제",60,feature_explanation,기능 설명형,오피스365 모바일 앱 동기화 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 백업 복원,perplexity_questions,informational,60,medium,low,2026-05-15,"Windows CPU 문제와 무관, 백업 복구 특화",60,feature_explanation,기능 설명형,오피스365 백업 복원 기본 개념부터 적용 방법까지 정리
+office365,오피스365 엑셀 필터 초기화,perplexity_questions,informational,60,medium,low,2026-05-15,기존 엑셀 시트통합/KPI와 달리 필터 초기화 상황,60,feature_explanation,기능 설명형,오피스365 엑셀 필터 초기화 기본 개념부터 적용 방법까지 정리
+unreal,언리얼엔진 렌더링 느림 최적화,perplexity_questions,informational,60,medium,low,2026-05-15,성능 최적화 목적으로 기본 조작법과 구분,60,feature_explanation,기능 설명형,언리얼엔진 렌더링 느림 최적화 기본 개념부터 적용 방법까지 정리
+unreal,언리얼엔진 에셋 임포트 실패,perplexity_questions,informational,60,medium,low,2026-05-15,외부 에셋 처리 문제로 설치/프로젝트 생성과 다름,60,feature_explanation,기능 설명형,언리얼엔진 에셋 임포트 실패 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼엔진 라이트맵 베이킹 실패,perplexity_questions,informational,60,medium,low,2026-05-15,라이팅 시스템 고급 문제로 초보 가이드와 구분,60,feature_explanation,기능 설명형,언리얼엔진 라이트맵 베이킹 실패 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼엔진 애니메이션 안움직임,perplexity_questions,informational,60,medium,low,2026-05-15,애니메이션 플로우 디버깅으로 기본 객체 배치와 다름,60,feature_explanation,기능 설명형,언리얼엔진 애니메이션 안움직임 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼엔진 물리 시뮬레이션 버그,perplexity_questions,informational,60,medium,low,2026-05-15,물리 엔진 디버깅으로 기본 객체 조작과 구분,60,feature_explanation,기능 설명형,언리얼엔진 물리 시뮬레이션 버그 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼엔진 소스 컨트롤 연결,perplexity_questions,informational,60,medium,low,2026-05-15,버전 관리 공유 상황으로 기초 프로젝트 생성과 무관,60,feature_explanation,기능 설명형,언리얼엔진 소스 컨트롤 연결 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 자동 저장 복구,perplexity_questions,informational,60,medium,low,2026-05-15,기존 글은 저장 기본만 있고 복구 방법 미포함,60,feature_explanation,기능 설명형,블렌더 자동 저장 복구 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 logging 로그 기록,perplexity_questions,informational,60,medium,low,2026-05-15,파일 IO 기본과 다른 구조화 로깅,60,feature_explanation,기능 설명형,파이썬 logging 로그 기록 기본 개념부터 적용 방법까지 정리
+notion,노션 API 연동 기초,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 노션 내부 기능만 다루고, 외부 시스템 연동은 미포함",60,feature_explanation,기능 설명형,노션 API 연동 기초 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 검색 속도 최적화,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 DB 생성만 다루고, 대용량 데이터 환경에서의 성능 최적화는 미포함",60,feature_explanation,기능 설명형,노션 검색 속도 최적화 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 템플릿 직접 만드는 법,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 마켓플레이스 템플릿만 다루고, 직접 만드는 방법은 미포함",60,feature_explanation,기능 설명형,노션 템플릿 직접 만드는 법 기본 개념부터 적용 방법까지 정리
+notion,노션 대량 데이터 가져오기,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 수작업 방식만 다루고, 효율적인 일괄 임포트 방법은 미포함",60,feature_explanation,기능 설명형,노션 대량 데이터 가져오기 기능과 사용 방법 쉽게 설명
+notion,노션 대신 무료 대체 도구,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 노션 자체만 다루고, 경쟁 도구와의 기능 비교는 미포함",60,feature_explanation,기능 설명형,노션 대신 무료 대체 도구 기본 개념부터 적용 방법까지 정리
+figma,피그마 이미지 가져오기 실패,perplexity_questions,informational,60,medium,low,2026-05-15,기존 글에 없는 피그마 이미지 임포트 형식 오류,60,feature_explanation,기능 설명형,피그마 이미지 가져오기 실패 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 컴포넌트 변형 복구,perplexity_questions,informational,60,medium,low,2026-05-15,디자인 시스템 재구축과 달리 런타임 컴포넌트 오류,60,feature_explanation,기능 설명형,피그마 컴포넌트 변형 복구 기본 개념부터 적용 방법까지 정리
+figma,피그마 여러 파일 병합,perplexity_questions,informational,60,medium,low,2026-05-15,"엑셀 시트 통합과 다름, 피그마 파일 구조 병합",60,feature_explanation,기능 설명형,피그마 여러 파일 병합 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 이미지 투명도 조절,perplexity_questions,informational,60,medium,low,2026-05-15,리스트/튜플 문법과 무관한 이미지 편집 팁,60,feature_explanation,기능 설명형,캔바 이미지 투명도 조절 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 템플릿 검색 느림,perplexity_questions,informational,60,medium,low,2026-05-15,엑셀 시트 통합과 무관한 검색 성능 최적화,60,feature_explanation,기능 설명형,캔바 템플릿 검색 느림 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 그리드 맞추기 어려움,perplexity_questions,informational,60,medium,low,2026-05-15,Set 연산과 무관한 그리드 정렬 기술,60,feature_explanation,기능 설명형,캔바 그리드 맞추기 어려움 기본 개념부터 적용 방법까지 정리
+jira,지라 칸반 보드 안보임,perplexity_questions,informational,60,medium,low,2026-05-15,보드 생성은 있지만 오류 해결 내용 없음,60,feature_explanation,기능 설명형,지라 칸반 보드 안보임 기본 개념부터 적용 방법까지 정리
+jira,지라 첨부파일 크기 제한,perplexity_questions,informational,60,medium,low,2026-05-15,"파일 업로드 기본만, 제한 해제 방법 없음",60,feature_explanation,기능 설명형,지라 첨부파일 크기 제한 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 보드 복사하는 법,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 개별 카드 템플릿만, 보드 전체 복사 미포함",60,feature_explanation,기능 설명형,트렐로 보드 복사하는 법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 캘린더 뷰 전환,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 칸반 기본만, 뷰 전환 미포함",60,feature_explanation,기능 설명형,트렐로 캘린더 뷰 전환 기본 개념부터 적용 방법까지 정리

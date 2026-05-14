@@ -455,3 +455,15 @@ office365,엑셀 활용 경영 과학 pdf,google_suggest,practical,80,medium,low
 office365,엑셀 자동화 서식 모음,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,엑셀 자동화 서식 모음 반복 작업을 줄이는 실전 사용법,2026-05-13 14:49:15,practical_usage,실무 활용형
 general_it,스마트폰 설정 비교,naver_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,스마트폰 설정 비교 차이를 이해하고 선택하는 방법,2026-05-13 14:49:15,comparison_analysis,비교/분석형
 office365,엑셀 비교표 만들기,naver_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,엑셀 비교표 만들기 비교할 때 먼저 봐야 할 핵심,2026-05-13 14:49:15,comparison_analysis,비교/분석형
+office365,onedrive 동기화 보류중 해결방법,google_suggest,problem_solving,100,low,low,2026-05-15,문제 해결형 검색어라 방문 의도가 강합니다.,100,onedrive 동기화 보류중 해결방법 원인과 해결 방법,2026-05-15 01:28:11,error_solution,오류 해결형
+canva,캔바 애니메이션 export 오류,perplexity_questions,problem_solving,95,low,low,2026-05-15,기존 질문 전략과 무관한 export 기술 문제,95,캔바 애니메이션 export 오류 원인과 해결 방법,2026-05-15 01:28:11,error_solution,오류 해결형
+notion,notion pdf 내보내기 안됨,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,notion pdf 내보내기 안됨 해결 전에 먼저 확인할 것,2026-05-15 01:28:11,error_solution,오류 해결형
+notion,notion calendar 오류,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,notion calendar 오류 해결 전에 먼저 확인할 것,2026-05-15 01:28:11,error_solution,오류 해결형
+unreal,언리얼엔진 LOD 설정 자동화,perplexity_questions,how_to,95,medium,low,2026-05-15,LOD 최적화 목적으로 초보 렌더링과 구분,95,언리얼엔진 LOD 설정 자동화 초보자도 이해하기 쉬운 설정과 활용,2026-05-15 01:28:11,feature_explanation,기능 설명형
+notion,노션 필터 자동화 설정,perplexity_questions,how_to,95,medium,low,2026-05-15,"기존 글은 카테고리 분류만 다루고, 시간 기반 자동 필터링은 미포함",95,노션 필터 자동화 설정 기본 개념부터 적용 방법까지 정리,2026-05-15 01:28:11,feature_explanation,기능 설명형
+office365,outlook copilot 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,outlook copilot 사용법 기능과 사용 방법 쉽게 설명,2026-05-15 01:28:11,feature_explanation,기능 설명형
+unreal,언리얼엔진 콘솔레 명령어 정리,perplexity_questions,practical,80,medium,low,2026-05-15,고급 디버깅 도구로 UI 기본 조작과 차이,80,언리얼엔진 콘솔레 명령어 정리 작업 흐름에 맞춰 정리한 활용법,2026-05-15 01:28:11,practical_usage,실무 활용형
+notion,노션 수식 함수 실무 활용,perplexity_questions,practical,80,medium,low,2026-05-15,"기존 글은 엑셀 함수만 다루고, 노션 특화 함수 활용은 미포함",80,노션 수식 함수 실무 활용 업무에 적용하는 단계별 방법,2026-05-15 01:28:11,practical_usage,실무 활용형
+office365,excel 단축키 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 단축키 정리 업무에 적용하는 단계별 방법,2026-05-15 01:28:11,practical_usage,실무 활용형
+office365,엑셀 차이값찾기 방법,naver_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,엑셀 차이값찾기 방법 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-15 01:28:11,comparison_analysis,비교/분석형
+office365,워드 비교본 만들기,google_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,워드 비교본 만들기 차이점과 선택 기준 정리,2026-05-15 01:28:11,comparison_analysis,비교/분석형

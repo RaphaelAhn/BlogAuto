@@ -155,3 +155,8 @@ notion,노션 댓글 알림 안옴,perplexity_questions,informational,50,medium,
 figma,피그마 레이어 사라짐,perplexity_questions,informational,50,medium,low,2026-05-13,작업관리자 오류와 무관한 피그마 레이어 시스템 문제,50,feature_explanation,기능 설명형,피그마 레이어 사라짐 처음 시작할 때 알아두면 좋은 사용법
 figma,피그마 컴포넌트 변형,perplexity_questions,informational,50,medium,low,2026-05-13,컴포넌트 기본 사용법과 다른 변형 오류 수정,50,feature_explanation,기능 설명형,피그마 컴포넌트 변형 기능과 사용 방법 쉽게 설명
 canva,캔바 이미지 깨짐,perplexity_questions,informational,50,medium,low,2026-05-13,Windows 시스템 오류와 무관한 캔바 이미지 처리 문제,50,feature_explanation,기능 설명형,캔바 이미지 깨짐 처음 시작할 때 알아두면 좋은 사용법
+office365,워드 파일 형식,naver_suggest,informational,50,medium,low,2026-05-15,정보 탐색형 검색어라 기초 설명 글로 만들기 좋습니다.,50,feature_explanation,기능 설명형,워드 파일 형식 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 워크플로 커스텀,perplexity_questions,informational,50,medium,low,2026-05-15,"기존 글은 에픽/스토리 생성만, 워크플로 설정은 다룸 안함",50,feature_explanation,기능 설명형,지라 워크플로 커스텀 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 댓글 검색,perplexity_questions,informational,50,medium,low,2026-05-15,댓글 관리 기능 미포함,50,feature_explanation,기능 설명형,지라 댓글 검색 기본 개념부터 적용 방법까지 정리
+jira,지라 프로젝트 복사,perplexity_questions,informational,50,medium,low,2026-05-15,프로젝트 복제 가이드 없음,50,feature_explanation,기능 설명형,지라 프로젝트 복사 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 로그아웃 자주,perplexity_questions,informational,50,medium,low,2026-05-15,세션 관리 팁 전무,50,feature_explanation,기능 설명형,지라 로그아웃 자주 기능과 사용 방법 쉽게 설명
