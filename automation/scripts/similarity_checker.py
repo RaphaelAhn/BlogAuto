@@ -16,6 +16,7 @@ PREVIOUS_POSTS_PATH = DATA_DIR / "previous_posts.csv"
 TOPIC_USED_PATH = DATA_DIR / "topic_used.csv"
 
 SIMILARITY_REPORT_PATH = DATA_DIR / "similarity_report_latest.csv"
+SIMILARITY_REPORT_HISTORY_PATH = DATA_DIR / "similarity_report_history.csv"
 
 _PREVIOUS_POSTS_LIMIT = int(os.getenv("BLOGAUTO_PREVIOUS_POSTS_LIMIT", "500"))
 
@@ -123,6 +124,20 @@ def compare_texts_structural(left: str, right: str) -> float:
     return compare_texts(masked_left, masked_right)
 
 
+def extract_headings(text: str) -> list[str]:
+    """마크다운 H2/H3 헤딩과 === 구분선 헤딩을 추출합니다."""
+    md_headings = re.findall(r'^#{2,3}\s+(.+)$', text, re.MULTILINE)
+    sep_headings = re.findall(r'^=+\n(.+)\n=+', text, re.MULTILINE)
+    return md_headings + sep_headings
+
+
+def heading_similarity(left: str, right: str) -> float:
+    """H2/H3 헤딩 집합의 Jaccard 유사도를 반환합니다."""
+    left_heads = frozenset(normalize_text(h) for h in extract_headings(left))
+    right_heads = frozenset(normalize_text(h) for h in extract_headings(right))
+    return _jaccard_sets(left_heads, right_heads)
+
+
 def _is_home_or_listing_url(url: str) -> bool:
     parsed = urlparse(str(url or ""))
     path = (parsed.path or "").strip("/")
@@ -143,12 +158,17 @@ class SimilarityCandidate:
     label: str
     text: str
     extra: str = ""
+    title: str = ""
+    url: str = ""
 
     def __post_init__(self):
         # 로딩 시점에 집합을 한 번만 계산 → 비교 시 재파싱 불필요
         self._tokens: frozenset = frozenset(token_set(self.text))
         self._sentences: frozenset = frozenset(sentence_set(self.text))
         self._ngrams: frozenset = frozenset(char_ngrams(self.text))
+        self._headings: frozenset = frozenset(
+            normalize_text(h) for h in extract_headings(self.text)
+        )
 
 
 @dataclass
@@ -187,6 +207,8 @@ def _load_previous_post_candidates(limit: int = _PREVIOUS_POSTS_LIMIT) -> list[S
                 label=label,
                 text=content,
                 extra=str(row.get("platform", "")).strip(),
+                title=title,
+                url=url,
             )
         )
 
@@ -217,6 +239,8 @@ def _load_output_candidates() -> list[SimilarityCandidate]:
                     label=str(txt_file),
                     text=cleaned,
                     extra=str(run_dir.name),
+                    title=txt_file.stem,
+                    url="",
                 )
             )
 
@@ -250,6 +274,8 @@ def _load_topic_output_candidates() -> list[SimilarityCandidate]:
                 label=title,
                 text=cleaned,
                 extra=str(output_path),
+                title=title,
+                url="",
             )
         )
 
@@ -257,9 +283,15 @@ def _load_topic_output_candidates() -> list[SimilarityCandidate]:
 
 
 class SimilarityChecker:
-    def __init__(self, threshold: float = 0.82, structural_threshold: float = 0.62):
+    def __init__(
+        self,
+        threshold: float = 0.82,
+        structural_threshold: float = 0.62,
+        heading_threshold: float = 0.60,
+    ):
         self.threshold = threshold
         self.structural_threshold = structural_threshold
+        self.heading_threshold = heading_threshold
         self.candidates: list[SimilarityCandidate] = []
 
     def load_defaults(self, previous_posts_limit: int = _PREVIOUS_POSTS_LIMIT) -> None:
@@ -270,7 +302,7 @@ class SimilarityChecker:
         self.candidates.extend(_load_topic_output_candidates())
         print(f"[checker] total candidates: {len(self.candidates)}")
 
-    def add_candidate(self, source: str, label: str, text: str, extra: str = "") -> None:
+    def add_candidate(self, source: str, label: str, text: str, extra: str = "", title: str = "", url: str = "") -> None:
         cleaned = _clean_reference_text(text)
         if len(cleaned) < 400:
             return
@@ -281,20 +313,25 @@ class SimilarityChecker:
                 label=label,
                 text=cleaned,
                 extra=extra,
+                title=title or label,
+                url=url,
             )
         )
 
-    def find_best_matches(self, text: str) -> tuple[SimilarityMatch, SimilarityMatch]:
-        """표준 유사도와 구조적 유사도를 단일 루프로 동시 계산합니다.
+    def find_best_matches(
+        self, text: str
+    ) -> tuple[SimilarityMatch, SimilarityMatch, SimilarityMatch]:
+        """표준 유사도·구조적 유사도·헤딩 유사도를 단일 루프로 동시 계산합니다.
 
         - 쿼리 집합을 루프 전에 한 번만 계산
         - 후보 집합은 로딩 시 사전 계산된 값 사용
-        - 표준 유사도가 낮은 후보는 구조적 검사 건너뜀
+        - 표준 유사도가 낮은 후보는 구조적/헤딩 검사 건너뜀
         """
         # 쿼리 집합 1회 계산
         q_tokens = frozenset(token_set(text))
         q_sentences = frozenset(sentence_set(text))
         q_ngrams = frozenset(char_ngrams(text))
+        q_headings = frozenset(normalize_text(h) for h in extract_headings(text))
 
         # 구조적 검사용 쿼리 토큰 빈도 (unique token 계산에 필요)
         q_tok_list = [t for t in re.split(r"[^0-9a-zA-Z가-힣]+", normalize_text(text)) if len(t) >= 2]
@@ -302,6 +339,7 @@ class SimilarityChecker:
 
         best_standard = SimilarityMatch(score=0.0, candidate=None)
         best_structural = SimilarityMatch(score=0.0, candidate=None)
+        best_heading = SimilarityMatch(score=0.0, candidate=None)
 
         for candidate in self.candidates:
             # 표준 유사도: 사전 계산된 집합으로 즉시 산출
@@ -312,7 +350,7 @@ class SimilarityChecker:
             if std_score > best_standard.score:
                 best_standard = SimilarityMatch(score=std_score, candidate=candidate)
 
-            # 구조적 유사도: 표준 유사도가 너무 낮으면 건너뜀
+            # 구조적 유사도·헤딩 유사도: 표준 유사도가 너무 낮으면 건너뜀
             if std_score < _STRUCTURAL_SKIP_BELOW:
                 continue
 
@@ -326,12 +364,24 @@ class SimilarityChecker:
             if struct_score > best_structural.score:
                 best_structural = SimilarityMatch(score=struct_score, candidate=candidate)
 
-        return best_standard, best_structural
+            # 헤딩 유사도: 쿼리와 후보의 헤딩 집합 비교
+            if q_headings and candidate._headings:
+                head_score = _jaccard_sets(q_headings, candidate._headings)
+                if head_score > best_heading.score:
+                    best_heading = SimilarityMatch(score=head_score, candidate=candidate)
+
+        return best_standard, best_structural, best_heading
 
 
 
 def save_similarity_report(report_rows: list[dict], destination: Path | None = None) -> Path:
     target = destination or SIMILARITY_REPORT_PATH
     target.parent.mkdir(parents=True, exist_ok=True)
-    pd.DataFrame(report_rows).to_csv(target, index=False, encoding="utf-8-sig")
+    report_df = pd.DataFrame(report_rows)
+    report_df.to_csv(target, index=False, encoding="utf-8-sig")
+    if target != SIMILARITY_REPORT_PATH:
+        report_df.to_csv(SIMILARITY_REPORT_PATH, index=False, encoding="utf-8-sig")
+    history_df = read_csv_safe(SIMILARITY_REPORT_HISTORY_PATH)
+    combined = pd.concat([history_df, report_df], ignore_index=True)
+    combined.to_csv(SIMILARITY_REPORT_HISTORY_PATH, index=False, encoding="utf-8-sig")
     return target

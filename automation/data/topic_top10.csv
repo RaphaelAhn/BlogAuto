@@ -1,0 +1,13 @@
+﻿category,keyword,source,search_intent,trend_score,difficulty,duplicate_risk,created_at,reason,final_score,topic_type,topic_type_label,title
+blender,블렌더 UV 맵핑 비틀림 현상 해결,perplexity_questions,problem_solving,95,low,low,2026-05-13,기존 글에 없는 UV 맵핑 트러블슈팅 주제,95,error_solution,오류 해결형,블렌더 UV 맵핑 비틀림 현상 해결 문제를 줄이는 실무 처리 순서
+python,파이썬 numpy 배열 연산 오류,perplexity_questions,problem_solving,95,low,low,2026-05-13,Set/리스트 기본과 달리 numpy 고급 연산,95,error_solution,오류 해결형,파이썬 numpy 배열 연산 오류 문제를 줄이는 실무 처리 순서
+python,python circular import 해결,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,error_solution,오류 해결형,python circular import 해결 자주 생기는 이유와 점검 순서
+python,python memory error 해결,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,error_solution,오류 해결형,python memory error 해결 해결 전에 먼저 확인할 것
+office365,chatgpt for powerpoint 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,feature_explanation,기능 설명형,chatgpt for powerpoint 사용법 처음 시작할 때 알아두면 좋은 사용법
+office365,claude in powerpoint 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,feature_explanation,기능 설명형,claude in powerpoint 사용법 초보자도 이해하기 쉬운 설정과 활용
+office365,powerpoint 기본 글꼴 변경,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,feature_explanation,기능 설명형,powerpoint 기본 글꼴 변경 기능과 사용 방법 쉽게 설명
+office365,엑셀 활용 능력 상세 설명,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,practical_usage,실무 활용형,엑셀 활용 능력 상세 설명 반복 작업을 줄이는 실전 사용법
+office365,엑셀 활용 경영 과학 pdf,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,practical_usage,실무 활용형,엑셀 활용 경영 과학 pdf 반복 작업을 줄이는 실전 사용법
+office365,엑셀 자동화 서식 모음,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,practical_usage,실무 활용형,엑셀 자동화 서식 모음 반복 작업을 줄이는 실전 사용법
+general_it,스마트폰 설정 비교,naver_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,comparison_analysis,비교/분석형,스마트폰 설정 비교 차이를 이해하고 선택하는 방법
+office365,엑셀 비교표 만들기,naver_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,comparison_analysis,비교/분석형,엑셀 비교표 만들기 비교할 때 먼저 봐야 할 핵심

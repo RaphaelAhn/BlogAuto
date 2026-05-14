@@ -1,13 +1,13 @@
-﻿topic_id,platform,category,keyword,title,search_intent,priority,source,status,created_at
-20260503_naver_001_노션템플릿만들기,naver,,노션 템플릿 만들기,노션 템플릿 만들기 쉽게 배우는 방법,업무 자동화,,,drafted,2026-05-03
-20260503_blogspot_en_002_ppt애니메이션효과,blogspot_en,,PPT 애니메이션 효과,PPT 애니메이션 효과 쉽게 배우는 방법,발표 개선,,,drafted,2026-05-03
-20260503_blogspot_en_003_ppt슬라이드번호넣기,blogspot_en,,PPT 슬라이드 번호 넣기,PPT 슬라이드 번호 넣기 쉽게 배우는 방법,문서 정리,,,drafted,2026-05-03
-20260503_naver_004_워드자동목차,naver,,워드 자동 목차,워드 자동 목차 쉽게 배우는 방법,보고서 작성,,,drafted,2026-05-03
-20260503_naver_005_워드표만들기,naver,,워드 표 만들기,워드 표 만들기 쉽게 배우는 방법,문서 작업,,,drafted,2026-05-03
-20260503_naver_006_워드페이지번호,naver,,워드 페이지 번호,워드 페이지 번호 쉽게 배우는 방법,문서 정리,,,drafted,2026-05-03
-20260503_naver_007_피그마오토레이아웃,naver,,피그마 오토레이아웃,피그마 오토레이아웃 쉽게 배우는 방법,디자인 작업,,,drafted,2026-05-03
-20260503_naver_008_피그마컴포넌트,naver,,피그마 컴포넌트,피그마 컴포넌트 쉽게 배우는 방법,디자인 시스템,,,drafted,2026-05-03
-20260503_naver_009_유니티씬전환,naver,,유니티 씬 전환,유니티 씬 전환 쉽게 배우는 방법,게임 개발,,,drafted,2026-05-03
-20260503_naver_010_유니티프리팹,naver,,유니티 프리팹,유니티 프리팹 쉽게 배우는 방법,게임 오브젝트 관리,,,drafted,2026-05-03
-20260503_naver_011_언리얼블루프린트,naver,,언리얼 블루프린트,언리얼 블루프린트 쉽게 배우는 방법,게임 개발,,,drafted,2026-05-03
-20260503_naver_012_언리얼레벨스트리밍,naver,,언리얼 레벨 스트리밍,언리얼 레벨 스트리밍 쉽게 배우는 방법,레벨 디자인,,,drafted,2026-05-03
+﻿topic_id,platform,category,keyword,title,search_intent,topic_type,structure_hint,priority,source,status,created_at
+20260513_naver_001_블렌더초보자자주하는오류5가지,naver,blender,블렌더 초보자 자주 하는 오류 5가지,블렌더 초보자 자주 하는 오류 5가지 자주 생기는 이유와 점검 순서,problem_solving,error_solution,checklist_review,100,perplexity_questions,drafted,2026-05-13
+20260513_naver_002_트렐로알림설정안됨,naver,trello,트렐로 알림 설정 안됨,트렐로 알림 설정 안됨 원인과 해결 방법,problem_solving,error_solution,comparison_guide,100,perplexity_questions,drafted,2026-05-13
+20260513_naver_003_ppt트러스트센터설정으로보안오류해결하,naver,ppt,PPT 트러스트 센터 설정으로 보안 오류 해결하기,PPT 트러스트 센터 설정으로 보안 오류 해결하기 문제를 줄이는 실무 처리 순서,problem_solving,error_solution,problem_solution,100,perplexity_questions,drafted,2026-05-13
+20260513_naver_004_셀병합문제해결하고보고서만들기,naver,excel,셀 병합 문제 해결하고 보고서 만들기,셀 병합 문제 해결하고 보고서 만들기 해결 전에 먼저 확인할 것,problem_solving,error_solution,decision_guide,100,perplexity_questions,drafted,2026-05-13
+20260513_blogspot_kr_005_ai를활용한ppt만들기,blogspot_kr,office365,ai를 활용한 ppt 만들기,ai를 활용한 ppt 만들기 초보자도 이해하기 쉬운 설정과 활용,how_to,feature_explanation,standardization_blueprint,95,google_suggest,drafted,2026-05-13
+20260513_blogspot_kr_006_언리얼lod설정자동화,blogspot_kr,unreal,언리얼 LOD 설정 자동화,언리얼 LOD 설정 자동화 기능과 사용 방법 쉽게 설명,how_to,feature_explanation,quickstart_entry,95,perplexity_questions,drafted,2026-05-13
+20260513_blogspot_kr_007_스마트폰기본브라우저설정,blogspot_kr,general_it,스마트폰 기본브라우저 설정,스마트폰 기본브라우저 설정 처음 시작할 때 알아두면 좋은 사용법,how_to,feature_explanation,workflow_playbook,90,google_suggest,drafted,2026-05-13
+20260513_tistory_008_블렌더렌더링메모리캐시관리,tistory,blender,블렌더 렌더링 메모리 캐시 관리,블렌더 렌더링 메모리 캐시 관리 작업 흐름에 맞춰 정리한 활용법,practical,practical_usage,checklist_review,80,perplexity_questions,drafted,2026-05-13
+20260513_tistory_009_노션으로주간플래너와할일목록자동화,tistory,notion,노션으로 주간 플래너와 할 일 목록 자동화,노션으로 주간 플래너와 할 일 목록 자동화 실무에서 바로 쓰는 방법,practical,practical_usage,comparison_guide,90,perplexity_questions,drafted,2026-05-13
+20260513_tistory_010_블렌더렌더엔진cyclesvseevee,tistory,blender,블렌더 렌더 엔진 Cycles vs Eevee 선택 기준,블렌더 렌더 엔진 Cycles vs Eevee 선택 기준 차이점과 선택 기준 정리,comparison,comparison_analysis,problem_solution,80,perplexity_questions,drafted,2026-05-13
+20260513_tistory_011_vs코드파이썬설정,tistory,python,vs 코드 파이썬 설정,vs 코드 파이썬 설정 차이점과 선택 기준 정리,comparison,comparison_analysis,decision_guide,85,google_suggest,drafted,2026-05-13
+20260513_blogspot_kr_012_unityawakestart차이,blogspot_kr,unity,unity awake start 차이,unity awake start 차이 차이점과 선택 기준 정리,comparison,comparison_analysis,standardization_blueprint,80,google_suggest,drafted,2026-05-13

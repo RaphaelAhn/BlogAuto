@@ -3,6 +3,8 @@ chcp 65001 > nul
 
 cd /d "%~dp0"
 setlocal
+set "HIDDEN_MODE="
+if /I "%~1"=="__hidden__" set "HIDDEN_MODE=1"
 
 set "PYTHON_CMD="
 set "USE_UV="
@@ -17,7 +19,7 @@ call :resolve_python
 
 if not defined PYTHON_CMD if not defined USE_UV (
     echo No runnable Python or uv was found. Check your install and PATH.
-    pause
+    if not defined HIDDEN_MODE pause
     exit /b 1
 )
 
@@ -31,7 +33,7 @@ if defined PYTHON_CMD (
 
 if not defined PYTHON_CMD if not defined USE_UV (
     echo Could not verify a runnable Python interpreter, and uv is unavailable.
-    pause
+    if not defined HIDDEN_MODE pause
     exit /b 1
 )
 
@@ -45,13 +47,13 @@ echo [speed] BLOGAUTO_USE_API_ON_RETRY=%BLOGAUTO_USE_API_ON_RETRY%
 start http://localhost:8501
 
 if defined USE_UV (
-    set "UV_CACHE_DIR=%CD%\.uv-cache"
-    uv run --python 3.14 --with streamlit --with pandas --with requests --with beautifulsoup4 python -m streamlit run automation/app.py
+    set "UV_CACHE_DIR=%TEMP%\uv-cache-blogauto"
+    uv run --python 3.14 --with streamlit --with pandas --with requests --with beautifulsoup4 python -m streamlit run automation/app.py --server.headless true --browser.gatherUsageStats false
 ) else (
-    "%PYTHON_CMD%" -m streamlit run automation/app.py
+    "%PYTHON_CMD%" -m streamlit run automation/app.py --server.headless true --browser.gatherUsageStats false
 )
 
-pause
+if not defined HIDDEN_MODE pause
 exit /b 0
 
 :resolve_python

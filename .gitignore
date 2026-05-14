@@ -20,3 +20,5 @@ automation/output/
 
 build/
 dist/
+
+automation/data/notion_config.json
