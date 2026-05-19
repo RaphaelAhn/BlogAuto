@@ -1,7 +1,12 @@
+import os
 from pathlib import Path
 
-
-AUTOMATION_DIR = Path(__file__).resolve().parent.parent
+# BLOGAUTO_PROJECT_ROOT: frozen EXE 또는 Hub 실행 시 실제 Project_Blog 경로를 가리킵니다.
+_env_root = os.environ.get("BLOGAUTO_PROJECT_ROOT", "").strip()
+if _env_root and Path(_env_root).exists():
+    AUTOMATION_DIR = Path(_env_root) / "automation"
+else:
+    AUTOMATION_DIR = Path(__file__).resolve().parent.parent
 PROJECT_ROOT = AUTOMATION_DIR.parent
 
 DATA_DIR = AUTOMATION_DIR / "data"

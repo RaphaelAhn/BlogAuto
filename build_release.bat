@@ -8,30 +8,30 @@ set "PYTHON_CMD="
 set "USE_UV="
 set "WORK_DIR=%CD%\build\pyinstaller"
 set "DIST_DIR=%CD%\dist"
-set "APP_DIR=%DIST_DIR%\BlogAuto"
+set "APP_DIR=%DIST_DIR%\Project_Blog"
 
 call :resolve_python
 
 if not defined PYTHON_CMD if not defined USE_UV (
     echo No runnable Python or uv was found. Check your install and PATH.
-    pause
+    if not defined BUILD_NO_PAUSE pause
     exit /b 1
 )
 
-tasklist /FI "IMAGENAME eq BlogAuto.exe" 2>nul | find /I "BlogAuto.exe" >nul
+tasklist /FI "IMAGENAME eq Project_Blog.exe" 2>nul | find /I "Project_Blog.exe" >nul
 if not errorlevel 1 (
     echo.
-    echo [경고] BlogAuto.exe가 현재 실행 중입니다.
+    echo [경고] Project_Blog.exe가 현재 실행 중입니다.
     echo 빌드하려면 앱을 먼저 종료해야 합니다.
     echo.
     choice /C YN /M "지금 강제 종료하고 빌드를 계속할까요?"
     if errorlevel 2 (
         echo 빌드를 취소합니다.
-        pause
+        if not defined BUILD_NO_PAUSE pause
         exit /b 1
     )
-    taskkill /F /IM BlogAuto.exe >nul 2>&1
-    echo BlogAuto.exe 종료 완료.
+    taskkill /F /IM Project_Blog.exe >nul 2>&1
+    echo Project_Blog.exe 종료 완료.
     timeout /t 1 /nobreak >nul
 )
 
@@ -51,13 +51,13 @@ if defined PYTHON_CMD (
 
 if errorlevel 1 (
     echo [ERROR] Release build failed.
-    pause
+    if not defined BUILD_NO_PAUSE pause
     exit /b 1
 )
 
 echo [2] Release build complete.
 echo Output: %APP_DIR%
-pause
+if not defined BUILD_NO_PAUSE pause
 exit /b 0
 
 :resolve_python

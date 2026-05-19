@@ -1,4 +1,5 @@
 ﻿import os
+import shutil
 import subprocess
 import sys
 from collections import deque
@@ -9,20 +10,69 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from scripts.notion_config import DEFAULT_NOTION_CONFIG, build_notion_env, is_notion_configured, load_notion_config, save_notion_config
-from scripts.notion_sync import _resolve_parent, _retrieve_schema, archive_notion_pages, sync_articles_to_notion
-from scripts.paths import OUTPUT_DIR as ROOT_OUTPUT_DIR
-from scripts.topic_registry import TOPIC_USED_COLUMNS, clear_generated_article_state, mark_as_published, normalize
-
 # Windows에서 subprocess가 CMD 창을 새로 띄우지 않도록 막는 플래그
 _POPEN_FLAGS: int = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+
+def _resolve_blog_root() -> Path:
+    """실제 Project_Blog 디렉터리를 반환합니다. frozen EXE 환경을 고려합니다."""
+    # launcher.py 또는 환경변수로 지정된 경로 우선
+    env = os.environ.get("BLOGAUTO_PROJECT_ROOT", "").strip()
+    if env and Path(env).exists():
+        return Path(env)
+
+    default = Path(__file__).resolve().parents[1]
+
+    if not getattr(sys, "frozen", False):
+        return default  # dev 모드: __file__ 기반 경로가 정확함
+
+    # standalone Blog EXE: dist/Project_Blog/Project_Blog.exe → parents[2] = Project_Blog/
+    exe = Path(sys.executable)
+    candidate = exe.parents[2] if len(exe.parents) >= 3 else exe.parent
+    if (candidate / "automation" / "app.py").exists() and (candidate / "start_blog_auto.bat").exists():
+        return candidate
+
+    return default
+
+
+def _build_pipeline_cmd(script_path: Path, args: tuple[str, ...]) -> list[str]:
+    """파이프라인 스크립트를 실행할 명령을 반환합니다. frozen EXE에서는 uv를 사용합니다."""
+    if not getattr(sys, "frozen", False):
+        return [sys.executable, "-u", str(script_path), *args]
+
+    # frozen 모드: sys.executable이 EXE 자신이므로 uv로 대체
+    uv = os.environ.get("BLOGAUTO_UV", "").strip() or shutil.which("uv") or ""
+    if uv:
+        return [
+            uv, "run",
+            "--python", "3.14",
+            "--with", "requests",
+            "--with", "beautifulsoup4",
+            "--with", "pandas",
+            "--with", "openpyxl",
+            "python", "-u", str(script_path), *args,
+        ]
+
+    # uv 없음: 시스템 python 시도
+    py = shutil.which("python") or shutil.which("py") or ""
+    if py and "WindowsApps" not in py:
+        return [py, "-u", str(script_path), *args]
+
+    return [sys.executable, "-u", str(script_path), *args]
+
+
+BASE_DIR = _resolve_blog_root()
 SCRIPTS_DIR = BASE_DIR / "automation" / "scripts"
 PIPELINE_SCRIPT = SCRIPTS_DIR / "run_blog_pipeline.py"
 TOPIC_USED_PATH = BASE_DIR / "automation" / "data" / "topic_used.csv"
 LOGS_DIR = BASE_DIR / "logs" / "pipeline"
 TODAY = datetime.now().strftime("%Y-%m-%d")
+
+from scripts.notion_config import DEFAULT_NOTION_CONFIG, build_notion_env, is_notion_configured, load_notion_config, save_notion_config
+from scripts.notion_sync import _resolve_parent, _retrieve_schema, archive_notion_pages, sync_articles_to_notion
+from scripts.paths import OUTPUT_DIR as ROOT_OUTPUT_DIR
+from scripts.topic_registry import TOPIC_USED_COLUMNS, clear_generated_article_state, mark_as_published, normalize
+
 OUTPUT_DIR = ROOT_OUTPUT_DIR
 STATUS_LABELS = {"synced": "동기화 완료", "failed": "동기화 실패", "disabled": "연동 비활성", "": "미동기화"}
 PIPELINE_STEP_CONFIG = [
@@ -48,7 +98,7 @@ def run_python_script(script_path: Path, *args: str, extra_env: dict[str, str] |
     log_path = build_run_log_path(script_path, args)
     recent_lines = deque(maxlen=200)
     status_placeholder, log_placeholder = st.empty(), st.empty()
-    command = [sys.executable, "-u", str(script_path), *args]
+    command = _build_pipeline_cmd(script_path, args)
     try:
         with log_path.open("w", encoding="utf-8") as log_file:
             log_file.write(f"[START] {datetime.now().isoformat()}\n")
@@ -211,14 +261,16 @@ def render_pipeline_steps(article_env: dict[str, str]):
         with left:
             st.markdown(f"**{step['label']}**")
             st.caption(step["description"])
+        result_container = st.empty()
         with right:
             if st.button("이 단계 실행", key=f"run_step_{step['key']}", use_container_width=True):
-                success, message, log_path = run_python_script(PIPELINE_SCRIPT, step["key"], extra_env=article_env)
-                render_result(success, message, log_path)
+                with result_container.container():
+                    success, message, log_path = run_python_script(PIPELINE_SCRIPT, step["key"], extra_env=article_env)
+                    render_result(success, message, log_path)
         st.divider()
 
-st.set_page_config(page_title="BlogAuto", page_icon="📝", layout="centered")
-st.title("BlogAuto 자동 글 생성")
+st.set_page_config(page_title="Project_Blog", page_icon="📝", layout="centered")
+st.title("Project_Blog 자동 글 생성")
 st.caption("글 생성과 노션 데이터베이스 관리를 함께 처리합니다.")
 notion_config = load_notion_config()
 notion_env = build_notion_env(notion_config)

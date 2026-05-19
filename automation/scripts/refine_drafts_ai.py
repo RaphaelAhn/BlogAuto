@@ -1,10 +1,12 @@
 import json
 import os
 import re
+import subprocess
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 import requests
@@ -57,6 +59,7 @@ USE_API_ON_RETRY = _get_bool_env("BLOGAUTO_USE_API_ON_RETRY", False)
 PARALLEL_WORKERS = _get_int_env("BLOGAUTO_PARALLEL_WORKERS", 1)
 MIN_KOREAN_CONTENT_CHARS = _get_int_env("BLOGAUTO_MIN_KOREAN_CHARS", 2500, minimum=1000)
 PIPELINE_VERIFY_RETRIES = _get_int_env("BLOGAUTO_PIPELINE_VERIFY_RETRIES", 2)
+USE_AI_TEAM_MARKDOWN = _get_bool_env("BLOGAUTO_USE_AI_TEAM_MARKDOWN", False)
 REQUIRED_SCENARIO_COUNT = 3
 REQUIRED_QA_COUNT = 5
 REQUIRED_SECTION_TITLES = [
@@ -66,8 +69,114 @@ REQUIRED_SECTION_TITLES = [
     "Q&A",
     "결론",
 ]
+KOREAN_ONLY_POLICY = False
+POSTPROCESS_REPLACEMENTS = [
+    (r"안됨를", "안 됨을"),
+    (r"안됨에", "안 됨에"),
+    (r"기능을을", "기능을"),
+    (r"화면를", "화면을"),
+    (r"문제과", "문제와"),
+    (r"형태로 이어집니다", "형태로 제시됩니다"),
+    (r"커버처럼", "포함하는 형태로"),
+    (r"\s/\s", ", "),
+]
+POSTPROCESS_FORBIDDEN_PATTERNS = [
+    r"안됨를",
+    r"안됨에",
+    r"기능을을",
+    r"화면를",
+    r"문제과",
+    r"형태로 이어집니다",
+    r"커버처럼",
+    r"\s/\s",
+]
 
 _state_lock = threading.Lock()
+
+
+_FOCUS_ENDING_REPLACEMENTS = [
+    ("방식 강조", "방식을 어떻게 강조할지"),
+    ("관점 강조", "관점을 어떻게 강조할지"),
+    ("예시 구성", "예시를 어떻게 구성할지"),
+    ("기준 제공", "기준을 어떻게 제시할지"),
+    ("먼저 설명", "먼저 설명할지"),
+    ("설명", "어떻게 설명할지"),
+    ("분리", "어떻게 분리할지"),
+    ("강조", "무엇을 강조할지"),
+    ("세분화", "어떻게 세분화할지"),
+    ("제시", "어떻게 제시할지"),
+    ("구성", "어떻게 구성할지"),
+    ("확장", "어디까지 확장할지"),
+    ("안내", "어떻게 안내할지"),
+    ("설계", "어떻게 설계할지"),
+    ("배제", "왜 배제할지"),
+    ("커버", "어디까지 포함할지"),
+]
+
+
+def _resolve_ai_team_bridge():
+    workspace_root = Path(__file__).resolve().parents[3]
+    ai_team_root = workspace_root / "Project_AI_Team"
+    python_path = ai_team_root / ".venv" / "Scripts" / "python.exe"
+    bridge_path = ai_team_root / "automation" / "markdown_bridge.py"
+    if python_path.exists() and bridge_path.exists():
+        return python_path, bridge_path
+    return None, None
+
+
+def _format_focus_point_as_question(text):
+    value = str(text or "").strip()
+    for source, target in _FOCUS_ENDING_REPLACEMENTS:
+        if value.endswith(source):
+            return value[: -len(source)] + target
+    if value.endswith("강하게"):
+        return value[:-3] + "강하게 볼지"
+    return value
+
+
+def format_focus_examples(section_focus):
+    items = [_format_focus_point_as_question(item) for item in section_focus if str(item or "").strip()]
+    return ", ".join(items)
+
+
+def _generate_draft_via_ai_team_builder(row, plan):
+    python_path, bridge_path = _resolve_ai_team_bridge()
+    if not python_path or not bridge_path:
+        return None
+
+    keyword = clean_value(plan.get("keyword", ""), clean_value(row.get("keyword", ""), ""))
+    title = clean_value(plan.get("title", ""), keyword)
+    search_intent = clean_value(row.get("search_intent", ""), "")
+    tag_keywords = clean_value(row.get("tag_keywords", ""), "")
+    include_items = [scenario for scenario in plan.get("scenarios", []) if scenario]
+    if search_intent:
+        include_items.append(search_intent)
+    if tag_keywords:
+        include_items.append(f"태그 키워드: {tag_keywords}")
+
+    payload = {
+        "product_id": f"BLOG-{datetime.now().strftime('%Y%m%d')}-{abs(hash(title)) % 100000:05d}",
+        "content_team": "09_콘텐츠B팀",
+        "product_name": title,
+        "target_customer": "검색 유입으로 실무형 정보를 빠르게 찾는 독자",
+        "problem_to_solve": search_intent or f"{keyword}에 대한 실무형 답변이 필요하다",
+        "core_keywords": ", ".join(filter(None, [keyword, tag_keywords])),
+        "include_items": "\n".join(include_items) or "실무 예제\n단계별 설명\nQ&A",
+        "exclude_items": "과장 표현\n수익 보장 표현\n근거 없는 단정",
+        "requested_platforms": [clean_value(row.get("platform", ""), "naver")],
+        "description": clean_value(row.get("meta_description", ""), "") or f"{keyword} 주제의 블로그 초안",
+    }
+    result = subprocess.run(
+        [str(python_path), str(bridge_path), "blog"],
+        input=json.dumps(payload, ensure_ascii=False),
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        print(f"[blog-markdown-bridge] subprocess failed: {result.stderr.strip()}", flush=True)
+        return None
+    return result.stdout.strip() or None
 
 
 TOOL_PROFILES = [
@@ -691,43 +800,42 @@ TITLE_VARIATIONS = {
 INTRO_TEMPLATES = {
     "problem_solution": [
         (
-            "{keyword}를 찾는 사람은 보통 정의가 아니라 막힌 지점을 해결하려고 합니다. "
-            "특히 {surfaces}처럼 화면 선택지가 많은 도구에서는 어디서부터 눌러야 하는지보다 "
-            "무엇을 먼저 고정해야 하는지가 더 중요합니다. 이 글은 {keyword}를 실제 작업 흐름 안에서 "
-            "어느 시점에 꺼내야 하는지부터 설명하고, 실수 없이 적용하기 위한 기준을 잡는 데 초점을 둡니다.",
+            "{keyword}를 찾는 사람은 대개 개념 설명보다 지금 막힌 부분을 빨리 풀고 싶어 합니다. "
+            "특히 {surfaces}처럼 화면 선택지가 많은 도구에서는 어디를 먼저 누를지보다 무엇을 먼저 기준으로 잡을지가 더 중요합니다. "
+            "이 글은 {keyword}를 실제 작업 흐름 안에서 언제 꺼내야 하는지부터 짚고, 실수 없이 적용하기 위한 기준을 함께 정리합니다.",
             "{hook} People searching for {keyword} usually need a fix, not a definition. "
             "In tools with many surfaces such as {surfaces}, the important question is not only where to click, "
             "but what must be fixed first. This guide starts from the moment when {keyword} becomes necessary "
             "and focuses on a {lens} that prevents avoidable mistakes.",
         ),
         (
-            "같은 {keyword} 오류가 반복될 때, 원인은 보통 기능 자체가 아니라 적용 순서에 있습니다. "
-            "{assets}처럼 기준이 되는 자료를 먼저 분리하지 않으면 변경 전후를 비교하기 어려워집니다. "
-            "이 글은 오류가 나타나는 전형적인 세 가지 장면을 중심으로 어디서 기준을 고쳐야 하는지 설명합니다.",
+            "같은 {keyword} 오류가 반복될 때는 기능보다 적용 순서를 먼저 의심해야 합니다. "
+            "{assets}처럼 기준이 되는 자료를 먼저 나눠 두지 않으면 변경 전후를 비교하기가 생각보다 어렵습니다. "
+            "이 글은 오류가 자주 생기는 세 가지 장면을 중심으로 어디서 기준을 다시 세워야 하는지 설명합니다.",
             "{hook} When the same {keyword} issue keeps coming back, the cause is usually in the sequence, not the feature. "
             "Without first separating a reference such as {assets}, comparing before and after states becomes difficult. "
             "This guide explains three typical scenes where issues surface and exactly where to adjust the boundary using a {lens}.",
         ),
         (
-            "{keyword}를 처음 건드릴 때 실수가 잦은 이유는 {surfaces}를 목적보다 먼저 열기 때문입니다. "
-            "화면보다 목적과 범위를 먼저 정해 두면, 같은 단계를 다시 밟더라도 결과가 크게 달라집니다. "
-            "이 글은 판단 순서를 장면별로 나눠 실패를 줄이는 방법을 설명합니다.",
+            "{keyword}를 처음 다룰 때 실수가 잦은 이유는 화면보다 목적을 나중에 정하기 때문입니다. "
+            "{surfaces}를 열기 전에 목적과 범위를 먼저 잡아 두면, 같은 단계를 밟아도 결과가 훨씬 안정적입니다. "
+            "이 글은 판단 순서를 장면별로 나눠서, 실패를 줄이는 방법을 차근차근 설명합니다.",
             "{hook} Early mistakes with {keyword} often happen because {surfaces} is opened before the goal is defined. "
             "Setting the goal and scope before touching the screen changes outcomes significantly, even when the same steps are followed. "
             "This guide divides the judgment order into specific scenes through a {lens} to show where failure is most likely.",
         ),
         (
-            "{keyword}가 왜 계속 안 될까요? 대부분의 경우 기능 자체는 정상인데 적용하는 순서가 틀립니다. "
-            "{surfaces}에서 설정을 바꾸기 전에 {assets}부터 정리해야 하는 이유가 바로 여기 있습니다. "
-            "이 글은 실패가 반복되는 패턴을 먼저 보여 주고, 어디서 방향을 바꿔야 하는지 역방향으로 짚어 줍니다.",
+            "{keyword}가 왜 자꾸 안 될까요? 대부분은 기능이 고장 난 것이 아니라 적용 순서가 어긋난 경우입니다. "
+            "{surfaces}에서 설정을 바꾸기 전에 {assets}부터 정리해야 하는 이유도 바로 여기에 있습니다. "
+            "이 글은 실패가 반복되는 패턴을 먼저 보여 주고, 어디서 방향을 바꿔야 하는지 거꾸로 짚어 봅니다.",
             "Why does {keyword} keep failing? In most cases the feature works fine — the sequence is wrong. "
             "That is why {assets} must be sorted before touching settings on {surfaces}. "
             "Rather than listing steps forward, this article traces back from failure patterns to show exactly where the sequence breaks, using a {lens}.",
         ),
         (
-            "결론부터 말하면, {keyword} 문제의 80%는 첫 번째 단계에서 이미 결정됩니다. "
-            "그 첫 단계에서 {surfaces}를 잘못 설정하거나 {assets}를 구분하지 않으면, 이후 모든 수정이 임시방편이 됩니다. "
-            "이 글은 그 결정적인 첫 단계부터 시작해서, 왜 나머지가 그 방향으로 따라가야 하는지를 설명합니다.",
+            "결론부터 말하면, {keyword} 문제는 첫 단계에서 방향이 거의 정해집니다. "
+            "처음에 {surfaces}를 잘못 건드리거나 {assets}를 구분하지 않으면, 뒤에서 하는 수정은 대부분 임시방편이 되기 쉽습니다. "
+            "이 글은 그 첫 단계를 중심으로, 왜 이후 순서까지 함께 바로잡아야 하는지 설명합니다.",
             "The short answer: 80% of {keyword} problems are decided at step one. "
             "If {surfaces} is misconfigured or {assets} is not separated at that point, every fix after that is a patch. "
             "This article starts from that decisive first step and explains why everything downstream depends on getting it right, through a {lens}.",
@@ -745,7 +853,7 @@ INTRO_TEMPLATES = {
         (
             "실무에서 {keyword}를 처음 쓰는 사람이 막히는 지점은 대부분 기능이 아니라 순서입니다. "
             "{surfaces}처럼 화면이 많은 환경에서는 어떤 단계에서 어떤 화면을 열지 미리 정해 두는 것이 핵심입니다. "
-            "이 글은 {assets}을 기준으로 실행 순서를 정리한 플레이북 형태로 이어집니다.",
+            "이 글은 {assets}을 기준으로 실행 순서를 정리한 플레이북 형태로 제시됩니다.",
             "{hook} For most people starting to use {keyword} at work, the barrier is sequence, not functionality. "
             "In environments with many surfaces such as {surfaces}, knowing which screen to open at each step in advance is the central challenge. "
             "This guide maps the execution order around {assets} through a {lens}.",
@@ -1045,12 +1153,12 @@ PROFILE_PRINCIPLES_ANGLE = {
 PRINCIPLES_BODIES = [
     {
         "ko": (
-            "{keyword}를 처음 다루는 사람이 가장 먼저 해야 할 일은 기능을 켜는 것이 아니라 '판단 기준'을 세우는 것입니다. "
-            "판단 기준이란 '이 작업을 어디까지 바꿀 것인가', '결과가 어떤 상태여야 완료로 볼 것인가'를 미리 정해 두는 것입니다. "
-            "이 기준이 없으면 {surfaces}를 열었을 때 어떤 옵션을 눌러야 하는지 막막해지고, 클릭을 반복하다가 의도하지 않은 변경이 생기기 쉽습니다. "
-            "{focus_text} 같은 관점을 미리 정리해 두면 화면에서 시선이 분산되지 않고 필요한 항목만 빠르게 찾을 수 있게 됩니다. "
-            "반대로 기준 없이 바로 적용하면 {pitfalls} 같은 문제가 작업 도중이나 작업 직후에 드러납니다. "
-            "이런 문제는 대부분 되돌리는 데 시간이 더 걸리기 때문에, 처음 5분을 기준 설정에 쓰는 것이 전체 작업 시간을 줄이는 가장 확실한 방법입니다."
+            "{keyword}를 처음 다룰 때 가장 먼저 해야 할 일은 기능을 켜는 것이 아니라 판단 기준을 세우는 일입니다. "
+            "여기서 말하는 판단 기준은 '어디까지 바꿀 것인가', '어떤 상태가 되면 끝난 것으로 볼 것인가'를 미리 정해 두는 것을 뜻합니다. "
+            "이 기준이 없으면 {surfaces}를 열었을 때 무엇부터 봐야 할지 흐려지고, 클릭을 반복하다가 생각하지 못한 변경이 생기기 쉽습니다. "
+            "예를 들어 {focus_examples}를 먼저 정리해 두면 시선이 덜 흔들리고, 필요한 항목만 빠르게 고를 수 있습니다. "
+            "반대로 기준 없이 바로 적용하면 {pitfalls} 같은 문제가 작업 도중이나 끝난 직후에 드러나기 쉽습니다. "
+            "대부분의 문제는 되돌리는 데 더 오래 걸리기 때문에, 처음 5분을 기준 잡는 데 쓰는 편이 오히려 전체 시간을 줄여 줍니다."
         ),
         "en": (
             "The first thing someone new to {keyword} should do is not enable the feature, but establish a decision baseline. "
@@ -1063,12 +1171,12 @@ PRINCIPLES_BODIES = [
     },
     {
         "ko": (
-            "{pitfalls}처럼 같은 문제가 반복된다면, 가장 먼저 확인해야 할 것은 기능이 아니라 '작업 순서'입니다. "
-            "많은 경우 기능 자체는 제대로 동작하고 있는데, 어떤 단계에서 어떤 화면을 먼저 열었느냐가 결과를 결정합니다. "
-            "예를 들어 {surfaces} 중 설정 화면을 기준 화면보다 먼저 열면, 기준이 없는 상태에서 값을 바꾸게 되어 나중에 어떤 값이 올바른지 알 수 없게 됩니다. "
-            "{keyword}를 적용하기 전에 {surfaces}에서 현재 상태가 어떤지 먼저 기록해 두는 습관이 이 순서 문제를 막아 줍니다. "
-            "{focus_text}처럼 문제가 생기기 쉬운 지점을 미리 알고 있으면, 같은 화면을 보더라도 어디서 멈춰야 하는지 판단이 훨씬 빨라집니다. "
-            "처음에는 이 기록 습관이 번거롭게 느껴질 수 있지만, 작업이 쌓일수록 오류 원인을 찾는 시간이 눈에 띄게 줄어드는 것을 확인할 수 있습니다."
+            "{pitfalls}처럼 비슷한 문제가 반복된다면, 가장 먼저 봐야 할 것은 기능이 아니라 작업 순서입니다. "
+            "대부분의 경우 기능은 멀쩡한데, 어떤 단계에서 어떤 화면을 먼저 열었는지가 결과를 갈라놓습니다. "
+            "예를 들어 {surfaces} 중 설정 화면을 기준 화면보다 먼저 열면, 기준이 없는 상태에서 값을 바꾸게 되어 나중에는 무엇이 맞는 값이었는지 헷갈리기 쉽습니다. "
+            "{keyword}를 적용하기 전에 {surfaces}의 현재 상태를 먼저 기록해 두는 습관이 이런 순서 문제를 크게 줄여 줍니다. "
+            "여기에 {focus_examples}까지 미리 정리해 두면, 같은 화면을 보더라도 어디서 멈추고 확인해야 하는지 훨씬 빨리 판단할 수 있습니다. "
+            "처음에는 이 과정이 번거롭게 느껴질 수 있지만, 작업이 쌓일수록 오류 원인을 찾는 시간이 눈에 띄게 줄어듭니다."
         ),
         "en": (
             "When the same issues such as {pitfalls} keep coming back, the first thing to check is the work sequence, not the feature. "
@@ -1081,12 +1189,12 @@ PRINCIPLES_BODIES = [
     },
     {
         "ko": (
-            "{keyword}를 처음 접할 때 가장 많이 놓치는 것은 '적용 범위'입니다. "
-            "적용 범위란 이 기능이 어디까지 영향을 미치는지, 즉 어떤 파일, 어떤 시트, 어떤 항목이 바뀌는지를 말합니다. "
-            "범위를 미리 정하지 않으면 의도한 것보다 넓게 적용되거나, 반대로 필요한 부분에만 적용되지 않아서 결과를 보고 당황하게 됩니다. "
-            "{focus_text}처럼 작업의 목적과 범위를 먼저 한 줄로 정리해 두면, {surfaces}를 열었을 때 어떤 옵션을 건드려야 할지가 자연스럽게 좁혀집니다. "
-            "범위를 흐릿하게 잡은 채로 진행하면 {pitfalls} 문제로 이어질 가능성이 높고, 수정 후에도 결과가 기대와 다를 때 원인을 찾기 어렵습니다. "
-            "처음 시작할 때는 '이 작업에서 바꿔야 하는 것'과 '바꾸면 안 되는 것'을 구분하는 것부터 시작하면, 범위 설정이 훨씬 쉬워집니다."
+            "{keyword}를 처음 접할 때 가장 많이 놓치는 부분은 적용 범위입니다. "
+            "적용 범위란 이 기능이 어디까지 영향을 미치는지, 다시 말해 어떤 파일과 어떤 항목이 실제로 바뀌는지를 뜻합니다. "
+            "범위를 미리 정하지 않으면 생각보다 넓게 적용되거나, 반대로 꼭 바뀌어야 할 부분이 빠져서 결과를 보고 당황하기 쉽습니다. "
+            "예를 들어 {focus_examples}를 먼저 정리해 두면, {surfaces}를 열었을 때 어떤 옵션을 봐야 할지가 자연스럽게 좁혀집니다. "
+            "범위를 흐릿하게 잡은 채로 진행하면 {pitfalls} 문제로 이어질 가능성이 커지고, 수정 뒤에도 왜 결과가 달라졌는지 원인을 찾기 어려워집니다. "
+            "처음에는 '이번 작업에서 바꿔야 하는 것'과 '건드리면 안 되는 것'을 나눠 적는 것부터 시작하면 범위 설정이 훨씬 쉬워집니다."
         ),
         "en": (
             "The most commonly missed element when first approaching {keyword} is the scope — meaning which files, sheets, or items will actually change. "
@@ -1772,6 +1880,114 @@ def paragraph_pair(korean, english):
     return f"{korean}\n\n{english}"
 
 
+ENGLISH_TERM_MAP = {
+    "테스트 씬": "test scene",
+    "프리팹 또는 블루프린트": "prefab or Blueprint",
+    "검증용 오브젝트": "validation object",
+    "로그 기록": "log record",
+    "Project 창": "Project window",
+    "Scene 뷰": "Scene view",
+    "Blueprint Editor": "Blueprint Editor",
+    "씬 구조 정리": "scene cleanup",
+    "객체 재사용": "object reuse",
+    "테스트 루프 단축": "shortening the test loop",
+    "참조가 끊기는 문제": "broken references",
+    "씬별 설정이 달라지는 문제": "scene-by-scene setting drift",
+    "런타임 테스트와 에디터 설정이 엇갈리는 문제": "runtime/editor setting mismatch",
+    "언리얼엔진": "Unreal Engine",
+    "콘솔레": "console",
+    "명령어": "commands",
+    "준비 단계에서 무엇을 고정해야 하는지 설명 / 실행 순서와 검토 순서를 분리 / 개인 작업이 팀 흐름으로 이어지는 방식 강조": "clarify what must be fixed in preparation, separate execution from review, and make the work reusable across the team",
+}
+
+
+def _replace_known_english_terms(text):
+    result = str(text or "")
+    for source, target in sorted(ENGLISH_TERM_MAP.items(), key=lambda item: len(item[0]), reverse=True):
+        result = result.replace(source, target)
+    return result
+
+
+def _english_fallback_phrase(text, fallback):
+    value = _replace_known_english_terms(text).strip()
+    if not value:
+        return fallback
+    if re.search(r"[가-힣]", value):
+        return fallback
+    return value
+
+
+def english_keyword_label(keyword, profile=None):
+    cleaned = _replace_known_english_terms(keyword).strip()
+    if cleaned and not re.search(r"[가-힣]", cleaned):
+        return cleaned
+
+    profile_name = (profile or {}).get("name", "")
+    profile_fallbacks = {
+        "game_dev": "this Unreal Engine workflow",
+        "excel_data": "this spreadsheet workflow",
+        "word_docs": "this document workflow",
+        "presentation_flow": "this presentation workflow",
+        "collaboration_system": "this collaboration workflow",
+        "design_system": "this design-system workflow",
+        "ai_workflow": "this AI workflow",
+    }
+    return profile_fallbacks.get(profile_name, "this workflow")
+
+
+def english_focus_label(text, profile=None):
+    cleaned = _replace_known_english_terms(text).strip()
+    if cleaned and not re.search(r"[가-힣]", cleaned):
+        return cleaned
+
+    profile_name = (profile or {}).get("name", "")
+    profile_fallbacks = {
+        "game_dev": "lock the preparation baseline, separate execution from review, and keep the workflow reusable across teammates",
+        "ai_workflow": "separate setup, execution, and verification so the workflow can be reused by someone else",
+    }
+    return profile_fallbacks.get(
+        profile_name,
+        "define the baseline first, separate execution from review, and document the flow for reuse",
+    )
+
+
+def english_surface_list(profile):
+    return ", ".join(
+        _english_fallback_phrase(surface, "the target screen")
+        for surface in profile["surfaces"][:4]
+    )
+
+
+def english_assets_list(profile):
+    return ", ".join(
+        _english_fallback_phrase(asset, "the working asset")
+        for asset in profile["assets"][:4]
+    )
+
+
+def english_pitfalls_list(profile):
+    return ", ".join(
+        _english_fallback_phrase(pitfall, "configuration drift")
+        for pitfall in profile["pitfalls"][:3]
+    )
+
+
+def english_surface_name(profile, index):
+    return _english_fallback_phrase(profile["surfaces"][index % len(profile["surfaces"])], "the target screen")
+
+
+def english_asset_name(profile, index):
+    return _english_fallback_phrase(profile["assets"][index % len(profile["assets"])], "the working asset")
+
+
+def english_pitfall_name(profile, index):
+    return _english_fallback_phrase(profile["pitfalls"][index % len(profile["pitfalls"])], "configuration drift")
+
+
+def english_step_lines(lines):
+    return [_replace_known_english_terms(line) for line in lines]
+
+
 def get_required_section_titles():
     return REQUIRED_SECTION_TITLES[:]
 
@@ -1853,6 +2069,56 @@ def analyze_bilingual_structure(text):
 
 def has_required_bilingual_structure(text):
     return analyze_bilingual_structure(text)["is_bilingual"]
+
+
+def _strip_english_body_paragraphs(text):
+    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", str(text or "")) if part.strip()]
+    kept = []
+    removed = 0
+    for paragraph in paragraphs:
+        if _classify_bilingual_paragraph(paragraph) == "en":
+            removed += 1
+            continue
+        kept.append(paragraph)
+    return "\n\n".join(kept).strip(), removed
+
+
+def analyze_korean_postprocess_issues(text):
+    bilingual_meta = analyze_bilingual_structure(text)
+    forbidden_hits = []
+    for pattern in POSTPROCESS_FORBIDDEN_PATTERNS:
+        if re.search(pattern, str(text or "")):
+            forbidden_hits.append(pattern)
+    return {
+        "english_body_paragraphs": bilingual_meta["english_blocks"],
+        "forbidden_hits": forbidden_hits,
+        "has_issues": bilingual_meta["english_blocks"] > 0 or bool(forbidden_hits),
+    }
+
+
+def apply_korean_postprocess_rules(text):
+    cleaned = str(text or "")
+    cleaned, removed_english = _strip_english_body_paragraphs(cleaned)
+    for pattern, replacement in POSTPROCESS_REPLACEMENTS:
+        cleaned = re.sub(pattern, replacement, cleaned)
+    return cleaned.strip(), removed_english
+
+
+def describe_language_policy_status(text):
+    if KOREAN_ONLY_POLICY:
+        issues = analyze_korean_postprocess_issues(text)
+        return {
+            "ok": not issues["has_issues"],
+            "label": f"ko_only=eng:{issues['english_body_paragraphs']} banned:{len(issues['forbidden_hits'])}",
+            "reason": "korean_policy",
+        }
+
+    bilingual_meta = analyze_bilingual_structure(text)
+    return {
+        "ok": bilingual_meta["is_bilingual"],
+        "label": f"bilingual={bilingual_meta['paired_blocks']}/{bilingual_meta['korean_blocks']}",
+        "reason": "bilingual_required",
+    }
 
 
 def analyze_required_article_structure(text):
@@ -2156,6 +2422,10 @@ def render_intro(keyword, profile, plan):
     variant = plan["variant"]["name"]
     tone = plan_tone(plan)
     narrative = plan_narrative(plan)
+    en_keyword = english_keyword_label(keyword, profile)
+    en_surfaces = english_surface_list(profile)
+    en_assets = english_assets_list(profile)
+    en_workflow = _replace_known_english_terms(profile["workflow"])
 
     templates = INTRO_TEMPLATES.get(variant, INTRO_TEMPLATES["workflow_playbook"])
     tmpl_index = (plan["seed"] + plan["attempt"]) % len(templates)
@@ -2168,10 +2438,10 @@ def render_intro(keyword, profile, plan):
         workflow=profile["workflow"],
     )
     en = en_tmpl.format(
-        keyword=keyword,
-        surfaces=surfaces,
-        assets=assets,
-        workflow=profile["workflow"],
+        keyword=en_keyword,
+        surfaces=en_surfaces,
+        assets=en_assets,
+        workflow=en_workflow,
         hook=tone["hook"],
         lens=tone["lens"],
     )
@@ -2181,12 +2451,18 @@ def render_intro(keyword, profile, plan):
 
 def render_principles(keyword, profile, plan):
     variant = plan["variant"]
-    focus_text = " / ".join(variant["section_focus"])
+    focus_text = ", ".join(variant["section_focus"])
+    focus_examples = format_focus_examples(variant["section_focus"])
     pitfalls = ", ".join(profile["pitfalls"][:3])
     surfaces = ", ".join(profile["surfaces"][:4])
     assets = ", ".join(profile["assets"])
     tone = plan_tone(plan)
     narrative = plan_narrative(plan)
+    en_keyword = english_keyword_label(keyword, profile)
+    en_focus_text = english_focus_label(focus_text, profile)
+    en_pitfalls = english_pitfalls_list(profile)
+    en_surfaces = english_surface_list(profile)
+    en_assets = english_assets_list(profile)
 
     base_angle = PROFILE_PRINCIPLES_ANGLE.get(profile["name"], 0)
     body_index = (base_angle + plan["attempt"]) % len(PRINCIPLES_BODIES)
@@ -2195,11 +2471,23 @@ def render_principles(keyword, profile, plan):
     body = PRINCIPLES_BODIES[body_index]
     note = PRINCIPLES_ASSET_NOTES[note_index]
 
-    ko = body["ko"].format(keyword=keyword, focus_text=focus_text, surfaces=surfaces, pitfalls=pitfalls)
-    en = body["en"].format(keyword=keyword, focus_text=focus_text, surfaces=surfaces, pitfalls=pitfalls, risk_label=tone["risk_label"])
+    ko = body["ko"].format(
+        keyword=keyword,
+        focus_text=focus_text,
+        focus_examples=focus_examples,
+        surfaces=surfaces,
+        pitfalls=pitfalls,
+    )
+    en = body["en"].format(
+        keyword=en_keyword,
+        focus_text=en_focus_text,
+        surfaces=en_surfaces,
+        pitfalls=en_pitfalls,
+        risk_label=tone["risk_label"],
+    )
 
     ko2 = note["ko"].format(keyword=keyword, assets=assets)
-    en2 = note["en"].format(keyword=keyword, assets=assets)
+    en2 = note["en"].format(keyword=en_keyword, assets=en_assets)
 
     principle_blocks = [
         paragraph_pair(ko, en + " " + narrative["principle_close"]),
@@ -2215,12 +2503,15 @@ def render_preparation(keyword, profile, plan):
     assets = ", ".join(profile["assets"][:3])
     tone = plan_tone(plan)
     narrative = plan_narrative(plan)
+    en_keyword = english_keyword_label(keyword, profile)
+    en_surfaces = english_surface_list(profile)
+    en_assets = english_assets_list(profile)
 
     prep_index = (plan["seed"] + plan["attempt"] * 3) % len(PREPARATION_BODIES)
     body = PREPARATION_BODIES[prep_index]
 
     ko = body["ko"].format(keyword=keyword, assets=assets, surfaces=surfaces)
-    en = body["en"].format(keyword=keyword, assets=assets, surfaces=surfaces, lens=tone["lens"])
+    en = body["en"].format(keyword=en_keyword, assets=en_assets, surfaces=en_surfaces, lens=tone["lens"])
     return paragraph_pair(ko, en + " " + narrative["prep_close"])
 
 
@@ -2281,7 +2572,7 @@ def build_example_steps(profile, scenario, index, plan):
     ]
     step_seed = plan["seed"] + (plan["attempt"] * 5) + index
     pattern_index = step_seed % len(ko_patterns)
-    return ko_patterns[pattern_index], en_patterns[pattern_index]
+    return ko_patterns[pattern_index], english_step_lines(en_patterns[pattern_index])
 
 
 def render_scenario(keyword, profile, plan, scenario, index):
@@ -2292,6 +2583,9 @@ def render_scenario(keyword, profile, plan, scenario, index):
     pattern = plan_pattern(plan)
     narrative = plan_narrative(plan)
     block_order = plan_block_order(plan)
+    en_keyword = english_keyword_label(keyword, profile)
+    en_pitfall = english_pitfall_name(profile, index)
+    en_asset = english_asset_name(profile, index)
 
     scenario_label = SCENARIO_LABELS[(plan["seed"] + index) % len(SCENARIO_LABELS)]
     step_ko_label, step_en_label = STEP_LABELS[(plan["seed"] + plan["attempt"] + index) % len(STEP_LABELS)]
@@ -2307,10 +2601,10 @@ def render_scenario(keyword, profile, plan, scenario, index):
         f"이 과정이 번거롭게 느껴질 수 있지만, 이 한 단계가 나중에 잘못된 결과를 되돌리는 데 드는 시간을 크게 줄여 줍니다."
     )
     en_intro = (
-        f"Situation: The most common mistake with {keyword} is clicking through screen menus before clarifying the work goal. "
+        f"Situation: The most common mistake with {en_keyword} is clicking through screen menus before clarifying the work goal. "
         f"Starting with what is visually obvious on screen feels natural, but without defining the change scope first, "
         f"unexpected areas often end up modified. "
-        f"In this scene, the key is to define the boundary of 'how far this task goes' using {asset} as the reference point before touching anything. "
+        f"In this scene, the key is to define the boundary of 'how far this task goes' using {en_asset} as the reference point before touching anything. "
         f"When setting the boundary, writing one line for 'what must change' and one line for 'what must not change' makes the judgment much easier. "
         f"This step may feel like extra work, but it significantly reduces the time spent undoing incorrect results later. "
         f"{narrative['reason_frame']}"
@@ -2325,10 +2619,10 @@ def render_scenario(keyword, profile, plan, scenario, index):
         f"이 예제를 통해 '언제 멈추고 확인해야 하는지'의 판단 기준을 익혀 두면, 비슷한 상황에서 같은 실수를 반복하지 않게 됩니다."
     )
     en_reason = (
-        f"{pattern['reason_label']}: The hardest moment in {profile['workflow']} is deciding whether a given option can be changed right now. "
+        f"{pattern['reason_label']}: The hardest moment in {_replace_known_english_terms(profile['workflow'])} is deciding whether a given option can be changed right now. "
         f"This scenario shows most clearly the step of establishing that decision baseline before the work starts. "
         f"When the change scope and criteria are set in advance, mid-task decisions become faster because you simply compare against the baseline. "
-        f"Without a baseline, issues such as {pitfall} tend to surface late in the process or just before sharing, "
+        f"Without a baseline, issues such as {en_pitfall} tend to surface late in the process or just before sharing, "
         f"and reverting at that point may require redoing every step that came after. "
         f"Internalizing 'when to stop and verify' from this example prevents repeating the same mistake in similar situations — that is the practical value of a {tone['lens']}."
     )
@@ -2345,7 +2639,7 @@ def render_scenario(keyword, profile, plan, scenario, index):
         f"저장 전 30초 확인이 나중에 몇 시간의 복구 작업을 막아 줄 수 있습니다."
     )
     en_caution = (
-        f"{pattern['caution_label']}: {pitfall} typically arises in two situations. "
+        f"{pattern['caution_label']}: {en_pitfall} typically arises in two situations. "
         f"First, when multiple options are changed at the same time. "
         f"Second, when the original and test copies sit in the same folder and get used interchangeably. "
         f"In either case, tracing which change caused a problem later becomes very difficult. "
@@ -2371,6 +2665,11 @@ def render_checklist_item(keyword, profile, plan, scenario, index):
     surface = surfaces[index % len(surfaces)]
     tone = plan_tone(plan)
     item_num = index + 1
+    en_pitfall = english_pitfall_name(profile, index)
+    en_asset = english_asset_name(profile, index)
+    en_surface = english_surface_name(profile, index)
+    en_surface_2 = english_surface_name(profile, min(1, len(surfaces) - 1))
+    en_surface_3 = english_surface_name(profile, min(2, len(surfaces) - 1))
 
     ko = (
         f"체크 항목 {item_num}. {scenario}\n\n"
@@ -2384,13 +2683,13 @@ def render_checklist_item(keyword, profile, plan, scenario, index):
     )
     en = (
         f"Check item {item_num}. {scenario}\n\n"
-        f"Why it matters: Skipping this item often causes {pitfall} to appear later when it is harder to fix. "
-        f"It is easy to miss without directly checking {surface}.\n\n"
+        f"Why it matters: Skipping this item often causes {en_pitfall} to appear later when it is harder to fix. "
+        f"It is easy to miss without directly checking {en_surface}.\n\n"
         f"How to verify:\n"
-        f"1) Confirm the current value in {asset} matches the intended state.\n"
-        f"2) Check the setting is correctly configured on {surfaces[min(1, len(surfaces)-1)]}.\n"
-        f"3) If adjustment is needed, apply changes on {surfaces[min(2, len(surfaces)-1)]} and save.\n\n"
-        f"Caution: This item is directly tied to {pitfall}. Skipping it can make later checks meaningless. [{tone['risk_label']}]"
+        f"1) Confirm the current value in {en_asset} matches the intended state.\n"
+        f"2) Check the setting is correctly configured on {en_surface_2}.\n"
+        f"3) If adjustment is needed, apply changes on {en_surface_3} and save.\n\n"
+        f"Caution: This item is directly tied to {en_pitfall}. Skipping it can make later checks meaningless. [{tone['risk_label']}]"
     )
     return paragraph_pair(ko, en)
 
@@ -2403,6 +2702,10 @@ def render_comparison_item(keyword, profile, plan, scenario, index):
     surface = surfaces[index % len(surfaces)]
     tone = plan_tone(plan)
     item_num = index + 1
+    en_pitfall = english_pitfall_name(profile, index)
+    en_asset_0 = english_asset_name(profile, 0)
+    en_surface = english_surface_name(profile, index)
+    en_surface_2 = english_surface_name(profile, min(1, len(surfaces) - 1))
 
     ko = (
         f"비교 장면 {item_num}. {scenario}\n\n"
@@ -2417,11 +2720,11 @@ def render_comparison_item(keyword, profile, plan, scenario, index):
     en = (
         f"Comparison scene {item_num}. {scenario}\n\n"
         f"Approach A — anchored to {assets[0]}:\n"
-        f"Fix {assets[0]} first on {surface} and narrow the scope. "
-        f"The impact range after changes stays predictable, reducing {pitfall} risk.\n\n"
+        f"Fix {en_asset_0} first on {en_surface} and narrow the scope. "
+        f"The impact range after changes stays predictable, reducing {en_pitfall} risk.\n\n"
         f"Approach B — anchored to {surfaces[min(1, len(surfaces)-1)]}:\n"
-        f"Select options directly on {surfaces[min(1, len(surfaces)-1)]} for faster application. "
-        f"Speed is higher but potential drift toward {pitfall} must be confirmed first.\n\n"
+        f"Select options directly on {en_surface_2} for faster application. "
+        f"Speed is higher but potential drift toward {en_pitfall} must be confirmed first.\n\n"
         f"Decision rule: For a repeating task, Approach A fits better. For a one-time case, Approach B is usually faster. [{tone['lens']}]"
     )
     return paragraph_pair(ko, en)
@@ -2436,6 +2739,9 @@ def render_quickstart_item(keyword, profile, plan, scenario, index):
     tone = plan_tone(plan)
     ko_steps_list, en_steps_list = build_example_steps(profile, scenario, index, plan)
     item_num = index + 1
+    en_pitfall = english_pitfall_name(profile, index)
+    en_asset = english_asset_name(profile, index)
+    en_surface = english_surface_name(profile, index)
 
     step_lines_ko = "\n".join(f"{i+1}) {step}" for i, step in enumerate(ko_steps_list))
     step_lines_en = "\n".join(f"{i+1}) {step}" for i, step in enumerate(en_steps_list))
@@ -2449,10 +2755,10 @@ def render_quickstart_item(keyword, profile, plan, scenario, index):
     )
     en = (
         f"First-try scene {item_num}. {scenario}\n\n"
-        f"It is straightforward. Start on {surface}.\n\n"
+        f"It is straightforward. Start on {en_surface}.\n\n"
         f"Steps to follow:\n{step_lines_en}\n\n"
-        f"First-timers often hit {pitfall} here. "
-        f"When that happens, double-check {asset} and try again. [{tone['lens']}]"
+        f"First-timers often hit {en_pitfall} here. "
+        f"When that happens, double-check {en_asset} and try again. [{tone['lens']}]"
     )
     return paragraph_pair(ko, en)
 
@@ -2463,6 +2769,9 @@ def render_review_or_exception(keyword, profile, plan):
     surfaces = ", ".join(profile["surfaces"][:3])
     tone = plan_tone(plan)
     narrative = plan_narrative(plan)
+    en_keyword = english_keyword_label(keyword, profile)
+    en_pitfalls = ", ".join(english_pitfall_name(profile, i) for i in range(min(2, len(profile["pitfalls"]))))
+    en_surfaces = english_surface_list(profile)
 
     if variant_name == "standardization_blueprint":
         ko = (
@@ -2471,8 +2780,8 @@ def render_review_or_exception(keyword, profile, plan):
             f"템플릿, 권한, 검토 순서를 한 문서에 묶어 두면 재사용성과 설명 가능성이 함께 올라갑니다."
         )
         en = (
-            f"When turning {keyword} into a standard routine, document which values were fixed on screens such as {surfaces} instead of relying on memory. "
-            f"If exception rules are not written separately, issues such as {pitfalls} repeat as soon as the owner changes. "
+            f"When turning {en_keyword} into a standard routine, document which values were fixed on screens such as {en_surfaces} instead of relying on memory. "
+            f"If exception rules are not written separately, issues such as {en_pitfalls} repeat as soon as the owner changes. "
             f"Keeping the template, permissions, and review order in one document improves both reuse and explainability during {tone['review_label']}."
         )
     elif variant_name == "decision_guide":
@@ -2483,7 +2792,7 @@ def render_review_or_exception(keyword, profile, plan):
         )
         en = (
             f"In the verification stage, it is more important to check whether the result matches the goal than to celebrate the fact that a result exists. "
-            f"Even when {keyword} appears to save time, the target scope may have expanded and created more follow-up edits. "
+            f"Even when {en_keyword} appears to save time, the target scope may have expanded and created more follow-up edits. "
             f"For that reason, the final checklist should include not only success criteria but also stop conditions under {tone['review_label']}."
         )
     elif variant_name == "checklist_review":
@@ -2493,8 +2802,8 @@ def render_review_or_exception(keyword, profile, plan):
             f"마지막 단계에서는 확인한 항목을 목록으로 남겨 두면, 다음번에 같은 점검을 반복할 때 훨씬 빠릅니다."
         )
         en = (
-            f"Finishing all checklist items for {keyword} is not the end. "
-            f"A single skipped item can lead to problems such as {pitfalls} later on. "
+            f"Finishing all checklist items for {en_keyword} is not the end. "
+            f"A single skipped item can lead to problems such as {en_pitfalls} later on. "
             f"At the final stage, recording the verified items as a list makes the next review significantly faster under {tone['review_label']}."
         )
     elif variant_name == "comparison_guide":
@@ -2504,9 +2813,9 @@ def render_review_or_exception(keyword, profile, plan):
             f"기록이 없으면 {pitfalls} 같은 문제가 반복될 때 어느 방식에서 생긴 건지 파악하기 어렵습니다."
         )
         en = (
-            f"Whichever approach you chose for {keyword}, note the reason in one line. "
+            f"Whichever approach you chose for {en_keyword}, note the reason in one line. "
             f"When the same situation comes back, that record removes the need to compare from scratch. "
-            f"Without it, repeat issues such as {pitfalls} become harder to trace back to a specific approach under {tone['review_label']}."
+            f"Without it, repeat issues such as {en_pitfalls} become harder to trace back to a specific approach under {tone['review_label']}."
         )
     elif variant_name == "quickstart_entry":
         ko = (
@@ -2515,9 +2824,9 @@ def render_review_or_exception(keyword, profile, plan):
             f"초보 단계에서 {pitfalls} 같은 문제를 먼저 한 번 겪어 두는 것이 오히려 빠른 성장으로 이어집니다."
         )
         en = (
-            f"After your first session with {keyword}, quickly record what you tried and where you got stuck. "
+            f"After your first session with {en_keyword}, quickly record what you tried and where you got stuck. "
             f"That note saves time when the same friction appears again. "
-            f"Running into {pitfalls} early on actually accelerates learning faster than avoiding it under {tone['review_label']}."
+            f"Running into {en_pitfalls} early on actually accelerates learning faster than avoiding it under {tone['review_label']}."
         )
     else:
         ko = (
@@ -2527,7 +2836,7 @@ def render_review_or_exception(keyword, profile, plan):
         )
         en = (
             f"After finishing the work, keep the review criteria together with the result instead of saving the result alone. "
-            f"Because {keyword} depends more on interpretation than on raw clicking, define which changed values count as success. "
+            f"Because {en_keyword} depends more on interpretation than on raw clicking, define which changed values count as success. "
             f"That record prevents the same trial and error from repeating in the next run and improves {tone['review_label']}."
         )
 
@@ -2538,10 +2847,14 @@ def render_qna(keyword, profile, plan):
     qna_blocks = []
     tone = plan_tone(plan)
     narrative = plan_narrative(plan)
+    total_questions = len(plan["questions"])
     for index, question in enumerate(plan["questions"], start=1):
         pitfall = profile["pitfalls"][(index - 1) % len(profile["pitfalls"])]
         surface = profile["surfaces"][(index - 1) % len(profile["surfaces"])]
         asset = profile["assets"][(index - 1) % len(profile["assets"])]
+        en_pitfall = english_pitfall_name(profile, index - 1)
+        en_surface = english_surface_name(profile, index - 1)
+        en_asset = english_asset_name(profile, index - 1)
 
         tmpl_index = (plan["seed"] + index + plan["attempt"]) % len(QA_ANSWER_TEMPLATES)
         tmpl = QA_ANSWER_TEMPLATES[tmpl_index]
@@ -2549,13 +2862,13 @@ def render_qna(keyword, profile, plan):
         shared_q = f"Q{index}. {question}"
         ko_a = tmpl["ko"].format(surface=surface, asset=asset, pitfall=pitfall)
         en_a = tmpl["en"].format(
-            surface=surface,
-            asset=asset,
-            pitfall=pitfall,
+            surface=en_surface,
+            asset=en_asset,
+            pitfall=en_pitfall,
             tip_label=tone["tip_label"],
-            qa_close=narrative["qa_close"],
+            qa_close=narrative["qa_close"] if index == total_questions else "",
         )
-        qna_blocks.append(shared_q + "\n\n" + paragraph_pair(ko_a, en_a))
+        qna_blocks.append(shared_q + "\n\n" + paragraph_pair(ko_a, " ".join(en_a.split())))
 
     return "\n\n".join(qna_blocks)
 
@@ -2563,13 +2876,14 @@ def render_qna(keyword, profile, plan):
 def render_conclusion(keyword, profile, plan):
     tone = plan_tone(plan)
     narrative = plan_narrative(plan)
+    en_keyword = english_keyword_label(keyword, profile)
 
     tmpl_index = (plan["seed"] + plan["attempt"]) % len(CONCLUSION_TEMPLATES)
     tmpl = CONCLUSION_TEMPLATES[tmpl_index]
 
     ko = tmpl["ko"].format(keyword=keyword)
     en = tmpl["en"].format(
-        keyword=keyword,
+        keyword=en_keyword,
         lens=tone["lens"],
         conclusion_close=narrative["conclusion_close"],
     )
@@ -2775,7 +3089,7 @@ def generate_article_via_api(row, plan):
 1. 한글 본문 글자 수만 최소 {MIN_KOREAN_CONTENT_CHARS:,}자 이상이어야 한다.
 2. 영어, 숫자, 기호는 글자 수 계산에서 제외한다.
 3. 목록, 표, 코드, 이미지 설명, 섹션 제목은 글자 수 계산에서 제외한다.
-4. 한국어 문단 뒤에 대응되는 영어 문단을 바로 붙일 것
+4. 본문은 한국어만 사용하고, 영어 문단을 따로 넣지 않는다.
 5. 섹션 순서:
    - 1. 서론
    - 2. 본문 1: 개념 설명
@@ -2824,8 +3138,13 @@ def generate_article_via_api(row, plan):
 
 def generate_draft_via_codex(row, plan):
     """1단계: gpt-4o로 1차 초안 생성."""
+    if USE_AI_TEAM_MARKDOWN:
+        ai_team_draft = _generate_draft_via_ai_team_builder(row, plan)
+        if ai_team_draft:
+            return ai_team_draft
+
     if not OPENAI_API_KEY:
-        return None
+        return _generate_draft_via_ai_team_builder(row, plan)
 
     keyword = plan["keyword"]
     profile = plan["profile"]
@@ -2847,12 +3166,13 @@ def generate_draft_via_codex(row, plan):
 
 [필수 규칙]
 1. 한국어 본문 글자 수 최소 {MIN_KOREAN_CONTENT_CHARS:,}자 이상 (영어·숫자·기호·제목 제외)
-2. 각 한국어 문단 바로 다음에 대응하는 영어 문단을 붙일 것
+2. 본문은 한국어만 사용하고, 영어 문단이나 영어 번역 문단을 넣지 않는다.
 3. 섹션 순서: 1. 서론 → 2. 본문 1: 개념 설명 → 3. 본문 2: 실무 적용 + 단계별 설명 → 4. Q&A → 5. 결론
 4. 각 섹션 제목은 위 문구를 그대로 사용하고 바꾸지 않습니다.
 5. 제시된 상황은 정확히 3개, Q&A는 정확히 5개
 6. 범용적인 "메뉴 → 탭 → 설정" 패턴 금지, 주제 특화 용어 사용
 7. 다음 위험 요소를 자연스럽게 포함: {", ".join(profile["pitfalls"])}
+8. "형태로 이어집니다", "안됨를", "안됨에", "기능을을", "커버처럼" 같은 표현은 사용하지 않습니다.
 
 본문만 출력하세요."""
 
@@ -2883,11 +3203,18 @@ def refine_article_via_claude(draft, plan):
     prompt = f"""아래 블로그 글 초안을 검토하고 수정해주세요.
 
 수정 기준:
-1. 문법 오류 수정
-2. 어색한 한국어/영어 표현을 자연스럽게 개선
-3. 문단 간 흐름이 매끄럽게 이어지도록 수정
-4. 키워드 "{keyword}"의 맥락 일관성 유지
-5. 내용·구조·길이는 절대 변경하지 말 것
+1. 한국어 문법, 조사, 띄어쓰기 오류를 수정합니다.
+2. 어색한 동사와 표현을 자연스럽게 바꿉니다.
+3. 같은 의미의 표현은 한 가지로 통일합니다.
+4. 영어 문단이나 영어 설명은 넣지 말고, 본문은 한국어만 사용합니다.
+5. "형태로 이어집니다", "안됨를", "안됨에", "기능을을", "커버처럼" 같은 표현은 금지합니다.
+6. "화면를", "문제과" 같은 잘못된 조사는 자연스럽게 바로잡습니다.
+7. "A / B / C"처럼 슬래시로 나열하지 말고 쉼표나 문장으로 풀어 씁니다.
+8. 쉼표로 길게 나열한 문장이 바로 "~처럼", "같은", "기준", "관점"을 수식하지 않게 다듬습니다.
+9. 필요하면 나열을 짧은 문장 2개 이상으로 나눕니다.
+10. 긴 문장은 두 문장 이상으로 나눌 수 있고, 어순 조정과 문장 재구성은 허용됩니다.
+11. 키워드 "{keyword}"의 맥락, 섹션 순서, 예제 수, Q&A 수는 유지합니다.
+12. 내용의 핵심 의미와 전체 분량은 크게 바꾸지 않습니다.
 
 원문:
 {draft}
@@ -2916,19 +3243,23 @@ def refine_article_via_claude(draft, plan):
     return draft
 
 
-def restore_english_paragraphs_via_claude(article, plan):
+def refine_korean_article_policy_via_claude(article, plan):
     if not ANTHROPIC_API_KEY or not article:
         return article
 
     keyword = plan["keyword"]
-    prompt = f"""아래 블로그 글은 반드시 한글 문단 다음에 대응되는 영어 문단이 바로 붙는 상하 병렬 구조여야 합니다.
+    prompt = f"""아래 블로그 글을 한국어 최종본 정책에 맞게 정리해주세요.
 
 수정 목표:
-1. 영어 문단이 빠진 모든 한글 문단 뒤에 대응되는 영어 문단을 추가합니다.
-2. 기존 한글 문단의 의미, 순서, 섹션 구조는 유지합니다.
-3. 제목, 예제 개수, Q&A 개수는 바꾸지 않습니다.
-4. 출력은 수정된 전체 본문만 반환합니다.
-5. 모든 한글 본문 문단 뒤에는 영어 문단이 바로 와야 합니다.
+1. 영어 문단이나 영어 설명 문단은 모두 제거합니다.
+2. 본문은 한국어만 사용합니다. 제품명, 서비스명 같은 고유명사는 예외입니다.
+3. 조사 오류, 띄어쓰기 오류, 어색한 표현을 함께 정리합니다.
+4. "형태로 이어집니다", "안됨를", "안됨에", "기능을을", "커버처럼", "화면를", "문제과"는 자연스러운 한국어로 고칩니다.
+5. "A / B / C"처럼 슬래시로 나열한 표현은 쉼표나 짧은 문장으로 바꿉니다.
+6. 쉼표로 길게 이어진 나열이 바로 수식어 역할을 하지 않도록 문장을 다시 나눕니다.
+7. 섹션 순서, 예제 개수, Q&A 개수, 핵심 의미는 유지합니다.
+8. 긴 문장은 더 읽기 쉽게 나눌 수 있습니다.
+9. 출력은 수정된 전체 본문만 반환합니다.
 
 키워드: {keyword}
 
@@ -2948,29 +3279,63 @@ def restore_english_paragraphs_via_claude(article, plan):
             timeout=120,
         )
         if response.status_code != 200:
-            print(f"[claude-bilingual] status={response.status_code}", flush=True)
+            print(f"[claude-korean-policy] status={response.status_code}", flush=True)
             return article
         text = response.json()["content"][0]["text"]
-        if count_korean_content_chars(text) >= MIN_KOREAN_CONTENT_CHARS and has_required_bilingual_structure(text):
+        issues = analyze_korean_postprocess_issues(text)
+        if count_korean_content_chars(text) >= MIN_KOREAN_CONTENT_CHARS and not issues["has_issues"]:
             return text
     except Exception as e:
-        print(f"[claude-bilingual] error: {e}", flush=True)
+        print(f"[claude-korean-policy] error: {e}", flush=True)
     return article
 
 
-def enforce_bilingual_article(article, row, plan):
-    if has_required_bilingual_structure(article):
-        return article, "ok"
+def enforce_korean_article_policy(article, row, plan):
+    cleaned, removed_english = apply_korean_postprocess_rules(article)
+    issues = analyze_korean_postprocess_issues(cleaned)
+    if count_korean_content_chars(cleaned) >= MIN_KOREAN_CONTENT_CHARS and not issues["has_issues"]:
+        if removed_english > 0 or cleaned != article:
+            return cleaned, "local_cleanup"
+        return cleaned, "ok"
 
-    restored = restore_english_paragraphs_via_claude(article, plan)
-    if restored != article and has_required_bilingual_structure(restored):
-        return restored, "claude_restore"
+    refined = refine_korean_article_policy_via_claude(cleaned, plan)
+    refined_cleaned, refined_removed_english = apply_korean_postprocess_rules(refined)
+    refined_issues = analyze_korean_postprocess_issues(refined_cleaned)
+    if count_korean_content_chars(refined_cleaned) >= MIN_KOREAN_CONTENT_CHARS and not refined_issues["has_issues"]:
+        if refined_cleaned != article or refined_removed_english > 0:
+            return refined_cleaned, "claude_cleanup"
+        return refined_cleaned, "ok"
 
     local_article = render_article_locally_v2(row, plan)
-    if has_required_bilingual_structure(local_article):
-        return local_article, "local_regen"
+    local_cleaned, local_removed_english = apply_korean_postprocess_rules(local_article)
+    local_issues = analyze_korean_postprocess_issues(local_cleaned)
+    if count_korean_content_chars(local_cleaned) >= MIN_KOREAN_CONTENT_CHARS and not local_issues["has_issues"]:
+        if local_removed_english > 0:
+            return local_cleaned, "local_regen_cleanup"
+        return local_cleaned, "local_regen"
 
-    return article, "failed"
+    return cleaned, "failed"
+
+
+def enforce_bilingual_article(article, row, plan):
+    if not KOREAN_ONLY_POLICY:
+        if has_required_bilingual_structure(article):
+            return article, "ok"
+
+        restored = refine_korean_article_policy_via_claude(article, plan)
+        if restored != article and has_required_bilingual_structure(restored):
+            return restored, "claude_restore"
+
+        local_article = render_article_locally_v2(row, plan)
+        if has_required_bilingual_structure(local_article):
+            return local_article, "local_regen"
+
+        return article, "failed"
+
+    cleaned, stage = enforce_korean_article_policy(article, row, plan)
+    if stage == "failed":
+        return article, "failed"
+    return cleaned, stage
 
 
 def enforce_required_article_structure(article, row, plan):
@@ -3110,10 +3475,10 @@ def run_article_pipeline(row, plan):
     if article != draft:
         source = f"{source}+claude"
     article, bilingual_stage = enforce_bilingual_article(article, row, plan)
-    if bilingual_stage == "claude_restore":
-        source = f"{source}+bilingual"
+    if bilingual_stage in {"claude_cleanup", "local_cleanup", "local_regen_cleanup"}:
+        source = f"{source}+korean"
     elif bilingual_stage == "local_regen":
-        source = "local+bilingual"
+        source = "local+korean"
     article, structure_stage = enforce_required_article_structure(article, row, plan)
     if structure_stage == "local_regen":
         source = "local+structure"
@@ -3351,14 +3716,14 @@ def _generate_validated_article_v2(row, checker, report_rows, quality_rows, run_
         quality_meta["article_source"] = article_source
         quality_meta["api_elapsed_seconds"] = round(api_elapsed, 3)
         quality_meta["attempt_elapsed_seconds"] = round(attempt_elapsed, 3)
-        bilingual_meta = analyze_bilingual_structure(article_text)
+        language_policy = describe_language_policy_status(article_text)
         required_structure_meta = analyze_required_article_structure(article_text)
 
         is_standard_ok = match.score < SIMILARITY_THRESHOLD
         is_structural_ok = structural_match.score < STRUCTURAL_THRESHOLD
         is_heading_ok = heading_match.score < checker.heading_threshold
         is_quality_ok = quality_meta["total_penalty"] < QUALITY_PENALTY_THRESHOLD
-        is_bilingual_ok = bilingual_meta["is_bilingual"]
+        is_bilingual_ok = language_policy["ok"]
         is_required_structure_ok = (
             required_structure_meta["has_required_sections"]
             and required_structure_meta["has_required_scenarios"]
@@ -3372,7 +3737,7 @@ def _generate_validated_article_v2(row, checker, report_rows, quality_rows, run_
             f"source={article_source} api={_timed(api_elapsed)} total={_timed(attempt_elapsed)} "
             f"standard={match.score} structural={structural_match.score} "
             f"heading={heading_match.score} penalty={quality_meta['total_penalty']} "
-            f"bilingual={bilingual_meta['paired_blocks']}/{bilingual_meta['korean_blocks']} "
+            f"{language_policy['label']} "
             f"required=sections:{required_section_preview} scenarios:{required_structure_meta['unique_scenarios']} qas:{required_structure_meta['unique_qas']}"
         )
 
@@ -3405,7 +3770,7 @@ def _generate_validated_article_v2(row, checker, report_rows, quality_rows, run_
         if not is_quality_ok:
             failed_checks.append("quality_penalty")
         if not is_bilingual_ok:
-            failed_checks.append("bilingual_required")
+            failed_checks.append(language_policy["reason"])
         if not is_required_structure_ok:
             failed_checks.append("required_structure")
         print(
@@ -3461,14 +3826,14 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
             quality_meta["article_source"] = article_source
             quality_meta["api_elapsed_seconds"] = round(pipeline_elapsed, 3)
             quality_meta["attempt_elapsed_seconds"] = round(attempt_elapsed, 3)
-            bilingual_meta = analyze_bilingual_structure(article_text)
+            language_policy = describe_language_policy_status(article_text)
             required_structure_meta = analyze_required_article_structure(article_text)
 
             is_standard_ok = match.score < SIMILARITY_THRESHOLD
             is_structural_ok = structural_match.score < STRUCTURAL_THRESHOLD
             is_heading_ok = heading_match.score < checker.heading_threshold
             is_quality_ok = quality_meta["total_penalty"] < QUALITY_PENALTY_THRESHOLD
-            is_bilingual_ok = bilingual_meta["is_bilingual"]
+            is_bilingual_ok = language_policy["ok"]
             is_required_structure_ok = (
                 required_structure_meta["has_required_sections"]
                 and required_structure_meta["has_required_scenarios"]
@@ -3482,7 +3847,7 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
                 f"source={article_source} pipeline={_timed(pipeline_elapsed)} total={_timed(attempt_elapsed)} "
                 f"standard={match.score} structural={structural_match.score} "
                 f"heading={heading_match.score} penalty={quality_meta['total_penalty']} "
-                f"bilingual={bilingual_meta['paired_blocks']}/{bilingual_meta['korean_blocks']} "
+                f"{language_policy['label']} "
                 f"required=sections:{required_section_preview} scenarios:{required_structure_meta['unique_scenarios']} qas:{required_structure_meta['unique_qas']}"
             )
 
@@ -3516,7 +3881,7 @@ def _parallel_article_worker(row, checker, run_dir, run_state, file_index):
             if not is_quality_ok:
                 failed_checks.append("quality_penalty")
             if not is_bilingual_ok:
-                failed_checks.append("bilingual_required")
+                failed_checks.append(language_policy["reason"])
             if not is_required_structure_ok:
                 failed_checks.append("required_structure")
             print(
@@ -3543,9 +3908,13 @@ def _save_article_file(row, plan, quality_meta, match, structural_match, article
     final_path = run_dir / f"{file_number}_{safe_platform}_{safe_title}.txt"
     article_text, bilingual_stage = enforce_bilingual_article(article_text, row, plan)
     article_text, structure_stage = enforce_required_article_structure(article_text, row, plan)
-    if not has_required_bilingual_structure(article_text):
+    if KOREAN_ONLY_POLICY:
+        korean_issues = analyze_korean_postprocess_issues(article_text)
+        if korean_issues["has_issues"]:
+            raise RuntimeError(f"한국어 후처리 실패: {plan['title']}")
+    elif not has_required_bilingual_structure(article_text):
         raise RuntimeError(f"영문 문단 복원 실패: {plan['title']}")
-    if bilingual_stage in {"claude_restore", "local_regen"}:
+    if bilingual_stage in {"claude_cleanup", "local_cleanup", "local_regen_cleanup", "claude_restore", "local_regen"}:
         quality_meta["article_source"] = f"{quality_meta.get('article_source', '')}+{bilingual_stage}".strip("+")
     if not has_required_article_structure(article_text):
         raise RuntimeError(

@@ -160,3 +160,190 @@ jira,지라 워크플로 커스텀,perplexity_questions,informational,50,medium,
 jira,지라 댓글 검색,perplexity_questions,informational,50,medium,low,2026-05-15,댓글 관리 기능 미포함,50,feature_explanation,기능 설명형,지라 댓글 검색 기본 개념부터 적용 방법까지 정리
 jira,지라 프로젝트 복사,perplexity_questions,informational,50,medium,low,2026-05-15,프로젝트 복제 가이드 없음,50,feature_explanation,기능 설명형,지라 프로젝트 복사 초보자도 이해하기 쉬운 설정과 활용
 jira,지라 로그아웃 자주,perplexity_questions,informational,50,medium,low,2026-05-15,세션 관리 팁 전무,50,feature_explanation,기능 설명형,지라 로그아웃 자주 기능과 사용 방법 쉽게 설명
+unity,유니티 허브 설치,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글들에는 유니티 실행 환경 관리나 허브 설치 의도가 전혀 없음,50,feature_explanation,기능 설명형,유니티 허브 설치 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 화면 깨짐,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글에는 유니티 에디터의 화면 표시 오류를 다루는 내용이 없음,50,feature_explanation,기능 설명형,유니티 화면 깨짐 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 컴파일 에러,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글들은 파이썬이나 엑셀 중심이며 유니티 스크립트 컴파일 오류 해결과는 무관함,50,feature_explanation,기능 설명형,유니티 컴파일 에러 기본 개념부터 적용 방법까지 정리
+unity,유니티 스크립트 연결,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글은 데이터 처리와 도구 사용법 위주이며 유니티 오브젝트-스크립트 연결 의도가 없음,50,feature_explanation,기능 설명형,유니티 스크립트 연결 기능과 사용 방법 쉽게 설명
+unity,유니티 씬 저장,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글의 파일 저장은 파이썬 텍스트 IO 중심이고 유니티 씬 저장 맥락과 다름,50,feature_explanation,기능 설명형,유니티 씬 저장 기본 개념부터 적용 방법까지 정리
+unity,유니티 iOS 빌드,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글은 iOS 배포 환경이나 유니티 플랫폼별 빌드와 관련이 없음,50,feature_explanation,기능 설명형,유니티 iOS 빌드 기본 개념부터 적용 방법까지 정리
+unity,유니티 패키지 임포트,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글은 다른 도구의 데이터 통합이나 파일 처리 중심이며 유니티 패키지 import와 다름,50,feature_explanation,기능 설명형,유니티 패키지 임포트 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 캐시 삭제,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글에는 유니티 임시 데이터 정리나 성능 개선 주제가 없음,50,feature_explanation,기능 설명형,유니티 캐시 삭제 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 버전 선택,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글은 다른 AI/오피스/파이썬 주제이며 유니티 버전 선택 의도와 겹치지 않음,50,feature_explanation,기능 설명형,유니티 버전 선택 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 소리 안남,perplexity_questions,informational,50,medium,low,2026-05-18,CPU/작업 관리자와 무관한 오디오 출력 문제를 다룸,50,feature_explanation,기능 설명형,윈도우 소리 안남 처음 시작할 때 알아두면 좋은 사용법
+office365,워드 파일명,naver_suggest,informational,50,medium,low,2026-05-18,정보 탐색형 검색어라 기초 설명 글로 만들기 좋습니다.,50,feature_explanation,기능 설명형,워드 파일명 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 뷰포트 조작법,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 실행화면 분석 수준이며, 뷰포트 조작 팁은 별도 의도입니다.",50,feature_explanation,기능 설명형,언리얼 뷰포트 조작법 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 화면 검은색,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 렌더링 방법의 이해 중심이고, 화면 이상 증상 해결과 다릅니다.",50,feature_explanation,기능 설명형,언리얼 화면 검은색 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 에디터 느림,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글의 '시간 오래걸림'은 설치/초기 실행 맥락이고, 에디터 성능 문제는 다릅니다.",50,feature_explanation,기능 설명형,언리얼 에디터 느림 기본 개념부터 적용 방법까지 정리
+blender,블렌더 맥북 단축키,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글은 OS별 조작 차이 설명이 아니라 일반 모델링 기능 설명임,50,feature_explanation,기능 설명형,블렌더 맥북 단축키 기본 개념부터 적용 방법까지 정리
+blender,블렌더 노트북 최적화,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글은 모델링 도구 소개 중심이라 저사양 기기 최적화 의도와 다름,50,feature_explanation,기능 설명형,블렌더 노트북 최적화 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 pip 설치,perplexity_questions,informational,50,medium,low,2026-05-18,코드 예제 중심의 기존 글과 달리 패키지 관리와 설치 오류 해결이 핵심,50,feature_explanation,기능 설명형,파이썬 pip 설치 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 버전 확인,perplexity_questions,informational,50,medium,low,2026-05-18,파일 읽기·쓰기나 리스트 활용과 무관한 시스템 확인 주제,50,feature_explanation,기능 설명형,파이썬 버전 확인 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 버전 변경,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글의 핵심 검색 의도와 달리 설치된 버전 관리와 전환이 목적,50,feature_explanation,기능 설명형,파이썬 버전 변경 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 CSV 읽기,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글의 일반 파일 읽기보다 표 형식 데이터 처리에 초점,50,feature_explanation,기능 설명형,파이썬 CSV 읽기 기본 개념부터 적용 방법까지 정리
+notion,노션 캘린더 연동,perplexity_questions,informational,50,medium,low,2026-05-18,기본 노션 사용법이 아니라 외부 서비스 연동에 대한 별도 의도입니다.,50,feature_explanation,기능 설명형,노션 캘린더 연동 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 배경 투명화,perplexity_questions,informational,50,medium,low,2026-05-18,기존 글과 달리 출력용 이미지 처리 및 재사용 목적이 핵심임,50,feature_explanation,기능 설명형,캔바 배경 투명화 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 이슈 타입 추가,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 이슈 개념 소개 위주이고, 이 주제는 관리자 설정 실무에 해당함",50,feature_explanation,기능 설명형,지라 이슈 타입 추가 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 필터 공유,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글에는 필터 만들기 언급만 있고, 이 주제는 공유와 재사용에 집중함",50,feature_explanation,기능 설명형,지라 필터 공유 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 JQL 검색,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 JQL 언급 수준이지만, 이 주제는 실제 검색식 활용에 더 직접적임",50,feature_explanation,기능 설명형,지라 JQL 검색 기본 개념부터 적용 방법까지 정리
+jira,지라 이슈 일괄 수정,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 생성과 기본 흐름 중심이며, 이 주제는 대량 관리 자동화에 해당함",50,feature_explanation,기능 설명형,지라 이슈 일괄 수정 기능과 사용 방법 쉽게 설명
+jira,지라 담당자 변경,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 기본 사용 흐름 중심이며, 이 주제는 실제 운영 중 인수인계 작업에 특화됨",50,feature_explanation,기능 설명형,지라 담당자 변경 기본 개념부터 적용 방법까지 정리
+jira,지라 댓글 알림 끄기,perplexity_questions,informational,50,medium,low,2026-05-18,"기존 글은 전체적인 사용법 위주이며, 이 주제는 댓글 알림 제어라는 구체적 목적이 다름",50,feature_explanation,기능 설명형,지라 댓글 알림 끄기 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 한글 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 텍스트 인코딩 및 표시 오류 해결에 집중함,50,feature_explanation,기능 설명형,유니티 한글 깨짐 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 빌드 실패,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 일반 개념 위주이고, 이 주제는 빌드 과정의 실패 대응에 초점이 있음",50,feature_explanation,기능 설명형,유니티 빌드 실패 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 포토샵 연동,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 블렌더 밖의 편집 워크플로우를 다루는 주제임,50,feature_explanation,기능 설명형,블렌더 포토샵 연동 기능과 사용 방법 쉽게 설명
+python,파이썬 한글 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 파일 읽기·쓰기 글과 달리 인코딩 문제 해결이 중심 의도임,50,feature_explanation,기능 설명형,파이썬 한글 깨짐 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 엑셀 읽기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글의 파일 입출력과 달리 스프레드시트 자동화가 핵심임,50,feature_explanation,기능 설명형,파이썬 엑셀 읽기 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 웹 스크래핑,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 웹 자동 수집이라는 별도 검색 의도임,50,feature_explanation,기능 설명형,파이썬 웹 스크래핑 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 json 읽기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 리스트·Set·파일 입출력 위주이며 JSON 파싱 의도와 다름,50,feature_explanation,기능 설명형,파이썬 json 읽기 기능과 사용 방법 쉽게 설명
+python,파이썬 정규표현식,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 문자열 패턴 검색과 검증이 핵심 목적임,50,feature_explanation,기능 설명형,파이썬 정규표현식 기본 개념부터 적용 방법까지 정리
+notion,노션 페이지 복구,perplexity_questions,informational,50,medium,low,2026-05-19,기본 작성법이 아니라 실수 복구와 데이터 회복에 관한 주제임,50,feature_explanation,기능 설명형,노션 페이지 복구 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 정렬 단축키,perplexity_questions,informational,50,medium,low,2026-05-19,피그마 기능 소개가 아니라 실무 속도 향상용 단축키 주제,50,feature_explanation,기능 설명형,피그마 정렬 단축키 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 배경 음악 제거,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 일반 기능 설명 위주이고, 이 주제는 영상 오디오 편집에 초점이 있음",50,feature_explanation,기능 설명형,캔바 배경 음악 제거 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 알림 끄기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 협업 기능 소개 중심이며, 알림 제어는 별도의 설정 문제임",50,feature_explanation,기능 설명형,지라 알림 끄기 기본 개념부터 적용 방법까지 정리
+jira,지라 엑셀 내보내기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 지라 내부 운영 중심이고, 외부 문서로의 내보내기 목적은 다름",50,feature_explanation,기능 설명형,지라 엑셀 내보내기 기본 개념부터 적용 방법까지 정리
+trello,트렐로 캘린더 연동,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기본 기능 소개 중심이고 외부 캘린더 연동은 별도 검색 의도입니다.,50,feature_explanation,기능 설명형,트렐로 캘린더 연동 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 버전 변경,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 버전 호환과 마이그레이션 문제를 다룬다,50,feature_explanation,기능 설명형,유니티 버전 변경 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 아이폰 빌드,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 완전히 다른 유니티 iOS 배포 실무 주제다,50,feature_explanation,기능 설명형,유니티 아이폰 빌드 기본 개념부터 적용 방법까지 정리
+unity,유니티 씬 전환,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글과 다른 유니티 실행 흐름 문제로, 핵심 검색 의도가 겹치지 않는다",50,feature_explanation,기능 설명형,유니티 씬 전환 기본 개념부터 적용 방법까지 정리
+unity,유니티 저장 시스템,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 업무 문서가 아닌 게임 데이터 저장 주제다,50,feature_explanation,기능 설명형,유니티 저장 시스템 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 오브젝트 생성,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 다른 유니티 런타임 오브젝트 처리 주제다,50,feature_explanation,기능 설명형,유니티 오브젝트 생성 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 오브젝트 풀링,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과는 검색 의도가 전혀 다른 성능 최적화 주제다,50,feature_explanation,기능 설명형,유니티 오브젝트 풀링 기본 개념부터 적용 방법까지 정리
+unity,유니티 터치 입력,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 유니티 모바일 조작 입력이라는 별도 검색 의도를 가진다,50,feature_explanation,기능 설명형,유니티 터치 입력 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 충돌 처리,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 다른 유니티 물리 처리 주제이며 기존 목록과도 의도가 겹치지 않는다,50,feature_explanation,기능 설명형,유니티 충돌 처리 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 오브젝트 분리,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 모델링 도구 자체 설명 중심이고, 분리 작업은 별도 활용 주제입니다.",50,feature_explanation,기능 설명형,블렌더 오브젝트 분리 기능과 사용 방법 쉽게 설명
+blender,블렌더 UV 펼치기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 모델링 도구 사용법 중심이며 UV 전개는 다른 핵심 검색 의도입니다.,50,feature_explanation,기능 설명형,블렌더 UV 펼치기 기능과 사용 방법 쉽게 설명
+blender,블렌더 배경 투명하게,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 모델링 도구 설명 중심이며 투명 배경 출력은 별도 목적입니다.,50,feature_explanation,기능 설명형,블렌더 배경 투명하게 기능과 사용 방법 쉽게 설명
+blender,블렌더 애드온 설치,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 기본 모델링 기능 중심이고, 애드온 관리와는 검색 의도가 다릅니다.",50,feature_explanation,기능 설명형,블렌더 애드온 설치 기본 개념부터 적용 방법까지 정리
+python,파이썬 설치,perplexity_questions,informational,50,medium,low,2026-05-19,"파일 입출력이나 자료형이 아닌, 파이썬 설치 자체의 환경 설정 문제를 다룸",50,feature_explanation,기능 설명형,파이썬 설치 기본 개념부터 적용 방법까지 정리
+python,파이썬 가상환경,perplexity_questions,informational,50,medium,low,2026-05-19,"리스트, 세트 같은 자료형이 아니라 환경 분리와 의존성 관리에 관한 주제",50,feature_explanation,기능 설명형,파이썬 가상환경 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 문자열 인코딩,perplexity_questions,informational,50,medium,low,2026-05-19,"파일 읽기쓰기와 겹치지 않도록, 인코딩 오류 해결에 집중함",50,feature_explanation,기능 설명형,파이썬 문자열 인코딩 기능과 사용 방법 쉽게 설명
+python,파이썬 예외처리,perplexity_questions,informational,50,medium,low,2026-05-19,기본 문법 설명보다 실무 중 오류 방지와 안정성 확보에 집중함,50,feature_explanation,기능 설명형,파이썬 예외처리 기본 개념부터 적용 방법까지 정리
+canva,캔바 한글 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 템플릿과 기본 기능 설명 중심이고 폰트 깨짐 문제는 포함되지 않음,50,feature_explanation,기능 설명형,캔바 한글 깨짐 기본 개념부터 적용 방법까지 정리
+canva,캔바 글꼴 추가,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기본 기능 익히기이며 글꼴 확장 설정은 별도 검색 의도임,50,feature_explanation,기능 설명형,캔바 글꼴 추가 기본 개념부터 적용 방법까지 정리
+canva,캔바 사이즈 변경,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기본 편집 소개이며 크기 재설계와 변환 목적이 다름,50,feature_explanation,기능 설명형,캔바 사이즈 변경 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 협업 댓글 기능,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기본 기능 학습 중심이고 피드백 협업 워크플로우는 핵심 의도가 다름,50,feature_explanation,기능 설명형,캔바 협업 댓글 기능 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 카드 복사,perplexity_questions,informational,50,medium,low,2026-05-19,기본 사용법이 아니라 카드 재사용이라는 구체적 작업 효율화에 초점을 둠,50,feature_explanation,기능 설명형,트렐로 카드 복사 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 보드 복사,perplexity_questions,informational,50,medium,low,2026-05-19,초보자 설명이 아니라 운영 자동화에 가까운 보드 재사용 주제임,50,feature_explanation,기능 설명형,트렐로 보드 복사 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 보드 템플릿,perplexity_questions,informational,50,medium,low,2026-05-19,단순 사용법이 아니라 템플릿 기반 생산성 향상 주제임,50,feature_explanation,기능 설명형,트렐로 보드 템플릿 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 허브 다운로드,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 유니티 실행 환경 준비에 초점을 둔 주제다.,50,feature_explanation,기능 설명형,유니티 허브 다운로드 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 프로젝트 생성,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 파일 다루기나 일반 사용법이 아니라 유니티 프로젝트 시작에 초점이 있다.,50,feature_explanation,기능 설명형,유니티 프로젝트 생성 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 정품인증,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 기능 활용 중심이고, 인증 오류 해결은 다루지 않음",50,feature_explanation,기능 설명형,오피스365 정품인증 기능과 사용 방법 쉽게 설명
+blender,블렌더 화면 검은색,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기본 메뉴와 모델링 기능 설명 위주로 화면 표시 오류와 무관함,50,feature_explanation,기능 설명형,블렌더 화면 검은색 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 json 파싱,perplexity_questions,informational,50,medium,low,2026-05-19,기존의 텍스트 파일 입출력과는 다른 데이터 포맷 처리 주제임,50,feature_explanation,기능 설명형,파이썬 json 파싱 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 템플릿 복제,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 노션 기초 설명 중심이고, 템플릿 복제 실무 문제는 다루지 않습니다.",50,feature_explanation,기능 설명형,노션 템플릿 복제 기본 개념부터 적용 방법까지 정리
+canva,캔바 한글 폰트 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글에는 한글 폰트 호환성이나 글자 깨짐 이슈가 없습니다.,50,feature_explanation,기능 설명형,캔바 한글 폰트 깨짐 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 배경 음악 넣기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기본 기능 학습에 초점이 있고 오디오 편집 목적은 포함되지 않습니다.,50,feature_explanation,기능 설명형,캔바 배경 음악 넣기 기능과 사용 방법 쉽게 설명
+jira,지라 알림 안옴,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 사용법 중심이고, 이 주제는 오류 해결과 재발 방지가 목적입니다.",50,feature_explanation,기능 설명형,지라 알림 안옴 기본 개념부터 적용 방법까지 정리
+unity,유니티 오디오 안들림,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글에는 Unity 사운드, 오디오 믹서, 음량 문제와 관련된 의도가 없음",50,feature_explanation,기능 설명형,유니티 오디오 안들림 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 검은 화면,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 엔진 소개와 콘텐츠 예제 탐색이고, 이 주제는 화면 표시 오류 대응임",50,feature_explanation,기능 설명형,언리얼 검은 화면 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 패키징 실패,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 프로젝트 사용법과 입문 안내이고, 이 주제는 배포 단계의 실패 해결임",50,feature_explanation,기능 설명형,언리얼 패키징 실패 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 텍스처 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 엔진 개요와 샘플 프로젝트 설명이고, 이 주제는 리소스 품질 문제 해결임",50,feature_explanation,기능 설명형,언리얼 텍스처 깨짐 기능과 사용 방법 쉽게 설명
+unreal,언리얼 프레임 드랍,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 입문용 설명 위주이고, 이 주제는 성능 최적화 문제에 집중함",50,feature_explanation,기능 설명형,언리얼 프레임 드랍 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 한글 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 학습 자료 소개이고, 이 주제는 한글 표시 문제라는 환경 이슈임",50,feature_explanation,기능 설명형,언리얼 한글 깨짐 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 메모리 부족,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 엔진 소개와 예제 프로젝트 안내이며, 이 주제는 시스템 자원 문제 해결임",50,feature_explanation,기능 설명형,언리얼 메모리 부족 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 렉 줄이기,perplexity_questions,informational,50,medium,low,2026-05-19,"기초 사용법이나 모델링 도구 소개가 아니라, 고사양 작업 중 성능 최적화 문제를 다룸",50,feature_explanation,기능 설명형,블렌더 렉 줄이기 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 웹 크롤링,perplexity_questions,informational,50,medium,low,2026-05-19,리스트나 Set 문법 설명이 아니라 데이터 수집 자동화 목적입니다.,50,feature_explanation,기능 설명형,파이썬 웹 크롤링 기본 개념부터 적용 방법까지 정리
+notion,노션 속도 느림,perplexity_questions,informational,50,medium,low,2026-05-19,기본 기능 설명이 아니라 성능 저하와 최적화 문제가 핵심입니다,50,feature_explanation,기능 설명형,노션 속도 느림 기본 개념부터 적용 방법까지 정리
+notion,노션 자동완성 끄기,perplexity_questions,informational,50,medium,low,2026-05-19,콘텐츠 작성 기본 설명이 아니라 입력 편의 설정을 다루는 주제입니다,50,feature_explanation,기능 설명형,노션 자동완성 끄기 기본 개념부터 적용 방법까지 정리
+notion,노션 페이지 잠금,perplexity_questions,informational,50,medium,low,2026-05-19,기본 사용법이 아니라 문서 보호와 편집 방지 목적의 주제입니다,50,feature_explanation,기능 설명형,노션 페이지 잠금 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 메모리 최적화,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글 목록에 성능 최적화, 메모리 관리, 저사양 대응 주제가 없음",50,feature_explanation,기능 설명형,유니티 메모리 최적화 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 블루스크린,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 작업 관리자나 일반 시스템 오류가 아니라 블루스크린이라는 별도 증상에 초점이 있음,50,feature_explanation,기능 설명형,윈도우 블루스크린 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 메모리 부족,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글의 CPU나 작업 관리자 이슈와 달리 RAM 부족 상황을 다룸,50,feature_explanation,기능 설명형,윈도우 메모리 부족 처음 시작할 때 알아두면 좋은 사용법
+office365,엑셀 실물화 뜻,naver_suggest,informational,50,medium,low,2026-05-19,정보 탐색형 검색어라 기초 설명 글로 만들기 좋습니다.,50,feature_explanation,기능 설명형,엑셀 실물화 뜻 기능과 사용 방법 쉽게 설명
+office365,워드 파일 병합,naver_suggest,informational,50,medium,low,2026-05-19,정보 탐색형 검색어라 기초 설명 글로 만들기 좋습니다.,50,feature_explanation,기능 설명형,워드 파일 병합 초보자도 이해하기 쉬운 설정과 활용
+office365,ppt 초본 뜻,naver_suggest,informational,50,medium,low,2026-05-19,정보 탐색형 검색어라 기초 설명 글로 만들기 좋습니다.,50,feature_explanation,기능 설명형,ppt 초본 뜻 기본 개념부터 적용 방법까지 정리
+blender,블렌더 화면이 안보임,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 좌표계와 오리진 설명이고, 이 주제는 화면 표시 문제 해결이다",50,feature_explanation,기능 설명형,블렌더 화면이 안보임 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 스케일 적용,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 오리진 이동이 중심이고, 이 주제는 변형값 정리와 작업 안정화다",50,feature_explanation,기능 설명형,블렌더 스케일 적용 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 카메라 맞추기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 좌표계와 원점 논리 중심이고, 이 주제는 카메라 구도 설정이다",50,feature_explanation,기능 설명형,블렌더 카메라 맞추기 기본 개념부터 적용 방법까지 정리
+python,파이썬 패키지 설치,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 기본 문법 위주이고, 이 주제는 외부 라이브러리 설치 문제를 다룹니다.",50,feature_explanation,기능 설명형,파이썬 패키지 설치 기본 개념부터 적용 방법까지 정리
+notion,노션 위젯 추가,perplexity_questions,informational,50,medium,low,2026-05-19,기본 기능 설명이 아니라 화면 구성과 시각적 활용에 대한 주제입니다.,50,feature_explanation,기능 설명형,노션 위젯 추가 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 표 계산,perplexity_questions,informational,50,medium,low,2026-05-19,일반 사용법이 아니라 표 기반 수치 처리와 계산 활용에 집중합니다.,50,feature_explanation,기능 설명형,노션 표 계산 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 뷰 전환,perplexity_questions,informational,50,medium,low,2026-05-19,DB 생성 자체가 아니라 보기 전환과 활용 방식이 핵심이라 검색 의도가 다릅니다.,50,feature_explanation,기능 설명형,노션 뷰 전환 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 댓글 안보임,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 다르게 협업 커뮤니케이션 오류를 해결하는 주제임,50,feature_explanation,기능 설명형,피그마 댓글 안보임 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 배경 제거,perplexity_questions,informational,50,medium,low,2026-05-19,"캔바의 특정 편집 기능 사용법에 대한 의도이며, 기존 글과 핵심 주제가 겹치지 않는다",50,feature_explanation,기능 설명형,캔바 배경 제거 기능과 사용 방법 쉽게 설명
+canva,캔바 용량 줄이기,perplexity_questions,informational,50,medium,low,2026-05-19,"파일 최적화 목적의 주제로, 기존 글과 핵심 검색 의도가 겹치지 않는다",50,feature_explanation,기능 설명형,캔바 용량 줄이기 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 글자 애니메이션,perplexity_questions,informational,50,medium,low,2026-05-19,"동영상·모션 효과 기능에 대한 의도이며, 기존 정적 디자인이나 검색 최적화 글과 다르다",50,feature_explanation,기능 설명형,캔바 글자 애니메이션 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 저작권,perplexity_questions,informational,50,medium,low,2026-05-19,"법적 사용 범위와 라이선스 확인 목적이며, 기존 글의 기능 사용법과 완전히 다르다",50,feature_explanation,기능 설명형,캔바 저작권 기능과 사용 방법 쉽게 설명
+jira,지라 이슈 자동 생성,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 Jira 활용 개념과 기본 검색, 로드맵 중심이며 자동 생성은 핵심 의도가 다름",50,feature_explanation,기능 설명형,지라 이슈 자동 생성 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 텍스처 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 그래픽 표시 품질 문제를 다룸,50,feature_explanation,기능 설명형,유니티 텍스처 깨짐 기능과 사용 방법 쉽게 설명
+unity,유니티 메모리 누수,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 검색법이며, 이 주제는 성능과 자원 관리 문제임",50,feature_explanation,기능 설명형,유니티 메모리 누수 기본 개념부터 적용 방법까지 정리
+unity,유니티 오토세이브,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 검색 기능이고, 이 주제는 편의 기능 설정에 해당함",50,feature_explanation,기능 설명형,유니티 오토세이브 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 업데이트 실패,perplexity_questions,informational,50,medium,low,2026-05-19,CPU 점유율이나 작업 관리자 문제와 달리 업데이트 설치 실패를 직접 해결하는 주제입니다.,50,feature_explanation,기능 설명형,윈도우 업데이트 실패 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 화면 안 켜짐,perplexity_questions,informational,50,medium,low,2026-05-19,프로그램 문제가 아니라 부팅 직후 디스플레이 출력 문제를 다룹니다.,50,feature_explanation,기능 설명형,윈도우 화면 안 켜짐 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 자동 종료,perplexity_questions,informational,50,medium,low,2026-05-19,프로그램 수준이 아니라 전원 및 하드웨어 관련 증상을 다룹니다.,50,feature_explanation,기능 설명형,윈도우 자동 종료 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 버전 호환성,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 업그레이드·이전 시 호환성 문제가 핵심입니다.,50,feature_explanation,기능 설명형,언리얼 버전 호환성 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 에디터 단축키,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 빠른 활용법과 생산성 개선이 핵심입니다.,50,feature_explanation,기능 설명형,언리얼 에디터 단축키 기본 개념부터 적용 방법까지 정리
+blender,블렌더 재질 안보임,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 오리진 이동 위주이며, 이 주제는 재질 표시 오류에 관한 별도 검색 의도입니다.",50,feature_explanation,기능 설명형,블렌더 재질 안보임 기본 개념부터 적용 방법까지 정리
+blender,블렌더 텍스처 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 텍스처 로딩 문제 해결이 핵심입니다.,50,feature_explanation,기능 설명형,블렌더 텍스처 깨짐 기능과 사용 방법 쉽게 설명
+blender,블렌더 메쉬 합치기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 Origin 이동 중심이고, 이 주제는 오브젝트 병합 작업입니다.",50,feature_explanation,기능 설명형,블렌더 메쉬 합치기 기본 개념부터 적용 방법까지 정리
+python,파이썬 파일 경로,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 파일 경로 지정 실수와 오류 해결이 중심입니다.,50,feature_explanation,기능 설명형,파이썬 파일 경로 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 날짜 시간,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 일반 자료형 설명에 가깝고, 시간 계산 실무 활용은 별도 의도입니다.",50,feature_explanation,기능 설명형,파이썬 날짜 시간 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 리스트 정렬,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 리스트 기본 소개 수준이며 정렬 활용은 다른 검색 의도입니다.,50,feature_explanation,기능 설명형,파이썬 리스트 정렬 기능과 사용 방법 쉽게 설명
+notion,노션 로딩 오래 걸림,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글과 달리 성능 저하 문제를 다루며, 사용법 안내와는 검색 의도가 다릅니다.",50,feature_explanation,기능 설명형,노션 로딩 오래 걸림 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 한글 폰트 적용,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글에는 폰트 적용과 한글 깨짐 해결 주제가 없고, 디자인 편집 실무 의도가 다릅니다.",50,feature_explanation,기능 설명형,캔바 한글 폰트 적용 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 워터마크 제거,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글에는 워터마크 처리나 유료 요소 제거 문제가 없어 상업용 결과물 완성 목적이 다릅니다.,50,feature_explanation,기능 설명형,캔바 워터마크 제거 기본 개념부터 적용 방법까지 정리
+jira,지라 필터 저장,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 검색 조건 저장과 재사용이 핵심 주제임,50,feature_explanation,기능 설명형,지라 필터 저장 기본 개념부터 적용 방법까지 정리
+jira,지라 이슈 링크 연결,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 이슈 간 관계 설정과 의존성 관리에 집중함,50,feature_explanation,기능 설명형,지라 이슈 링크 연결 기능과 사용 방법 쉽게 설명
+jira,지라 이슈 타입 변경,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 이슈 분류 수정과 구조 정리에 초점을 둠,50,feature_explanation,기능 설명형,지라 이슈 타입 변경 기능과 사용 방법 쉽게 설명
+jira,지라 댓글 알림 안옴,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 특정 오류 해결 상황을 다룸,50,feature_explanation,기능 설명형,지라 댓글 알림 안옴 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 csv 가져오기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 외부 파일 대량 가져오기가 핵심임,50,feature_explanation,기능 설명형,지라 csv 가져오기 기능과 사용 방법 쉽게 설명
+jira,지라 보드 컬럼 추가,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 보드 구조 편집과 운영 최적화에 초점을 둠,50,feature_explanation,기능 설명형,지라 보드 컬럼 추가 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 리스트 추가,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 검색 키워드에 관한 내용이고, 이 주제는 Trello의 프로젝트 구조 설계다.",50,feature_explanation,기능 설명형,트렐로 리스트 추가 기본 개념부터 적용 방법까지 정리
+blender,블렌더 원점 맞추기,perplexity_questions,informational,50,medium,low,2026-05-19,3D 커서 이동이 아니라 원점 정렬 실무에 집중함,50,feature_explanation,기능 설명형,블렌더 원점 맞추기 기본 개념부터 적용 방법까지 정리
+blender,블렌더 컬렉션 숨기기,perplexity_questions,informational,50,medium,low,2026-05-19,좌표계나 오리진이 아닌 씬 관리 기능 주제임,50,feature_explanation,기능 설명형,블렌더 컬렉션 숨기기 기본 개념부터 적용 방법까지 정리
+python,파이썬 설치 확인,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 파일 입출력, 리스트, 집합, 튜플 등 사용법 중심이며 설치 확인과 실행 오류 해결 의도가 다릅니다.",50,feature_explanation,기능 설명형,파이썬 설치 확인 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 크롤링 시작,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글 목록에는 크롤링 자체를 다루는 글이 없고, 자동 수집 시작 방법은 별도 의도입니다.",50,feature_explanation,기능 설명형,파이썬 크롤링 시작 기능과 사용 방법 쉽게 설명
+python,파이썬 일정 자동알림,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 기본 문법 학습 위주이고, 시간 기반 자동 알림은 업무 활용 중심입니다.",50,feature_explanation,기능 설명형,파이썬 일정 자동알림 기능과 사용 방법 쉽게 설명
+figma,피그마 프레임 뜻,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 실무 활용이나 상세페이지 제작 위주이고, 초보 개념 용어 설명 의도와 다릅니다.",50,feature_explanation,기능 설명형,피그마 프레임 뜻 기능과 사용 방법 쉽게 설명
+figma,피그마 이미지 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글 목록에는 이미지 품질 문제나 렌더링 오류를 다루는 글이 없습니다.,50,feature_explanation,기능 설명형,피그마 이미지 깨짐 기본 개념부터 적용 방법까지 정리
+canva,캔바 배치 자동 정렬,perplexity_questions,informational,50,medium,low,2026-05-19,디자인 편집 효율에 관한 주제로 기존 SEO 글과 무관함,50,feature_explanation,기능 설명형,캔바 배치 자동 정렬 기본 개념부터 적용 방법까지 정리
+jira,지라 보드 바꾸기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 보드 전환이나 보드 종류 비교를 중심으로 다루지 않습니다.,50,feature_explanation,기능 설명형,지라 보드 바꾸기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 데이터 내보내기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 내부 사용법 중심이며, 내보내기와 외부 활용은 별개 의도입니다.",50,feature_explanation,기능 설명형,지라 데이터 내보내기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 속도 느림,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 기능 소개가 중심이며, 성능 저하 해결은 별도 문제입니다.",50,feature_explanation,기능 설명형,지라 속도 느림 기본 개념부터 적용 방법까지 정리
+unity,유니티 카메라 흔들림,perplexity_questions,informational,50,medium,low,2026-05-19,검색 표현식과 관련 없고 연출 구현 목적의 주제임,50,feature_explanation,기능 설명형,유니티 카메라 흔들림 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 클립보드 기록,perplexity_questions,informational,50,medium,low,2026-05-19,오류 해결이 아니라 업무 자동화와 편의 기능 활용이 핵심임,50,feature_explanation,기능 설명형,윈도우 클립보드 기록 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 스토리지 센스,perplexity_questions,informational,50,medium,low,2026-05-19,수동 디스크 정리와 달리 자동화된 저장공간 관리 기능에 초점이 다름,50,feature_explanation,기능 설명형,윈도우 스토리지 센스 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 단축키,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 3D 커서, 오리진, 좌표계에 집중하며 단축키 전체 정리에 대한 의도가 아님",50,feature_explanation,기능 설명형,블렌더 단축키 기본 개념부터 적용 방법까지 정리
+blender,블렌더 화면 안보임,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 패널 구조와 커서·좌표 이해에 초점이 있고 뷰포트 복구 문제와 다름,50,feature_explanation,기능 설명형,블렌더 화면 안보임 기본 개념부터 적용 방법까지 정리
+blender,블렌더 카메라 이동,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 3D 커서와 오리진 중심이라 카메라 조작 검색 의도와 겹치지 않음,50,feature_explanation,기능 설명형,블렌더 카메라 이동 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 오브젝트 정렬,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기준점과 좌표 이해가 주제이며 배치 정렬 작업과는 별개임,50,feature_explanation,기능 설명형,블렌더 오브젝트 정렬 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 마우스 조작,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 패널과 좌표 개념 중심이며 마우스 내비게이션 학습과 다름,50,feature_explanation,기능 설명형,블렌더 마우스 조작 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 오리진 이동,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글에도 오리진 언급이 있지만 인터페이스 논리와 좌표 개념 설명 중심이라 실제 이동 방법 검색과는 다름,50,feature_explanation,기능 설명형,블렌더 오리진 이동 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 문자열 처리,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 파일 읽기나 리스트 같은 구조 중심이며 문자열 정제 실무 주제와는 다릅니다.,50,feature_explanation,기능 설명형,파이썬 문자열 처리 기본 개념부터 적용 방법까지 정리
+figma,피그마 글꼴 안보임,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 디자인 협업보다 글꼴 호환 오류 해결이 중심입니다.,50,feature_explanation,기능 설명형,피그마 글꼴 안보임 기본 개념부터 적용 방법까지 정리
+canva,캔바 글자 간격 조절,perplexity_questions,informational,50,medium,low,2026-05-19,도구 소개가 아니라 실제 디자인 편집 세부 조정에 대한 주제임,50,feature_explanation,기능 설명형,캔바 글자 간격 조절 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 엑셀 연동,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 Confluence 연동이나 기본 Jira 사용법 위주이며 엑셀 연동 목적이 다름,50,feature_explanation,기능 설명형,지라 엑셀 연동 기본 개념부터 적용 방법까지 정리
+jira,지라 사용자 추가,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 Jira 기본 개념 중심이며 사용자 초대·추가 실무 주제가 아님,50,feature_explanation,기능 설명형,지라 사용자 추가 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 라벨 색상 뜻,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 정보 관리나 SEO 중심이라 트렐로 라벨 체계와는 검색 의도가 다름,50,feature_explanation,기능 설명형,트렐로 라벨 색상 뜻 기본 개념부터 적용 방법까지 정리
+blender,블렌더 파일 복구,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 파일 복구나 비정상 종료 대응과 무관함,50,feature_explanation,기능 설명형,블렌더 파일 복구 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 오리진 맞추기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글과 오리진 관련 용어는 겹치지만, 핵심 검색 의도가 다른 해결형 주제이며 원리 설명이 아닌 실무 조정이 목적임",50,feature_explanation,기능 설명형,블렌더 오리진 맞추기 기본 개념부터 적용 방법까지 정리
+python,파이썬 venv,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 기능 설명 위주이며 가상환경 생성과 관리 문제와 다름,50,feature_explanation,기능 설명형,파이썬 venv 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 주피터 노트북,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 일반 코드 문법 위주이고 대화형 실행 환경 설정과 다름,50,feature_explanation,기능 설명형,파이썬 주피터 노트북 기능과 사용 방법 쉽게 설명
+python,파이썬 엑셀 쓰기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글의 파일 저장과 달리 엑셀 출력 자동화가 핵심임,50,feature_explanation,기능 설명형,파이썬 엑셀 쓰기 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 크롤링,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글에는 웹 크롤링 자동화 주제가 직접적으로 포함되지 않음,50,feature_explanation,기능 설명형,파이썬 크롤링 기능과 사용 방법 쉽게 설명
+notion,노션 문서 공유 링크,perplexity_questions,informational,50,medium,low,2026-05-19,페이지 링크 기능 자체가 아니라 문서 전달과 협업 상황에 맞춘 주제,50,feature_explanation,기능 설명형,노션 문서 공유 링크 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 무료 플랜 한도,perplexity_questions,informational,50,medium,low,2026-05-19,사용법이 아니라 요금제와 사용 한도 비교라는 독립된 주제,50,feature_explanation,기능 설명형,노션 무료 플랜 한도 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 느려짐,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글의 핵심은 협업과 제작 활용이며, 이 주제는 성능 저하 문제 해결입니다.",50,feature_explanation,기능 설명형,피그마 느려짐 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 한글 깨짐,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 디자인 협업 툴 소개 중심이고, 이 주제는 한글 표시 오류에 대한 문제 해결입니다.",50,feature_explanation,기능 설명형,피그마 한글 깨짐 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 폰트 안보임,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 이 주제는 폰트 인식 문제라는 구체적 오류를 다룹니다.,50,feature_explanation,기능 설명형,피그마 폰트 안보임 기본 개념부터 적용 방법까지 정리
+figma,피그마 텍스트 줄바꿈,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 이 주제는 텍스트 편집 세부 조정에 관한 검색 의도입니다.,50,feature_explanation,기능 설명형,피그마 텍스트 줄바꿈 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 버전 되돌리기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 활용과 협업 중심이고, 이 주제는 복구와 되돌리기라는 문제 해결형 의도입니다.",50,feature_explanation,기능 설명형,피그마 버전 되돌리기 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 공동작업 초대,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 개인 사용이나 SEO 관련 내용이 중심이고, 이 주제는 협업 설정이 핵심입니다.",50,feature_explanation,기능 설명형,캔바 공동작업 초대 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 애니메이션 넣기,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 정적인 디자인이나 SEO 중심이고, 이 주제는 모션 효과 활용이 핵심입니다.",50,feature_explanation,기능 설명형,캔바 애니메이션 넣기 기본 개념부터 적용 방법까지 정리
+jira,지라 차트 보는 법,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 데이터 시각화 해석과 보고 목적이 중심,50,feature_explanation,기능 설명형,지라 차트 보는 법 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 모바일 최적화,perplexity_questions,informational,50,medium,low,2026-05-19,에디터 검색이 아니라 성능 최적화 실무 주제로 의도가 다름,50,feature_explanation,기능 설명형,유니티 모바일 최적화 기본 개념부터 적용 방법까지 정리
+unity,유니티 리소스 로딩,perplexity_questions,informational,50,medium,low,2026-05-19,프로젝트 검색과 달리 런타임 로딩 방식에 대한 주제임,50,feature_explanation,기능 설명형,유니티 리소스 로딩 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 느려짐,perplexity_questions,informational,50,medium,low,2026-05-19,오류 복구가 아니라 사용 중 성능 저하를 개선하는 목적의 주제임,50,feature_explanation,기능 설명형,윈도우 느려짐 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 화면 안나옴,perplexity_questions,informational,50,medium,low,2026-05-19,일반 오류와 달리 화면 출력 자체가 안 되는 증상을 다룸,50,feature_explanation,기능 설명형,윈도우 화면 안나옴 기본 개념부터 적용 방법까지 정리
+blender,블렌더 원근감 이상함,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 인터페이스 논리와 좌표계 설명이고, 이 주제는 시각 왜곡과 카메라/뷰 설정 문제로 다름",50,feature_explanation,기능 설명형,블렌더 원근감 이상함 기본 개념부터 적용 방법까지 정리
+python,파이썬 반복문,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 리스트·문자열 슬라이스·set·파일 입출력처럼 자료구조 중심이며, 반복문 선택과 자동화 목적은 다릅니다.",50,feature_explanation,기능 설명형,파이썬 반복문 기본 개념부터 적용 방법까지 정리
+python,파이썬 함수,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 파일, 리스트, set, 튜플 중심이고 함수 설계·재사용 문제와는 검색 의도가 다릅니다.",50,feature_explanation,기능 설명형,파이썬 함수 기본 개념부터 적용 방법까지 정리
+python,파이썬 중복 제거,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글에 set이 있지만, 중복 제거라는 실무 목적을 전면에 둔 검색 의도는 다릅니다.",50,feature_explanation,기능 설명형,파이썬 중복 제거 기능과 사용 방법 쉽게 설명
+python,파이썬 디버깅,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 기본 개념 학습 중심이며, 실행 중 문제를 추적하는 디버깅 목적은 다릅니다.",50,feature_explanation,기능 설명형,파이썬 디버깅 기능과 사용 방법 쉽게 설명
+notion,노션 글씨 크기 변경,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 블록 추가와 페이지 구성 설명 위주이며 서식 조정 의도와 다름,50,feature_explanation,기능 설명형,노션 글씨 크기 변경 기능과 사용 방법 쉽게 설명
+notion,노션 pdf 내보내기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글은 노션 내부 활용 중심이고 파일 출력 및 배포 목적과 겹치지 않음,50,feature_explanation,기능 설명형,노션 pdf 내보내기 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 용량 줄이기,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글과 달리 성능 저하와 파일 정리 문제를 다룸,50,feature_explanation,기능 설명형,피그마 용량 줄이기 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 사진 편집,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글 목록에는 일반적인 사진 편집 실무 주제가 없다,50,feature_explanation,기능 설명형,캔바 사진 편집 기본 개념부터 적용 방법까지 정리
+canva,캔바 한글 자간 조절,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글 목록에는 한글 타이포그래피 조정 주제가 없다,50,feature_explanation,기능 설명형,캔바 한글 자간 조절 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 필터 JQL,perplexity_questions,informational,50,medium,low,2026-05-19,기존 글들과 검색 의도와 주제가 겹치지 않는 JQL 활용법 주제임,50,feature_explanation,기능 설명형,지라 필터 JQL 기본 개념부터 적용 방법까지 정리
+trello,트렐로 협업 팁,perplexity_questions,informational,50,medium,low,2026-05-19,"기존 글은 개인 사용이나 템플릿 중심이며, 팀 협업 운영 노하우는 포함되지 않음",50,feature_explanation,기능 설명형,트렐로 협업 팁 초보자도 이해하기 쉬운 설정과 활용

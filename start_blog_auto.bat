@@ -48,7 +48,7 @@ start http://localhost:8501
 
 if defined USE_UV (
     set "UV_CACHE_DIR=%TEMP%\uv-cache-blogauto"
-    uv run --python 3.14 --with streamlit --with pandas --with requests --with beautifulsoup4 python -m streamlit run automation/app.py --server.headless true --browser.gatherUsageStats false
+    uv run --python 3.14 --with streamlit --with pandas --with requests --with beautifulsoup4 --with openpyxl python -m streamlit run automation/app.py --server.headless true --browser.gatherUsageStats false
 ) else (
     "%PYTHON_CMD%" -m streamlit run automation/app.py --server.headless true --browser.gatherUsageStats false
 )

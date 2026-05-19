@@ -12,7 +12,7 @@ secrets.toml
 *.p12
 *.pfx
 
-BlogAuto.log
+Project_Blog.log
 logs/
 *.log
 automation/content/

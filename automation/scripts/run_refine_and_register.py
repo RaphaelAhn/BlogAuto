@@ -2,6 +2,7 @@ import pandas as pd
 
 from notion_sync import sync_articles_to_notion
 import refine_drafts_ai
+from generate_practice_excel import generate_practice_excel_batch
 from paths import DATA_DIR
 from topic_registry import append_topic_used, normalize
 
@@ -79,6 +80,17 @@ def main():
     print(f"topic_used.csv record added: {saved_topic_count}")
 
     update_queue_status(processed_keywords)
+
+    # 각 아티클에 대해 연습 Excel 생성
+    output_paths = [
+        str(row.get("output_path", ""))
+        for _, row in source_df.iterrows()
+        if str(row.get("output_path", "")).endswith(".txt")
+    ]
+    if output_paths:
+        excel_results = generate_practice_excel_batch(output_paths)
+        print(f"[practice_excel] 생성 완료: {len(excel_results)}개")
+
     print("[debug] run_refine_and_register.main completed")
 
 

@@ -67,11 +67,11 @@ def main() -> None:
     root = project_root()
     logs_dir = root / "logs"
     logs_dir.mkdir(parents=True, exist_ok=True)
-    log_path = logs_dir / "BlogAuto.log"
+    log_path = logs_dir / "Project_Blog.log"
     log_file = log_path.open("a", encoding="utf-8")
     sys.stdout = log_file
     sys.stderr = log_file
-    print("\n--- BlogAuto launch ---", flush=True)
+    print("\n--- Project_Blog launch ---", flush=True)
 
     from streamlit.web import bootstrap
 

@@ -467,3 +467,171 @@ notion,노션 수식 함수 실무 활용,perplexity_questions,practical,80,medi
 office365,excel 단축키 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 단축키 정리 업무에 적용하는 단계별 방법,2026-05-15 01:28:11,practical_usage,실무 활용형
 office365,엑셀 차이값찾기 방법,naver_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,엑셀 차이값찾기 방법 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-15 01:28:11,comparison_analysis,비교/분석형
 office365,워드 비교본 만들기,google_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,워드 비교본 만들기 차이점과 선택 기준 정리,2026-05-15 01:28:11,comparison_analysis,비교/분석형
+notion,노션 문제가 발생 했습니다 다시 시도 중 입니다,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,노션 문제가 발생 했습니다 다시 시도 중 입니다 해결 전에 먼저 확인할 것,2026-05-18 00:32:07,error_solution,오류 해결형
+notion,notion 문제 가 발생 했습니다,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,notion 문제 가 발생 했습니다 문제를 줄이는 실무 처리 순서,2026-05-18 00:32:07,error_solution,오류 해결형
+figma,figma change to 안됨,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,figma change to 안됨 자주 생기는 이유와 점검 순서,2026-05-18 00:32:07,error_solution,오류 해결형
+figma,figma missing fonts 해결,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,figma missing fonts 해결 원인과 해결 방법,2026-05-18 00:32:07,error_solution,오류 해결형
+trello,트렐로 리스트 정리 방법,perplexity_questions,how_to,95,medium,low,2026-05-18,"기존 글은 사용 예시 중심이고, 이 주제는 정리·최적화 목적이 다름",95,트렐로 리스트 정리 방법 기본 개념부터 적용 방법까지 정리,2026-05-18 00:32:07,feature_explanation,기능 설명형
+trello,트렐로 자동화 설정,perplexity_questions,how_to,85,medium,low,2026-05-18,"기존 글은 일반 활용 사례이고, 이 주제는 자동화라는 별도 목적에 초점이 있음",85,트렐로 자동화 설정 기본 개념부터 적용 방법까지 정리,2026-05-18 00:32:07,feature_explanation,기능 설명형
+office365,outlook classic 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,outlook classic 사용법 처음 시작할 때 알아두면 좋은 사용법,2026-05-18 00:32:07,feature_explanation,기능 설명형
+office365,엑셀 자동화 파일 쓰는법,naver_suggest,practical,80,medium,low,2026-05-18,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,엑셀 자동화 파일 쓰는법 작업 흐름에 맞춰 정리한 활용법,2026-05-18 00:32:07,practical_usage,실무 활용형
+trello,트렐로 체크리스트 활용,perplexity_questions,practical,80,medium,low,2026-05-18,"기존 글은 보드 운영 사례 위주이고, 이 주제는 카드 내부 작업 분해에 초점이 있음",80,트렐로 체크리스트 활용 실무에서 바로 쓰는 방법,2026-05-18 00:32:07,practical_usage,실무 활용형
+office365,excel 데이터 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 데이터 정리 업무에 적용하는 단계별 방법,2026-05-18 00:32:07,practical_usage,실무 활용형
+figma,피그마 기본강의 비교,naver_suggest,comparison,75,medium,low,2026-05-18,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,피그마 기본강의 비교 비교할 때 먼저 봐야 할 핵심,2026-05-18 00:32:07,comparison_analysis,비교/분석형
+python,vsc 파이썬 설정,google_suggest,comparison,75,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,vsc 파이썬 설정 차이를 이해하고 선택하는 방법,2026-05-18 00:32:07,comparison_analysis,비교/분석형
+general_it,윈도우 오류 코드 0xc000007b 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,일반적인 윈도우 오류 개요가 아니라 특정 실행 오류 코드 해결에 초점이 있습니다.,95,윈도우 오류 코드 0xc000007b 해결 자주 생기는 이유와 점검 순서,2026-05-19 00:04:29,error_solution,오류 해결형
+general_it,윈도우 업데이트 오류 0x80070002 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,시스템 오류 전반이 아니라 업데이트 실패 오류만 다룹니다.,95,윈도우 업데이트 오류 0x80070002 해결 원인과 해결 방법,2026-05-19 00:04:29,error_solution,오류 해결형
+general_it,윈도우 원격데스크톱 연결 안됨 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,일반 윈도우 오류와 달리 원격 접속 기능 장애를 다룹니다.,95,윈도우 원격데스크톱 연결 안됨 해결 자주 생기는 이유와 점검 순서,2026-05-19 00:04:29,error_solution,오류 해결형
+canva,canva 우리쪽에 문제가 있습니다,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,canva 우리쪽에 문제가 있습니다 문제를 줄이는 실무 처리 순서,2026-05-19 00:04:29,error_solution,오류 해결형
+general_it,윈도우 시작프로그램 정리 방법,perplexity_questions,how_to,95,medium,low,2026-05-19,작업 관리자 열리지 않음 같은 오류가 아니라 시작 최적화 주제입니다.,95,윈도우 시작프로그램 정리 방법 기능과 사용 방법 쉽게 설명,2026-05-19 00:04:29,feature_explanation,기능 설명형
+jira,지라 자동화 규칙 만들기,perplexity_questions,how_to,95,medium,low,2026-05-19,"기존 글은 기본 기능 활용 중심이고, 자동화는 별도의 고급 설정 의도임",95,지라 자동화 규칙 만들기 기본 개념부터 적용 방법까지 정리,2026-05-19 00:04:29,feature_explanation,기능 설명형
+trello,트렐로 라벨 정리 방법,perplexity_questions,how_to,95,medium,low,2026-05-19,기존 글은 기초 사용법 중심이고 라벨 체계 정리라는 구체적 문제를 다루지 않습니다.,95,트렐로 라벨 정리 방법 초보자도 이해하기 쉬운 설정과 활용,2026-05-19 00:04:29,feature_explanation,기능 설명형
+trello,트렐로 체크리스트 활용법,perplexity_questions,practical,80,medium,low,2026-05-19,기존 글은 카드 뷰나 기본 구조 위주이며 체크리스트 실전 활용이 핵심입니다.,80,트렐로 체크리스트 활용법 실무에서 바로 쓰는 방법,2026-05-19 00:04:29,practical_usage,실무 활용형
+trello,트렐로 반복 업무 관리,perplexity_questions,practical,80,medium,low,2026-05-19,기존 글은 전반적인 사용법 설명이고 반복 업무 운영이라는 목적이 다릅니다.,80,트렐로 반복 업무 관리 작업 흐름에 맞춰 정리한 활용법,2026-05-19 00:04:29,practical_usage,실무 활용형
+trello,트렐로 업무 우선순위 정리,perplexity_questions,practical,80,medium,low,2026-05-19,기존 글은 도구 소개 성격이 강하고 우선순위 관리 전략은 별개의 검색 의도입니다.,80,트렐로 업무 우선순위 정리 실무에서 바로 쓰는 방법,2026-05-19 00:04:29,practical_usage,실무 활용형
+canva,캔바 무료와 프로 차이,perplexity_questions,comparison,70,medium,low,2026-05-18,"기존 글은 사용법 중심이며, 요금제 비교와 선택 목적이 다름",70,캔바 무료와 프로 차이 차이점과 선택 기준 정리,2026-05-19 00:04:29,comparison_analysis,비교/분석형
+office365,오피스365 버전 차이,perplexity_questions,comparison,70,medium,low,2026-05-13,엑셀 내부 기능 아닌 다중 버전 협업 해결,70,오피스365 버전 차이 차이점과 선택 기준 정리,2026-05-19 00:04:29,comparison_analysis,비교/분석형
+general_it,윈도우 오류 코드 0xc0000005 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,작업 관리자나 CPU 점유율 문제가 아니라 특정 실행 오류 코드 대응 주제,95,윈도우 오류 코드 0xc0000005 해결 원인과 해결 방법,2026-05-19 00:13:47,error_solution,오류 해결형
+office365,오피스365 원드라이브 동기화 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-19,기존 글과 달리 시트 취합이 아니라 클라우드 동기화 장애 해결이 핵심,95,오피스365 원드라이브 동기화 안됨 문제를 줄이는 실무 처리 순서,2026-05-19 00:13:47,error_solution,오류 해결형
+office365,오피스365 엑셀 열리지 않음 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,"기존 글은 여러 시트 통합 방법 중심이고, 실행 실패나 파일 손상 대응은 다름",95,오피스365 엑셀 열리지 않음 해결 문제를 줄이는 실무 처리 순서,2026-05-19 00:13:47,error_solution,오류 해결형
+office365,오피스365 엑셀 필터 안됨 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,"기존 글은 함수 기반 취합과는 다른, 필터 기능 장애 해결 주제임",95,오피스365 엑셀 필터 안됨 해결 문제를 줄이는 실무 처리 순서,2026-05-19 00:13:47,error_solution,오류 해결형
+trello,트렐로 업무 관리 방법,perplexity_questions,how_to,95,medium,low,2026-05-19,기본 소개와 겹치지 않도록 우선순위 관리와 실행 정리에 초점을 둠,95,트렐로 업무 관리 방법 기본 개념부터 적용 방법까지 정리,2026-05-19 00:13:47,feature_explanation,기능 설명형
+general_it,윈도우 기본 앱 연결 변경 방법,perplexity_questions,how_to,90,medium,low,2026-05-19,오류 복구가 아니라 사용 편의성을 위한 연결 설정 주제입니다.,90,윈도우 기본 앱 연결 변경 방법 기능과 사용 방법 쉽게 설명,2026-05-19 00:13:47,feature_explanation,기능 설명형
+general_it,윈도우 디스크 검사 chkdsk 사용법,perplexity_questions,how_to,85,low,low,2026-05-19,윈도우 오류 해결이 아니라 저장장치 점검과 복구 목적의 주제입니다.,85,윈도우 디스크 검사 chkdsk 사용법 기본 개념부터 적용 방법까지 정리,2026-05-19 00:13:47,feature_explanation,기능 설명형
+general_it,윈도우 디스크 용량 부족 정리,perplexity_questions,practical,80,medium,low,2026-05-19,오류 해결이 아니라 저장공간 관리와 정리 목적,80,윈도우 디스크 용량 부족 정리 반복 작업을 줄이는 실전 사용법,2026-05-19 00:13:47,practical_usage,실무 활용형
+trello,트렐로 반복 작업 자동화,perplexity_questions,practical,80,medium,low,2026-05-19,일반 활용이 아니라 자동화 중심의 고효율 운영 주제임,80,트렐로 반복 작업 자동화 작업 흐름에 맞춰 정리한 활용법,2026-05-19 00:13:47,practical_usage,실무 활용형
+office365,excel 업무 자동화,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 업무 자동화 실무에서 바로 쓰는 방법,2026-05-19 00:13:47,practical_usage,실무 활용형
+python,파이썬 vscode 설정,perplexity_questions,comparison,85,medium,low,2026-05-19,코드 문법이 아니라 편집기 설정과 실행 연결 문제를 다룸,85,파이썬 vscode 설정 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 00:13:47,comparison_analysis,비교/분석형
+figma,피그마 익스포트 png pdf 차이,perplexity_questions,comparison,80,low,low,2026-05-19,기존 글은 PDF로 내보내기 언급은 있지만 포맷 비교와 출력 목적 최적화는 다름,80,피그마 익스포트 png pdf 차이 비교할 때 먼저 봐야 할 핵심,2026-05-19 00:13:47,comparison_analysis,비교/분석형
+unreal,언리얼 블루프린트 함수 호출 오류,perplexity_questions,problem_solving,95,low,low,2026-05-19,"기존 글들은 기초 문서나 샘플 소개 중심이고, 이 주제는 기능 연결 오류 해결에 초점이 있음",95,언리얼 블루프린트 함수 호출 오류 문제를 줄이는 실무 처리 순서,2026-05-19 00:40:33,error_solution,오류 해결형
+canva,canva 에 문제 가 발생 했습니다,google_suggest,problem_solving,95,low,low,2026-05-12,문제 해결형 검색어라 방문 의도가 강합니다.,95,canva 에 문제 가 발생 했습니다 원인과 해결 방법,2026-05-19 00:40:33,error_solution,오류 해결형
+unity,유니티 네트워크 멀티플레이어 연결안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,파이썬 자료형이나 KPI 차트와 다른 네트워킹 문제,95,유니티 네트워크 멀티플레이어 연결안됨 문제를 줄이는 실무 처리 순서,2026-05-19 00:40:33,error_solution,오류 해결형
+general_it,윈도우 업데이트 오류 0x80070002,perplexity_questions,problem_solving,95,low,low,2026-05-12,일반 작업관리자 접근과 무관한 업데이트 전용 오류,95,윈도우 업데이트 오류 0x80070002 해결 전에 먼저 확인할 것,2026-05-19 00:40:33,error_solution,오류 해결형
+general_it,윈도우 방화벽 프로그램 허용 설정,perplexity_questions,how_to,85,low,low,2026-05-19,윈도우 오류 자체보다 네트워크 차단 설정 관리에 초점이 있습니다.,85,윈도우 방화벽 프로그램 허용 설정 기능과 사용 방법 쉽게 설명,2026-05-19 00:40:33,feature_explanation,기능 설명형
+office365,오피스365 공유 권한 설정 방법,perplexity_questions,how_to,85,low,low,2026-05-19,"기존 글은 데이터 취합 중심이고, 문서 공유·권한 관리 의도와 다름",85,오피스365 공유 권한 설정 방법 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 00:40:33,feature_explanation,기능 설명형
+office365,Kutools for outlook 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,Kutools for outlook 사용법 기능과 사용 방법 쉽게 설명,2026-05-19 00:40:33,feature_explanation,기능 설명형
+office365,python excel 자동화,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,python excel 자동화 업무에 적용하는 단계별 방법,2026-05-19 00:40:33,practical_usage,실무 활용형
+office365,워드 프레스 블로그 자동화,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,워드 프레스 블로그 자동화 반복 작업을 줄이는 실전 사용법,2026-05-19 00:40:33,practical_usage,실무 활용형
+office365,워드 프레스 자동화 수익,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,워드 프레스 자동화 수익 업무에 적용하는 단계별 방법,2026-05-19 00:40:33,practical_usage,실무 활용형
+unity,유니티 허브 유니티 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,유니티 허브 유니티 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 00:40:33,comparison_analysis,비교/분석형
+unity,유니티 무료 유료 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,유니티 무료 유료 차이 차이점과 선택 기준 정리,2026-05-19 00:40:33,comparison_analysis,비교/분석형
+general_it,윈도우 OneDrive 동기화 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,로컬 프로세스와 다른 클라우드 연동 문제,95,윈도우 OneDrive 동기화 오류 문제를 줄이는 실무 처리 순서,2026-05-19 00:54:05,error_solution,오류 해결형
+office365,오피스365 엑셀 셀 병합 해제 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,"기존 글은 시트 통합, KPI 비교 중심이고 이것은 셀 병합 해제 오류 해결",95,오피스365 엑셀 셀 병합 해제 안됨 해결 전에 먼저 확인할 것,2026-05-19 00:54:05,error_solution,오류 해결형
+office365,오피스365 엑셀 필터 적용 안될 때 해결법,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 글은 데이터 통합 자동화 중심이고 이것은 필터 기능 오류 해결,95,오피스365 엑셀 필터 적용 안될 때 해결법 원인과 해결 방법,2026-05-19 00:54:05,error_solution,오류 해결형
+office365,오피스365 원드 페이지 나누기 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 글은 엑셀 중심이고 이것은 워드 문서 페이지 레이아웃,95,오피스365 원드 페이지 나누기 안됨 문제를 줄이는 실무 처리 순서,2026-05-19 00:54:05,error_solution,오류 해결형
+office365,mailplug outlook 설정,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,mailplug outlook 설정 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 00:54:05,feature_explanation,기능 설명형
+office365,outlook 기본 브라우저 변경,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,outlook 기본 브라우저 변경 기능과 사용 방법 쉽게 설명,2026-05-19 00:54:05,feature_explanation,기능 설명형
+office365,onedrive 동기화 해제 방법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,onedrive 동기화 해제 방법 기능과 사용 방법 쉽게 설명,2026-05-19 00:54:05,feature_explanation,기능 설명형
+office365,워드 프레스 자동화 포스팅,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,워드 프레스 자동화 포스팅 업무에 적용하는 단계별 방법,2026-05-19 00:54:05,practical_usage,실무 활용형
+office365,워드 프레스 자동화 프로그램,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,워드 프레스 자동화 프로그램 작업 흐름에 맞춰 정리한 활용법,2026-05-19 00:54:05,practical_usage,실무 활용형
+office365,워드 활용 능력 상세 설명,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,워드 활용 능력 상세 설명 작업 흐름에 맞춰 정리한 활용법,2026-05-19 00:54:05,practical_usage,실무 활용형
+unity,언리얼 엔진 유니티 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,언리얼 엔진 유니티 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 00:54:05,comparison_analysis,비교/분석형
+unity,언리얼 유니티 차이 디시,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,언리얼 유니티 차이 디시 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 00:54:05,comparison_analysis,비교/분석형
+general_it,윈도우 관리자 권한 실행 안됨,perplexity_questions,problem_solving,100,medium,low,2026-05-19,작업 관리자 문제와 달리 실행 권한 설정 문제를 다룹니다.,100,윈도우 관리자 권한 실행 안됨 원인과 해결 방법,2026-05-19 01:41:48,error_solution,오류 해결형
+general_it,윈도우 오류 코드 0x80070057 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,"작업 관리자 문제나 CPU 점유율 문제가 아니라, 특정 오류 코드 중심의 해결 주제입니다.",95,윈도우 오류 코드 0x80070057 해결 원인과 해결 방법,2026-05-19 01:41:48,error_solution,오류 해결형
+office365,오피스365 원클라우드 용량 부족 해결법,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 글은 오피스 앱 기능 중심이고 이것은 클라우드 스토리지 관리,95,오피스365 원클라우드 용량 부족 해결법 원인과 해결 방법,2026-05-19 01:41:48,error_solution,오류 해결형
+python,파이썬 jupyter notebook 실행 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,자료구조 글과 무관한 Jupyter 환경 오류,95,파이썬 jupyter notebook 실행 안됨 문제를 줄이는 실무 처리 순서,2026-05-19 01:41:48,error_solution,오류 해결형
+jira,지라 자동화 규칙 설정,perplexity_questions,how_to,95,medium,low,2026-05-19,"기존 글은 일반 사용법 중심이며, 이 주제는 업무 자동화에 특화되어 있습니다.",95,지라 자동화 규칙 설정 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 01:41:48,feature_explanation,기능 설명형
+trello,트렐로 자동화 규칙 설정,perplexity_questions,how_to,95,medium,low,2026-05-19,기본 사용법이 아니라 업무 자동화 설정에 초점을 둔 주제다,95,트렐로 자동화 규칙 설정 초보자도 이해하기 쉬운 설정과 활용,2026-05-19 01:41:48,feature_explanation,기능 설명형
+trello,트렐로 보드 정리 방법,perplexity_questions,how_to,95,medium,low,2026-05-19,초보 사용법이 아니라 정리와 유지보수 목적의 주제다,95,트렐로 보드 정리 방법 초보자도 이해하기 쉬운 설정과 활용,2026-05-19 01:41:48,feature_explanation,기능 설명형
+figma,피그마 실무 단축키 모음,perplexity_questions,practical,80,medium,low,2026-05-19,"기존 글은 제작 방법론 중심이며, 이 주제는 반복 작업 속도 향상에 초점을 둠",80,피그마 실무 단축키 모음 실무에서 바로 쓰는 방법,2026-05-19 01:41:48,practical_usage,실무 활용형
+office365,excel 활용 통계학 pdf,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 활용 통계학 pdf 실무에서 바로 쓰는 방법,2026-05-19 01:41:48,practical_usage,실무 활용형
+office365,excel 활용 통계학,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 활용 통계학 실무에서 바로 쓰는 방법,2026-05-19 01:41:48,practical_usage,실무 활용형
+trello,트렐로 Notion 비교,perplexity_questions,comparison,70,medium,low,2026-05-19,사용법이 아니라 도구 비교 의도라 기존 글과 다르다,70,트렐로 Notion 비교 비교할 때 먼저 봐야 할 핵심,2026-05-19 01:41:48,comparison_analysis,비교/분석형
+unity,언리얼엔진 유니티 비교,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,언리얼엔진 유니티 비교 차이점과 선택 기준 정리,2026-05-19 01:41:48,comparison_analysis,비교/분석형
+general_it,윈도우 관리자 권한 실행 안됨 해결,perplexity_questions,problem_solving,100,low,low,2026-05-19,일반 오류가 아니라 권한 실행 문제에 한정된 주제라 기존 글과 의도가 다릅니다.,100,윈도우 관리자 권한 실행 안됨 해결 해결 전에 먼저 확인할 것,2026-05-19 01:55:37,error_solution,오류 해결형
+general_it,윈도우 오류 코드 0x80070002 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,"작업 관리자나 CPU 점유율 같은 기존 시스템 오류 글과 달리, 특정 오류 코드 해결에 초점을 둔 주제입니다.",95,윈도우 오류 코드 0x80070002 해결 자주 생기는 이유와 점검 순서,2026-05-19 01:55:37,error_solution,오류 해결형
+general_it,윈도우 압축파일 열리지 않음 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,기존 윈도우 오류 글과 달리 압축 해제 실패라는 파일 처리 문제에 집중합니다.,95,윈도우 압축파일 열리지 않음 해결 해결 전에 먼저 확인할 것,2026-05-19 01:55:37,error_solution,오류 해결형
+python,파이썬 설치 후 pip 명령어 인식 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 글은 설치 방법만 다루므로 설치 후 실제 오류 상황 추가,95,파이썬 설치 후 pip 명령어 인식 안됨 해결 전에 먼저 확인할 것,2026-05-19 01:55:37,error_solution,오류 해결형
+trello,트렐로 업무용 칸반 보드 만들기,perplexity_questions,how_to,95,medium,low,2026-05-19,일반 소개가 아니라 실제 업무 구조 설계에 집중한다,95,트렐로 업무용 칸반 보드 만들기 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 01:55:37,feature_explanation,기능 설명형
+office365,오피스365 워드 페이지 번호 설정,perplexity_questions,how_to,85,low,low,2026-05-19,기존 글은 워드의 다단계 목록 편집 중심이고 페이지 번호 설정과는 검색 의도가 다름,85,오피스365 워드 페이지 번호 설정 기능과 사용 방법 쉽게 설명,2026-05-19 01:55:37,feature_explanation,기능 설명형
+office365,오피스365 파워포인트 발표자 보기 설정,perplexity_questions,how_to,85,low,low,2026-05-19,기존 글은 엑셀과 워드 편집 중심이고 발표 화면 설정은 별도 의도임,85,오피스365 파워포인트 발표자 보기 설정 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 01:55:37,feature_explanation,기능 설명형
+general_it,윈도우 디스크 정리 빠르게 하는 법,perplexity_questions,practical,90,low,low,2026-05-19,오류 복구가 아니라 저장 공간 확보와 최적화 목적의 주제입니다.,90,윈도우 디스크 정리 빠르게 하는 법 업무에 적용하는 단계별 방법,2026-05-19 01:55:37,practical_usage,실무 활용형
+figma,피그마 한 파일 여러 페이지 정리,perplexity_questions,practical,90,low,low,2026-05-19,"기존 글은 마인드맵과 구조도 작성 중심이고, 이 주제는 파일 관리와 정리 방법에 집중함",90,피그마 한 파일 여러 페이지 정리 반복 작업을 줄이는 실전 사용법,2026-05-19 01:55:37,practical_usage,실무 활용형
+trello,트렐로 라벨 색상 정리,perplexity_questions,practical,80,medium,low,2026-05-19,"기존 글은 기본 활용법 위주이며, 이 주제는 시각적 분류 체계 최적화에 초점이 다름",80,트렐로 라벨 색상 정리 실무에서 바로 쓰는 방법,2026-05-19 01:55:37,practical_usage,실무 활용형
+unity,고도 엔진 유니티 비교,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,고도 엔진 유니티 비교 차이점과 선택 기준 정리,2026-05-19 01:55:37,comparison_analysis,비교/분석형
+unity,unreal unity 비교,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,unreal unity 비교 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 01:55:37,comparison_analysis,비교/분석형
+office365,오피스365 문서 공동편집 충돌 해결,perplexity_questions,problem_solving,95,low,low,2026-05-19,기존 글의 시트 통합과 다르게 협업 편집 충돌을 다룸,95,오피스365 문서 공동편집 충돌 해결 원인과 해결 방법,2026-05-19 17:22:56,error_solution,오류 해결형
+python,파이썬 인코딩 오류 UnicodeDecodeError 해결법,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 파일 읽기 글은 기본 문법만 다루므로 실무 인코딩 문제 추가,95,파이썬 인코딩 오류 UnicodeDecodeError 해결법 해결 전에 먼저 확인할 것,2026-05-19 17:22:56,error_solution,오류 해결형
+python,파이썬 import 경로 오류 ModuleNotFoundError 해결,perplexity_questions,problem_solving,95,low,low,2026-05-12,파일 읽기/쓰기 글과 다른 임포트 경로 문제로 실전 적용 케이스 추가,95,파이썬 import 경로 오류 ModuleNotFoundError 해결 해결 전에 먼저 확인할 것,2026-05-19 17:22:56,error_solution,오류 해결형
+unity,유니티 스크립트 컴파일 에러 해결,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 글 없음. 초보자 실수부터 실무 난제까지 단계별 해결,95,유니티 스크립트 컴파일 에러 해결 해결 전에 먼저 확인할 것,2026-05-19 17:22:56,error_solution,오류 해결형
+blender,블렌더 기본 설정 추천,perplexity_questions,how_to,100,medium,low,2026-05-19,"기존 글은 특정 인터페이스 요소 설명이고, 이 주제는 전체 작업 환경 최적화다",100,블렌더 기본 설정 추천 기능과 사용 방법 쉽게 설명,2026-05-19 17:22:56,feature_explanation,기능 설명형
+general_it,윈도우 관리자 권한 설정,perplexity_questions,how_to,95,medium,low,2026-05-19,기존 글과 달리 오류 해결이 아니라 권한 설정과 실행 방식 최적화에 초점이 있음,95,윈도우 관리자 권한 설정 초보자도 이해하기 쉬운 설정과 활용,2026-05-19 17:22:56,feature_explanation,기능 설명형
+office365,오피스365 문서 공유 권한 설정,perplexity_questions,how_to,85,low,low,2026-05-19,기존 글은 함수와 자동화 중심이고 공유 권한 제어는 다루지 않음,85,오피스365 문서 공유 권한 설정 기능과 사용 방법 쉽게 설명,2026-05-19 17:22:56,feature_explanation,기능 설명형
+trello,트렐로 카드 체크리스트 활용,perplexity_questions,practical,80,medium,low,2026-05-19,"기존 글은 보드와 카드 구조 설명 중심이며, 이 주제는 카드 내부 작업 분해와 진행 관리에 초점이 다름",80,트렐로 카드 체크리스트 활용 실무에서 바로 쓰는 방법,2026-05-19 17:22:56,practical_usage,실무 활용형
+general_it,윈도우 시작프로그램 정리,perplexity_questions,practical,80,medium,low,2026-05-19,"기존 글은 오류 복구 중심이지만, 이 주제는 부팅 최적화와 자동 실행 관리가 핵심임",80,윈도우 시작프로그램 정리 업무에 적용하는 단계별 방법,2026-05-19 17:22:56,practical_usage,실무 활용형
+trello,트렐로 자동화 Butler,perplexity_questions,practical,80,medium,low,2026-05-19,기존 글과 달리 트렐로의 자동화 기능 활용에 초점이 다름,80,트렐로 자동화 Butler 업무에 적용하는 단계별 방법,2026-05-19 17:22:56,practical_usage,실무 활용형
+canva,캔바 무료 vs 프로 차이,perplexity_questions,comparison,70,medium,low,2026-05-19,"캔바의 기능 비교와 구독 선택 의도이며, 기존 SEO·템플릿·웹사이트 관련 글과 검색 의도가 다르다",70,캔바 무료 vs 프로 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 17:22:56,comparison_analysis,비교/분석형
+jira,지라 칸반과 스크럼 차이,perplexity_questions,comparison,70,medium,low,2026-05-19,기존 글은 실제 활용법 중심이고 도구 유형 비교는 다른 의도임,70,지라 칸반과 스크럼 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 17:22:56,comparison_analysis,비교/분석형
+office365,오피스365 원드 공유 링크 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,시트 통합이나 KPI 비교와 다른 공유 권한 문제,95,오피스365 원드 공유 링크 안됨 원인과 해결 방법,2026-05-19 17:26:28,error_solution,오류 해결형
+office365,오피스365 파워포인트 슬라이드 복사 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,시트 통합과 무관한 PPT 편집 오류,95,오피스365 파워포인트 슬라이드 복사 안됨 원인과 해결 방법,2026-05-19 17:26:28,error_solution,오류 해결형
+office365,오피스365 공유 워크스페이스 권한 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,개인 KPI 비교와 다른 팀 공유 권한,95,오피스365 공유 워크스페이스 권한 오류 문제를 줄이는 실무 처리 순서,2026-05-19 17:26:28,error_solution,오류 해결형
+office365,오피스365 파워포인트 자동 저장 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,엑셀 시트와 무관한 PPT 저장 설정,95,오피스365 파워포인트 자동 저장 안됨 해결 전에 먼저 확인할 것,2026-05-19 17:26:28,error_solution,오류 해결형
+canva,캔바 프레젠테이션 발표 자료 만들기,perplexity_questions,how_to,85,low,low,2026-05-19,"기존 글은 카드뉴스 중심 사용법이고, 이 주제는 발표용 문서 제작이라는 목적이 다름",85,캔바 프레젠테이션 발표 자료 만들기 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 17:26:28,feature_explanation,기능 설명형
+notion,노션 태그 정리 방법,perplexity_questions,how_to,85,medium,low,2026-05-19,기존 글은 태그 운영 전략보다는 기본 블록과 DB 사용에 가깝습니다.,85,노션 태그 정리 방법 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 17:26:28,feature_explanation,기능 설명형
+office365,비즈니스 용 onedrive 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,비즈니스 용 onedrive 사용법 기능과 사용 방법 쉽게 설명,2026-05-19 17:26:28,feature_explanation,기능 설명형
+office365,excel 활용 투자 관리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel 활용 투자 관리 실무에서 바로 쓰는 방법,2026-05-19 17:26:28,practical_usage,실무 활용형
+office365,excel을 활용한 확률과 통계,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,excel을 활용한 확률과 통계 작업 흐름에 맞춰 정리한 활용법,2026-05-19 17:26:28,practical_usage,실무 활용형
+office365,컴퓨터 활용능력 파워포인트,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,컴퓨터 활용능력 파워포인트 반복 작업을 줄이는 실전 사용법,2026-05-19 17:26:28,practical_usage,실무 활용형
+unity,unity layer 비교,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,unity layer 비교 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 17:26:28,comparison_analysis,비교/분석형
+unity,unreal unity 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,unreal unity 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 17:26:28,comparison_analysis,비교/분석형
+office365,오피스365 팀즈 채팅 파일 다운 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,엑셀 함수와 다른 팀즈 채팅 문제,95,오피스365 팀즈 채팅 파일 다운 안됨 자주 생기는 이유와 점검 순서,2026-05-19 17:30:45,error_solution,오류 해결형
+office365,오피스365 엑셀 인쇄 미리보기 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,시트 합치기와 다른 인쇄 문제,95,오피스365 엑셀 인쇄 미리보기 오류 문제를 줄이는 실무 처리 순서,2026-05-19 17:30:45,error_solution,오류 해결형
+office365,오피스365 아웃룩 캘린더 공유 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,엑셀 자동화와 무관한 아웃룩 캘린더,95,오피스365 아웃룩 캘린더 공유 안됨 원인과 해결 방법,2026-05-19 17:30:45,error_solution,오류 해결형
+python,파이썬 requests api 호출 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,자료구조와 다른 네트워크 요청 문제 해결,95,파이썬 requests api 호출 오류 문제를 줄이는 실무 처리 순서,2026-05-19 17:30:45,error_solution,오류 해결형
+office365,onedrive 동기화 폴더 설정,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,onedrive 동기화 폴더 설정 기본 개념부터 적용 방법까지 정리,2026-05-19 17:30:45,feature_explanation,기능 설명형
+office365,microsoft teams 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,microsoft teams 사용법 기능과 사용 방법 쉽게 설명,2026-05-19 17:30:45,feature_explanation,기능 설명형
+office365,microsoft teams 화상 회의 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,microsoft teams 화상 회의 사용법 초보자도 이해하기 쉬운 설정과 활용,2026-05-19 17:30:45,feature_explanation,기능 설명형
+office365,직장인을 위한 실무 파워포인트,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,직장인을 위한 실무 파워포인트 반복 작업을 줄이는 실전 사용법,2026-05-19 17:30:45,practical_usage,실무 활용형
+office365,PowerPoint 자동화,naver_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,PowerPoint 자동화 반복 작업을 줄이는 실전 사용법,2026-05-19 17:30:45,practical_usage,실무 활용형
+office365,PowerPoint 정리,naver_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,PowerPoint 정리 반복 작업을 줄이는 실전 사용법,2026-05-19 17:30:45,practical_usage,실무 활용형
+unity,unity 2d 3d 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,unity 2d 3d 차이 비교할 때 먼저 봐야 할 핵심,2026-05-19 17:30:45,comparison_analysis,비교/분석형
+unity,Unity Editor 비교,naver_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,Unity Editor 비교 차이점과 선택 기준 정리,2026-05-19 17:30:45,comparison_analysis,비교/분석형
+office365,오피스365 팀즈 미팅 녹화 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,"팀즈 녹화 기능 오류, 기존 엑셀 중심 글과 상황·도구 다름",95,오피스365 팀즈 미팅 녹화 안됨 자주 생기는 이유와 점검 순서,2026-05-19 19:18:34,error_solution,오류 해결형
+office365,오피스365 공유 링크 권한 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,"공유 권한 관리, 기존 KPI 비교나 파이썬과 무관",95,오피스365 공유 링크 권한 오류 해결 전에 먼저 확인할 것,2026-05-19 19:18:34,error_solution,오류 해결형
+office365,오피스365 테마 색상 변경 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,"UI 테마 커스터마이징, 데이터 통합이나 KPI와 다른 디자인 초점",95,오피스365 테마 색상 변경 안됨 자주 생기는 이유와 점검 순서,2026-05-19 19:18:34,error_solution,오류 해결형
+python,파이썬 requests timeout 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,기존 자료형 글과 달리 네트워크 요청 오류 처리,95,파이썬 requests timeout 오류 원인과 해결 방법,2026-05-19 19:18:34,error_solution,오류 해결형
+office365,microsoft teams meeting 사용법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,microsoft teams meeting 사용법 기능과 사용 방법 쉽게 설명,2026-05-19 19:18:34,feature_explanation,기능 설명형
+office365,microsoft teams 사용 방법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,microsoft teams 사용 방법 초보자도 이해하기 쉬운 설정과 활용,2026-05-19 19:18:34,feature_explanation,기능 설명형
+office365,microsoft teams 삭제 방법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,microsoft teams 삭제 방법 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 19:18:34,feature_explanation,기능 설명형
+unreal,언리얼 프로젝트 폴더 정리,perplexity_questions,practical,80,medium,low,2026-05-19,기존 글과 달리 파일 구조 정리와 관리 효율이 목적입니다.,80,언리얼 프로젝트 폴더 정리 작업 흐름에 맞춰 정리한 활용법,2026-05-19 19:18:34,practical_usage,실무 활용형
+jira,지라 반복 업무 자동화,perplexity_questions,practical,80,medium,low,2026-05-19,기존 글의 일반 활용보다 자동화 규칙 설정이 중심임,80,지라 반복 업무 자동화 반복 작업을 줄이는 실전 사용법,2026-05-19 19:18:34,practical_usage,실무 활용형
+office365,PowerPoint 실무,naver_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,PowerPoint 실무 반복 작업을 줄이는 실전 사용법,2026-05-19 19:18:34,practical_usage,실무 활용형
+figma,피그마 무료 유료 차이,perplexity_questions,comparison,70,medium,low,2026-05-19,"기존 글은 사용법 중심이고, 이 주제는 요금제 비교에 해당합니다.",70,피그마 무료 유료 차이 차이점과 선택 기준 정리,2026-05-19 19:18:34,comparison_analysis,비교/분석형
+unity,Unity Editor 차이,naver_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,Unity Editor 차이 차이점과 선택 기준 정리,2026-05-19 19:18:34,comparison_analysis,비교/분석형
+python,파이썬 오류 해결 방법,perplexity_questions,problem_solving,100,medium,low,2026-05-19,"기존 글들은 개별 기능 설명 중심이며, 오류 메시지 기반 해결은 별도의 검색 수요가 큽니다.",100,파이썬 오류 해결 방법 해결 전에 먼저 확인할 것,2026-05-19 19:40:59,error_solution,오류 해결형
+python,파이썬 selenium 드라이버 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,Set/List와 무관한 브라우저 자동화 오류,95,파이썬 selenium 드라이버 오류 문제를 줄이는 실무 처리 순서,2026-05-19 19:40:59,error_solution,오류 해결형
+python,파이썬 openpyxl 엑셀 수정 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,엑셀 통합/KPI와 다른 파이썬 엑셀 자동화,95,파이썬 openpyxl 엑셀 수정 오류 자주 생기는 이유와 점검 순서,2026-05-19 19:40:59,error_solution,오류 해결형
+python,파이썬 logging 파일 생성 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-12,파일 IO 기본과 다른 로깅 구조화,95,파이썬 logging 파일 생성 안됨 자주 생기는 이유와 점검 순서,2026-05-19 19:40:59,error_solution,오류 해결형
+general_it,윈도우 디스크 정리 방법,perplexity_questions,how_to,95,medium,low,2026-05-19,오류 해결이 아니라 저장공간 확보와 최적화 목적의 주제입니다.,95,윈도우 디스크 정리 방법 기본 개념부터 적용 방법까지 정리,2026-05-19 19:40:59,feature_explanation,기능 설명형
+general_it,윈도우 시작프로그램 관리 방법,perplexity_questions,how_to,95,medium,low,2026-05-19,오류 증상 해결이 아닌 부팅 속도 개선과 자동 실행 관리 주제입니다.,95,윈도우 시작프로그램 관리 방법 기능과 사용 방법 쉽게 설명,2026-05-19 19:40:59,feature_explanation,기능 설명형
+jira,지라 자동화 설정,perplexity_questions,how_to,85,medium,low,2026-05-19,"기존 글은 일반 활용법 중심이고, 자동화 규칙 설정은 검색 의도가 다릅니다.",85,지라 자동화 설정 기본 개념부터 적용 방법까지 정리,2026-05-19 19:40:59,feature_explanation,기능 설명형
+trello,트렐로 반복 업무 자동화,perplexity_questions,practical,80,medium,low,2026-05-19,"업무 자동화 목적은 기존 글 목록에 없으며, 특정 도구의 실무 활용에 초점이 맞습니다.",80,트렐로 반복 업무 자동화 업무에 적용하는 단계별 방법,2026-05-19 19:40:59,practical_usage,실무 활용형
+office365,PowerPoint 활용,naver_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,PowerPoint 활용 실무에서 바로 쓰는 방법,2026-05-19 19:40:59,practical_usage,실무 활용형
+office365,파이썬 파워포인트 자동화,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,파이썬 파워포인트 자동화 반복 작업을 줄이는 실전 사용법,2026-05-19 19:40:59,practical_usage,실무 활용형
+unreal,언리얼 엔진 버전 비교,perplexity_questions,comparison,70,medium,low,2026-05-19,기존 글은 버전 선택 비교가 아니라 SEO 인사이트 중심이라 의도가 겹치지 않음,70,언리얼 엔진 버전 비교 차이점과 선택 기준 정리,2026-05-19 19:40:59,comparison_analysis,비교/분석형
+office365,오피스2021 오피스365 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,오피스2021 오피스365 차이 비교할 때 먼저 봐야 할 핵심,2026-05-19 19:40:59,comparison_analysis,비교/분석형
+python,파이썬 numpy 배열 인덱싱 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,List/Set과 다른 numpy 고급 인덱싱,95,파이썬 numpy 배열 인덱싱 오류 원인과 해결 방법,2026-05-19 19:48:09,error_solution,오류 해결형
+office365,오피스365 엑셀 FILTER 함수 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,시트통합이 아닌 단일 시트 내 필터링 함수 문제,95,오피스365 엑셀 FILTER 함수 오류 원인과 해결 방법,2026-05-19 19:48:09,error_solution,오류 해결형
+office365,오피스365 공유 파일 권한 오류,perplexity_questions,problem_solving,95,low,low,2026-05-12,공동편집과 다른 권한 관리 문제,95,오피스365 공유 파일 권한 오류 문제를 줄이는 실무 처리 순서,2026-05-19 19:48:09,error_solution,오류 해결형
+python,파이썬 라이브러리 임포트 충돌 해결,perplexity_questions,problem_solving,95,low,low,2026-05-12,"기존 글은 기본 기능만 다룸, 이는 패키지 관리와 네임스페이스 중심",95,파이썬 라이브러리 임포트 충돌 해결 원인과 해결 방법,2026-05-19 19:48:09,error_solution,오류 해결형
+notion,노션 업무용 대시보드 만들기,perplexity_questions,how_to,95,medium,low,2026-05-19,"기존 글은 개별 DB나 SEO 관련 자료라, 업무 대시보드 구성이라는 검색 의도가 겹치지 않음",95,노션 업무용 대시보드 만들기 기본 개념부터 적용 방법까지 정리,2026-05-19 19:48:09,feature_explanation,기능 설명형
+canva,캔바 폴더 정리 방법,perplexity_questions,how_to,85,medium,low,2026-05-19,검색 노출이나 디자인 제작이 아니라 자산 관리와 정리 흐름이 다름,85,캔바 폴더 정리 방법 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 19:48:09,feature_explanation,기능 설명형
+jira,지라 티켓 정리 방법,perplexity_questions,how_to,85,medium,low,2026-05-19,기존 글은 용어와 기본 구조 설명 중심이고 티켓 정리 운영 의도와 다름,85,지라 티켓 정리 방법 기능과 사용 방법 쉽게 설명,2026-05-19 19:48:09,feature_explanation,기능 설명형
+general_it,윈도우 시작프로그램 관리,perplexity_questions,practical,80,medium,low,2026-05-19,오류 복구가 아니라 부팅 최적화와 자동 실행 관리에 초점이 다름,80,윈도우 시작프로그램 관리 업무에 적용하는 단계별 방법,2026-05-19 19:48:09,practical_usage,실무 활용형
+unreal,언리얼 엔진 리다이렉트 정리,perplexity_questions,practical,80,medium,low,2026-05-19,"기존 글들과 핵심 의도가 겹치지 않으며, 프로젝트 유지보수와 경로 정리라는 별도 실무 문제임",80,언리얼 엔진 리다이렉트 정리 작업 흐름에 맞춰 정리한 활용법,2026-05-19 19:48:09,practical_usage,실무 활용형
+office365,아웃룩 메일 용량 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,아웃룩 메일 용량 정리 업무에 적용하는 단계별 방법,2026-05-19 19:48:09,practical_usage,실무 활용형
+office365,오피스2024 오피스365 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,오피스2024 오피스365 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 19:48:09,comparison_analysis,비교/분석형
+office365,오피스2019 오피스365 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,오피스2019 오피스365 차이 차이를 이해하고 선택하는 방법,2026-05-19 19:48:09,comparison_analysis,비교/분석형
+general_it,윈도우 오류 코드 0x80070005,perplexity_questions,problem_solving,95,low,low,2026-05-19,"작업 관리자, CPU 점유율, 일반 오류 해결과 달리 권한 오류 코드 자체에 집중한 주제임",95,윈도우 오류 코드 0x80070005 문제를 줄이는 실무 처리 순서,2026-05-19 20:16:50,error_solution,오류 해결형
+general_it,윈도우 업데이트 오류 0x800f081f,perplexity_questions,problem_solving,95,low,low,2026-05-19,기존 글의 작업 관리자나 CPU 문제와 겹치지 않는 업데이트 전용 오류 해결 주제임,95,윈도우 업데이트 오류 0x800f081f 자주 생기는 이유와 점검 순서,2026-05-19 20:16:50,error_solution,오류 해결형
+unreal,언리얼 엔진 캐릭터 애니메이션 안됨,perplexity_questions,problem_solving,95,low,low,2026-05-19,기존 글 목록에는 애니메이션 재생 문제나 캐릭터 동작 연결 이슈가 없음,95,언리얼 엔진 캐릭터 애니메이션 안됨 해결 전에 먼저 확인할 것,2026-05-19 20:16:50,error_solution,오류 해결형
+general_it,윈도우 디스크 오류 체크 및 수복,perplexity_questions,problem_solving,95,low,low,2026-05-12,"기존 글은 소프트웨어 오류이고, 본 주제는 하드드라이브의 물리적/논리적 손상 진단",95,윈도우 디스크 오류 체크 및 수복 해결 전에 먼저 확인할 것,2026-05-19 20:16:50,error_solution,오류 해결형
+unreal,언리얼 엔진 버전 업그레이드 방법,perplexity_questions,how_to,85,low,low,2026-05-19,"기존 글 목록에 버전 마이그레이션이나 엔진 업그레이드 전략이 없고, 설치·학습형 주제와도 다름",85,언리얼 엔진 버전 업그레이드 방법 처음 시작할 때 알아두면 좋은 사용법,2026-05-19 20:16:50,feature_explanation,기능 설명형
+unreal,언리얼 엔진 플러그인 활성화 방법,perplexity_questions,how_to,85,low,low,2026-05-19,"기존 글에는 플러그인 관리나 기능 확장 주제가 없고, 검색 의도도 도구 비교나 SEO와 무관함",85,언리얼 엔진 플러그인 활성화 방법 기능과 사용 방법 쉽게 설명,2026-05-19 20:16:50,feature_explanation,기능 설명형
+office365,microsoft teams 설치 방법,google_suggest,how_to,85,low,low,2026-05-12,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,85,microsoft teams 설치 방법 기능과 사용 방법 쉽게 설명,2026-05-19 20:16:50,feature_explanation,기능 설명형
+office365,outlook 용량 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,outlook 용량 정리 업무에 적용하는 단계별 방법,2026-05-19 20:16:50,practical_usage,실무 활용형
+office365,outlook 메일 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,outlook 메일 정리 작업 흐름에 맞춰 정리한 활용법,2026-05-19 20:16:50,practical_usage,실무 활용형
+office365,outlook 중복메일 정리,google_suggest,practical,80,medium,low,2026-05-12,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,80,outlook 중복메일 정리 업무에 적용하는 단계별 방법,2026-05-19 20:16:50,practical_usage,실무 활용형
+trello,트렐로 vs 노션 업무관리 비교,perplexity_questions,comparison,90,medium,low,2026-05-19,기존 글은 트렐로 자체 사용법 중심이며 도구 비교 의도는 완전히 다름,90,트렐로 vs 노션 업무관리 비교 비교할 때 먼저 봐야 할 핵심,2026-05-19 20:16:50,comparison_analysis,비교/분석형
+office365,오피스 오피스365 차이,google_suggest,comparison,70,medium,low,2026-05-12,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,오피스 오피스365 차이 어떤 상황에서 무엇을 골라야 하는지 정리,2026-05-19 20:16:50,comparison_analysis,비교/분석형

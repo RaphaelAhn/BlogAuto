@@ -8,7 +8,7 @@ set "PYTHON_CMD="
 set "USE_UV="
 set "WORK_DIR=%CD%\build\pyinstaller"
 set "DIST_DIR=%CD%\dist"
-set "APP_DIR=%DIST_DIR%\BlogAuto"
+set "APP_DIR=%DIST_DIR%\Project_Blog"
 
 call :resolve_python
 
@@ -34,13 +34,13 @@ if defined PYTHON_CMD (
 
 if errorlevel 1 (
     echo [ERROR] Quick build failed.
-    pause
+    if not defined BUILD_NO_PAUSE pause
     exit /b 1
 )
 
 echo [2] Quick build complete.
 echo Output: %APP_DIR%
-pause
+if not defined BUILD_NO_PAUSE pause
 exit /b 0
 
 :resolve_python

@@ -981,6 +981,201 @@ notion,노션 페이지 백업 방법,perplexity_questions,how_to,75,medium,low,
 figma,피그마 파일 복구 방법,perplexity_questions,how_to,75,medium,low,2026-05-15,"Windows 복구와 다름, 피그마 버전 히스토리 활용",75,feature_explanation,기능 설명형,피그마 파일 복구 방법 초보자도 이해하기 쉬운 설정과 활용
 figma,피그마 그리드 설정 안보임,perplexity_questions,how_to,75,medium,low,2026-05-15,웹사이트 레이아웃 아이디어와 달리 그리드 뷰 버그 수정,75,feature_explanation,기능 설명형,피그마 그리드 설정 안보임 처음 시작할 때 알아두면 좋은 사용법
 canva,캔바 자동 저장 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-15,기존 노션/클로드와 다른 캔바 클라우드 문제,75,error_solution,오류 해결형,캔바 자동 저장 안됨 해결 전에 먼저 확인할 것
+unity,유니티 빌드 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-18,기존 글은 일반 시스템 복구와 자료형 설명 위주이며 유니티 빌드 실패 해결과는 다름,75,error_solution,오류 해결형,유니티 빌드 오류 자주 생기는 이유와 점검 순서
+general_it,윈도우 업데이트 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-18,기존 글의 작업 관리자/CPU 오류와 달리 Windows 업데이트 실패 상황을 다룸,75,error_solution,오류 해결형,윈도우 업데이트 오류 해결 전에 먼저 확인할 것
+general_it,윈도우 로그인 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-18,작업 관리자 문제가 아니라 로그인 단계 장애를 다룸,75,error_solution,오류 해결형,윈도우 로그인 오류 문제를 줄이는 실무 처리 순서
+general_it,윈도우 드라이버 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-18,기존 글과 달리 하드웨어 드라이버 인식 문제에 초점이 있음,75,error_solution,오류 해결형,윈도우 드라이버 오류 자주 생기는 이유와 점검 순서
+general_it,윈도우 인쇄 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-18,시스템 관리 도구가 아닌 프린터 출력 장애를 다룸,75,error_solution,오류 해결형,윈도우 인쇄 오류 자주 생기는 이유와 점검 순서
+office365,엑셀 문제 다운하는법,naver_suggest,problem_solving,75,medium,low,2026-05-18,문제 해결형 검색어라 방문 의도가 강합니다.,75,error_solution,오류 해결형,엑셀 문제 다운하는법 자주 생기는 이유와 점검 순서
+unreal,언리얼 설치 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 설치 자체의 개요 수준이며, 설치 오류 해결이라는 검색 의도와 다릅니다.",75,error_solution,오류 해결형,언리얼 설치 오류 자주 생기는 이유와 점검 순서
+unreal,언리얼 렌더링 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 렌더링 개념 설명이며, 렌더링 불량 문제 해결과는 다릅니다.",75,error_solution,오류 해결형,언리얼 렌더링 안됨 해결 전에 먼저 확인할 것
+unreal,언리얼 플러그인 설치 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 기본 인터페이스 설명이고, 기능 확장용 플러그인 활용은 다릅니다.",75,feature_explanation,기능 설명형,언리얼 플러그인 설치 방법 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 버전 변경 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 기본 입문 내용이며, 버전 관리와 호환성 대응은 별도 주제입니다.",75,feature_explanation,기능 설명형,언리얼 버전 변경 방법 기본 개념부터 적용 방법까지 정리
+blender,블렌더 마우스 조작 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,기존 글은 모델링 기능과 UI 설명 중심이라 기본 조작법 검색 의도와 다름,75,feature_explanation,기능 설명형,블렌더 마우스 조작 방법 기능과 사용 방법 쉽게 설명
+python,파이썬 가상환경 만들기,perplexity_questions,how_to,75,medium,low,2026-05-18,리스트·셋 같은 문법이 아니라 프로젝트 관리와 의존성 분리를 다룸,75,feature_explanation,기능 설명형,파이썬 가상환경 만들기 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 venv 사용법,perplexity_questions,how_to,75,medium,low,2026-05-18,일반 자료형 설명이 아니라 실행 도구 설정과 운영 방법에 초점,75,feature_explanation,기능 설명형,파이썬 venv 사용법 기능과 사용 방법 쉽게 설명
+python,파이썬 openpyxl 사용법,perplexity_questions,how_to,75,medium,low,2026-05-18,엑셀 기능 설명이 아니라 파이썬 라이브러리 활용법이라는 점이 다름,75,feature_explanation,기능 설명형,파이썬 openpyxl 사용법 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 requests 사용법,perplexity_questions,how_to,75,medium,low,2026-05-18,리스트·셋·파일과 다른 웹 요청 중심의 실무 주제,75,feature_explanation,기능 설명형,파이썬 requests 사용법 기능과 사용 방법 쉽게 설명
+notion,노션 기본 언어 바꾸는 법,naver_suggest,how_to,75,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,75,feature_explanation,기능 설명형,노션 기본 언어 바꾸는 법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 템플릿 복제 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 기본 사용법 중심이고, 이 주제는 템플릿 복제라는 별도 작업 흐름에 초점을 둡니다.",75,feature_explanation,기능 설명형,노션 템플릿 복제 방법 기능과 사용 방법 쉽게 설명
+notion,노션 데이터베이스 필터 설정,perplexity_questions,how_to,75,medium,low,2026-05-18,기본 작성법이 아닌 데이터베이스의 실무 필터링 활용에 해당합니다.,75,feature_explanation,기능 설명형,노션 데이터베이스 필터 설정 기능과 사용 방법 쉽게 설명
+notion,노션 데이터베이스 정렬 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,기존 글의 인라인 추가나 기본 편집과 달리 정렬 기능 활용이 핵심입니다.,75,feature_explanation,기능 설명형,노션 데이터베이스 정렬 방법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 관계형 데이터베이스 사용법,perplexity_questions,how_to,75,medium,low,2026-05-18,기본 사용법보다 한 단계 높은 데이터베이스 연결 활용 주제입니다.,75,feature_explanation,기능 설명형,노션 관계형 데이터베이스 사용법 기능과 사용 방법 쉽게 설명
+notion,노션 반복 일정 만들기,perplexity_questions,how_to,75,medium,low,2026-05-18,페이지 작성법이 아니라 반복 업무 자동화라는 실무 목적이 다릅니다.,75,feature_explanation,기능 설명형,노션 반복 일정 만들기 기능과 사용 방법 쉽게 설명
+notion,노션 검색 안됨 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-18,작성과 편집이 아니라 내부 검색 기능의 문제 해결에 해당합니다.,75,error_solution,오류 해결형,노션 검색 안됨 해결 해결 전에 먼저 확인할 것
+figma,피그마 기본강의 비교,naver_suggest,comparison,75,medium,low,2026-05-18,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,75,comparison_analysis,비교/분석형,피그마 기본강의 비교 비교할 때 먼저 봐야 할 핵심
+figma,피그마 텍스트 자동 줄바꿈 설정,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 피그마 기본 기능 소개 중심이고, 이 주제는 텍스트 줄바꿈 문제 해결에 초점이 다름",75,feature_explanation,기능 설명형,피그마 텍스트 자동 줄바꿈 설정 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 링크 공유 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-18,기존 글과 달리 공유 보안과 권한 관리가 중심인 주제임,75,feature_explanation,기능 설명형,피그마 링크 공유 권한 설정 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 주석 달기 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 제작 기능 중심이고, 이 주제는 리뷰와 협업 커뮤니케이션에 해당함",75,feature_explanation,기능 설명형,피그마 주석 달기 방법 기능과 사용 방법 쉽게 설명
+canva,캔바 오류 내는 법,naver_suggest,problem_solving,75,medium,low,2026-05-18,문제 해결형 검색어라 방문 의도가 강합니다.,75,error_solution,오류 해결형,캔바 오류 내는 법 자주 생기는 이유와 점검 순서
+canva,캔바 글꼴 적용 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 기본 기능 설명 위주로, 폰트 적용 오류 대응과는 다름",75,error_solution,오류 해결형,캔바 글꼴 적용 안됨 원인과 해결 방법
+canva,캔바 공동작업 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-18,기존 글에는 공유 권한 관리나 협업 보안 설정 주제가 없음,75,feature_explanation,기능 설명형,캔바 공동작업 권한 설정 기능과 사용 방법 쉽게 설명
+canva,캔바 모바일 앱 사용법,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 PC 중심 기능 소개와 다르고, 모바일 전용 사용 환경이 핵심임",75,feature_explanation,기능 설명형,캔바 모바일 앱 사용법 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 배치 정렬 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 기본 기능 소개 위주이며, 레이아웃 정렬 문제 해결과는 다름",75,error_solution,오류 해결형,캔바 배치 정렬 안됨 원인과 해결 방법
+jira,지라 상태 전환 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 상태 개념 소개 수준이고, 이 주제는 전환 오류 해결에 집중함",75,error_solution,오류 해결형,지라 상태 전환 안됨 자주 생기는 이유와 점검 순서
+trello,트렐로 로그인 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 일반 사용 소개이며, 이 주제는 접속 오류 대응에 초점이 있음",75,error_solution,오류 해결형,트렐로 로그인 안됨 문제를 줄이는 실무 처리 순서
+trello,트렐로 초대 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-18,"기존 글은 협업 사례 소개 중심이고, 이 주제는 초대 실패 문제에 초점이 있음",75,error_solution,오류 해결형,트렐로 초대 안됨 자주 생기는 이유와 점검 순서
+trello,트렐로 보드 복사 방법,perplexity_questions,how_to,75,medium,low,2026-05-18,"기존 글은 실사용 예시 중심이며, 이 주제는 보드 재사용과 복제 기능에 초점이 있음",75,feature_explanation,기능 설명형,트렐로 보드 복사 방법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 설치 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 설치 후 사용법 중심이며, 이 주제는 설치 자체의 오류 해결에 초점을 둠",75,error_solution,오류 해결형,유니티 설치 오류 자주 생기는 이유와 점검 순서
+unity,유니티 ios 빌드 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 iOS 배포 설정이라는 목적이 다름,75,feature_explanation,기능 설명형,유니티 ios 빌드 설정 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 저장 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 저장 실패와 작업 유실 방지에 초점을 둠,75,error_solution,오류 해결형,유니티 저장 안됨 문제를 줄이는 실무 처리 순서
+unity,유니티 버전 변경 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 버전 호환과 프로젝트 이전 문제를 다룸,75,feature_explanation,기능 설명형,유니티 버전 변경 방법 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 안전모드 진입 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,작업 관리자나 성능 이슈가 아닌 부팅 환경 진입 방법에 관한 주제입니다.,75,feature_explanation,기능 설명형,윈도우 안전모드 진입 방법 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 사용자 계정 컨트롤 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,오류 해결이 아니라 계정 권한 설정 최적화 주제입니다.,75,feature_explanation,기능 설명형,윈도우 사용자 계정 컨트롤 설정 초보자도 이해하기 쉬운 설정과 활용
+office365,원노트 사용법 아이패드,naver_suggest,how_to,75,medium,low,2026-05-19,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,75,feature_explanation,기능 설명형,원노트 사용법 아이패드 기능과 사용 방법 쉽게 설명
+blender,블렌더 그래픽카드 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 모델링 도구 설명 중심이고, 성능 설정과 최적화 의도가 다름",75,feature_explanation,기능 설명형,블렌더 그래픽카드 설정 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 자동 저장 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 사용법 소개 중심이며, 재발 방지용 보호 설정이라는 목적이 다름",75,feature_explanation,기능 설명형,블렌더 자동 저장 설정 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 마우스 조작 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 모델링 도구 자체 설명이고, 입력 장치 설정 최적화는 별도 의도임",75,feature_explanation,기능 설명형,블렌더 마우스 조작 설정 기능과 사용 방법 쉽게 설명
+blender,블렌더 기본 화면 구성,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 모델링 도구 중심이라 인터페이스 전체 구조를 이해하는 주제와 다름,75,feature_explanation,기능 설명형,블렌더 기본 화면 구성 기본 개념부터 적용 방법까지 정리
+python,파이썬 오류 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 특정 문법 설명이 아니라 실전 오류 대응이 검색 의도임,75,error_solution,오류 해결형,파이썬 오류 해결 자주 생기는 이유와 점검 순서
+notion,노션 속도 느림 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,사용법 설명이 아니라 대용량 워크스페이스 성능 문제 해결에 해당함,75,error_solution,오류 해결형,노션 속도 느림 해결 자주 생기는 이유와 점검 순서
+figma,피그마 프레임 크기 변경 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,상세페이지 제작 과정이 아니라 프레임 조정 실무 팁에 집중,75,feature_explanation,기능 설명형,피그마 프레임 크기 변경 방법 기본 개념부터 적용 방법까지 정리
+figma,피그마 페이지 복사 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,프레임 복사 설명이 아니라 페이지 단위 복사에 특화됨,75,feature_explanation,기능 설명형,피그마 페이지 복사 방법 기본 개념부터 적용 방법까지 정리
+canva,캔바 팀 공유 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 개인 사용법 중심이며, 이 주제는 협업 권한 관리에 초점이 있음",75,feature_explanation,기능 설명형,캔바 팀 공유 권한 설정 기능과 사용 방법 쉽게 설명
+canva,캔바 링크 클릭 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글은 링크 기능 소개가 아니라 링크 오류 해결에 초점을 둠,75,error_solution,오류 해결형,캔바 링크 클릭 안됨 자주 생기는 이유와 점검 순서
+canva,캔바 업로드 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글의 템플릿 검색과 다르게 파일 업로드 실패 문제를 다룸,75,error_solution,오류 해결형,캔바 업로드 안됨 자주 생기는 이유와 점검 순서
+canva,캔바 브랜드키트 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글에 브랜드키트가 언급되더라도, 이 주제는 실무 설정과 반복 제작 최적화에 초점이 있음",75,feature_explanation,기능 설명형,캔바 브랜드키트 사용법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 담당자 변경 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 협업 전반과 기본 설정 위주이고, 담당자 변경은 구체적인 운영 작업임",75,feature_explanation,기능 설명형,지라 담당자 변경 방법 기능과 사용 방법 쉽게 설명
+jira,지라 스프린트 시작 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 스크럼 생성 예시 수준이고, 스프린트 시작 절차를 찾는 의도는 별도임",75,feature_explanation,기능 설명형,지라 스프린트 시작 방법 기능과 사용 방법 쉽게 설명
+jira,지라 모바일 앱 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 데스크톱 기준의 기본 사용법 중심이며, 모바일 사용은 환경이 다름",75,feature_explanation,기능 설명형,지라 모바일 앱 사용법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 검색 안됨 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 검색 기능 활용법 중심이며, 검색 오류 해결은 문제 해결형 의도임",75,error_solution,오류 해결형,지라 검색 안됨 해결 해결 전에 먼저 확인할 것
+trello,트렐로 공유 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 카드와 보드의 기본 사용법 중심이며 공유 권한 관리가 핵심 주제입니다.,75,feature_explanation,기능 설명형,트렐로 공유 권한 설정 기능과 사용 방법 쉽게 설명
+trello,트렐로 카드 복사 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 트렐로 전반의 사용법이고 카드 복사라는 실무 기능에 초점이 맞춰집니다.,75,feature_explanation,기능 설명형,트렐로 카드 복사 방법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 모바일 앱 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 일반적인 웹 사용법 중심이며 모바일 환경이라는 상황이 다릅니다.,75,feature_explanation,기능 설명형,트렐로 모바일 앱 사용법 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 앱 설치 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글의 작업 관리자/CPU 이슈와 다른 설치 실패 주제,75,error_solution,오류 해결형,윈도우 앱 설치 안됨 해결 전에 먼저 확인할 것
+general_it,윈도우 복구 모드 진입 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,오류 증상 해결보다 복구 진입 절차 자체를 다루는 주제,75,feature_explanation,기능 설명형,윈도우 복구 모드 진입 방법 기본 개념부터 적용 방법까지 정리
+office365,원드라이브 설정 들어가는 법,naver_suggest,how_to,75,medium,low,2026-05-19,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,75,feature_explanation,기능 설명형,원드라이브 설정 들어가는 법 기능과 사용 방법 쉽게 설명
+unreal,언리얼 플러그인 활성화 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글들은 전반적 입문과 개발 환경 소개 중심이며, 이 주제는 실사용 설정 팁에 해당함",75,feature_explanation,기능 설명형,언리얼 플러그인 활성화 방법 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 맥북 설치 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글들은 일반적인 엔진 소개와 문서 안내 중심이며, 운영체제별 설치 실무와 다름",75,feature_explanation,기능 설명형,언리얼 맥북 설치 방법 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 그래픽 설정 최적화,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글에는 최적화 설정 주제가 없고, 성능 개선 목적의 실무형 주제임",75,feature_explanation,기능 설명형,언리얼 그래픽 설정 최적화 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 설치 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 기능 소개와 기초 메뉴 설명 중심이며, 설치 실패 해결은 다룹니다.",75,error_solution,오류 해결형,블렌더 설치 안됨 자주 생기는 이유와 점검 순서
+python,파이썬 텔레그램 봇 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"파일, 자료형, 설치가 아니라 메신저 자동화와 알림 전송에 관한 주제",75,feature_explanation,기능 설명형,파이썬 텔레그램 봇 만들기 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 템플릿 적용 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 기본 사용법 중심이고, 이 주제는 템플릿 적용이라는 구체 행동이다",75,feature_explanation,기능 설명형,노션 템플릿 적용 방법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 모바일 앱 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 일반 기능 소개 중심이며, 모바일 환경은 다른 사용 맥락이다",75,feature_explanation,기능 설명형,노션 모바일 앱 사용법 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 캘린더 연동 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 일반적인 노션 활용 중심이고, 캘린더 연동은 별도 자동화 주제다",75,feature_explanation,기능 설명형,노션 캘린더 연동 방법 기본 개념부터 적용 방법까지 정리
+notion,노션 표 계산 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 기본 기능 소개 위주이고, 계산 오류 해결은 문제 해결형 주제다",75,error_solution,오류 해결형,노션 표 계산 안됨 문제를 줄이는 실무 처리 순서
+notion,노션 워크스페이스 전환 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 기본 사용법 중심이고, 이 주제는 다중 워크스페이스 운영에 대한 검색 의도다",75,feature_explanation,기능 설명형,노션 워크스페이스 전환 방법 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 공유 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 구조도 공유나 페이지 공유 언급 수준이며 권한 설정 자체를 다루는 주제와 겹치지 않음,75,feature_explanation,기능 설명형,피그마 공유 권한 설정 기능과 사용 방법 쉽게 설명
+figma,피그마 컴포넌트 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 결과물 제작 예시 중심이며 컴포넌트 재사용 구조 설계 의도와 겹치지 않음,75,feature_explanation,기능 설명형,피그마 컴포넌트 만들기 기본 개념부터 적용 방법까지 정리
+figma,피그마 화면 렉 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글은 제작 노하우 중심이고 성능 저하 해결 의도는 전혀 다름,75,error_solution,오류 해결형,피그마 화면 렉 해결 자주 생기는 이유와 점검 순서
+canva,캔바 권한 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글은 기본 편집 기능 설명이고 권한 충돌 해결은 다루지 않음,75,error_solution,오류 해결형,캔바 권한 오류 문제를 줄이는 실무 처리 순서
+trello,트렐로 체크리스트 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,보드 전반 설명이 아니라 카드 내부 체크리스트 활용에 초점을 둠,75,feature_explanation,기능 설명형,트렐로 체크리스트 사용법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 패키지 임포트 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 유니티 자산 추가 및 적용 절차가 중심이다.,75,feature_explanation,기능 설명형,유니티 패키지 임포트 방법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 모바일 빌드 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 빌드와 배포 준비가 핵심인 유니티 주제다.,75,feature_explanation,기능 설명형,유니티 모바일 빌드 방법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 오토세이브 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 유니티 작업 안정화 및 자동 저장 설정이 목적이다.,75,feature_explanation,기능 설명형,유니티 오토세이브 설정 기본 개념부터 적용 방법까지 정리
+unity,유니티 성능 최적화 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 유니티 성능 개선이라는 별도 검색 의도를 가진다.,75,feature_explanation,기능 설명형,유니티 성능 최적화 방법 초보자도 이해하기 쉬운 설정과 활용
+office365,오피스365 계정 공유 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 문서 작업 기능 중심이며 계정 공유 운영 방식과 다름,75,feature_explanation,기능 설명형,오피스365 계정 공유 방법 초보자도 이해하기 쉬운 설정과 활용
+office365,오피스365 온라인 버전 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 데스크톱 엑셀 함수 중심이고 웹 버전 활용은 다루지 않음,75,feature_explanation,기능 설명형,오피스365 온라인 버전 사용법 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 자동 저장 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 기능 소개 중심이며, 재발 방지용 설정 최적화는 별도 주제입니다.",75,feature_explanation,기능 설명형,언리얼 엔진 자동 저장 설정 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 가벼운 PC 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 기능 학습 중심이고, 저사양 환경 최적화 주제와 다름",75,feature_explanation,기능 설명형,블렌더 가벼운 PC 설정 기능과 사용 방법 쉽게 설명
+blender,블렌더 크래시 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 기본 사용법과 모델링 도구 중심이며, 프로그램 강제 종료 해결과는 검색 의도가 다름",75,error_solution,오류 해결형,블렌더 크래시 해결 문제를 줄이는 실무 처리 순서
+python,파이썬 정규표현식 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 리스트·set 문법과 다른 텍스트 패턴 처리 주제임,75,feature_explanation,기능 설명형,파이썬 정규표현식 사용법 기능과 사용 방법 쉽게 설명
+python,파이썬 에러 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,특정 문법 설명이 아니라 실무형 실행 오류 대응에 초점을 둠,75,error_solution,오류 해결형,파이썬 에러 해결 자주 생기는 이유와 점검 순서
+figma,피그마 오토레이아웃 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 마케팅 소재 제작 중심이고, 이 주제는 UI 레이아웃 자동 정렬 기능 자체에 초점을 둠",75,feature_explanation,기능 설명형,피그마 오토레이아웃 사용법 기능과 사용 방법 쉽게 설명
+figma,피그마 협업 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 공유 링크 전달 맥락이 일부 언급될 뿐, 권한 설정 문제를 다루지 않음",75,feature_explanation,기능 설명형,피그마 협업 권한 설정 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 텍스트 줄바꿈 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 전체 결과물 제작 흐름 중심이고, 이 주제는 텍스트 표시 규칙 설정을 다룸",75,feature_explanation,기능 설명형,피그마 텍스트 줄바꿈 설정 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 도형 그림자 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 컨셉 표현용 광고 소재 중심이고, 이 주제는 UI 스타일링 효과 설정에 초점을 둠",75,feature_explanation,기능 설명형,피그마 도형 그림자 설정 기능과 사용 방법 쉽게 설명
+figma,피그마 와이어프레임 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 완성형 시각물 제작 흐름 중심이고, 이 주제는 설계 초안 단계에 집중함",75,feature_explanation,기능 설명형,피그마 와이어프레임 만들기 기본 개념부터 적용 방법까지 정리
+canva,캔바 슬라이드 발표자료 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 카드뉴스 제작과 기초 기능 설명이 중심이라 발표자료 제작 목적이 다릅니다.,75,feature_explanation,기능 설명형,캔바 슬라이드 발표자료 만들기 기본 개념부터 적용 방법까지 정리
+jira,지라 칸반 보드 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 기본 사용법과 이슈 유형 설명 중심이고, 이 주제는 보드 생성과 화면 구성에 집중해 검색 의도가 다릅니다.",75,feature_explanation,기능 설명형,지라 칸반 보드 만들기 기본 개념부터 적용 방법까지 정리
+jira,지라 로그인 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 기능 설명이 아니라 접속 장애 해결이 핵심입니다.,75,error_solution,오류 해결형,지라 로그인 안됨 자주 생기는 이유와 점검 순서
+trello,트렐로 캘린더 뷰 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,일반 사용법이 아니라 일정 시각화 기능에만 초점을 둔 별도 주제다,75,feature_explanation,기능 설명형,트렐로 캘린더 뷰 사용법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 카드 템플릿 복사 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기초 사용법이 아니라 반복 업무 재사용에 맞춘 주제다,75,feature_explanation,기능 설명형,트렐로 카드 템플릿 복사 방법 기능과 사용 방법 쉽게 설명
+trello,트렐로 보드 공유 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,사용법 일반론이 아니라 공유 권한과 접근 제어에 집중한다,75,feature_explanation,기능 설명형,트렐로 보드 공유 권한 설정 기능과 사용 방법 쉽게 설명
+trello,트렐로 슬랙 연동 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,협업 자동 알림 연동이라는 별도 검색 의도다,75,feature_explanation,기능 설명형,트렐로 슬랙 연동 방법 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 삭제 복구 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,실수 복구라는 오류 대응 주제로 기본 사용법과 겹치지 않는다,75,feature_explanation,기능 설명형,트렐로 삭제 복구 방법 기본 개념부터 적용 방법까지 정리
+unity,유니티 안드로이드 빌드 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 모바일 앱 빌드 환경 설정과 관련이 없어 주제가 겹치지 않음,75,feature_explanation,기능 설명형,유니티 안드로이드 빌드 설정 기능과 사용 방법 쉽게 설명
+unity,유니티 오브젝트 삭제 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 데이터 처리나 문서 작업과 관련되어 있고, Unity 에디터 내 오브젝트 관리와 다름",75,feature_explanation,기능 설명형,유니티 오브젝트 삭제 방법 기본 개념부터 적용 방법까지 정리
+unity,유니티 애니메이터 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 애니메이터 상태 전환이나 캐릭터 동작 제어를 다루지 않음,75,feature_explanation,기능 설명형,유니티 애니메이터 설정 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 컴파일 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 학습용 개요이며, 이 주제는 개발 중 발생하는 빌드 오류 해결임",75,error_solution,오류 해결형,언리얼 컴파일 오류 문제를 줄이는 실무 처리 순서
+unreal,언리얼 업데이트 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 버전 개요가 아니라 입문·학습 중심이고, 이 주제는 업데이트 실패 대응임",75,error_solution,오류 해결형,언리얼 업데이트 오류 해결 전에 먼저 확인할 것
+unreal,언리얼 충돌 해결,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 학습용 안내이고, 이 주제는 빈번한 크래시 해결에 집중함",75,error_solution,오류 해결형,언리얼 충돌 해결 해결 전에 먼저 확인할 것
+unreal,언리얼 자동 저장 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 프로젝트 열기와 예제 탐색이고, 이 주제는 업무 중 데이터 보호 설정임",75,feature_explanation,기능 설명형,언리얼 자동 저장 설정 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 내보내기 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,모델링 기능 설명이 아니라 파일 변환과 내보내기 실패 문제임,75,error_solution,오류 해결형,블렌더 내보내기 오류 자주 생기는 이유와 점검 순서
+notion,노션 협업 댓글 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,단순 문서 작성이 아니라 팀 협업 커뮤니케이션 기능에 초점이 맞춰져 있습니다,75,feature_explanation,기능 설명형,노션 협업 댓글 사용법 기능과 사용 방법 쉽게 설명
+figma,피그마 권한 요청 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 구조도 공유나 작업 흐름 중심이고, 이 주제는 권한 문제 해결에 초점이 다름",75,feature_explanation,기능 설명형,피그마 권한 요청 방법 기본 개념부터 적용 방법까지 정리
+figma,피그마 이미지 내보내기 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 콘텐츠 페이지 제작과 점검 중심이며, 이 주제는 내보내기 설정과 품질 최적화가 핵심임",75,feature_explanation,기능 설명형,피그마 이미지 내보내기 설정 기능과 사용 방법 쉽게 설명
+figma,피그마 PDF 저장 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 콘텐츠 제작과 공유 흐름 위주이며, 이 주제는 문서 출력 포맷 설정에 초점이 다름",75,feature_explanation,기능 설명형,피그마 PDF 저장 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 워크플로우 설정 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 기본 사용법과 이슈 유형 중심이며, 워크플로우 설계와 설정 최적화 의도는 다름",75,feature_explanation,기능 설명형,지라 워크플로우 설정 방법 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 JQL 검색 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글의 단순 필터 생성 언급과 달리, JQL 검색 자체가 중심 주제임",75,feature_explanation,기능 설명형,지라 JQL 검색 방법 기능과 사용 방법 쉽게 설명
+jira,지라 이슈 링크 연결 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 이슈 생성 중심이고, 이슈 간 연결 관리 의도는 다름",75,feature_explanation,기능 설명형,지라 이슈 링크 연결 방법 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 스크럼 보드 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 일반적인 기본 사용법이며, 스크럼 보드 운영은 별도 검색 의도임",75,feature_explanation,기능 설명형,지라 스크럼 보드 사용법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 카드 템플릿 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 트렐로의 일반 사용법 중심이고, 이 주제는 반복 업무를 위한 카드 템플릿 제작에 초점이 다름",75,feature_explanation,기능 설명형,트렐로 카드 템플릿 만들기 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 마감일 알림 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 전반적인 사용법 소개이고, 이 주제는 마감일 알림이라는 특정 설정 문제에 집중함",75,feature_explanation,기능 설명형,트렐로 마감일 알림 설정 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 반복 카드 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 일반 사용법 위주이며, 이 주제는 정기 반복 업무 관리에 특화됨",75,feature_explanation,기능 설명형,트렐로 반복 카드 만들기 기본 개념부터 적용 방법까지 정리
+trello,트렐로 카드 댓글 알림 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 일반 사용법 중심이며, 이 주제는 카드 댓글 알림이라는 협업 커뮤니케이션 문제에 초점이 다름",75,feature_explanation,기능 설명형,트렐로 카드 댓글 알림 설정 기능과 사용 방법 쉽게 설명
+general_it,윈도우 부팅 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 실행 중 발생하는 오류 중심이지만, 이 주제는 부팅 단계 자체가 실패하는 상황임",75,error_solution,오류 해결형,윈도우 부팅 안됨 문제를 줄이는 실무 처리 순서
+general_it,윈도우 캡처 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 화면 캡처 기능의 실패라는 특정 사용 맥락을 다룸,75,error_solution,오류 해결형,윈도우 캡처 안됨 해결 전에 먼저 확인할 것
+office365,오피스365 공유 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글에는 문서 공유 권한 설정 주제가 없음,75,feature_explanation,기능 설명형,오피스365 공유 권한 설정 기능과 사용 방법 쉽게 설명
+office365,오피스365 업데이트 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 프로그램 업데이트 관리가 핵심 의도임,75,feature_explanation,기능 설명형,오피스365 업데이트 방법 초보자도 이해하기 쉬운 설정과 활용
+office365,오피스365 캘린더 공유 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 핵심 기능이 완전히 다른 일정 공유 주제임,75,feature_explanation,기능 설명형,오피스365 캘린더 공유 방법 초보자도 이해하기 쉬운 설정과 활용
+office365,오피스365 구독 해지 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 전혀 다른 구독 종료·결제 관리 의도임,75,feature_explanation,기능 설명형,오피스365 구독 해지 방법 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 한글 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 언리얼 설치·사용 전반이나 SEO 관련이며, 언리얼 UI 언어 설정은 별도 의도임",75,feature_explanation,기능 설명형,언리얼 엔진 한글 설정 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 입력 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글의 설정 팁은 타 도구 중심이고, 언리얼 입력 매핑 문제는 별도 주제임",75,feature_explanation,기능 설명형,언리얼 엔진 입력 설정 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 버전 변경 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 버전 호환 이슈가 아닌 일반 사용법 위주이고, 언리얼 버전 전환은 별개 검색 의도임",75,feature_explanation,기능 설명형,언리얼 엔진 버전 변경 방법 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 모바일 빌드 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 모바일 배포나 플랫폼별 빌드와 관련 없고, 언리얼의 타깃 플랫폼 설정이 핵심임",75,feature_explanation,기능 설명형,언리얼 엔진 모바일 빌드 설정 기본 개념부터 적용 방법까지 정리
+blender,블렌더 렌더 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 인터페이스 논리와 원점 설정이 중심이고, 이 주제는 렌더 오류 해결이다",75,error_solution,오류 해결형,블렌더 렌더 안됨 자주 생기는 이유와 점검 순서
+python,파이썬 파일 경로 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글의 파일 읽기 쓰기와 달리, 경로 문제 해결에 초점을 둡니다.",75,feature_explanation,기능 설명형,파이썬 파일 경로 설정 기본 개념부터 적용 방법까지 정리
+notion,노션 체크리스트 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"페이지 링크나 블록 추가와 겹치지 않고, 실행 관리용 체크 구조에 초점이 다릅니다.",75,feature_explanation,기능 설명형,노션 체크리스트 만들기 기본 개념부터 적용 방법까지 정리
+canva,캔바 폰트 적용 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"디자인 요소 설정 오류 해결 주제이며, 기존 글과 검색 목적이 중복되지 않는다",75,error_solution,오류 해결형,캔바 폰트 적용 안됨 원인과 해결 방법
+canva,캔바 링크 공유 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"공유 기능 오류 해결 주제로, 기존 글의 웹사이트 SEO나 템플릿 활용 의도와 겹치지 않는다",75,error_solution,오류 해결형,캔바 링크 공유 오류 원인과 해결 방법
+jira,지라 댓글 멘션 알림 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 일반 활용법 위주이고 댓글 알림 제어는 별도 문제임,75,feature_explanation,기능 설명형,지라 댓글 멘션 알림 설정 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 멤버 초대 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 보드 구조 설명 위주이며, 이 주제는 팀원 초대와 권한 설정에 집중함",75,feature_explanation,기능 설명형,트렐로 멤버 초대 방법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 보드 공개 비공개 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 접근 권한과 공개 범위 설정이 주제임,75,feature_explanation,기능 설명형,트렐로 보드 공개 비공개 설정 기본 개념부터 적용 방법까지 정리
+trello,트렐로 검색 필터 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 보드 개념 설명 중심이고, 이 주제는 검색과 필터 활용에 초점이 있음",75,feature_explanation,기능 설명형,트렐로 검색 필터 사용법 기능과 사용 방법 쉽게 설명
+trello,트렐로 보드 템플릿 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 반복 업무를 위한 보드 템플릿 제작에 초점이 있음,75,feature_explanation,기능 설명형,트렐로 보드 템플릿 만들기 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 로그인 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,시스템 성능 문제가 아니라 로그인 인증 단계의 문제를 다루므로 겹치지 않습니다.,75,error_solution,오류 해결형,윈도우 로그인 안됨 문제를 줄이는 실무 처리 순서
+general_it,윈도우 앱 실행 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,작업 관리자 열림 문제와 달리 특정 앱 실행 실패를 다룹니다.,75,error_solution,오류 해결형,윈도우 앱 실행 안됨 해결 전에 먼저 확인할 것
+unreal,언리얼 머티리얼 적용 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 에셋 적용 실무 절차가 중심입니다.,75,feature_explanation,기능 설명형,언리얼 머티리얼 적용 방법 기본 개념부터 적용 방법까지 정리
+notion,노션 테이블 필터 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 데이터베이스를 보는 방식이 아니라 필터링 실무 활용이 핵심입니다.,75,feature_explanation,기능 설명형,노션 테이블 필터 설정 기본 개념부터 적용 방법까지 정리
+figma,피그마 공동작업 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 협업 권한 관리 자체를 다룹니다.,75,feature_explanation,기능 설명형,피그마 공동작업 권한 설정 기본 개념부터 적용 방법까지 정리
+figma,피그마 로그인 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 계정 접속 문제 해결입니다.,75,error_solution,오류 해결형,피그마 로그인 안됨 문제를 줄이는 실무 처리 순서
+figma,피그마 협업 댓글 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 협업 커뮤니케이션 기능에 초점이 있습니다.,75,feature_explanation,기능 설명형,피그마 협업 댓글 사용법 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 SNS 카드뉴스 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글과 달리 SNS 콘텐츠 제작이 중심이며, 일반 디자인 편집과 검색 의도가 다릅니다.",75,feature_explanation,기능 설명형,캔바 SNS 카드뉴스 만들기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 검색 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 검색 장애 해결이 핵심 의도임,75,error_solution,오류 해결형,지라 검색 안됨 원인과 해결 방법
+trello,트렐로 댓글 알림 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 SEO 학습 중심이며, 이 주제는 Trello 협업 기능의 세부 설정이다.",75,feature_explanation,기능 설명형,트렐로 댓글 알림 설정 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 라이팅 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 콘텐츠 설계 주제이며, 이 주제는 언리얼 조명 세팅이라는 실무 활용임",75,feature_explanation,기능 설명형,언리얼 엔진 라이팅 설정 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 단축키 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 언리얼 생산성 향상용 설정 주제임,75,feature_explanation,기능 설명형,언리얼 엔진 단축키 설정 기본 개념부터 적용 방법까지 정리
+blender,블렌더 스케일 적용 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기준점 설명이 아니라 변환 값 적용 실무 주제임,75,feature_explanation,기능 설명형,블렌더 스케일 적용 방법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 데이터베이스 관계형 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 데이터베이스 생성과 보기 방식 설명이 중심이고, 이 주제는 관계형 연결 활용에 초점이 있음",75,feature_explanation,기능 설명형,노션 데이터베이스 관계형 설정 기능과 사용 방법 쉽게 설명
+notion,노션 검색 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 검색 기능 장애와 정보 회수 문제를 다룸,75,error_solution,오류 해결형,노션 검색 안됨 원인과 해결 방법
+figma,피그마 컴포넌트 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 반복 작업 전반을 다루더라도 컴포넌트 사용법 자체를 검색하는 핵심 의도와는 다릅니다.,75,feature_explanation,기능 설명형,피그마 컴포넌트 사용법 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 오토레이아웃 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 피그마를 활용한 제작 사례 중심이며, 오토레이아웃 설정 문제와는 검색 의도가 다릅니다.",75,feature_explanation,기능 설명형,피그마 오토레이아웃 설정 기능과 사용 방법 쉽게 설명
+figma,피그마 안드로이드 앱 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글들은 데스크톱 기반 작업과 협업 중심이며, 모바일 앱 사용 의도와 다릅니다.",75,feature_explanation,기능 설명형,피그마 안드로이드 앱 사용법 처음 시작할 때 알아두면 좋은 사용법
+trello,윈도우 인터넷 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,인터넷 연결 장애 해결이라는 실무형 오류 주제로 기존 글과 다릅니다.,75,error_solution,오류 해결형,윈도우 인터넷 안됨 원인과 해결 방법
+trello,윈도우 자동 로그인 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,설정 팁 중심의 윈도우 활용 주제이며 기존 오류 해결 글과 다릅니다.,75,feature_explanation,기능 설명형,윈도우 자동 로그인 설정 기능과 사용 방법 쉽게 설명
+trello,엑셀 드롭다운 목록 만들기,perplexity_questions,how_to,75,medium,low,2026-05-19,엑셀 자동화와는 달리 입력 제어 기능에 초점이 있어 기존 통합·KPI 글과 다릅니다.,75,feature_explanation,기능 설명형,엑셀 드롭다운 목록 만들기 기능과 사용 방법 쉽게 설명
+trello,엑셀 중복값 제거 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"중복 데이터 정리라는 검색 의도가 새롭고, 기존 엑셀 통합·비교 글과 다릅니다.",75,feature_explanation,기능 설명형,엑셀 중복값 제거 방법 기능과 사용 방법 쉽게 설명
+unity,유니티 라이선스 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,검색 표현식이 아니라 계정·인증 문제 해결을 다루므로 겹치지 않음,75,error_solution,오류 해결형,유니티 라이선스 오류 자주 생기는 이유와 점검 순서
+general_it,윈도우 와이파이 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,PC 내부 오류가 아니라 네트워크 연결 문제에 초점이 다름,75,error_solution,오류 해결형,윈도우 와이파이 안됨 자주 생기는 이유와 점검 순서
+general_it,윈도우 화면 캡처 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,오류 해결이 아니라 실사용 기능과 빠른 활용법이 중심임,75,feature_explanation,기능 설명형,윈도우 화면 캡처 방법 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 가상 데스크톱 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,시스템 오류가 아닌 멀티태스킹 생산성 향상 주제임,75,feature_explanation,기능 설명형,윈도우 가상 데스크톱 사용법 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 마우스 시점 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글에 언리얼 입력 설정·시점 제어 관련 주제가 없고, 조작감 설정이라는 새로운 목적임",75,feature_explanation,기능 설명형,언리얼 엔진 마우스 시점 설정 기본 개념부터 적용 방법까지 정리
+python,파이썬 설치 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 파일 입출력, 리스트, 집합, 튜플 중심이며 설치 오류 해결 의도와 겹치지 않습니다.",75,error_solution,오류 해결형,파이썬 설치 오류 자주 생기는 이유와 점검 순서
+python,파이썬 함수 오류,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글은 리스트, 집합, 파일 같은 기초 자료형 위주이며 함수 오류 해결은 다루지 않습니다.",75,error_solution,오류 해결형,파이썬 함수 오류 자주 생기는 이유와 점검 순서
+notion,노션 페이지 복제 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 페이지 링크나 블록 추가에 관한 내용이므로, 복제라는 별도 작업 의도와 겹치지 않음",75,feature_explanation,기능 설명형,노션 페이지 복제 방법 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 정렬 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"기존 글의 핵심은 데이터베이스 생성 방식이며, 정렬 오류 해결은 다른 문제임",75,error_solution,오류 해결형,노션 정렬 안됨 문제를 줄이는 실무 처리 순서
+notion,노션 캘린더 보기 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글의 핵심은 DB 생성 방식이고, 캘린더 뷰 활용은 일정 관리 목적의 별도 주제임",75,feature_explanation,기능 설명형,노션 캘린더 보기 사용법 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 댓글 알림 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글과 달리 협업 기능 중 알림 관리라는 매우 구체적인 상황입니다.,75,feature_explanation,기능 설명형,피그마 댓글 알림 설정 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 링크 공유 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,콘텐츠 설명이 아니라 공유 실패라는 오류 해결 주제라 기존 글과 다름,75,error_solution,오류 해결형,캔바 링크 공유 안됨 원인과 해결 방법
+canva,캔바 인쇄용 pdf 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,검색 최적화가 아니라 출력 품질과 인쇄 설정이 핵심이라 다름,75,feature_explanation,기능 설명형,캔바 인쇄용 pdf 설정 기능과 사용 방법 쉽게 설명
+canva,캔바 협업 댓글 사용법,perplexity_questions,how_to,75,medium,low,2026-05-19,"웹사이트 SEO와 무관하고, 실무 협업 커뮤니케이션 기능에 초점이 다름",75,feature_explanation,기능 설명형,캔바 협업 댓글 사용법 기능과 사용 방법 쉽게 설명
+trello,트렐로 리스트 정렬 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글은 프로젝트 관리의 한계나 템플릿 중심이며, 리스트 정렬은 별도의 사용법 검색 의도임",75,feature_explanation,기능 설명형,트렐로 리스트 정렬 방법 기본 개념부터 적용 방법까지 정리
+trello,트렐로 보드 공유 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글 목록에는 협업 공유 설정이나 권한 관리 주제가 없음,75,feature_explanation,기능 설명형,트렐로 보드 공유 방법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 씬 전환 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 달리 실제 게임 흐름 제어 오류를 다룸,75,error_solution,오류 해결형,유니티 씬 전환 안됨 자주 생기는 이유와 점검 순서
+unity,유니티 자동 저장 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"검색 키워드 활용과 관련 없고, 편의 기능 설정이라는 별개 주제임",75,feature_explanation,기능 설명형,유니티 자동 저장 설정 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 시작 프로그램 끄는 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,오류 해결이 아니라 부팅 최적화와 자동 실행 관리에 초점을 둔 주제임,75,feature_explanation,기능 설명형,윈도우 시작 프로그램 끄는 방법 기능과 사용 방법 쉽게 설명
+general_it,윈도우 검색 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,"작업 관리자, CPU 문제와 무관한 검색 기능 장애에 대한 주제임",75,error_solution,오류 해결형,윈도우 검색 안됨 문제를 줄이는 실무 처리 순서
+general_it,윈도우 와이파이 자동 연결 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,오류 해결이 아니라 네트워크 사용 편의성과 반복 작업 감소에 초점을 둔 주제임,75,feature_explanation,기능 설명형,윈도우 와이파이 자동 연결 설정 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 앱 삭제 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,기존 글과 다른 소프트웨어 제거 문제를 해결하는 별도 검색 의도임,75,error_solution,오류 해결형,윈도우 앱 삭제 안됨 자주 생기는 이유와 점검 순서
+unreal,언리얼 엔진 플러그인 설치 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글에는 도구 확장용 플러그인 설치·활성화 주제가 없고, 언리얼 자체 생태계 설정에 해당함",75,feature_explanation,기능 설명형,언리얼 엔진 플러그인 설치 방법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 카드 마감일 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 카드의 기본 기능 소개만 있고 마감일 설정 실무는 별도 주제임,75,feature_explanation,기능 설명형,트렐로 카드 마감일 설정 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 텍스트메시프로 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,검색 표현식이 아니라 UI 도구 설정 방법에 관한 주제임,75,feature_explanation,기능 설명형,유니티 텍스트메시프로 설정 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 인쇄 안됨,perplexity_questions,problem_solving,75,medium,low,2026-05-19,PC 오류가 아니라 주변기기 출력 문제를 다루는 별도 주제임,75,error_solution,오류 해결형,윈도우 인쇄 안됨 자주 생기는 이유와 점검 순서
+unreal,언리얼 엔진 프로젝트 생성 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글에는 프로젝트 생성 절차가 없고, 검색 의도도 문서 작성형 주제와 다름",75,feature_explanation,기능 설명형,언리얼 엔진 프로젝트 생성 방법 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 캐릭터 이동 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,"기존 글에는 게임 플레이 구현이나 입력 설정 주제가 없고, 실무 검색 의도도 다름",75,feature_explanation,기능 설명형,언리얼 엔진 캐릭터 이동 설정 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 에셋 임포트 방법,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글은 파일 읽기쓰기 같은 일반 파일 IO가 아니라 언리얼 에셋 가져오기라는 별도 의도임,75,feature_explanation,기능 설명형,언리얼 엔진 에셋 임포트 방법 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 공유 링크 권한 설정,perplexity_questions,how_to,75,medium,low,2026-05-19,기존 글 목록에는 공유 권한 설정과 협업 관리 주제가 없다,75,feature_explanation,기능 설명형,캔바 공유 링크 권한 설정 기능과 사용 방법 쉽게 설명
 excel,엑셀 안전 모드 vs 정상 모드 성능 비교와 전환법,perplexity_questions,comparison,70,low,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,comparison_analysis,비교/분석형,엑셀 안전 모드 vs 정상 모드 성능 비교와 전환법 차이점과 선택 기준 정리
 notion,obsidian notion 차이,google_suggest,comparison,70,low,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,comparison_analysis,비교/분석형,obsidian notion 차이 차이를 이해하고 선택하는 방법
 notion,obsidian notion 비교,google_suggest,comparison,70,low,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,70,comparison_analysis,비교/분석형,obsidian notion 비교 차이를 이해하고 선택하는 방법
@@ -1147,6 +1342,21 @@ office365,오피스365 원드라이브 용량 초과,perplexity_questions,inform
 unreal,언리얼엔진 버전업그레이드 데이터 손실,perplexity_questions,informational,70,low,low,2026-05-15,버전 관리 상황으로 설치 가이드와 완전 다름,70,feature_explanation,기능 설명형,언리얼엔진 버전업그레이드 데이터 손실 기능과 사용 방법 쉽게 설명
 python,파이썬 requests api 호출,perplexity_questions,informational,70,low,low,2026-05-15,파일 처리와 다른 네트워크 통신 중심,70,feature_explanation,기능 설명형,파이썬 requests api 호출 처음 시작할 때 알아두면 좋은 사용법
 notion,노션 데이터베이스 정렬 및 그룹화,perplexity_questions,informational,70,low,low,2026-05-15,"기존 글은 기본 테이블만 다루고, 다중 정렬과 그룹화 고급 활용은 미포함",70,feature_explanation,기능 설명형,노션 데이터베이스 정렬 및 그룹화 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 이미지 교체 빠르게 하는 법,perplexity_questions,informational,70,low,low,2026-05-18,기존 글과 달리 반복 작업 효율화가 핵심 검색 의도임,70,feature_explanation,기능 설명형,피그마 이미지 교체 빠르게 하는 법 기능과 사용 방법 쉽게 설명
+office365,오피스365 최근 문서 목록 삭제,perplexity_questions,informational,70,low,low,2026-05-19,기존 글과 달리 최근 파일 관리 및 보안 정리 목적이 핵심,70,feature_explanation,기능 설명형,오피스365 최근 문서 목록 삭제 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 엑셀 공동작업 실시간 반영,perplexity_questions,informational,70,low,low,2026-05-19,"기존 글은 시트 통합과 함수 활용 중심이며, 공동편집 반영 문제와 다름",70,feature_explanation,기능 설명형,오피스365 엑셀 공동작업 실시간 반영 기능과 사용 방법 쉽게 설명
+office365,오피스365 워드 표가 다음 페이지로 넘어감,perplexity_questions,informational,70,low,low,2026-05-19,기존 글은 목록과 스타일 편집 중심이며 표 레이아웃 문제와 별개임,70,feature_explanation,기능 설명형,오피스365 워드 표가 다음 페이지로 넘어감 기본 개념부터 적용 방법까지 정리
+office365,오피스365 엑셀 파일 열리지 않음,perplexity_questions,informational,70,low,low,2026-05-19,기존 글은 여러 시트 취합 방법 중심이고 파일 열기 오류 해결과 다름,70,feature_explanation,기능 설명형,오피스365 엑셀 파일 열리지 않음 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 원드라이브 용량 부족,perplexity_questions,informational,70,low,low,2026-05-19,기존 글은 문서 기능 활용 중심이며 저장 용량 관리 문제와 다름,70,feature_explanation,기능 설명형,오피스365 원드라이브 용량 부족 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 프로젝트 용량 줄이기,perplexity_questions,informational,70,low,low,2026-05-19,"기존 글은 프로젝트 학습이나 예제 안내 중심이며, 용량 최적화는 검색 의도가 겹치지 않습니다.",70,feature_explanation,기능 설명형,언리얼 엔진 프로젝트 용량 줄이기 기능과 사용 방법 쉽게 설명
+trello,트렐로 카드 체크리스트 만드는 법,perplexity_questions,informational,70,low,low,2026-05-19,보드와 리스트 중심 설명과 달리 카드 내부 작업 분해에 집중한다,70,feature_explanation,기능 설명형,트렐로 카드 체크리스트 만드는 법 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 파워포인트 발표자 도구,perplexity_questions,informational,70,low,low,2026-05-19,기존 글에는 발표 지원 기능 활용 주제가 없음,70,feature_explanation,기능 설명형,오피스365 파워포인트 발표자 도구 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 아웃룩 메일 자동 분류,perplexity_questions,informational,70,low,low,2026-05-19,기존 글의 엑셀·파일·시스템 문제와 다른 메일 자동화 주제임,70,feature_explanation,기능 설명형,오피스365 아웃룩 메일 자동 분류 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 오브젝트 이동이 이상할 때,perplexity_questions,informational,70,low,low,2026-05-19,오리진 설정 자체보다 이동 오작동 증상 해결에 초점이 있음,70,feature_explanation,기능 설명형,블렌더 오브젝트 이동이 이상할 때 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 프로젝트 열리지 않음,perplexity_questions,informational,70,low,low,2026-05-19,"기존 글에는 언리얼 프로젝트 실행 불가나 손상 복구 의도가 없으며, 실행 장애 대응으로 구분됨",70,feature_explanation,기능 설명형,언리얼 엔진 프로젝트 열리지 않음 기본 개념부터 적용 방법까지 정리
+unity,유니티 Rigidbody 속도 안붙음,perplexity_questions,informational,70,low,low,2026-05-19,검색 방법이 아니라 물리 이동 문제 해결에 초점을 둔 완전히 다른 주제임,70,feature_explanation,기능 설명형,유니티 Rigidbody 속도 안붙음 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 블루프린트 변수 값 안 바뀜,perplexity_questions,informational,70,low,low,2026-05-19,"기존 글은 일반적인 파일·리스트·집합 설명 위주로, 블루프린트 변수 디버깅과는 별개임",70,feature_explanation,기능 설명형,언리얼 엔진 블루프린트 변수 값 안 바뀜 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 메모리 사용량 줄이기,perplexity_questions,informational,70,low,low,2026-05-19,"기존 글에는 언리얼 성능 최적화나 메모리 관리 주제가 없고, 일반 Windows CPU 문제와도 범위가 다름",70,feature_explanation,기능 설명형,언리얼 엔진 메모리 사용량 줄이기 초보자도 이해하기 쉬운 설정과 활용
 excel,논문 정리 excel,google_suggest,practical,70,medium,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,논문 정리 excel 업무에 적용하는 단계별 방법
 ppt,ppt 자동화,google_suggest,practical,70,medium,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,ppt 자동화 반복 작업을 줄이는 실전 사용법
 ppt,ppt 자동화 ai,google_suggest,practical,70,medium,low,2026-04-26,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,ppt 자동화 ai 반복 작업을 줄이는 실전 사용법
@@ -1675,6 +1885,36 @@ office365,오피스365 버전 차이,perplexity_questions,comparison,70,medium,l
 notion,노션 문서 버전 관리,perplexity_questions,practical,70,medium,low,2026-05-15,"기존 글은 협업 기능만 다루고, 버전 관리 전략은 미포함",70,practical_usage,실무 활용형,노션 문서 버전 관리 업무에 적용하는 단계별 방법
 jira,지라 백로그 정리,perplexity_questions,practical,70,medium,low,2026-05-15,정리/정돈 팁 없고 에픽 생성만 다룸,70,practical_usage,실무 활용형,지라 백로그 정리 반복 작업을 줄이는 실전 사용법
 jira,지라 스프린트 자동화,perplexity_questions,practical,70,medium,low,2026-05-15,자동화 기능 소개 없음,70,practical_usage,실무 활용형,지라 스프린트 자동화 반복 작업을 줄이는 실전 사용법
+office365,엑셀 정리 꿈해몽,naver_suggest,practical,70,medium,low,2026-05-18,실무 활용 의도가 강해 경험형 콘텐츠로 확장하기 좋습니다.,70,practical_usage,실무 활용형,엑셀 정리 꿈해몽 업무에 적용하는 단계별 방법
+blender,블렌더 단축키 정리,perplexity_questions,practical,70,medium,low,2026-05-18,기존 글은 특정 모델링 도구 설명 중심이라 단축키 학습 의도와 다름,70,practical_usage,실무 활용형,블렌더 단축키 정리 업무에 적용하는 단계별 방법
+python,파이썬 엑셀 자동화,perplexity_questions,practical,70,medium,low,2026-05-18,엑셀 통합을 다룬 기존 글과 달리 파이썬 기반 자동화 자체가 주제,70,practical_usage,실무 활용형,파이썬 엑셀 자동화 실무에서 바로 쓰는 방법
+canva,캔바 무료와 프로 차이,perplexity_questions,comparison,70,medium,low,2026-05-18,"기존 글은 사용법 중심이며, 요금제 비교와 선택 목적이 다름",70,comparison_analysis,비교/분석형,캔바 무료와 프로 차이 차이점과 선택 기준 정리
+notion,노션 협업 태그 관리,perplexity_questions,practical,70,medium,low,2026-05-19,기본 사용법이 아니라 태그 운영과 협업 규칙 설계에 초점이 있음,70,practical_usage,실무 활용형,노션 협업 태그 관리 작업 흐름에 맞춰 정리한 활용법
+trello,트렐로 카드 자동화,perplexity_questions,practical,70,medium,low,2026-05-19,기존 글은 기본 사용법과 활용법 중심이어서 자동화 설정이라는 핵심 의도가 다릅니다.,70,practical_usage,실무 활용형,트렐로 카드 자동화 반복 작업을 줄이는 실전 사용법
+trello,트렐로 보드 정리,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 초보자용 기본 사용법 위주로, 오래된 보드 정리라는 실무 문제와 다릅니다.",70,practical_usage,실무 활용형,트렐로 보드 정리 반복 작업을 줄이는 실전 사용법
+notion,노션 체크박스 자동화,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 기본 사용법 중심이며, 자동화는 다른 검색 의도다",70,practical_usage,실무 활용형,노션 체크박스 자동화 업무에 적용하는 단계별 방법
+jira,지라 라벨 관리,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 기본 기능 소개 위주이며, 이 주제는 분류 체계와 운영 효율화에 초점이 다름",70,practical_usage,실무 활용형,지라 라벨 관리 실무에서 바로 쓰는 방법
+trello,트렐로 라벨 정리,perplexity_questions,practical,70,medium,low,2026-05-19,보드 소개가 아니라 분류 체계 최적화라는 실무 문제에 초점을 둠,70,practical_usage,실무 활용형,트렐로 라벨 정리 반복 작업을 줄이는 실전 사용법
+blender,블렌더 무료 애드온 추천,perplexity_questions,informational,70,medium,low,2026-05-19,기존 글은 블렌더 자체 기능 설명 위주이며 애드온 비교와 추천 의도가 다름,70,feature_explanation,기능 설명형,블렌더 무료 애드온 추천 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 업무 자동화,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 기본 사용법과 설명 중심이며, 자동화 활용이라는 목적이 별도입니다.",70,practical_usage,실무 활용형,노션 업무 자동화 반복 작업을 줄이는 실전 사용법
+notion,노션 페이지 정리,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 페이지 링크나 블록 추가 같은 단일 기능이 아니라, 전체 정리 운영이 핵심입니다.",70,practical_usage,실무 활용형,노션 페이지 정리 반복 작업을 줄이는 실전 사용법
+trello,트렐로 Notion 비교,perplexity_questions,comparison,70,medium,low,2026-05-19,사용법이 아니라 도구 비교 의도라 기존 글과 다르다,70,comparison_analysis,비교/분석형,트렐로 Notion 비교 비교할 때 먼저 봐야 할 핵심
+notion,노션 단축키 정리,perplexity_questions,practical,70,medium,low,2026-05-19,페이지 링크나 블록 추가가 아니라 입력·편집 효율을 높이는 단축키 활용 주제라 검색 의도가 다릅니다.,70,practical_usage,실무 활용형,노션 단축키 정리 실무에서 바로 쓰는 방법
+canva,캔바 무료 vs 프로 차이,perplexity_questions,comparison,70,medium,low,2026-05-19,"캔바의 기능 비교와 구독 선택 의도이며, 기존 SEO·템플릿·웹사이트 관련 글과 검색 의도가 다르다",70,comparison_analysis,비교/분석형,캔바 무료 vs 프로 차이 어떤 상황에서 무엇을 골라야 하는지 정리
+jira,지라 자동화 규칙,perplexity_questions,practical,70,medium,low,2026-05-19,기존 글은 기본 사용과 검색 중심이며 자동화는 핵심 목적이 다름,70,practical_usage,실무 활용형,지라 자동화 규칙 업무에 적용하는 단계별 방법
+jira,지라 칸반과 스크럼 차이,perplexity_questions,comparison,70,medium,low,2026-05-19,기존 글은 실제 활용법 중심이고 도구 유형 비교는 다른 의도임,70,comparison_analysis,비교/분석형,지라 칸반과 스크럼 차이 어떤 상황에서 무엇을 골라야 하는지 정리
+blender,블렌더 무료 플러그인 추천,perplexity_questions,informational,70,medium,low,2026-05-19,"기존 글은 특정 Origin 설정 설명이며, 이 주제는 기능 확장용 플러그인 탐색입니다.",70,feature_explanation,기능 설명형,블렌더 무료 플러그인 추천 기본 개념부터 적용 방법까지 정리
+figma,피그마 무료 유료 차이,perplexity_questions,comparison,70,medium,low,2026-05-19,"기존 글은 사용법 중심이고, 이 주제는 요금제 비교에 해당합니다.",70,comparison_analysis,비교/분석형,피그마 무료 유료 차이 차이점과 선택 기준 정리
+unreal,언리얼 엔진 버전 비교,perplexity_questions,comparison,70,medium,low,2026-05-19,기존 글은 버전 선택 비교가 아니라 SEO 인사이트 중심이라 의도가 겹치지 않음,70,comparison_analysis,비교/분석형,언리얼 엔진 버전 비교 차이점과 선택 기준 정리
+notion,노션 반복 일정 관리,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 맛집 기록처럼 기록형 데이터베이스 예시가 중심이며, 이 주제는 반복 일정 관리 자동화에 초점이 있음",70,practical_usage,실무 활용형,노션 반복 일정 관리 작업 흐름에 맞춰 정리한 활용법
+figma,피그마 실무 템플릿,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 개별 기능과 사례 위주이며, 템플릿 재사용 중심의 검색 의도와 다릅니다.",70,practical_usage,실무 활용형,피그마 실무 템플릿 실무에서 바로 쓰는 방법
+general_it,윈도우 디스크 정리,perplexity_questions,practical,70,medium,low,2026-05-19,작업 관리자 문제와 무관하며 저장 공간 확보라는 목적이 다름,70,practical_usage,실무 활용형,윈도우 디스크 정리 반복 작업을 줄이는 실전 사용법
+python,파이썬 시간 자동화,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글 목록에는 예약 실행, 자동 스케줄링, 반복 작업 자동화 주제가 없습니다.",70,practical_usage,실무 활용형,파이썬 시간 자동화 반복 작업을 줄이는 실전 사용법
+figma,피그마 템플릿 활용법,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글은 일반적인 협업 툴 설명이고, 이 주제는 빠른 제작을 위한 템플릿 활용에 집중합니다.",70,practical_usage,실무 활용형,피그마 템플릿 활용법 반복 작업을 줄이는 실전 사용법
+trello,트렐로 작업 자동화,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글의 템플릿 활용과는 달리, 자동화 규칙 설정은 별도의 검색 의도임",70,practical_usage,실무 활용형,트렐로 작업 자동화 작업 흐름에 맞춰 정리한 활용법
+notion,노션 할일 관리,perplexity_questions,practical,70,medium,low,2026-05-19,데이터베이스 개념 소개가 아니라 할일 관리라는 실제 사용 목적에 맞춘 주제,70,practical_usage,실무 활용형,노션 할일 관리 실무에서 바로 쓰는 방법
+notion,노션 업무 관리법,perplexity_questions,practical,70,medium,low,2026-05-19,특정 기능 설명이 아니라 실제 업무 운영 방식에 초점을 둔 주제,70,practical_usage,실무 활용형,노션 업무 관리법 실무에서 바로 쓰는 방법
+python,파이썬 딕셔너리 정리,perplexity_questions,practical,70,medium,low,2026-05-19,"기존 글에는 딕셔너리 개념이 언급되지만, 딕셔너리만 따로 정리하는 목적은 겹치지 않습니다.",70,practical_usage,실무 활용형,파이썬 딕셔너리 정리 실무에서 바로 쓰는 방법
 ppt,ppt 방법,google_suggest,how_to,65,medium,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,ppt 방법 초보자도 이해하기 쉬운 설정과 활용
 ppt,ppt 만드는 방법,google_suggest,how_to,65,medium,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,ppt 만드는 방법 초보자도 이해하기 쉬운 설정과 활용
 ppt,ppt 다운로드 방법,google_suggest,how_to,65,medium,low,2026-04-26,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,ppt 다운로드 방법 초보자도 이해하기 쉬운 설정과 활용
@@ -2278,6 +2518,102 @@ office365,엑셀 기본 책,naver_suggest,how_to,65,medium,low,2026-05-15,사용
 office365,엑셀 설정 꿀팁,naver_suggest,how_to,65,medium,low,2026-05-15,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,엑셀 설정 꿀팁 처음 시작할 때 알아두면 좋은 사용법
 notion,노션 공유 권한 설정,perplexity_questions,how_to,65,medium,low,2026-05-15,"기존 글은 기본 기능만 다루고, 보안 관점의 세부 권한 관리는 미포함",65,feature_explanation,기능 설명형,노션 공유 권한 설정 기능과 사용 방법 쉽게 설명
 trello,트렐로 백업 방법,perplexity_questions,how_to,65,medium,low,2026-05-15,"기존 글은 실시간 사용법만, 백업 전략 없음",65,feature_explanation,기능 설명형,트렐로 백업 방법 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 한글 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,기존 글은 다른 도구의 기능 정리와 문제 해결이며 유니티 언어 설정 주제와 겹치지 않음,65,feature_explanation,기능 설명형,유니티 한글 설정 초보자도 이해하기 쉬운 설정과 활용
+office365,엑셀 기본 수식,naver_suggest,how_to,65,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,엑셀 기본 수식 기능과 사용 방법 쉽게 설명
+unreal,언리얼 그래픽 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 기본 창 이해 중심이고, 그래픽 설정 최적화는 다른 검색 의도입니다.",65,feature_explanation,기능 설명형,언리얼 그래픽 설정 기능과 사용 방법 쉽게 설명
+blender,블렌더 모델링 방법,google_suggest,how_to,65,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,블렌더 모델링 방법 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 한글 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,기존 글은 메뉴 설명이나 모델링 기능 소개이지 언어 설정 안내가 아님,65,feature_explanation,기능 설명형,블렌더 한글 설정 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 환경변수 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글의 자료형·파일 처리와 겹치지 않고, 실행 환경 문제 해결에 집중",65,feature_explanation,기능 설명형,파이썬 환경변수 설정 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 디버깅 방법,perplexity_questions,how_to,65,medium,low,2026-05-18,문법 설명이 아니라 실제 오류 추적과 문제 해결 전략이 중심,65,feature_explanation,기능 설명형,파이썬 디버깅 방법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 설정 보는 법,naver_suggest,how_to,65,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,노션 설정 보는 법 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 사용법 표,naver_suggest,how_to,65,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,노션 사용법 표 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 사용법 여행,naver_suggest,how_to,65,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,노션 사용법 여행 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 사용법 공유,naver_suggest,how_to,65,medium,low,2026-05-18,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,노션 사용법 공유 기능과 사용 방법 쉽게 설명
+notion,노션 롤업 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,기본 편집이 아니라 데이터 집계 자동화라는 다른 검색 의도입니다.,65,feature_explanation,기능 설명형,노션 롤업 설정 기능과 사용 방법 쉽게 설명
+notion,노션 위젯 추가 방법,perplexity_questions,how_to,65,medium,low,2026-05-18,기본 콘텐츠 작성과는 달리 대시보드 꾸미기와 외부 위젯 활용이 핵심입니다.,65,feature_explanation,기능 설명형,노션 위젯 추가 방법 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 발표자료 만들기,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 SNS 카드뉴스 중심이고, 발표자료 제작 의도는 별개임",65,feature_explanation,기능 설명형,캔바 발표자료 만들기 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 이력서 만들기,perplexity_questions,how_to,65,medium,low,2026-05-18,기존 글은 교육과정이나 취업준비가 아니라 실무 문서 제작 의도에 초점이 있음,65,feature_explanation,기능 설명형,캔바 이력서 만들기 기능과 사용 방법 쉽게 설명
+jira,지라 워크플로우 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 기본 사용법 중심이며, 이 주제는 실제 운영용 워크플로우 구조 설정에 초점이 다름",65,feature_explanation,기능 설명형,지라 워크플로우 설정 기능과 사용 방법 쉽게 설명
+jira,지라 권한 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 기본 사용법 중심이며, 이 주제는 보안과 접근 제어에 초점이 다름",65,feature_explanation,기능 설명형,지라 권한 설정 기본 개념부터 적용 방법까지 정리
+trello,트렐로 권한 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 사용법 전반에 가깝고, 이 주제는 권한 관리 목적이 명확히 다름",65,feature_explanation,기능 설명형,트렐로 권한 설정 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 마감일 설정,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 보드 사용법 중심이며, 이 주제는 일정 관리 목적이 중심임",65,feature_explanation,기능 설명형,트렐로 마감일 설정 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 템플릿 만들기,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 일반 보드 활용 중심이며, 이 주제는 재사용 가능한 템플릿 설계에 초점이 있음",65,feature_explanation,기능 설명형,트렐로 템플릿 만들기 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 모바일 사용법,perplexity_questions,how_to,65,medium,low,2026-05-18,"기존 글은 PC 기반 협업 소개에 가깝고, 이 주제는 모바일 환경 최적화가 다름",65,feature_explanation,기능 설명형,트렐로 모바일 사용법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 팀 작업 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 개인 사용이 아니라 팀 협업 환경을 다룸,65,feature_explanation,기능 설명형,유니티 팀 작업 설정 기본 개념부터 적용 방법까지 정리
+office365,엑셀 무료사용 방법,google_suggest,how_to,65,medium,low,2026-05-19,사용 방법을 찾는 검색어라 단계별 설명 글로 만들기 좋습니다.,65,feature_explanation,기능 설명형,엑셀 무료사용 방법 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 렌더링 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 도구 사용법 중심이고, 렌더 출력 설정 목적은 별도 검색 의도임",65,feature_explanation,기능 설명형,블렌더 렌더링 설정 기능과 사용 방법 쉽게 설명
+blender,블렌더 내보내기 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 모델링 도구 중심이고, 파일 내보내기 실무 목적과는 다름",65,feature_explanation,기능 설명형,블렌더 내보내기 방법 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 경로 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 운영체제 설정과 실행 경로 문제가 핵심임,65,feature_explanation,기능 설명형,파이썬 경로 설정 기본 개념부터 적용 방법까지 정리
+notion,노션 모바일 사용법,perplexity_questions,how_to,65,medium,low,2026-05-19,PC 기준의 기본 편집 설명과 달리 모바일 사용 상황에 특화됨,65,feature_explanation,기능 설명형,노션 모바일 사용법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 보드 생성 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 기본 사용법과 이슈 관리 중심이며, 보드 생성 자체에 대한 검색 의도가 겹치지 않음",65,feature_explanation,기능 설명형,지라 보드 생성 방법 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 이슈 링크 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 이슈 생성과 할당 중심이며, 이슈 간 링크 관리 의도와 다름",65,feature_explanation,기능 설명형,지라 이슈 링크 방법 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 단축키 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 도구 설명 위주이며, 개인 단축키 커스터마이징은 포함되지 않습니다.",65,feature_explanation,기능 설명형,블렌더 단축키 설정 기본 개념부터 적용 방법까지 정리
+blender,블렌더 단위 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 모델링 도구 사용법 중심이고, 치수 단위 최적화는 다른 주제입니다.",65,feature_explanation,기능 설명형,블렌더 단위 설정 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 권한 설정 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 일반 사용법 중심이고, 이 주제는 공유 권한 관리에 초점이 있다",65,feature_explanation,기능 설명형,노션 권한 설정 방법 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 보기 전환 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 기본 개념 소개 중심이며, 이 주제는 보기 전환이라는 구체 기능이다",65,feature_explanation,기능 설명형,노션 보기 전환 방법 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 팀 공유 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 개인 사용법 중심이며 팀 협업 설정은 별도 주제임,65,feature_explanation,기능 설명형,캔바 팀 공유 방법 기능과 사용 방법 쉽게 설명
+canva,캔바 인쇄 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 기본 기능 익히기이고 인쇄용 세부 설정은 별도 검색 의도임,65,feature_explanation,기능 설명형,캔바 인쇄 설정 기본 개념부터 적용 방법까지 정리
+canva,캔바 모바일 사용법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 일반 기본 기능 중심이고 모바일 환경 사용법은 별도 상황임,65,feature_explanation,기능 설명형,캔바 모바일 사용법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 보드 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 에픽·스토리·작업 추가 위주이며, 이 주제는 보드 구조 설계에 집중해 검색 의도가 다름",65,feature_explanation,기능 설명형,지라 보드 만들기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 이슈 타입 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 이슈를 추가하는 방법 중심이고, 이 주제는 이슈 타입 설계와 설정에 초점이 다름",65,feature_explanation,기능 설명형,지라 이슈 타입 설정 기능과 사용 방법 쉽게 설명
+jira,지라 보드 공유 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 내부 작업 관리 중심이며, 이 주제는 공유 범위와 협업 배포가 핵심이라 다름",65,feature_explanation,기능 설명형,지라 보드 공유 방법 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 이슈 복제 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 이슈 추가의 기초 설명 중심이고, 이 주제는 반복 작업 단축과 복제 활용이 핵심이라 다름",65,feature_explanation,기능 설명형,지라 이슈 복제 방법 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 카메라 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 모델링 도구와 기본 메뉴 중심이며 카메라 세팅 목적과 다름,65,feature_explanation,기능 설명형,블렌더 카메라 설정 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 링크 공유 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 목록에는 페이지 링크 걸기만 있고, 외부 공유용 링크 발급과 공개 설정은 다릅니다.",65,feature_explanation,기능 설명형,노션 링크 공유 방법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 뷰 전환 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 자료에 보기 전환 개념은 일부 언급되지만, 뷰 전환만을 해결하는 실무 주제는 아닙니다.",65,feature_explanation,기능 설명형,노션 뷰 전환 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 에픽 분할 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글에도 에픽이 언급되지만, 이 주제는 대형 작업 분해와 운영 최적화가 중심입니다.",65,feature_explanation,기능 설명형,지라 에픽 분할 방법 기본 개념부터 적용 방법까지 정리
+unity,유니티 씬 전환 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글에는 Unity 씬 관리나 화면 이동 관련 검색 의도가 없음,65,feature_explanation,기능 설명형,유니티 씬 전환 방법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 프리팹 사용법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 문서 통합과 함수 활용 중심이며, Unity 리소스 재사용 구조와는 무관함",65,feature_explanation,기능 설명형,유니티 프리팹 사용법 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 뷰포트 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기초 강좌가 아니라 작업 화면 최적화라는 생산성 주제임,65,feature_explanation,기능 설명형,블렌더 뷰포트 설정 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 초보 실수,perplexity_questions,informational,65,medium,low,2026-05-19,기능 설명이 아니라 초보자의 실수 예방과 사용 안정성에 집중함,65,feature_explanation,기능 설명형,블렌더 초보 실수 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 정렬 기준 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,블록 작성이 아니라 데이터 관리 순서 최적화에 초점이 있습니다,65,feature_explanation,기능 설명형,노션 정렬 기준 설정 기능과 사용 방법 쉽게 설명
+notion,노션 다크모드 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,사용 방법 일반론이 아니라 화면 테마 설정과 시각 피로 완화가 핵심입니다,65,feature_explanation,기능 설명형,노션 다크모드 설정 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 협업 권한 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 개인 사용법 중심이며, 이 주제는 공유 권한 관리라는 협업 목적이 다름",65,feature_explanation,기능 설명형,캔바 협업 권한 설정 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 링크 공유 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 공유 링크 생성과 접근 제어가 핵심 의도임,65,feature_explanation,기능 설명형,캔바 링크 공유 방법 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 링크 첨부 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글의 검색 의도는 템플릿과 기본 기능 학습이고, 이 주제는 링크 삽입과 연결 설정에 초점이 있음",65,feature_explanation,기능 설명형,캔바 링크 첨부 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 알림 설정 끄기,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 알림 최적화 및 방해 줄이기 목적의 검색 의도임,65,feature_explanation,기능 설명형,지라 알림 설정 끄기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 필터 공유 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 필터 생성 예시 수준이며, 공유 설정과 권한 관리가 중심은 아님",65,feature_explanation,기능 설명형,지라 필터 공유 방법 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 기본앱 변경,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글의 일반 오류와 달리 기본 앱 설정이라는 사용성 조정 주제임,65,feature_explanation,기능 설명형,윈도우 기본앱 변경 기능과 사용 방법 쉽게 설명
+notion,노션 템플릿 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 개별 기능 사용법 중심이고, 이 주제는 반복 작업 자동화용 템플릿 생성에 초점이 다릅니다.",65,feature_explanation,기능 설명형,노션 템플릿 만들기 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 정렬 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,링크나 블록 추가가 아니라 데이터 표시 순서를 조정하는 관리 기능 주제입니다.,65,feature_explanation,기능 설명형,노션 정렬 방법 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 미러링 사용법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글의 제작 프로세스와 달리 모바일 실시간 확인이라는 사용 목적이 다름,65,feature_explanation,기능 설명형,피그마 미러링 사용법 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 배너 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"홍보 이미지 제작 목적의 주제로, 기존 캔바 웹사이트 최적화나 숨겨진 템플릿 소개와 다르다",65,feature_explanation,기능 설명형,캔바 배너 만들기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 보드 컬럼 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 일반적인 프로젝트 관리 활용이며 보드 화면 설정은 별개 주제임,65,feature_explanation,기능 설명형,지라 보드 컬럼 설정 기능과 사용 방법 쉽게 설명
+unreal,언리얼 씬 조명 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 겹치지 않는 비주얼 설정 주제입니다.,65,feature_explanation,기능 설명형,언리얼 씬 조명 설정 기능과 사용 방법 쉽게 설명
+blender,블렌더 조명 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 오브젝트 중심이 아닌 씬 조명 최적화 주제입니다.,65,feature_explanation,기능 설명형,블렌더 조명 설정 기능과 사용 방법 쉽게 설명
+python,파이썬 함수 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글 목록은 파일·리스트·집합 중심이고 함수 설계는 별개의 검색 의도입니다.,65,feature_explanation,기능 설명형,파이썬 함수 만들기 기본 개념부터 적용 방법까지 정리
+canva,캔바 협업 공유 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 개인 편집이나 SEO 관련 내용 중심이며, 협업과 권한 설정 의도가 다릅니다.",65,feature_explanation,기능 설명형,캔바 협업 공유 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 에픽 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글의 일반 활용과 달리 상위 계획 단위 생성에 초점이 있음,65,feature_explanation,기능 설명형,지라 에픽 만들기 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 초대 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글과 달리 Trello의 공유 및 협업 설정을 다루며, 검색 의도도 완전히 다르다.",65,feature_explanation,기능 설명형,트렐로 초대 방법 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 PATH 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 설치 후 환경 설정 문제를 다루며 핵심 검색 의도가 겹치지 않습니다.,65,feature_explanation,기능 설명형,파이썬 PATH 설정 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 표 정렬 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 데이터베이스 입문 설명 중심이며, 이 주제는 표 정렬 실무 활용에 초점이 있음",65,feature_explanation,기능 설명형,노션 표 정렬 방법 기능과 사용 방법 쉽게 설명
+notion,노션 필터 조건 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 데이터베이스 필터링과 보기 최적화 문제를 다룸,65,feature_explanation,기능 설명형,노션 필터 조건 설정 기능과 사용 방법 쉽게 설명
+jira,지라 계정 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 지라 기능 활용과 용어 설명 중심이며, 계정 생성 자체를 다루지 않습니다.",65,feature_explanation,기능 설명형,지라 계정 만들기 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 프로젝트 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글과 검색 의도가 겹치지 않도록, 프로젝트 생성 단계에만 초점을 맞춘 주제입니다.",65,feature_explanation,기능 설명형,지라 프로젝트 만들기 기본 개념부터 적용 방법까지 정리
+jira,지라 이슈 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 생활 관리용 이슈 활용에 가까워, 실무용 이슈 생성 방법과는 검색 의도가 다릅니다.",65,feature_explanation,기능 설명형,지라 이슈 만들기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 필터 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글과 달리, 조회 효율을 높이기 위한 필터 설정이 핵심입니다.",65,feature_explanation,기능 설명형,지라 필터 만들기 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 대시보드 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 개념 소개에 가까워, 시각화된 관리 화면 구성은 별도 주제입니다.",65,feature_explanation,기능 설명형,지라 대시보드 설정 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 한국어 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,검색 키워드 사용법이 아니라 초기 환경 설정 주제이므로 다름,65,feature_explanation,기능 설명형,유니티 한국어 설정 기본 개념부터 적용 방법까지 정리
+blender,블렌더 원근감 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 좌표계와 피벗 설명이 중심이라 카메라 시점 설정과는 다른 의도임,65,feature_explanation,기능 설명형,블렌더 원근감 설정 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 스냅 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 인터페이스와 기준점 개념 중심이고 스냅 실전 활용 의도는 다름,65,feature_explanation,기능 설명형,블렌더 스냅 설정 기능과 사용 방법 쉽게 설명
+notion,노션 롤업 계산 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글들은 노션 기본 사용이나 포트폴리오 SEO 중심이며, 롤업 계산은 데이터베이스 고급 활용 의도임",65,feature_explanation,기능 설명형,노션 롤업 계산 방법 기본 개념부터 적용 방법까지 정리
+figma,피그마 초보자 단축키,perplexity_questions,informational,65,medium,low,2026-05-19,기존 글과 달리 협업 설명이 아니라 초보자의 즉시 생산성 향상에 초점이 있습니다.,65,feature_explanation,기능 설명형,피그마 초보자 단축키 기본 개념부터 적용 방법까지 정리
+canva,캔바 팀원 초대 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,개인 사용법이 아니라 팀 협업 설정이 핵심이라 기존 주제와 겹치지 않음,65,feature_explanation,기능 설명형,캔바 팀원 초대 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 필터 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 용어 정리나 일반 사용 설명 중심이고 필터 최적화 의도가 없음,65,feature_explanation,기능 설명형,지라 필터 설정 기본 개념부터 적용 방법까지 정리
+jira,지라 이슈 복사 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 초보자용 개념 설명 중심이며 반복 입력 절감용 복사 기능 의도가 아님,65,feature_explanation,기능 설명형,지라 이슈 복사 방법 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 시간 추적 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 기본 사용법 중심이며 공수 기록·추적 설정 의도와 다름,65,feature_explanation,기능 설명형,지라 시간 추적 설정 기능과 사용 방법 쉽게 설명
+blender,블렌더 내보내기 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글은 출력 포맷별 내보내기 방법을 다루지 않음,65,feature_explanation,기능 설명형,블렌더 내보내기 설정 기능과 사용 방법 쉽게 설명
+canva,캔바 ppt 만들기,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 SEO나 템플릿 소개 중심이고, 이 주제는 프레젠테이션 제작이 핵심입니다.",65,feature_explanation,기능 설명형,캔바 ppt 만들기 기본 개념부터 적용 방법까지 정리
+jira,지라 작업 생성 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 Jira 기본 개념이나 Confluence 연동이 중심이며, 새 작업 생성 위치를 찾는 실무형 사용법과 다름",65,feature_explanation,기능 설명형,지라 작업 생성 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 이슈 수정 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글 목록에는 이슈 수정 절차를 다루는 주제가 없음,65,feature_explanation,기능 설명형,지라 이슈 수정 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 필터 사용법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 목록 조회 효율화와 검색 조건 활용에 초점이 있음,65,feature_explanation,기능 설명형,지라 필터 사용법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 알림 끄는 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글과 다른 문제 해결형 주제로, 사용 편의 설정에 초점이 있음",65,feature_explanation,기능 설명형,지라 알림 끄는 방법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 댓글 알림 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글과 달리 협업 커뮤니케이션 알림 최적화가 핵심 의도,65,feature_explanation,기능 설명형,지라 댓글 알림 설정 기능과 사용 방법 쉽게 설명
+jira,지라 엑셀 연동 방법,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 Confluence 연동이 중심이며, 엑셀 연동은 다른 실무 목적",65,feature_explanation,기능 설명형,지라 엑셀 연동 방법 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 팀스 사용법,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글 목록에는 팀 협업 기능 사용법이 없다,65,feature_explanation,기능 설명형,캔바 팀스 사용법 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 인쇄용 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,기존 글 목록에는 인쇄용 출력 최적화 주제가 없다,65,feature_explanation,기능 설명형,캔바 인쇄용 설정 기능과 사용 방법 쉽게 설명
+jira,지라 마감일 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 Jira 활용 전반이며, 일정 통제 기능에 대한 주제가 아님",65,feature_explanation,기능 설명형,지라 마감일 설정 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 보안 설정,perplexity_questions,how_to,65,medium,low,2026-05-19,"기존 글은 기능 활용 중심이고, 보안 운영이라는 목적이 다름",65,feature_explanation,기능 설명형,지라 보안 설정 기본 개념부터 적용 방법까지 정리
 excel,csv excel 차이,google_suggest,comparison,60,medium,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,csv excel 차이 비교할 때 먼저 봐야 할 핵심
 excel,csv 와 excel 차이,google_suggest,comparison,60,medium,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,csv 와 excel 차이 차이를 이해하고 선택하는 방법
 excel,access excel 차이,google_suggest,comparison,60,medium,low,2026-04-26,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,access excel 차이 차이점과 선택 기준 정리
@@ -2911,3 +3247,206 @@ jira,지라 칸반 보드 안보임,perplexity_questions,informational,60,medium
 jira,지라 첨부파일 크기 제한,perplexity_questions,informational,60,medium,low,2026-05-15,"파일 업로드 기본만, 제한 해제 방법 없음",60,feature_explanation,기능 설명형,지라 첨부파일 크기 제한 처음 시작할 때 알아두면 좋은 사용법
 trello,트렐로 보드 복사하는 법,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 개별 카드 템플릿만, 보드 전체 복사 미포함",60,feature_explanation,기능 설명형,트렐로 보드 복사하는 법 초보자도 이해하기 쉬운 설정과 활용
 trello,트렐로 캘린더 뷰 전환,perplexity_questions,informational,60,medium,low,2026-05-15,"기존 글은 칸반 기본만, 뷰 전환 미포함",60,feature_explanation,기능 설명형,트렐로 캘린더 뷰 전환 기본 개념부터 적용 방법까지 정리
+unity,유니티 인스펙터 안보임,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글에는 유니티 에디터 창 배치나 레이아웃 복구 관련 의도가 없음,60,feature_explanation,기능 설명형,유니티 인스펙터 안보임 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 안드로이드 빌드,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글 목록에는 모바일 빌드 설정이나 플랫폼 전환 주제가 없음,60,feature_explanation,기능 설명형,유니티 안드로이드 빌드 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 에픽게임즈 런처 느림,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글의 '시간 오래걸림'은 일반 체감 설명이고, 런처 성능 최적화 검색 의도와 다릅니다.",60,feature_explanation,기능 설명형,언리얼 에픽게임즈 런처 느림 기본 개념부터 적용 방법까지 정리
+blender,믹서기 블렌더 차이점,naver_suggest,comparison,60,medium,low,2026-05-18,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,믹서기 블렌더 차이점 차이를 이해하고 선택하는 방법
+blender,블렌더 렌더링 느릴 때,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글은 렌더 속도 최적화가 아니라 모델링 도구 사용법에 초점이 있음,60,feature_explanation,기능 설명형,블렌더 렌더링 느릴 때 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 화면 검게 나옴,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글은 렌더 오류 해결이 아니라 모델링 기능 설명 중심임,60,feature_explanation,기능 설명형,블렌더 화면 검게 나옴 기본 개념부터 적용 방법까지 정리
+blender,블렌더 OBJ 내보내기,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글은 편집 도구 중심이며 파일 내보내기 활용과 의도가 다름,60,feature_explanation,기능 설명형,블렌더 OBJ 내보내기 기능과 사용 방법 쉽게 설명
+blender,블렌더 FBX 내보내기,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글은 모델링 기능 소개이지 외부 전송용 export 설정이 아님,60,feature_explanation,기능 설명형,블렌더 FBX 내보내기 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 JSON 읽기 쓰기,perplexity_questions,informational,60,medium,low,2026-05-18,텍스트 파일 입출력과 달리 구조화 데이터 처리에 초점,60,feature_explanation,기능 설명형,파이썬 JSON 읽기 쓰기 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 페이지 잠금 해제,perplexity_questions,informational,60,medium,low,2026-05-18,기본 사용법이 아니라 편집 제한 해제라는 오류성 상황입니다.,60,feature_explanation,기능 설명형,노션 페이지 잠금 해제 기본 개념부터 적용 방법까지 정리
+figma,피그마 프레임 맞춤 정렬 단축키,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 기초 활용 중심이고, 이 주제는 정렬 효율화에 초점이 다름",60,feature_explanation,기능 설명형,피그마 프레임 맞춤 정렬 단축키 기본 개념부터 적용 방법까지 정리
+figma,피그마 컴포넌트 수정이 안될 때,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글과 다르게 컴포넌트 편집 문제 해결에 집중함,60,feature_explanation,기능 설명형,피그마 컴포넌트 수정이 안될 때 기능과 사용 방법 쉽게 설명
+figma,피그마 자동 레이아웃 간격 조절,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 일반 기능 소개에 가깝고, 이 주제는 오토레이아웃 세부 조정이 핵심임",60,feature_explanation,기능 설명형,피그마 자동 레이아웃 간격 조절 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 오브젝트 잠금 해제,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글과 달리 작업 중 발생하는 선택/잠금 문제를 다룸,60,feature_explanation,기능 설명형,피그마 오브젝트 잠금 해제 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 실시간 협업 느릴 때,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글과 달리 공동 편집 성능 문제를 다루는 주제임,60,feature_explanation,기능 설명형,피그마 실시간 협업 느릴 때 기능과 사용 방법 쉽게 설명
+figma,피그마 내보내기 사이즈 맞추기,perplexity_questions,informational,60,medium,low,2026-05-18,기존 글과 달리 결과물 규격 맞춤과 출력 최적화가 중심임,60,feature_explanation,기능 설명형,피그마 내보내기 사이즈 맞추기 기본 개념부터 적용 방법까지 정리
+canva,캔바 한글 폰트 추천,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 기능 사용법 중심이고, 한글 폰트 선택과 시각 스타일 목적이 다름",60,feature_explanation,기능 설명형,캔바 한글 폰트 추천 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 링크 공유 비밀번호,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 디자인 활용법 중심이고, 공유 보안 설정 의도와 다름",60,feature_explanation,기능 설명형,캔바 링크 공유 비밀번호 기능과 사용 방법 쉽게 설명
+canva,캔바 인스타그램 게시물 사이즈,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 기본 기능 학습 중심이고, 플랫폼별 규격 최적화 의도가 다름",60,feature_explanation,기능 설명형,캔바 인스타그램 게시물 사이즈 기본 개념부터 적용 방법까지 정리
+jira,지라 프로젝트 아카이브,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 생성과 진행 관리 중심이며, 이 주제는 종료 프로젝트 정리라는 별도 운영 이슈임",60,feature_explanation,기능 설명형,지라 프로젝트 아카이브 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 버전 기록 확인,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 입문형 사용법이고, 이 주제는 변경 추적과 복구 목적이 다름",60,feature_explanation,기능 설명형,트렐로 버전 기록 확인 기본 개념부터 적용 방법까지 정리
+trello,트렐로 첨부파일 안열림,perplexity_questions,informational,60,medium,low,2026-05-18,"기존 글은 보드 운영 소개 중심이고, 이 주제는 파일 접근 오류 해결에 초점이 있음",60,feature_explanation,기능 설명형,트렐로 첨부파일 안열림 기본 개념부터 적용 방법까지 정리
+unity,유니티 메모리 누수 확인,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 장시간 실행 중 자원 누수 진단에 초점을 둠,60,feature_explanation,기능 설명형,유니티 메모리 누수 확인 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 오브젝트 사라짐,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 오브젝트 표시 및 씬 상태 문제를 다룸,60,feature_explanation,기능 설명형,유니티 오브젝트 사라짐 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 카메라 따라가기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 특정 기능 구현 목적의 주제임,60,feature_explanation,기능 설명형,유니티 카메라 따라가기 기본 개념부터 적용 방법까지 정리
+python,파이썬 날짜 시간 포맷,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 파일과 집합 자료형 중심이며 날짜 포맷 변환은 다루지 않음,60,feature_explanation,기능 설명형,파이썬 날짜 시간 포맷 기본 개념부터 적용 방법까지 정리
+notion,노션 데이터베이스 필터,perplexity_questions,informational,60,medium,low,2026-05-19,데이터베이스 생성이 아니라 필터로 실무 관리를 최적화하는 주제임,60,feature_explanation,기능 설명형,노션 데이터베이스 필터 기본 개념부터 적용 방법까지 정리
+notion,노션 데이터베이스 정렬,perplexity_questions,informational,60,medium,low,2026-05-19,기본 가이드의 데이터베이스 소개와 달리 정렬 활용법에 초점이 있음,60,feature_explanation,기능 설명형,노션 데이터베이스 정렬 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 링크드 데이터베이스,perplexity_questions,informational,60,medium,low,2026-05-19,새 데이터베이스 생성이 아니라 연결된 데이터 재사용 구조에 관한 주제임,60,feature_explanation,기능 설명형,노션 링크드 데이터베이스 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 워크스페이스 전환,perplexity_questions,informational,60,medium,low,2026-05-19,페이지 작성법이 아니라 여러 워크스페이스를 오가는 운영 문제에 해당함,60,feature_explanation,기능 설명형,노션 워크스페이스 전환 기본 개념부터 적용 방법까지 정리
+figma,피그마 오토레이아웃 간격 맞추기,perplexity_questions,informational,60,medium,low,2026-05-19,기본 사용법이 아니라 간격 불일치 문제 해결에 초점을 둠,60,feature_explanation,기능 설명형,피그마 오토레이아웃 간격 맞추기 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 이미지 일괄 교체,perplexity_questions,informational,60,medium,low,2026-05-19,상세페이지 제작 일반이 아니라 반복 수정 자동화에 초점,60,feature_explanation,기능 설명형,피그마 이미지 일괄 교체 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 배경 투명하게 저장,perplexity_questions,informational,60,medium,low,2026-05-19,상세페이지 제작과 무관한 export 설정 문제를 다룸,60,feature_explanation,기능 설명형,피그마 배경 투명하게 저장 기능과 사용 방법 쉽게 설명
+figma,피그마 가이드선 안보임,perplexity_questions,informational,60,medium,low,2026-05-19,디자인 제작 과정이 아니라 보기 설정 오류 해결에 해당,60,feature_explanation,기능 설명형,피그마 가이드선 안보임 기본 개념부터 적용 방법까지 정리
+canva,캔바 PDF 인쇄용 저장,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 인쇄 결과를 위한 내보내기 설정을 다룸,60,feature_explanation,기능 설명형,캔바 PDF 인쇄용 저장 기능과 사용 방법 쉽게 설명
+canva,캔바 이미지 확대 흐림,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기능 나열 중심이며, 이 주제는 이미지 품질 문제를 해결함",60,feature_explanation,기능 설명형,캔바 이미지 확대 흐림 기본 개념부터 적용 방법까지 정리
+canva,캔바 발표자료 만드는 법,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 카드뉴스 중심이며, 이 주제는 발표 자료 제작 목적이 다름",60,feature_explanation,기능 설명형,캔바 발표자료 만드는 법 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 텍스트 정렬 안맞음,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 기능 학습 중심이고, 이 주제는 편집 정렬 문제 해결에 초점이 있음",60,feature_explanation,기능 설명형,캔바 텍스트 정렬 안맞음 처음 시작할 때 알아두면 좋은 사용법
+canva,캔바 무료 유료 차이,perplexity_questions,comparison,60,medium,low,2026-05-19,"기존 글은 사용법 안내 위주이며, 이 주제는 요금제 비교와 선택에 집중함",60,comparison_analysis,비교/분석형,캔바 무료 유료 차이 어떤 상황에서 무엇을 골라야 하는지 정리
+jira,지라 대시보드 위젯 추가,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 사용법 중심이며, 대시보드 구성과 위젯 활용은 다른 검색 의도임",60,feature_explanation,기능 설명형,지라 대시보드 위젯 추가 기본 개념부터 적용 방법까지 정리
+trello,트렐로 마감일 알림 안옴,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글의 일반 사용법과 달리 오류 해결이 핵심 검색 의도입니다.,60,feature_explanation,기능 설명형,트렐로 마감일 알림 안옴 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 파워업 추천,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 기본 활용법 중심이며 확장 기능 비교와 추천은 별도 주제입니다.,60,feature_explanation,기능 설명형,트렐로 파워업 추천 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 대안 비교,perplexity_questions,comparison,60,medium,low,2026-05-19,"기존 글은 트렐로 사용법 중심이고, 다른 도구와의 비교는 완전히 다른 검색 의도입니다.",60,comparison_analysis,비교/분석형,트렐로 대안 비교 어떤 상황에서 무엇을 골라야 하는지 정리
+unity,유니티 UI 버튼 이벤트,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 핵심 의도가 다른 유니티 인터페이스 설정 주제다,60,feature_explanation,기능 설명형,유니티 UI 버튼 이벤트 기능과 사용 방법 쉽게 설명
+general_it,윈도우 블루스크린 원인,perplexity_questions,informational,60,medium,low,2026-05-19,일반적인 윈도우 오류 해결이 아니라 시스템 중단 현상 분석 주제,60,feature_explanation,기능 설명형,윈도우 블루스크린 원인 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 안전모드 들어가는 법,perplexity_questions,informational,60,medium,low,2026-05-19,작업 관리자나 점유율 이슈가 아닌 부팅 모드 전환 방법 주제,60,feature_explanation,기능 설명형,윈도우 안전모드 들어가는 법 기능과 사용 방법 쉽게 설명
+office365,오피스365 자동 업데이트 끄기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 업무 기능 활용 중심이고, 업데이트 제어는 별개의 검색 의도임",60,feature_explanation,기능 설명형,오피스365 자동 업데이트 끄기 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 에디터 검은 화면,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 입문/설명 중심이며, 이 주제는 실행 직후 발생하는 표시 오류 해결에 초점이 있음",60,feature_explanation,기능 설명형,언리얼 에디터 검은 화면 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 사운드 안 들림,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 엔진 소개와 콘텐츠 예제 중심이며, 오디오 출력 장애 해결과 검색 의도가 다름",60,feature_explanation,기능 설명형,언리얼 사운드 안 들림 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 한글 폰트 깨짐,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 언리얼 전반 개요 위주이고, 이 주제는 현업에서 자주 겪는 표시 오류 해결임",60,feature_explanation,기능 설명형,언리얼 한글 폰트 깨짐 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 자동 저장 복구,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글에는 복구 절차가 없고, 이 주제는 오류 발생 후 데이터 복원 목적이 중심임",60,feature_explanation,기능 설명형,언리얼 자동 저장 복구 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 메모리 사용량 줄이기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 엔진 개념과 샘플 설명 위주이며, 자원 사용 문제 대응과는 다름",60,feature_explanation,기능 설명형,언리얼 메모리 사용량 줄이기 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 텍스처 용량 줄이기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 학습용 예제와 입문서 중심이며, 실제 배포 전 자산 최적화 주제와 다름",60,feature_explanation,기능 설명형,언리얼 텍스처 용량 줄이기 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 충돌 원인 찾기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 시작하기, 샘플, 개발 환경 소개 위주이며, 충돌 원인 분석은 별도 검색 의도임",60,feature_explanation,기능 설명형,언리얼 충돌 원인 찾기 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 오브젝트 합치기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 익스트루드 같은 모델링 도구 설명 중심이라 오브젝트 병합 의도와 다릅니다.,60,feature_explanation,기능 설명형,블렌더 오브젝트 합치기 기능과 사용 방법 쉽게 설명
+blender,블렌더 카메라 각도 고정,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 모델 편집 위주이고 카메라 구도 고정은 다른 사용 맥락입니다.,60,feature_explanation,기능 설명형,블렌더 카메라 각도 고정 기본 개념부터 적용 방법까지 정리
+python,파이썬 실행 속도 개선,perplexity_questions,informational,60,medium,low,2026-05-19,기초 문법이 아닌 성능 개선과 속도 최적화 문제를 다룸,60,feature_explanation,기능 설명형,파이썬 실행 속도 개선 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 공유 링크 열리지 않음,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 페이지 작성과 편집 중심이며, 공유 링크 오류는 별도 이슈다",60,feature_explanation,기능 설명형,노션 공유 링크 열리지 않음 기능과 사용 방법 쉽게 설명
+figma,피그마 버전 히스토리 복구,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 콘텐츠 제작과 레이아웃 안내 중심이며 복구·되돌리기 의도와 다름,60,feature_explanation,기능 설명형,피그마 버전 히스토리 복구 기능과 사용 방법 쉽게 설명
+figma,피그마 협업 댓글 기능,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 제작 프로세스 위주이고 협업 피드백 관리 의도는 포함되지 않음,60,feature_explanation,기능 설명형,피그마 협업 댓글 기능 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 배경 흐림 효과 적용,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 광고 소재 컨셉 표현 중심이며 특정 효과 적용법 검색 의도와 다름,60,feature_explanation,기능 설명형,피그마 배경 흐림 효과 적용 기능과 사용 방법 쉽게 설명
+figma,피그마와 포토샵 차이,perplexity_questions,comparison,60,medium,low,2026-05-19,기존 글은 피그마 활용 자체를 전제로 하며 도구 비교 의도와는 다름,60,comparison_analysis,비교/분석형,피그마와 포토샵 차이 어떤 상황에서 무엇을 골라야 하는지 정리
+figma,피그마 웹사이트 디자인 가이드,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 광고 소재, 상세페이지, SEO 점검 중심이고 웹사이트 디자인 가이드는 다른 검색 의도임",60,feature_explanation,기능 설명형,피그마 웹사이트 디자인 가이드 기능과 사용 방법 쉽게 설명
+canva,캔바 이미지 화질 높이기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 기본 기능 소개이고 결과물 화질 최적화는 다른 목적임,60,feature_explanation,기능 설명형,캔바 이미지 화질 높이기 기본 개념부터 적용 방법까지 정리
+trello,트렐로 댓글 알림 안옴,perplexity_questions,informational,60,medium,low,2026-05-19,기본 기능 설명이 아니라 알림 문제 해결이라는 명확한 장애 대응 주제임,60,feature_explanation,기능 설명형,트렐로 댓글 알림 안옴 초보자도 이해하기 쉬운 설정과 활용
+general_it,윈도우 블루스크린 원인 확인,perplexity_questions,informational,60,medium,low,2026-05-19,일반적인 시스템 복구가 아니라 블루스크린 원인 분석에 초점을 둔 주제입니다.,60,feature_explanation,기능 설명형,윈도우 블루스크린 원인 확인 기본 개념부터 적용 방법까지 정리
+office365,오피스365 구독 해지,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 기능 활용 중심이며 결제/해지 관리 주제가 아님,60,feature_explanation,기능 설명형,오피스365 구독 해지 기능과 사용 방법 쉽게 설명
+office365,오피스365 엑셀 느려짐,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 함수 활용과 시트 통합 중심이며 성능 저하 해결은 다루지 않음,60,feature_explanation,기능 설명형,오피스365 엑셀 느려짐 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 검은 화면,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 시각적 표시 오류 해결을 다루며 핵심 검색 의도가 겹치지 않습니다.,60,feature_explanation,기능 설명형,언리얼 엔진 검은 화면 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 버전 변경,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 프로젝트 예제나 입문 설명 중심이고, 버전 호환 관리라는 목적이 다릅니다.",60,feature_explanation,기능 설명형,언리얼 엔진 버전 변경 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 프레임 드랍,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 개념 설명과 프로젝트 안내이며, 성능 최적화라는 목적이 다릅니다.",60,feature_explanation,기능 설명형,언리얼 엔진 프레임 드랍 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 플러그인 설치,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 플러그인 설치와 충돌 해결을 다루지 않아 검색 의도가 다릅니다.,60,feature_explanation,기능 설명형,언리얼 엔진 플러그인 설치 기본 개념부터 적용 방법까지 정리
+blender,블렌더 면 뒤집힘 수정,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 모델링 기능 소개 중심이며, 메쉬 오류 수정 주제와 겹치지 않음",60,feature_explanation,기능 설명형,블렌더 면 뒤집힘 수정 기본 개념부터 적용 방법까지 정리
+python,파이썬 모듈 not found,perplexity_questions,informational,60,medium,low,2026-05-19,파일 읽기·set·list와 다른 런타임 오류 해결 주제임,60,feature_explanation,기능 설명형,파이썬 모듈 not found 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 날짜 시간 처리,perplexity_questions,informational,60,medium,low,2026-05-19,파일 입출력이나 집합 연산과 무관한 시간 데이터 처리 주제임,60,feature_explanation,기능 설명형,파이썬 날짜 시간 처리 기본 개념부터 적용 방법까지 정리
+figma,피그마 컴포넌트 만드는 법,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 결과물 제작 프로세스 설명 위주이며, 이 주제는 재사용 구조 설계에 집중함",60,feature_explanation,기능 설명형,피그마 컴포넌트 만드는 법 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 무료 플랜 제한,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글들은 활용법 중심이며, 이 주제는 플랜 비교와 사용 한도 확인이 목적임",60,feature_explanation,기능 설명형,피그마 무료 플랜 제한 기본 개념부터 적용 방법까지 정리
+figma,피그마 이미지 선명하게 넣는 법,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 레이아웃과 제작 흐름 위주이고, 이 주제는 이미지 품질 유지 문제를 다룸",60,feature_explanation,기능 설명형,피그마 이미지 선명하게 넣는 법 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 파일 용량 줄이는 법,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 파일 최적화가 아니라 콘텐츠 구성과 제작 방법에 초점을 둠,60,feature_explanation,기능 설명형,피그마 파일 용량 줄이는 법 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 도형 정렬 단축키,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 시각 자료 제작 프로세스 중심이고, 이 주제는 생산성 단축키에 초점을 둠",60,feature_explanation,기능 설명형,피그마 도형 정렬 단축키 기본 개념부터 적용 방법까지 정리
+canva,캔바 이미지 배경 제거,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 기본 기능 소개 수준이라 배경 제거 실전 활용 의도와 다릅니다.,60,feature_explanation,기능 설명형,캔바 이미지 배경 제거 기능과 사용 방법 쉽게 설명
+canva,캔바 동영상 편집 자막 넣기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 카드뉴스와 일반 기능 중심이며 영상 자막 편집은 별도 의도입니다.,60,feature_explanation,기능 설명형,캔바 동영상 편집 자막 넣기 기본 개념부터 적용 방법까지 정리
+canva,캔바 인쇄용 PDF 저장,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 일반적인 디자인 사용법 중심이며 인쇄용 출력 최적화는 다루지 않습니다.,60,feature_explanation,기능 설명형,캔바 인쇄용 PDF 저장 기능과 사용 방법 쉽게 설명
+canva,캔바 사진 자르기 안맞음,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 기능 소개에 가깝고, 이미지 크롭 문제 해결 의도와는 다릅니다.",60,feature_explanation,기능 설명형,캔바 사진 자르기 안맞음 처음 시작할 때 알아두면 좋은 사용법
+jira,지라 구글 캘린더 연동,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 Jira 내부 기능 설명 위주이고, 이 주제는 외부 캘린더 연동이 핵심입니다.",60,feature_explanation,기능 설명형,지라 구글 캘린더 연동 기본 개념부터 적용 방법까지 정리
+jira,지라와 트렐로 차이,perplexity_questions,comparison,60,medium,low,2026-05-19,"기존 글은 Jira 자체 사용법이고, 이 주제는 도구 비교와 선택 의도가 완전히 다릅니다.",60,comparison_analysis,비교/분석형,지라와 트렐로 차이 차이점과 선택 기준 정리
+unity,유니티 라이선스 활성화,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 계정·인증·라이선스 문제를 다루지 않아 검색 의도가 겹치지 않음,60,feature_explanation,기능 설명형,유니티 라이선스 활성화 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 게임 화면 비율 맞추기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 시트나 데이터 정렬이 중심이고, Unity UI 화면 비율 최적화와는 전혀 다른 의도임",60,feature_explanation,기능 설명형,유니티 게임 화면 비율 맞추기 기본 개념부터 적용 방법까지 정리
+blender,블렌더 작업 속도 높이기,perplexity_questions,informational,60,medium,low,2026-05-19,기능 개요가 아니라 반복 작업 효율화와 속도 개선에 초점을 둠,60,feature_explanation,기능 설명형,블렌더 작업 속도 높이기 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 파일 열리지 않음,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 제작 프로세스와 SEO 점검 중심이며, 이 주제는 파일 접근 실패 해결이 핵심임",60,feature_explanation,기능 설명형,피그마 파일 열리지 않음 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 협업 댓글 알림 안옴,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 공유 방식 설명 중심이고, 이 주제는 협업 알림 장애라는 구체적 문제 해결에 다름",60,feature_explanation,기능 설명형,피그마 협업 댓글 알림 안옴 기능과 사용 방법 쉽게 설명
+figma,피그마 텍스트 자동줄바꿈,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 구조도와 제작 프로세스 중심이고, 이 주제는 텍스트 표시와 레이아웃 제어가 핵심임",60,feature_explanation,기능 설명형,피그마 텍스트 자동줄바꿈 기능과 사용 방법 쉽게 설명
+figma,피그마 크기 단위 px 맞추기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 콘텐츠 기획과 시각자료 제작 중심이며, 이 주제는 화면 단위 설정과 개발 협업이 중심임",60,feature_explanation,기능 설명형,피그마 크기 단위 px 맞추기 기본 개념부터 적용 방법까지 정리
+figma,피그마 모바일 화면 제작,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 일반적인 광고 소재와 콘텐츠 구조 설계 위주이며, 이 주제는 모바일 UI 제작 실무에 초점이 다름",60,feature_explanation,기능 설명형,피그마 모바일 화면 제작 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 템플릿 추천,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기능 익히기 위주이고, 이 주제는 템플릿 선택과 활용에 초점이 다름",60,feature_explanation,기능 설명형,캔바 템플릿 추천 기본 개념부터 적용 방법까지 정리
+canva,캔바 사진 화질 높이기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 기능 소개이며, 이 주제는 이미지 품질 개선이라는 다른 검색 의도임",60,feature_explanation,기능 설명형,캔바 사진 화질 높이기 기본 개념부터 적용 방법까지 정리
+jira,지라 담당자 일괄 변경,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 개별 이슈 관리 위주이고, 대량 변경 자동화는 다른 의도임",60,feature_explanation,기능 설명형,지라 담당자 일괄 변경 기능과 사용 방법 쉽게 설명
+jira,지라 대시보드 만드는 법,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글의 기본 활용 범위를 넘어서 대시보드 구성과 시각화가 주제임,60,feature_explanation,기능 설명형,지라 대시보드 만드는 법 초보자도 이해하기 쉬운 설정과 활용
+jira,지라 트렐로 비교,perplexity_questions,comparison,60,medium,low,2026-05-19,"기존 글은 지라 사용 안내 중심이고, 도구 비교는 선택 의도가 달라 중복되지 않음",60,comparison_analysis,비교/분석형,지라 트렐로 비교 어떤 상황에서 무엇을 골라야 하는지 정리
+trello,트렐로 모바일 알림 안옴,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 기능 소개이고, 이 주제는 모바일 알림 장애 해결에 초점이 다름",60,feature_explanation,기능 설명형,트렐로 모바일 알림 안옴 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 카드 이동 단축키,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기본 조작 안내 중심이고, 이 주제는 속도 향상을 위한 단축 조작에 초점이 다름",60,feature_explanation,기능 설명형,트렐로 카드 이동 단축키 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 칸반 보드 예시,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 사용법 설명 위주이고, 이 주제는 실제 업무 구조 설계 예시에 초점이 다름",60,feature_explanation,기능 설명형,트렐로 칸반 보드 예시 기본 개념부터 적용 방법까지 정리
+unity,유니티 오브젝트 생성 삭제,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 단일 컴포넌트 활용 중심이며 동적 오브젝트 생명주기 관리는 없음,60,feature_explanation,기능 설명형,유니티 오브젝트 생성 삭제 기능과 사용 방법 쉽게 설명
+unity,유니티 UI 버튼 연결,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글 목록에는 UI 이벤트 연결, 버튼 동작 설정 주제가 없음",60,feature_explanation,기능 설명형,유니티 UI 버튼 연결 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 애니메이션 적용,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 데이터 처리와 일반 사용법 위주이고 애니메이션 적용 실무는 없음,60,feature_explanation,기능 설명형,유니티 애니메이션 적용 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 오브젝트 회전 이동,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 컴포넌트 조회 같은 기초 개념 위주이며, 실제 조작 구현 주제는 없음",60,feature_explanation,기능 설명형,유니티 오브젝트 회전 이동 기능과 사용 방법 쉽게 설명
+office365,한셀 엑셀 차이,naver_suggest,comparison,60,medium,low,2026-05-19,비교 검색 의도가 있어 선택 기준을 설명하는 글로 적합합니다.,60,comparison_analysis,비교/분석형,한셀 엑셀 차이 차이점과 선택 기준 정리
+office365,오피스365 비밀번호 변경,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글에는 계정 보안 및 비밀번호 관리 의도가 없음,60,feature_explanation,기능 설명형,오피스365 비밀번호 변경 처음 시작할 때 알아두면 좋은 사용법
+office365,오피스365 라이선스 확인,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기능 활용 중심이고, 이 주제는 구독·라이선스 확인에 집중함",60,feature_explanation,기능 설명형,오피스365 라이선스 확인 기능과 사용 방법 쉽게 설명
+office365,오피스365 워드 페이지 번호,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 다른 문서 서식 설정 의도임,60,feature_explanation,기능 설명형,오피스365 워드 페이지 번호 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 프로젝트 생성,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글에는 언리얼 프로젝트 생성 의도가 없고, 도구 사용법 중심이라 검색 목적이 다름",60,feature_explanation,기능 설명형,언리얼 엔진 프로젝트 생성 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 블루프린트 시작,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 SEO와 일반 프로그램 사용법 위주이며, 언리얼 블루프린트 입문은 다른 검색 의도임",60,feature_explanation,기능 설명형,언리얼 엔진 블루프린트 시작 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 렌더링 최적화,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 SEO 전략이나 일반 설정법 중심이며, 언리얼 렌더링 성능 최적화는 완전히 다른 의도임",60,feature_explanation,기능 설명형,언리얼 엔진 렌더링 최적화 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 오브젝트 이동이 이상함,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글도 기준점이 나오지만 핵심은 원점 설명이며, 이 주제는 실제 이동 오류 해결이다",60,feature_explanation,기능 설명형,블렌더 오브젝트 이동이 이상함 기능과 사용 방법 쉽게 설명
+blender,블렌더 자동 저장 위치,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 3D 커서와 원점이 중심이고, 이 주제는 백업 복구 설정이다",60,feature_explanation,기능 설명형,블렌더 자동 저장 위치 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 렌더 속도 빠르게,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 좌표와 Origin 설명이고, 이 주제는 출력 성능 최적화다",60,feature_explanation,기능 설명형,블렌더 렌더 속도 빠르게 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 여러 오브젝트 정렬,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 3D 커서와 원점 개념 중심이고, 이 주제는 대량 오브젝트 배치 정렬이다",60,feature_explanation,기능 설명형,블렌더 여러 오브젝트 정렬 초보자도 이해하기 쉬운 설정과 활용
+python,파이썬 pip 업그레이드,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 파일·자료형이 아니라 설치 도구 유지보수에 대한 주제입니다.,60,feature_explanation,기능 설명형,파이썬 pip 업그레이드 기능과 사용 방법 쉽게 설명
+python,파이썬 코드 실행 속도 높이기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 개념 설명이 아니라 성능 개선이라는 별도 목적에 해당합니다.,60,feature_explanation,기능 설명형,파이썬 코드 실행 속도 높이기 기본 개념부터 적용 방법까지 정리
+python,파이썬 메일 자동 발송,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 자료형·파일 처리보다 업무 자동화 목적이 분명합니다.,60,feature_explanation,기능 설명형,파이썬 메일 자동 발송 기능과 사용 방법 쉽게 설명
+python,파이썬 웹 크롤링 시작,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글의 파일·집합·리스트와 검색 의도가 겹치지 않으며, 데이터 수집 작업에 초점이 있습니다.",60,feature_explanation,기능 설명형,파이썬 웹 크롤링 시작 처음 시작할 때 알아두면 좋은 사용법
+python,파이썬 주피터 노트북 설치,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 일반 파이썬 문법 중심이고, 이 주제는 노트북 실행 환경 설정에 관한 내용입니다.",60,feature_explanation,기능 설명형,파이썬 주피터 노트북 설치 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 오토레이아웃 간격 조절,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 오토레이아웃 활용법과 제작 흐름 중심이고, 이 주제는 간격 조절에 특화됨",60,feature_explanation,기능 설명형,피그마 오토레이아웃 간격 조절 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 프레임 크기 변경,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 결과물 제작 과정이 아니라 프레임 사이즈 조정 문제에 초점이 있음,60,feature_explanation,기능 설명형,피그마 프레임 크기 변경 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 png 용량 줄이기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 저장 최적화와 용량 관리에 초점이 있음,60,feature_explanation,기능 설명형,피그마 png 용량 줄이기 기본 개념부터 적용 방법까지 정리
+figma,피그마 무료 버전 제한,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 사용법 중심이고, 이 주제는 요금제 비교와 제한 확인이라는 별도 의도임",60,feature_explanation,기능 설명형,피그마 무료 버전 제한 기본 개념부터 적용 방법까지 정리
+figma,피그마 템플릿 추천,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 직접 제작 흐름 중심이며, 이 주제는 템플릿 탐색과 선택에 초점이 있음",60,feature_explanation,기능 설명형,피그마 템플릿 추천 기능과 사용 방법 쉽게 설명
+canva,캔바 배경 투명하게 저장,perplexity_questions,informational,60,medium,low,2026-05-19,"파일 내보내기 세부 설정에 관한 주제로, 기존 글의 SEO 자동 생성·콘텐츠 디자인과 의도가 다르다",60,feature_explanation,기능 설명형,캔바 배경 투명하게 저장 기본 개념부터 적용 방법까지 정리
+trello,트렐로 카드 설명 작성법,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 기능 소개 중심이고, 이 주제는 카드 설명 작성 실무에 초점이 있음",60,feature_explanation,기능 설명형,트렐로 카드 설명 작성법 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 에러 빌드 실패,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 검색 기능 소개 중심이고, 이 주제는 빌드 실패 오류 해결에 초점을 둠",60,feature_explanation,기능 설명형,유니티 에러 빌드 실패 기본 개념부터 적용 방법까지 정리
+unity,유니티 오브젝트 안보임,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 에셋 검색이며, 이 주제는 씬 표시 문제 해결임",60,feature_explanation,기능 설명형,유니티 오브젝트 안보임 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 카메라 안움직임,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 에디터 내 카메라 조작 오류에 관한 주제임,60,feature_explanation,기능 설명형,유니티 카메라 안움직임 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 레이아웃 초기화,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 에디터 화면 구성 복구라는 별도 상황임,60,feature_explanation,기능 설명형,유니티 레이아웃 초기화 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 저장 공간 부족,perplexity_questions,informational,60,medium,low,2026-05-19,오류 해결 중에서도 디스크 용량 관리라는 별도 검색 의도입니다.,60,feature_explanation,기능 설명형,윈도우 저장 공간 부족 처음 시작할 때 알아두면 좋은 사용법
+general_it,윈도우 마우스 커서 안움직임,perplexity_questions,informational,60,medium,low,2026-05-19,시스템 전반이 아니라 마우스 입력 문제에 집중한 주제입니다.,60,feature_explanation,기능 설명형,윈도우 마우스 커서 안움직임 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 블루프린트 기초,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글 목록에는 언리얼의 블루프린트 사용법 주제가 없습니다.,60,feature_explanation,기능 설명형,언리얼 블루프린트 기초 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 카메라 시점 변경,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글 목록에는 카메라 시점 조정 주제가 없습니다.,60,feature_explanation,기능 설명형,언리얼 카메라 시점 변경 초보자도 이해하기 쉬운 설정과 활용
+blender,블렌더 모델 크기 맞추기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글의 중심점/커서 주제와 다르게, 이 주제는 크기와 단위 조정이 핵심입니다.",60,feature_explanation,기능 설명형,블렌더 모델 크기 맞추기 기본 개념부터 적용 방법까지 정리
+notion,노션 정렬 기준 바꾸기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 DB 생성과 블록 사용법이고, 이 주제는 정렬 설정이라는 별도 기능입니다.",60,feature_explanation,기능 설명형,노션 정렬 기준 바꾸기 기본 개념부터 적용 방법까지 정리
+notion,노션 체크박스 자동 완료,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 블록 추가나 DB 개념 중심이고, 체크박스 자동화는 다른 실무 목적입니다.",60,feature_explanation,기능 설명형,노션 체크박스 자동 완료 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 글자 크기 바꾸기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 데이터베이스와 블록 활용 위주이고, 이 주제는 서식·가독성 설정에 초점이 있습니다.",60,feature_explanation,기능 설명형,노션 글자 크기 바꾸기 기본 개념부터 적용 방법까지 정리
+figma,피그마 이미지 내보내기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 프로세스 설명 중심이고, 이 주제는 내보내기 실무 사용법에 집중합니다.",60,feature_explanation,기능 설명형,피그마 이미지 내보내기 기본 개념부터 적용 방법까지 정리
+canva,캔바 이미지 화질 깨짐,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글에는 내보내기 품질 문제나 화질 개선 주제가 없어 문제 중심 검색 의도가 다릅니다.,60,feature_explanation,기능 설명형,캔바 이미지 화질 깨짐 기본 개념부터 적용 방법까지 정리
+canva,캔바 배치 수정 단축키,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 단축키나 작업 효율화 주제가 없고, 빠른 편집 최적화 의도가 다릅니다.",60,feature_explanation,기능 설명형,캔바 배치 수정 단축키 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 라벨 색깔 의미,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글의 SEO 키워드와 무관하며, Trello 보드 정리와 협업 효율에 직접 연결되는 주제다.",60,feature_explanation,기능 설명형,트렐로 라벨 색깔 의미 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 컴퓨터 사양,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 겹치지 않는 언리얼 하드웨어 요구사항 확인 주제임,60,feature_explanation,기능 설명형,언리얼 엔진 컴퓨터 사양 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 캐시 삭제,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 캐시 정리나 프로젝트 복구와 관련된 검색 의도가 없음,60,feature_explanation,기능 설명형,언리얼 엔진 캐시 삭제 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 프로젝트 복구,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글과 핵심 의도가 완전히 다르고, 프로젝트 복구라는 실무 문제임",60,feature_explanation,기능 설명형,언리얼 엔진 프로젝트 복구 초보자도 이해하기 쉬운 설정과 활용
+unreal,언리얼 엔진 자동 저장 복구,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 SEO 주제이며, 이 항목은 데이터 복구와 재해복구 성격임",60,feature_explanation,기능 설명형,언리얼 엔진 자동 저장 복구 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 마우스 이상함,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 도구 사용 오류 해결이 아니며, 이 주제는 입력장치 설정 문제임",60,feature_explanation,기능 설명형,언리얼 엔진 마우스 이상함 기능과 사용 방법 쉽게 설명
+blender,블렌더 마우스 조작 바꾸기,perplexity_questions,informational,60,medium,low,2026-05-19,인터페이스 논리 설명이 아니라 조작 방식 전환에 해당함,60,feature_explanation,기능 설명형,블렌더 마우스 조작 바꾸기 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 뷰포트 화면 분할,perplexity_questions,informational,60,medium,low,2026-05-19,패널 논리 설명이 아니라 화면 구성 방법 자체를 찾는 주제임,60,feature_explanation,기능 설명형,블렌더 뷰포트 화면 분할 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 재질 안 보일 때,perplexity_questions,informational,60,medium,low,2026-05-19,기초 인터페이스가 아니라 재질 표시 오류 해결 주제임,60,feature_explanation,기능 설명형,블렌더 재질 안 보일 때 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 익스포트 안될 때,perplexity_questions,informational,60,medium,low,2026-05-19,입문 개념이 아니라 내보내기 실패 해결 주제임,60,feature_explanation,기능 설명형,블렌더 익스포트 안될 때 초보자도 이해하기 쉬운 설정과 활용
+notion,노션 페이지 링크 거는 법,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 목록에 동일한 제목이 있으나, 중복 제외 기준상 새로운 의도 확장은 불가하므로 페이지 내부 연결 활용으로 차별화됨",60,feature_explanation,기능 설명형,노션 페이지 링크 거는 법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 블록 이동 단축키,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 블록 추가 방법 중심이고, 이 주제는 블록 이동과 생산성 향상에 초점이 있음",60,feature_explanation,기능 설명형,노션 블록 이동 단축키 기본 개념부터 적용 방법까지 정리
+notion,노션 페이지 속도 느림,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 SEO와 일반 사용법 중심이며, 이 주제는 대용량 페이지 성능 최적화에 초점이 있음",60,feature_explanation,기능 설명형,노션 페이지 속도 느림 기본 개념부터 적용 방법까지 정리
+figma,피그마 댓글 알림 안옴,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 협업 도구 소개 수준이고, 댓글 알림 오류라는 운영 문제는 다룹니다.",60,feature_explanation,기능 설명형,피그마 댓글 알림 안옴 초보자도 이해하기 쉬운 설정과 활용
+canva,캔바 이미지 품질 높이기,perplexity_questions,informational,60,medium,low,2026-05-19,SEO가 아니라 출력 품질과 파일 설정에 대한 실무 주제임,60,feature_explanation,기능 설명형,캔바 이미지 품질 높이기 기본 개념부터 적용 방법까지 정리
+canva,캔바 슬라이드 다운로드,perplexity_questions,informational,60,medium,low,2026-05-19,웹사이트 SEO가 아니라 파일 내보내기 실무 주제임,60,feature_explanation,기능 설명형,캔바 슬라이드 다운로드 기본 개념부터 적용 방법까지 정리
+jira,지라와 컨플루언스 연동,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 이미 Confluence와 Jira 연동 흐름을 직접 다루므로 핵심 의도가 겹치지 않도록 연동의 다른 활용 맥락으로 확장한 주제입니다.,60,feature_explanation,기능 설명형,지라와 컨플루언스 연동 기본 개념부터 적용 방법까지 정리
+trello,노션 템플릿 만드는 법,perplexity_questions,informational,60,medium,low,2026-05-19,새 페이지 작성 효율화라는 목적이 기존 글과 겹치지 않습니다.,60,feature_explanation,기능 설명형,노션 템플릿 만드는 법 처음 시작할 때 알아두면 좋은 사용법
+trello,윈도우 작업표시줄 안보임,perplexity_questions,informational,60,medium,low,2026-05-19,"작업 관리자와 다른 윈도우 UI 오류로, 기존 글의 검색 의도와 별개입니다.",60,feature_explanation,기능 설명형,윈도우 작업표시줄 안보임 기능과 사용 방법 쉽게 설명
+trello,파이썬 파일명 일괄 변경,perplexity_questions,informational,60,medium,low,2026-05-19,"파일 입출력이 아닌 파일명 일괄 처리 자동화로, 기존 파이썬 글과 의도가 다릅니다.",60,feature_explanation,기능 설명형,파이썬 파일명 일괄 변경 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 UI 위치 고정,perplexity_questions,informational,60,medium,low,2026-05-19,프로젝트 검색이 아니라 화면 비율 대응 UI 설정 주제임,60,feature_explanation,기능 설명형,유니티 UI 위치 고정 초보자도 이해하기 쉬운 설정과 활용
+unity,유니티 저장소 용량 줄이기,perplexity_questions,informational,60,medium,low,2026-05-19,에셋 검색이 아닌 프로젝트 관리·최적화 주제이므로 겹치지 않음,60,feature_explanation,기능 설명형,유니티 저장소 용량 줄이기 기능과 사용 방법 쉽게 설명
+unreal,언리얼 엔진 패키징 실패,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글에 패키징·배포 빌드 실패 해결 의도가 없고, 제작 후 배포 단계라는 별도 상황임",60,feature_explanation,기능 설명형,언리얼 엔진 패키징 실패 기본 개념부터 적용 방법까지 정리
+unreal,언리얼 엔진 텍스처 깨짐,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 목록의 일반적인 SEO·엑셀·파이썬 주제와 무관하며, 언리얼 그래픽 에셋 표시 문제에만 해당함",60,feature_explanation,기능 설명형,언리얼 엔진 텍스처 깨짐 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 레벨 블루프린트,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 목록과 달리 언리얼 기능 사용법 주제이며, 오류 해결이 아니라 빠른 활용법에 해당함",60,feature_explanation,기능 설명형,언리얼 엔진 레벨 블루프린트 처음 시작할 때 알아두면 좋은 사용법
+blender,블렌더 작업 속도 올리기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 인터페이스 요소 설명 위주이고 생산성 향상 전략은 다름,60,feature_explanation,기능 설명형,블렌더 작업 속도 올리기 기능과 사용 방법 쉽게 설명
+python,파이썬 csv 파일 읽기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글의 파일 입출력은 일반 텍스트 중심이고 CSV 처리 문제와는 핵심 의도가 다릅니다.,60,feature_explanation,기능 설명형,파이썬 csv 파일 읽기 기능과 사용 방법 쉽게 설명
+notion,노션 관계형 데이터베이스 연결,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 단일 DB 소개에 가깝고, 관계형 연결은 완전히 다른 검색 목적임",60,feature_explanation,기능 설명형,노션 관계형 데이터베이스 연결 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 글자색 바꾸는 법,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 구조와 기능 설명 중심이라 서식 변경이라는 별도 의도와 다름,60,feature_explanation,기능 설명형,노션 글자색 바꾸는 법 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 페이지 안에 표 넣기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 인라인과 전체 페이지 DB 개념에 집중하므로, 일반 페이지 내 표 삽입 의도와 다름",60,feature_explanation,기능 설명형,노션 페이지 안에 표 넣기 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 무료 요금제 기능,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 실무 활용이나 디자인 협업 중심이고, 이 주제는 요금제 기능 확인에 초점이 다릅니다.",60,feature_explanation,기능 설명형,피그마 무료 요금제 기능 초보자도 이해하기 쉬운 설정과 활용
+figma,피그마 프레임 크기 맞추기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 협업 플랫폼 소개에 가깝고, 이 주제는 화면 규격 설정이라는 사용법 중심입니다.",60,feature_explanation,기능 설명형,피그마 프레임 크기 맞추기 기본 개념부터 적용 방법까지 정리
+figma,피그마 모바일에서 보는 법,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 데스크톱 작업 중심이고, 이 주제는 모바일 열람 상황이 다릅니다.",60,feature_explanation,기능 설명형,피그마 모바일에서 보는 법 처음 시작할 때 알아두면 좋은 사용법
+trello,트렐로 무료 버전 한계,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 사용법·템플릿 중심이라 요금제 비교와 제한 확인이라는 검색 의도가 다름,60,feature_explanation,기능 설명형,트렐로 무료 버전 한계 기본 개념부터 적용 방법까지 정리
+unity,유니티 텍스처 용량 줄이기,perplexity_questions,informational,60,medium,low,2026-05-19,"검색 키워드 사용법과 무관하며, 최적화 실무 주제임",60,feature_explanation,기능 설명형,유니티 텍스처 용량 줄이기 기본 개념부터 적용 방법까지 정리
+unity,유니티 모바일 화면 비율 맞추기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글의 검색 기능이 아니라 디바이스별 UI 대응 문제를 다룸,60,feature_explanation,기능 설명형,유니티 모바일 화면 비율 맞추기 기본 개념부터 적용 방법까지 정리
+unity,유니티 플레이 모드 느림,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글과 핵심 의도가 다르며, 검색이 아닌 작업 효율 개선 주제임",60,feature_explanation,기능 설명형,유니티 플레이 모드 느림 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 버전별 호환성 확인,perplexity_questions,informational,60,medium,low,2026-05-19,"검색 의도와 무관하게, 프로젝트 유지보수와 호환성 관리라는 다른 목적을 가짐",60,feature_explanation,기능 설명형,유니티 버전별 호환성 확인 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 안전 모드 진입,perplexity_questions,informational,60,medium,low,2026-05-19,작업 관리자나 설정 팁이 아니라 부팅 복구 상황을 다루는 별도 주제임,60,feature_explanation,기능 설명형,윈도우 안전 모드 진입 기본 개념부터 적용 방법까지 정리
+general_it,윈도우 파일 탐색기 안열림,perplexity_questions,informational,60,medium,low,2026-05-19,일반 시스템 오류가 아니라 파일 관리 핵심 도구 장애를 다루는 주제임,60,feature_explanation,기능 설명형,윈도우 파일 탐색기 안열림 기능과 사용 방법 쉽게 설명
+general_it,윈도우 화면 캡처 단축키,perplexity_questions,informational,60,medium,low,2026-05-19,오류 해결이 아니라 실사용 편의 기능을 빠르게 익히는 주제임,60,feature_explanation,기능 설명형,윈도우 화면 캡처 단축키 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 캐릭터 안움직임,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글 목록에 게임플레이 입력 문제나 캐릭터 제어 오류가 없음,60,feature_explanation,기능 설명형,언리얼 엔진 캐릭터 안움직임 기능과 사용 방법 쉽게 설명
+blender,블렌더 화면이 안보여요,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 패널 분할과 레이아웃 개념 위주이며 화면 표시 장애 해결과 다름,60,feature_explanation,기능 설명형,블렌더 화면이 안보여요 기본 개념부터 적용 방법까지 정리
+python,파이썬 requests,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 자료형과 파일 처리 중심이고 HTTP 요청 사용법과 다름,60,feature_explanation,기능 설명형,파이썬 requests 처음 시작할 때 알아두면 좋은 사용법
+notion,노션 템플릿 추천,perplexity_questions,informational,60,medium,low,2026-05-19,SEO나 기술 설명이 아니라 실사용 템플릿 선택과 활용 목적이 중심인 주제,60,feature_explanation,기능 설명형,노션 템플릿 추천 기본 개념부터 적용 방법까지 정리
+figma,피그마 이미지 품질 높이기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 디자인 협업과 제작 전반이며, 이 주제는 이미지 품질 최적화입니다.",60,feature_explanation,기능 설명형,피그마 이미지 품질 높이기 기본 개념부터 적용 방법까지 정리
+figma,피그마 pdf 내보내기,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 제작과 협업 중심이고, 이 주제는 파일 출력/내보내기 문제에 해당합니다.",60,feature_explanation,기능 설명형,피그마 pdf 내보내기 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 모바일 미리보기,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 이 주제는 모바일 확인과 화면 검증에 초점이 있습니다.,60,feature_explanation,기능 설명형,피그마 모바일 미리보기 기본 개념부터 적용 방법까지 정리
+canva,캔바 무료 요금제 기능,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 웹사이트 SEO나 디자인 템플릿 활용 중심이고, 이 주제는 요금제 기능 확인이라는 검색 의도가 다릅니다.",60,feature_explanation,기능 설명형,캔바 무료 요금제 기능 기본 개념부터 적용 방법까지 정리
+canva,캔바 템플릿 수정하는 법,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글은 템플릿 소개가 아니라 템플릿 편집 방법 자체가 핵심입니다.,60,feature_explanation,기능 설명형,캔바 템플릿 수정하는 법 처음 시작할 때 알아두면 좋은 사용법
+unity,유니티 오브젝트 생성 위치,perplexity_questions,informational,60,medium,low,2026-05-19,프로젝트 검색이 아니라 런타임 생성 좌표 제어 주제라 다름,60,feature_explanation,기능 설명형,유니티 오브젝트 생성 위치 기본 개념부터 적용 방법까지 정리
+unity,유니티 2D 캐릭터 이동,perplexity_questions,informational,60,medium,low,2026-05-19,검색 방법이 아니라 2D 이동 구현 주제라 핵심 의도가 다름,60,feature_explanation,기능 설명형,유니티 2D 캐릭터 이동 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 블루프린트 기초,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 일반 도구 사용법이나 SEO 관련 주제이며, 언리얼 제작 방식 학습과는 의도가 다름",60,feature_explanation,기능 설명형,언리얼 엔진 블루프린트 기초 처음 시작할 때 알아두면 좋은 사용법
+unreal,언리얼 엔진 빌드 시간 단축,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글에는 자동화나 빌드 최적화에 대한 언리얼 주제가 없고, 목적도 검색 의도 분석과 다름",60,feature_explanation,기능 설명형,언리얼 엔진 빌드 시간 단축 기능과 사용 방법 쉽게 설명
+figma,피그마 프레젠테이션 모드,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 제작과 협업 중심이고, 이 주제는 발표 상황에 맞춘 사용법임",60,feature_explanation,기능 설명형,피그마 프레젠테이션 모드 처음 시작할 때 알아두면 좋은 사용법
+figma,피그마 실시간 협업 느림,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글은 협업 장점 소개이고, 이 주제는 다중 사용자 성능 문제 해결에 초점이 다름",60,feature_explanation,기능 설명형,피그마 실시간 협업 느림 기능과 사용 방법 쉽게 설명
+figma,피그마 아이콘 넣는 법,perplexity_questions,informational,60,medium,low,2026-05-19,기존 글과 달리 개별 디자인 요소 삽입의 실무 활용이 중심임,60,feature_explanation,기능 설명형,피그마 아이콘 넣는 법 초보자도 이해하기 쉬운 설정과 활용
+trello,트렐로 보드 공유 권한,perplexity_questions,informational,60,medium,low,2026-05-19,"기존 글 목록에는 보드 공유 권한, 접근 제어, 협업 보안에 대한 주제가 없음",60,feature_explanation,기능 설명형,트렐로 보드 공유 권한 기본 개념부터 적용 방법까지 정리
+trello,트렐로 노션 비교,perplexity_questions,comparison,60,medium,low,2026-05-19,"기존 글에는 도구 비교 주제가 없고, 기능 선택을 위한 비교 검색 의도도 다름",60,comparison_analysis,비교/분석형,트렐로 노션 비교 어떤 상황에서 무엇을 골라야 하는지 정리
