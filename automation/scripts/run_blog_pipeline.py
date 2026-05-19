@@ -73,7 +73,6 @@ def run_pipeline(command: str = "all") -> tuple[bool, str]:
 def main() -> None:
     command = sys.argv[1] if len(sys.argv) > 1 else "all"
     success, message = run_pipeline(command)
-    print(message, flush=True)
     if not success:
         raise SystemExit(1)
 
